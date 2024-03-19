@@ -64,7 +64,7 @@ As a result, the columns of $[\partial_p]$ generate the $p$-chain group $C_p$. L
 >       0 & 0
 >   \end{bmatrix}
 > $$
-where $D=\textup{diag}(d_1,\dots,d_\ell)$ with $d_i\in\Z$, $d_i\ge1$ and $d_1\mid d_2\mid\cdots\mid d_\ell$.
+> where $D=\textup{diag}(d_1,\dots,d_\ell)$ with $d_i\in\Z$, $d_i\ge1$ and $d_1\mid d_2\mid\cdots\mid d_\ell$.
 
 When working over $\Z_2$, we get that $D=I_\ell$, the $\ell\times\ell$ identity matrix.
 
