@@ -5,6 +5,7 @@ import { QuartzTransformerPlugin } from "../types"
 
 interface Options {
   renderEngine: "katex" | "mathjax"
+  macros: {}
 }
 
 export const Latex: QuartzTransformerPlugin<Options> = (opts?: Options) => {
@@ -16,7 +17,7 @@ export const Latex: QuartzTransformerPlugin<Options> = (opts?: Options) => {
     },
     htmlPlugins() {
       if (engine === "katex") {
-        return [[rehypeKatex, { output: "html" }]]
+        return [[rehypeKatex, { output: "html", macros: opts?.macros ?? {} }]]
       } else {
         return [rehypeMathjax]
       }

@@ -8,14 +8,14 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "PhD Notes",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "phd.thrall.me",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
@@ -56,7 +56,24 @@ const config: QuartzConfig = {
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "filesystem"],
       }),
-      Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Latex({ 
+          renderEngine: "katex", 
+          macros: {
+            "\\ii": "\\textup{i}",
+            "\\bb": "\\mathbb{#1}",
+            "\\R": "\\mathbb{R}",
+            "\\Q": "\\mathbb{Q}",
+            "\\Z": "\\mathbb{Z}",
+            "\\N": "\\mathbb{N}",
+            "\\F": "\\mathbb{F}",
+            "\\scr": "\\mathscr{#1}",
+            "\\cal": "\\mathcal{#1}",
+            "\\d": "\\textup{d}#1",
+            "\\Ker": "\\textup{Ker}",
+            "\\rank": "\\textup{rank}",
+            "\\id": "\\textup{id}",
+          },
+      }),
       Plugin.SyntaxHighlighting({
         theme: {
           light: "github-light",
