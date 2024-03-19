@@ -1,0 +1,10 @@
+{
+    "id": "obsidian-asymptote",
+    "name": "Obsidian Asymptote",
+    "version": "0.0.0",
+    "minAppVersion": "0.15.0",
+    "description": "A plugin for rendering Asymptote drawings within notes.",
+    "author": "Aaron Manning",
+    "authorUrl": "https://aaronmanning.net",
+    "isDesktopOnly": true
+}
