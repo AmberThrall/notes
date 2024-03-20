@@ -4,7 +4,8 @@ aliases:
   - homology
   - homology group
   - homology groups
-tags: []
+tags:
+  - computational-topology
 ---
 
 > [!def] p-chain

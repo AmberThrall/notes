@@ -4,7 +4,8 @@ aliases:
   - simplices
   - simplicial complex
   - abstract simplicial complex
-tags: []
+tags:
+  - computational-topology
 ---
 
 Let $S=\{p_0,\dots,p_k\}\subset\R^d$. Recall that a **linear combination** of $S$ is a sum of the form

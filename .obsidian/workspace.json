@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+                "file": "content/Computational Topology/Persistent Homology.md",
                 "mode": "preview",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:computational-topology",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+                "file": "content/Computational Topology/Persistent Homology.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+                "file": "content/Computational Topology/Persistent Homology.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md"
+                "file": "content/Computational Topology/Persistent Homology.md"
               }
             }
           }
@@ -149,6 +149,17 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Computational Topology/Delaunay.md",
+    "content/Computational Topology/Simplices.md~",
+    "content/Computational Topology/Relative Homology.md~",
+    "content/Computational Topology/Reduced Homology.md~",
+    "content/Computational Topology/Persistent Homology.md~",
+    "content/Computational Topology/Homotopy.md~",
+    "content/Computational Topology/4913",
+    "content/Computational Topology/Homology Groups.md~",
+    "content/Computational Topology/Euler-Poincaré Theorem.md~",
+    "content/Daily/2024-03-19.md",
+    "content/Computational Topology/Boundary Matrices.md~",
     "Notes/Computational Topology/Boundary Matrices.md",
     "Notes/Computational Topology/Delaunay.md",
     "Notes/Daily/2024-03-14.md",
@@ -159,22 +170,13 @@
     "Notes/Computational Topology/Homotopy.md",
     "Notes/Computational Topology/Simplices.md",
     "Notes/Computational Topology/Simplices.md~",
-    "Notes/Computational Topology/Homology Groups.md~",
     "Notes/Computational Topology/Reduced Homology.md",
-    "Notes/Computational Topology/Boundary Matrices.md~",
     "Notes/Computational Topology/1710548167-LVAP.md",
     "Notes/Computational Topology/1710548154-DMFN.md",
-    "Notes/Computational Topology/Reduced Homology.md~",
     "Notes/Computational Topology/Euler-Poincaré Theorem.md",
-    "Notes/Computational Topology/Euler-Poincaré Theorem.md~",
-    "Notes/Computational Topology/4913",
     "betti.md",
     "Notes/Figures/SS_2024-03-15_1710541633.png",
     "Notes/Figures/SS_2024-03-15_1710539747.png",
-    "Notes/Daily/2024-03-14.md~",
-    "Notes/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md~",
-    "Notes/Papers/4913",
-    "Notes/Symmetric Difference.md~",
     "Notes/Figures/Venn0110.svg",
     "Notes/Group Theory/Quotient Group.md",
     "Notes/Figures/SS_2024-03-08_1709944069.png",

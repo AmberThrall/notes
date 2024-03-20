@@ -4,7 +4,8 @@ aliases:
   - boundary matrices
   - boundary matrix
   - smith normal form
-tags: []
+tags:
+  - computational-topology
 ---
 
 A common tool in computing [[Reduced Homology|reduced homology groups]] is boundary matrices.

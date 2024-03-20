@@ -5,7 +5,8 @@ aliases:
   - Euler-Poincaré
   - Betti number
   - betti number
-tags: []
+tags:
+  - computational-topology
 ---
 
 Recall that the **order** of a group $G$ is simply its cardinality $|G|$. We define the **rank** of a group $G$ as the smallest generating set, i.e., 

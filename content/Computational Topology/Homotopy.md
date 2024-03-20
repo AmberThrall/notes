@@ -7,7 +7,8 @@ aliases:
   - retraction
   - deformation retraction
   - contractible
-tags: []
+tags:
+  - computational-topology
 ---
 
 > [!def] Homotopy

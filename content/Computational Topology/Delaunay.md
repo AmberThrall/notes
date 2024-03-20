@@ -2,7 +2,8 @@
 id: Delaunay
 aliases:
   - delaunay
-tags: []
+tags:
+  - computational-topology
 ---
 
 A common question is how to construct a simplicial complex given a data set. One such method is known as Delaunay complex. We seek to build up the Delaunay complex construction.
