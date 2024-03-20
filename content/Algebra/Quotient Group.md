@@ -2,7 +2,9 @@
 id: Quotient Group
 aliases:
   - quotient group
-tags: []
+tags:
+  - algebra
+  - group-theory
 ---
 
 Let $H$ be a subgroup of $G$. A **left coset** of $H$ corresponding to $g$ is given by 

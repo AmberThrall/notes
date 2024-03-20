@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Computational Topology/Persistent Homology.md",
+                "file": "content/Algebra/Quotient Group.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Computational Topology/Persistent Homology.md",
+                "file": "content/Algebra/Quotient Group.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Computational Topology/Persistent Homology.md",
+                "file": "content/Algebra/Quotient Group.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Computational Topology/Persistent Homology.md"
+                "file": "content/Algebra/Quotient Group.md"
               }
             }
           }
@@ -149,6 +149,12 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Algebra/Quotient Group.md~",
+    "content/Computational Topology/Persistent Homology.md",
+    "content/Group Theory/Quotient Group.md",
+    "content/Algebra/Quotient Group.md",
+    "content/Algebra",
+    "content/Group Theory/Quotient Group.md~",
     "content/Computational Topology/Delaunay.md",
     "content/Computational Topology/Simplices.md~",
     "content/Computational Topology/Relative Homology.md~",
@@ -157,9 +163,7 @@
     "content/Computational Topology/Homotopy.md~",
     "content/Computational Topology/4913",
     "content/Computational Topology/Homology Groups.md~",
-    "content/Computational Topology/Euler-Poincaré Theorem.md~",
     "content/Daily/2024-03-19.md",
-    "content/Computational Topology/Boundary Matrices.md~",
     "Notes/Computational Topology/Boundary Matrices.md",
     "Notes/Computational Topology/Delaunay.md",
     "Notes/Daily/2024-03-14.md",
@@ -169,7 +173,6 @@
     "Notes/Computational Topology/Homology Groups.md",
     "Notes/Computational Topology/Homotopy.md",
     "Notes/Computational Topology/Simplices.md",
-    "Notes/Computational Topology/Simplices.md~",
     "Notes/Computational Topology/Reduced Homology.md",
     "Notes/Computational Topology/1710548167-LVAP.md",
     "Notes/Computational Topology/1710548154-DMFN.md",
@@ -190,8 +193,6 @@
     "code/env/lib/python3.11/site-packages/sklearn/datasets/images/china.jpg",
     "code/env/lib/python3.11/site-packages/scipy/ndimage/tests/dots.png",
     "code/env/lib/python3.11/site-packages/scipy/fft/_pocketfft/LICENSE.md",
-    "code/env/lib/python3.11/site-packages/numpy/random/LICENSE.md",
-    "Notes/2024-03-08.md",
-    "Welcome.md"
+    "code/env/lib/python3.11/site-packages/numpy/random/LICENSE.md"
   ]
 }
