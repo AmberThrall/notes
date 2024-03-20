@@ -1,6 +1,14 @@
 ---
-title: Welcome to Quartz
+id: index
+aliases: []
+tags: []
+title: PhD Notes
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+This site is a collection of notes taken in graduate school.
+
+You can navigate by [[tags/ | tag]] or folder:
+- [[/Algebra]]
+- [[Computational Topology/]]
+- [[Daily/]]
+- [[Papers/]]
