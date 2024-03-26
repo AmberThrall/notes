@@ -28,6 +28,8 @@ Mapper construction is defined to be the nerve of a cover of data:
 
 We begin with a set of overlapping intervals covering the possible values of some parameter (shown here as the $y$-axis). Next we cluster the data set such that each cluster falls into an interval. We then take the nerve of the clusters.
 
+The full algorithm is given [[2024-03-19 | here]].
+
 The choice of intervals may drastically affect the resulting complex. For example, consider the two constructions below:
 
 ![[SS_2024-03-08_1709944069.png#invert]]
