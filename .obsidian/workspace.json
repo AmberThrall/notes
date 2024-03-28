@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/index.md",
+                "file": "content/Computational Topology/Persistent Homology.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/index.md",
+                "file": "content/Computational Topology/Persistent Homology.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/index.md",
+                "file": "content/Computational Topology/Persistent Homology.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/index.md"
+                "file": "content/Computational Topology/Persistent Homology.md"
               }
             }
           }
@@ -146,14 +147,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "437246b057b1229b",
+  "active": "fb6316178493ddb5",
   "lastOpenFiles": [
+    "content/Computational Topology/Persistent Homology.md~",
+    "content/Computational Topology/1711664064-UYXB.md",
+    "content/Figures/750px-Persistence_Diagram.png",
+    "content/Figures/750px-Persistence_Diagram.png.crdownload",
+    "content/Daily/2024-03-26.md",
+    "content/Algebra/Free Group.md",
     "Algebra.md",
     "content/index.md",
     "content/index.md~",
     "content/Daily/2024-03-26.md~",
-    "content/Algebra/Free Group.md",
-    "content/Daily/2024-03-26.md",
     "content/Algebra/Free Group.md~",
     "content/Figures/P1S2all.jpg",
     "content/Figures/P1S2all.jpg.crdownload",
@@ -166,15 +171,12 @@
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md~",
     "public/tags/papers.html",
     "public/tags/index.html",
-    "public/tags/group-theory.html",
-    "public/tags/daily-notes.html",
     "public/static/og-image.png",
     "public/static/icon.png",
     "public/Figures/sample_simplices.png",
     "public/Figures/nerve_example.png",
     "public/Figures/homemorphic_but_not_isomorphic.png",
     "public/Figures/delaunay_tetrahedron.png",
-    "public/Figures/deformation_retract.png",
     "node_modules/mathjax-full/README.md",
     "node_modules/mathjax-full/CONTRIBUTING.md",
     "node_modules/typescript/SECURITY.md",
@@ -191,8 +193,6 @@
     "node_modules/sisteransi/readme.md",
     "node_modules/shebang-command/readme.md",
     "node_modules/shiki/README.md",
-    "node_modules/speech-rule-engine/README.md",
-    "node_modules/css-tree/README.md",
-    "node_modules/flexsearch/README.md"
+    "node_modules/speech-rule-engine/README.md"
   ]
 }
