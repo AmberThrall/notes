@@ -2,13 +2,13 @@
 id: index
 aliases: []
 tags: []
-title: PhD Notes
+title: Notes
 ---
 
 This site is a collection of notes taken in graduate school.
 
 You can navigate by [[tags/ | tag]] or folder:
-- [[/Algebra]]
+- [[Algebra/]]
 - [[Computational Topology/]]
 - [[Daily/]]
 - [[Papers/]]

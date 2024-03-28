@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-03-26.md",
+                "file": "content/index.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-03-26.md",
+                "file": "content/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-03-26.md",
+                "file": "content/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-03-26.md"
+                "file": "content/index.md"
               }
             }
           }
@@ -149,6 +148,9 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "Algebra.md",
+    "content/index.md",
+    "content/index.md~",
     "content/Daily/2024-03-26.md~",
     "content/Algebra/Free Group.md",
     "content/Daily/2024-03-26.md",
@@ -162,7 +164,6 @@
     "content/Daily/2024-03-19.md",
     "content/Algebra/Quotient Group.md",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md~",
-    "content/index.md~",
     "public/tags/papers.html",
     "public/tags/index.html",
     "public/tags/group-theory.html",
@@ -192,7 +193,6 @@
     "node_modules/shiki/README.md",
     "node_modules/speech-rule-engine/README.md",
     "node_modules/css-tree/README.md",
-    "node_modules/flexsearch/README.md",
-    "node_modules/flexsearch/CHANGELOG.md"
+    "node_modules/flexsearch/README.md"
   ]
 }
