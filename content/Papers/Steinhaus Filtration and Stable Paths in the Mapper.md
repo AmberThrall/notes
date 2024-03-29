@@ -107,4 +107,4 @@ Let $\text{\v{C}}_r(X)$ be the cover of $X$ by balls of radius $r$. Then the Cec
 
 **Conjecture**: Given finite $X\subset\R^n$ and $R>\textup{diam}(X)$, the Cech filtration is isomorphic to the Steinhaus filtration constructed from $\text{\v{C}}_R(x)$ under the Lebesgue measure.
 
-The paper starts with proving the 1-dimensional case.
+The paper starts with proving the 1-dimensional case. See daily entry [[2024-03-29]] for details.

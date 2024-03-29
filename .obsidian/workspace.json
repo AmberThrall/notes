@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Computational Topology/Persistent Homology.md",
+                "file": "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Computational Topology/Persistent Homology.md",
+                "file": "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Computational Topology/Persistent Homology.md",
+                "file": "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Computational Topology/Persistent Homology.md"
+                "file": "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md"
               }
             }
           }
@@ -147,8 +147,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fb6316178493ddb5",
+  "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Daily/2024-03-29.md",
+    "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+    "content/Daily/2024-03-29.md~",
+    "content/Figures/SS_2024-03-29_1711749705.png",
+    "content/Computational Topology/Persistent Homology.md",
     "content/Computational Topology/Persistent Homology.md~",
     "content/Computational Topology/1711664064-UYXB.md",
     "content/Figures/750px-Persistence_Diagram.png",
@@ -165,18 +170,15 @@
     "content/Figures/800px-Fundamental_group_of_the_circle.svg.png",
     "content/Figures/800px-Fundamental_group_of_the_circle.svg.png.crdownload",
     "content/Figures/SS_2024-03-26_1711487892.png",
-    "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
     "content/Daily/2024-03-19.md",
     "content/Algebra/Quotient Group.md",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md~",
     "public/tags/papers.html",
-    "public/tags/index.html",
     "public/static/og-image.png",
     "public/static/icon.png",
     "public/Figures/sample_simplices.png",
     "public/Figures/nerve_example.png",
     "public/Figures/homemorphic_but_not_isomorphic.png",
-    "public/Figures/delaunay_tetrahedron.png",
     "node_modules/mathjax-full/README.md",
     "node_modules/mathjax-full/CONTRIBUTING.md",
     "node_modules/typescript/SECURITY.md",
@@ -191,8 +193,6 @@
     "node_modules/rehype-citation/README.md",
     "node_modules/shebang-regex/readme.md",
     "node_modules/sisteransi/readme.md",
-    "node_modules/shebang-command/readme.md",
-    "node_modules/shiki/README.md",
-    "node_modules/speech-rule-engine/README.md"
+    "node_modules/shebang-command/readme.md"
   ]
 }
