@@ -10,7 +10,10 @@ tags:
 - What does the "birth time" of a simplex $\sigma$ mean?
 *Answer:* Smallest time $t$ such that $\sigma$ is created in the filtration.
 - How to pick the intervals for Mapper construction?
+- How to visualize bottleneck metric on covers?
 - How does interleaved filtration relate to stability?
+- Why does an isomorphism between the 1-skeleton of VR and cover imply isomorphism between filtrations?
+- How to interpret Pareto frontiers?
 
 Full paper can be found at: https://arxiv.org/abs/1906.08256.
 
@@ -46,7 +49,7 @@ We construct a filtration given by a distance on covers.
 >   d_{St}(A,B) = 1 - \frac{\mu(A\cap B)}{\mu(A\cup B)} = \frac{\mu(A\cup B)-\mu(A\cap B)}{\mu(A\cup B)}. 
 > $$
 
-The Steinhaus distance is bounded on $[0,1]$. Indeed, since $A\cap B\subseteq A\cup B$, the ratio of measures is between 0 and 1. In a sense, the Steinhaus distance measures "how little" the two sets intersect. When they don't intersect at all, we get a distance of one. When $A=B$, the distance is zero.
+The Steinhaus distance is bounded on $[0,1]$ and is based on the [Jaccard distance](https://en.wikipedia.org/wiki/Jaccard_index). Indeed, since $A\cap B\subseteq A\cup B$, the ratio of measures is between 0 and 1. In a sense, the Steinhaus distance measures "how little" the two sets intersect. When they don't intersect at all, we get a distance of one. When $A=B$, the distance is zero.
 
 Naturally, this can be extended to a collection of sets:
 $$
@@ -107,4 +110,72 @@ Let $\text{\v{C}}_r(X)$ be the cover of $X$ by balls of radius $r$. Then the Cec
 
 **Conjecture**: Given finite $X\subset\R^n$ and $R>\textup{diam}(X)$, the Cech filtration is isomorphic to the Steinhaus filtration constructed from $\text{\v{C}}_R(x)$ under the Lebesgue measure.
 
-The paper starts with proving the 1-dimensional case. See daily entry [[2024-03-29]] for details.
+The paper starts with proving there is a bijection between $n$-skeletons in the 1-dimensional case. See daily entry [[2024-03-29]] for details. The bijection is given by
+$$
+    C(\{v_i\}) = \frac{Rd_{St}(\{V_i\})}{2-d_{St}(\{V_i\})}
+$$
+where $C(\{v_i\})$ is the Cech birth radius of the simplex defined by vertices $\{v_i\}$ and $\{V_i\}$ is the set of $R$-balls centered at each vertex $\{v_i\}$.
+
+The paper then moves on to the 1-skeleton in any arbitrary dimension. Notice that if the 1-skeletons of the two constructions are isomorphic, then the cover filtration is isomorphic to the Vietoris-Rips filtration since VR is formed by initially finding the 1-skeleton of the Cech complex.
+
+> [!lemma]
+> The Vietoris-Rips filtration completely determines the cover filtration in arbitrary dimensions.
+
+While the paper doesn't provide a bijection between the two, they do provide a mapping from the birth time of edges in the Cech filtration to birth time of edges in the cover filtration. More specifically, this map is given by the Steinhaus distance (with Lebesgue measure) of two spheres in $\R^n$ with radius $R$ that have a Euclidean distance of $d$:
+$$
+    d_{St}^n(R,d) = \frac{2V_\circ^n(R) - 2_\cap^n(R,d)}{2V_\circ^n(R)-V_\cap^n(R,d)}
+$$
+where $V_\circ^n(R)$ is the volume of a hypersphere of radius $R$ and $V_\cap^n(R,d)$ is the volume of intersection between two hyperspheres both with radius $R$ whose centers have distance $d$. Both terms involve the gamma function and are messy to compute. The term $V_\cap^n(R,d)$ was derived by Li in 2011.
+
+The paper does not demonstrate that this mapping is bijective, and the existence of an inverse is not clear from the map. However, the existence of the map does suggest we can derive the cover filtration from the VR filtration. More precisely, once the VR filtration is constructed, we can construct the cover filtration by evaluating $d_{St}^n(R,d)$ given above for each radius $R$ in the VR filtration.
+
+While the conjecture was not definitely proven, experimental results are given that reinforce the validity of the claim:
+
+![[SS_2024-04-02_1712092634.png#invert | center]]
+
+The left most plot shows a uniform data set of 20,000 points with 50 sampled landmark points. The middle plot gives the persistence diagram of dimensions 0 and 1 for the VR filtration. Whereas the right plot gives an approximated persitence diagrams (dimensions 0 and 1) for the Steinhaus filtration based on the landmarks. The selected cover was balls of radii 0.5.
+
+The two persistence diagrams have minimal differences, which is to be expected if the conjecture holds true as the Steinhaus filtration is approximated.
+
+# Stable Paths
+
+We want a method to find "stable" paths in the 1-skeleton of a cover filtration. That is, paths with the least distance. That is, the Steinhaus distance. This differs from the shortest path which would be the path with fewest edges.
+
+> [!def] $\rho$-Stable path
+> Given a Steinhaus distance $\rho$, a path $P$ is defined to $\rho$-**stable** if
+> $$
+>   \max\{d_{St}(e)\mid e\in P\}\le\rho. 
+> $$
+
+In other words, a path is $\rho$-stable if each step along the path is at most $\rho$ far. Clearly, if $\rho_1\le \rho_2$ then a $\rho_1$-stable path is also $\rho_2$-stable. Moreover, when $\rho_1<\rho_2$, then we have a higher confidence that a $\rho_1$-stable path $P_1$ is not due to noise than a less stable $\rho_2$-stable path $P_2$. We want to find the maximally stable paths between two vertices.
+
+> [!def] Maximally Stable Path
+> Given a pair of vertices $s$ and $t$, a **maximally stable s-t path** is a $\rho$-stable path between $s$ and $t$ for the smallest value of $\rho$. In the case of multiple s-t paths with the same minimum $\rho$-value, the shortest of the paths is used.
+
+Finding the maximally stable path is a [minimax](https://en.wikipedia.org/wiki/Minimax) path problem on undirected graphs. That is, we want to minimize the maximum edge weight. See daily note [[2024-04-02]] for more details.
+
+There are two paths of relevant: the shortest path, and the most stable. We want to compare the two by computing the Pareto frontier between the two paths:
+
+![[SS_2024-04-02_1712095858.png#invert | center]]
+
+We repeatedly compute the shortest path (orange dots above) while keeping track of the cheapest known path and removing all edges with distance larger than $\rho$.
+
+```
+Input: 1-skeleton G of cover filtration and vertices s,t
+
+set LIST = [] // stores path P and cost p pairs
+while s and t are connected in G:
+    compute shortest path P between s and t
+    set p = max edge distance in P
+
+    if LIST has no path P' where |P|=|P'|:
+        add (P,p) to LIST
+    else if p < p' for path (P',p') in LIST where |P|=|P'|:
+        replace (P',p') with (P,p) in LIST
+
+    remove all edges e from G with distance >= p
+```
+
+# Application: Recommendation Systems
+
+Consider the following question: *What movies should I show my friend first, to wean them into my favorite movie?*
