@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+                "file": "content/Daily/2024-04-04.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+                "file": "content/Daily/2024-04-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+                "file": "content/Daily/2024-04-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md"
+                "file": "content/Daily/2024-04-04.md"
               }
             }
           }
@@ -149,13 +149,16 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Daily/2024-04-04.md~",
+    "content/Figures/random_data_vr_complex_scikit_tda_tut.png",
+    "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+    "content/Daily/2024-04-04.md",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md~",
     "content/Figures/SS_2024-04-02_1712095858.png",
     "content/Daily/2024-04-02.md",
     "content/Daily/2024-04-02.md~",
     "content/Figures/Minimum_spanning_tree.svg",
     "content/Figures/Unconfirmed 527512.crdownload",
-    "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
     "content/Figures/SS_2024-04-02_1712092634.png",
     "content/Papers/4913",
     "content/Daily/2024-03-29.md",
@@ -172,14 +175,12 @@
     "content/index.md",
     "content/index.md~",
     "content/Daily/2024-03-26.md~",
-    "content/Algebra/Free Group.md~",
     "content/Figures/P1S2all.jpg",
     "content/Figures/800px-Fundamental_group_of_the_circle.svg.png",
     "content/Figures/SS_2024-03-26_1711487892.png",
     "content/Daily/2024-03-19.md",
     "content/Algebra/Quotient Group.md",
     "public/static/og-image.png",
-    "public/static/icon.png",
     "node_modules/mathjax-full/README.md",
     "node_modules/mathjax-full/CONTRIBUTING.md",
     "node_modules/typescript/SECURITY.md",
@@ -192,7 +193,6 @@
     "node_modules/saxes/README.md",
     "node_modules/serve-handler/README.md",
     "node_modules/rehype-citation/README.md",
-    "node_modules/shebang-regex/readme.md",
-    "node_modules/sisteransi/readme.md"
+    "node_modules/shebang-regex/readme.md"
   ]
 }
