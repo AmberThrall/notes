@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-04-08.md",
+                "file": "content/Daily/2024-04-10.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-04-08.md",
+                "file": "content/Daily/2024-04-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-04-08.md",
+                "file": "content/Daily/2024-04-10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-04-08.md"
+                "file": "content/Daily/2024-04-10.md"
               }
             }
           }
@@ -149,6 +149,9 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Daily/2024-04-10.md~",
+    "content/Daily/2024-04-08.md",
+    "content/Daily/2024-04-10.md",
     "content/Daily/2024-04-08.md~",
     "content/Daily/4913",
     "content/Daily/2024-04-04.md",
@@ -175,7 +178,6 @@
     "content/Algebra/Free Group.md",
     "Algebra.md",
     "content/index.md",
-    "content/index.md~",
     "content/Figures/P1S2all.jpg",
     "content/Figures/800px-Fundamental_group_of_the_circle.svg.png",
     "content/Figures/SS_2024-03-26_1711487892.png",
@@ -192,8 +194,6 @@
     "node_modules/signal-exit/README.md",
     "node_modules/section-matter/README.md",
     "node_modules/saxes/README.md",
-    "node_modules/serve-handler/README.md",
-    "node_modules/rehype-citation/README.md",
-    "node_modules/shebang-regex/readme.md"
+    "node_modules/serve-handler/README.md"
   ]
 }
