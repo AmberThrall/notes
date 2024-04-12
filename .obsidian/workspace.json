@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-04-10.md",
+                "file": "content/Daily/2024-04-08.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-04-10.md",
+                "file": "content/Daily/2024-04-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-04-10.md",
+                "file": "content/Daily/2024-04-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-04-10.md"
+                "file": "content/Daily/2024-04-08.md"
               }
             }
           }
@@ -149,10 +149,10 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Daily/2024-04-08.md~",
+    "content/Daily/2024-04-10.md",
     "content/Daily/2024-04-10.md~",
     "content/Daily/2024-04-08.md",
-    "content/Daily/2024-04-10.md",
-    "content/Daily/2024-04-08.md~",
     "content/Daily/4913",
     "content/Daily/2024-04-04.md",
     "content/Daily/2024-04-04.md~",
@@ -173,7 +173,6 @@
     "content/Computational Topology/Persistent Homology.md~",
     "content/Computational Topology/1711664064-UYXB.md",
     "content/Figures/750px-Persistence_Diagram.png",
-    "content/Figures/750px-Persistence_Diagram.png.crdownload",
     "content/Daily/2024-03-26.md",
     "content/Algebra/Free Group.md",
     "Algebra.md",
