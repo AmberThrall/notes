@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-04-08.md",
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-04-08.md",
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-04-08.md",
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-04-08.md"
+                "file": "content/Papers/Persistence stability for geometric complexes.md"
               }
             }
           }
@@ -149,10 +149,16 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Papers/Persistence stability for geometric complexes.md~",
+    "content/Algebra/Module.md",
+    "content/Algebra/Module.md~",
+    "content/Papers/Persistence stability for geometric complexes.md",
+    "content/Daily/2024-04-16.md",
+    "content/Daily/2024-04-16.md~",
+    "content/Daily/2024-04-08.md",
     "content/Daily/2024-04-08.md~",
     "content/Daily/2024-04-10.md",
     "content/Daily/2024-04-10.md~",
-    "content/Daily/2024-04-08.md",
     "content/Daily/4913",
     "content/Daily/2024-04-04.md",
     "content/Daily/2024-04-04.md~",
@@ -165,12 +171,9 @@
     "content/Figures/Minimum_spanning_tree.svg",
     "content/Figures/Unconfirmed 527512.crdownload",
     "content/Figures/SS_2024-04-02_1712092634.png",
-    "content/Papers/4913",
     "content/Daily/2024-03-29.md",
-    "content/Daily/2024-03-29.md~",
     "content/Figures/SS_2024-03-29_1711749705.png",
     "content/Computational Topology/Persistent Homology.md",
-    "content/Computational Topology/Persistent Homology.md~",
     "content/Computational Topology/1711664064-UYXB.md",
     "content/Figures/750px-Persistence_Diagram.png",
     "content/Daily/2024-03-26.md",
@@ -190,9 +193,6 @@
     "node_modules/sass/README.md",
     "node_modules/@esbuild/linux-x64/README.md",
     "node_modules/jsdom/README.md",
-    "node_modules/signal-exit/README.md",
-    "node_modules/section-matter/README.md",
-    "node_modules/saxes/README.md",
-    "node_modules/serve-handler/README.md"
+    "node_modules/signal-exit/README.md"
   ]
 }
