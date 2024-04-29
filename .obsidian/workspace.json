@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md",
+                "file": "content/Algebra/Cyclic Groups.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md",
+                "file": "content/Algebra/Cyclic Groups.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md",
+                "file": "content/Algebra/Cyclic Groups.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md"
+                "file": "content/Algebra/Cyclic Groups.md"
               }
             }
           }
@@ -149,6 +149,11 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Algebra/Cyclic Groups.md~",
+    "content/Algebra/Groups.md",
+    "content/Algebra/Groups.md~",
+    "content/Algebra/Cyclic Groups.md",
+    "content/Algebra/4913",
     "content/Papers/Persistence stability for geometric complexes.md~",
     "content/Figures/SS_2024-04-25_1714077275.png",
     "content/Figures/SS_2024-04-25_1714076945.png",
@@ -167,12 +172,9 @@
     "content/Daily/2024-04-04.md~",
     "content/Figures/random_data_vr_complex_scikit_tda_tut.png",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
-    "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md~",
     "content/Figures/SS_2024-04-02_1712095858.png",
     "content/Daily/2024-04-02.md",
-    "content/Daily/2024-04-02.md~",
     "content/Figures/Minimum_spanning_tree.svg",
-    "content/Figures/Unconfirmed 527512.crdownload",
     "content/Figures/SS_2024-04-02_1712092634.png",
     "content/Daily/2024-03-29.md",
     "content/Figures/SS_2024-03-29_1711749705.png",
@@ -191,8 +193,6 @@
     "node_modules/typescript/SECURITY.md",
     "node_modules/typescript/README.md",
     "node_modules/sass/README.md",
-    "node_modules/@esbuild/linux-x64/README.md",
-    "node_modules/jsdom/README.md",
-    "node_modules/signal-exit/README.md"
+    "node_modules/@esbuild/linux-x64/README.md"
   ]
 }
