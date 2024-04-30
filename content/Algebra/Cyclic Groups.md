@@ -36,3 +36,15 @@ $$
     a^r=a^s \Leftrightarrow a^{r-s}=e \Leftrightarrow r-s\in\textup{Ker}\alpha=\langle m\rangle \Leftrightarrow m\mid(r-s),
 $$
 i.e., $r=s$ in $\Z_m$. Therefore, $G\cong \Z_m$.
+
+Let $G$ be a group of and $a\in G$ have infinite order ($|\langle a\rangle|=\infty$). Then
+1. $a^k=e$ if and only if $k=0$
+2. the elements $a^k$ for all $k\in\Z$ are distinct
+
+If $a$ has finite order $m>0$, then
+
+3. $m$ is the least positive integer such that $a^m=e$
+4. $a^k=e$ if and only if $m\mid k$
+5. $a^r=a^s$ if and only if $r\equiv s\bmod m$
+6. $\langle a\rangle$ is the distinct elements $a,a^2,\dots,a^{m-1},a^m=e$
+7. if $k\mid m$ then the order $|a^k|=m/k$

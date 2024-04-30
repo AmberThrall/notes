@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Algebra/Cyclic Groups.md",
+                "file": "content/Topology/Topological Spaces.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Algebra/Cyclic Groups.md",
+                "file": "content/Topology/Topological Spaces.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Algebra/Cyclic Groups.md",
+                "file": "content/Topology/Topological Spaces.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Algebra/Cyclic Groups.md"
+                "file": "content/Topology/Topological Spaces.md"
               }
             }
           }
@@ -149,10 +149,14 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Topology/Topological Spaces.md~",
+    "content/Algebra/Cyclic Groups.md",
+    "content/Topology/Topological Spaces.md",
+    "content/index.md~",
+    "content/Topology",
     "content/Algebra/Cyclic Groups.md~",
     "content/Algebra/Groups.md",
     "content/Algebra/Groups.md~",
-    "content/Algebra/Cyclic Groups.md",
     "content/Algebra/4913",
     "content/Papers/Persistence stability for geometric complexes.md~",
     "content/Figures/SS_2024-04-25_1714077275.png",
@@ -167,9 +171,7 @@
     "content/Daily/2024-04-08.md~",
     "content/Daily/2024-04-10.md",
     "content/Daily/2024-04-10.md~",
-    "content/Daily/4913",
     "content/Daily/2024-04-04.md",
-    "content/Daily/2024-04-04.md~",
     "content/Figures/random_data_vr_complex_scikit_tda_tut.png",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
     "content/Figures/SS_2024-04-02_1712095858.png",
@@ -192,7 +194,6 @@
     "node_modules/mathjax-full/CONTRIBUTING.md",
     "node_modules/typescript/SECURITY.md",
     "node_modules/typescript/README.md",
-    "node_modules/sass/README.md",
-    "node_modules/@esbuild/linux-x64/README.md"
+    "node_modules/sass/README.md"
   ]
 }

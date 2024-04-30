@@ -11,4 +11,5 @@ You can navigate by [[tags/ | tag]] or folder:
 - [[Algebra/]]
 - [[Computational Topology/]]
 - [[Daily/]]
+- [[Topology/]]
 - [[Papers/]]
