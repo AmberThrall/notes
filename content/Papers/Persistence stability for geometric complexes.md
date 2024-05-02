@@ -69,7 +69,9 @@ The paper provides an unnecessarily complex definition of a multivalued map $C$ 
 A single-valued map is **subordinate** to a multivalued map $C$ if $f(x)\in C(x)$ for all $x\in X$ and is denoted $f:X\xrightarrow{C}Y$.
 
 > [!def] $\epsilon$-simplicial
-> Let $\bb{S}$ and $\bb{T}$ be two filtered simplicial complexes with vertex sets $X$ and $Y$. A multivalued map $C$ from $X$ to $Y$ is $\epsilon$-simplicial if for any $a\in\R$ and any simplex $\sigma\in\bb{S}_a$, every finite subset of $C(\sigma)$ is a simplex of $\bb{T}_{a+\epsilon}$.
+> Let $\bb{S}$ and $\bb{T}$ be two filtered simplicial complexes with vertex sets $X$ and $Y$. A multivalued map $C:X\rightrightarrows Y$ is $\epsilon$-simplicial if for any $a\in\R$ and any simplex $\sigma\in\bb{S}_a$, every finite subset of $C(\sigma)$ is a simplex of $\bb{T}_{a+\epsilon}$.
+
+![[SS_2024-05-02_1714688414.png#invert | center ]]
 
 > [!prp] 
 > If $C$ is an $\epsilon$-simplicial multivalued map, then $C$ induces a canonical linear map $H(C)\in\textup{Hom}^\epsilon(H(\bb{S}),H(\bb{T}))$ equal to $H(f)$ for any $f:X\xrightarrow{C}Y$.
@@ -82,3 +84,44 @@ Here $H(f)$ represents the homomorphism of degree $\epsilon$ between $H(\bb{S})$
 > - $D:Y\rightrightarrows Z$ is $\delta$-simplicial
 >
 > then $D\circ C:X\rightrightarrows Z$ is $(\epsilon+\delta)$-simplicial and $H(D\circ C)=H(D)\circ H(C)$.
+
+# Correspondences
+
+> [!def] Correspondence
+> A multivalued map $C:X\rightrightarrows Y$ is a **correspondence** if the projection $C\rightarrow Y$ is surjective, i.e., for every $y\in Y$ there is at least one $x\in X$ such that $(x,y)\in C$. Alternatively, the transpose $C^\top$ (constructed by image of $(x,y)\mapsto(y,x)$ map) is a multivalued map.
+
+If $C$ is a correspondence then the maps $1_X=\{(x,x)\}$ and $1_Y=\{(y,y)\}$ satisfy
+$$
+    1_X\subset C^\top\circ C~\text{ and }~1_Y\subset C\circ C^\top.
+$$
+Let $C$ be a correspondence between vertex sets of filtered complexes $\bb{S}$ and $\bb{T}$. If $C$ maps simplices $\sigma\in\bb{S}_a$ to simplices $C(\sigma)\in\bb{T}_{a+\epsilon}$ and $C^\top$ maps simplices $\tau\in\bb{T}_a$ to simplices $C^\top(\tau)\in\bb{S}_{a+\epsilon}$, then $H(C)$ and $H(C^\top)$ induce $\epsilon$-interleaved persistence modules $H(\bb{S})$ and $H(\bb{T})$.
+
+![[SS_2024-05-02_1714685668.png#invert | center ]]
+
+Consider the case where $X$ and $Y$ are metric spaces. Then a correspondence $C:X\rightrightarrows Y$ has **distortion** defined by 
+$$
+    \textup{dis}(C) = \sup\{|d_X(x,x')-d_Y(y,y')|:(x,y),(x',y')\in C\}.
+$$
+We can us the distortion to calculate the Gromov-Hausdorff distance:
+$$
+    d_{GH}(X,Y) = \frac{1}{2}\inf\{\textup{dis}(C):C:X\rightrightarrows Y\text{ is a correspondence}\}.
+$$
+"low-distrortion" correspondences give rise to $\epsilon$-simplicial maps.
+
+#### Vietoris-Rips and Cech complex
+
+Let $(X,d_X)$ be a metric space. We get a filtered simplicial complex $\R\textup{ips}(X)=(\textup{Rips}(X,a))_{a\in\R}$ where 
+$$
+    [x_0,x_1,\dots,x_k]\in\textup{Rips}(X,a)\Leftrightarrow d_X(x_i,x_j)\le a\text{ for all }i,j.
+$$
+
+> [!lemma] Vietoris-Rips interleaving
+> Let $(X,d_X)$ and $(Y,d_Y)$ be metric spaces. For any $\epsilon>2d_{GH}(X,Y)$ the persistence modules $H(\R\textup{ips}(X))$ and $H(\R\textup{ips}(Y))$ are $\epsilon$-interleaved.
+
+Since $\epsilon>2d_{GH}$ there is a correspondence $C:X\rightrightarrows Y$ with distortion at most $\epsilon$. Consider $\sigma\in\textup{Rips}(X,a)$ and finite subset $\tau\subset C(\sigma)$. Notice that for any $y,y'\in\tau$, there is some $x,x'\in\sigma$ such that $y\in C(x)$ and $y'\in C(x')$. But
+$$
+    d_Y(y,y')\le d_X(x,x') + \epsilon\le a+\epsilon
+$$
+So $\tau\in\textup{Rips}(Y,a+\epsilon)$. Thus, $C$ is an $\epsilon$-simplicial from $\R\textup{ips}(X)$ to $\R\textup{ips}(Y)$. A similar argument holds for $C^\top$.
+
+The paper proves a similar result for the Cech complex.
