@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Algebra/Isomorphism Theorems.md",
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Algebra/Isomorphism Theorems.md",
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Algebra/Isomorphism Theorems.md",
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Algebra/Isomorphism Theorems.md"
+                "file": "content/Papers/Persistence stability for geometric complexes.md"
               }
             }
           }
@@ -149,6 +149,7 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Papers/Persistence stability for geometric complexes.md~",
     "content/Algebra/Isomorphism Theorems.md~",
     "content/Figures/Diagram_for_the_First_Isomorphism_Theorem.png",
     "content/Figures/Diagram_for_the_First_Isomorphism_Theorem.png.crdownload",
@@ -156,7 +157,6 @@
     "content/Algebra/Quotient Group.md",
     "content/Algebra/Isomorphism Theorems.md",
     "content/Algebra/Cyclic Groups.md",
-    "content/Papers/Persistence stability for geometric complexes.md~",
     "content/Figures/SS_2024-05-02_1714688414.png",
     "content/Figures/SS_2024-05-02_1714685668.png",
     "content/Topology/Topological Spaces.md",
