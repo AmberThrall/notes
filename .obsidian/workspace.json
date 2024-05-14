@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Category Theory/Categories.md",
+                "file": "content/Category Theory/Duality.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Category Theory/Categories.md",
+                "file": "content/Category Theory/Duality.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Category Theory/Categories.md",
+                "file": "content/Category Theory/Duality.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Category Theory/Categories.md"
+                "file": "content/Category Theory/Duality.md"
               }
             }
           }
@@ -149,41 +149,43 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
-    "content/Category Theory/Categories.md~",
+    "content/Category Theory/Duality.md~",
+    "content/Category Theory/4913",
     "content/Papers/Persistence stability for geometric complexes.md",
-    "content/Category Theory/Categories.md",
-    "content/Category Theory",
+    "content/Category Theory/Duality.md",
     "content/Papers/Persistence stability for geometric complexes.md~",
+    "content/Daily/2024-05-14.md",
+    "content/Daily/2024-05-14.md~",
+    "content/Figures/1_EmQGvpUYLQj9KQZpBDEQOA.gif",
+    "content/Figures/1_EmQGvpUYLQj9KQZpBDEQOA.gif.crdownload",
+    "content/Figures/1_vPwfK_hni5SMDFBuR194Tw.gif.crdownload",
+    "content/Figures/1_vPwfK_hni5SMDFBuR194Tw.gif",
+    "content/Figures/1_4fTqNjb0NpOm_BX-YpT8fg.webp",
+    "content/Figures/1_4fTqNjb0NpOm_BX-YpT8fg.webp.crdownload",
+    "content/Daily/4913",
+    "content/Figures/1_P8wFt0DqQheT8xEMgx-Z5w.gif",
+    "content/Figures/1_P8wFt0DqQheT8xEMgx-Z5w.gif.crdownload",
+    "content/Figures/1_VZAMTElMafRjz4CtVaEqgg.gif",
+    "content/Figures/1_VZAMTElMafRjz4CtVaEqgg.gif.crdownload",
+    "content/Figures/1_9dqnnfbqz0WfjlhONkD2iQ.gif",
+    "content/Figures/1_9dqnnfbqz0WfjlhONkD2iQ.gif.crdownload",
+    "content/Figures/Unit_square_totally_bounded_space.png",
+    "content/Category Theory/Categories.md",
     "content/Computational Topology/Witness Complex.md",
-    "content/Computational Topology/Witness Complex.md~",
     "content/Figures/SS_2024-05-08_1715199269.png",
-    "content/Algebra/Isomorphism Theorems.md~",
     "content/Figures/Diagram_for_the_First_Isomorphism_Theorem.png",
-    "content/Figures/Diagram_for_the_First_Isomorphism_Theorem.png.crdownload",
     "content/Figures/SS_2024-05-06_1715034974.png",
     "content/Algebra/Quotient Group.md",
     "content/Algebra/Isomorphism Theorems.md",
     "content/Algebra/Cyclic Groups.md",
-    "content/Figures/SS_2024-05-02_1714688414.png",
-    "content/Figures/SS_2024-05-02_1714685668.png",
     "content/Topology/Topological Spaces.md",
-    "content/Topology/Topological Spaces.md~",
-    "content/index.md~",
-    "content/Topology",
-    "content/Algebra/Cyclic Groups.md~",
     "content/Algebra/Groups.md",
-    "content/Algebra/Groups.md~",
-    "content/Figures/SS_2024-04-25_1714077275.png",
-    "content/Figures/SS_2024-04-25_1714076945.png",
-    "content/Figures/SS_2024-04-25_1714076441.png",
     "content/Algebra/Module.md",
     "content/Daily/2024-04-16.md",
     "content/Daily/2024-04-08.md",
     "content/Daily/2024-04-10.md",
     "content/Daily/2024-04-04.md",
-    "content/Figures/random_data_vr_complex_scikit_tda_tut.png",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
-    "content/Figures/SS_2024-04-02_1712095858.png",
     "content/Daily/2024-04-02.md",
     "content/Daily/2024-03-29.md",
     "content/Computational Topology/Persistent Homology.md",
@@ -192,8 +194,6 @@
     "content/Algebra/Free Group.md",
     "Algebra.md",
     "content/index.md",
-    "content/Daily/2024-03-19.md",
-    "node_modules/mathjax-full/README.md",
-    "node_modules/mathjax-full/CONTRIBUTING.md"
+    "content/Daily/2024-03-19.md"
   ]
 }

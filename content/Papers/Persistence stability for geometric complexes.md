@@ -5,6 +5,14 @@ tags:
   - papers
 ---
 
+**Questions:**
+- Does the bottleneck metric require both persistence diagrams have the same number of points?
+- The persistence modules work over a field $k$. The given example is homology groups over a field. Can this be done with homology groups over a group like $\Z_2$ or $\Z$?
+- How do persistence diagrams differ for persistence modules?
+- Is it possible to construct an $\epsilon$-interleaving?
+- What exactly is $q$-tame modules?
+- Proposition 3.3
+
 Full paper can be found at: https://link.springer.com/article/10.1007/s10711-013-9937-z
 
 # Introduction
@@ -23,8 +31,6 @@ $$
     d_b(\textup{dgm}(\R\textup{ips}(X)),\textup{dgm}(\R\textup{ips}(Y))) \le 2d_{GH}(X,Y)
 $$
 where $d_b$ is the [[2024-04-16 | bottleneck metric]] on persistence diagrams and $d_{GH}$ is the Gromov-Hausdorff distance.
-
-**Question:** Is this result only useful if the two filtrations give persistence diagrams with equal number of points?  
 
 One immediate consequence of this result is that instead of working with the more messy Gromov-Hausdorff distance, we can use the bottleneck metric which is easier to compute.
 
@@ -75,12 +81,12 @@ A single-valued map is **subordinate** to a multivalued map $C$ if $f(x)\in C(x)
 
 ![[SS_2024-05-02_1714688414.png#invert | center ]]
 
-> [!prp] 
+> [!prp] Proposition 3.3
 > If $C$ is an $\epsilon$-simplicial multivalued map, then $C$ induces a canonical linear map $H(C)\in\textup{Hom}^\epsilon(H(\bb{S}),H(\bb{T}))$ equal to $H(f)$ for any $f:X\xrightarrow{C}Y$.
 
 Here $H(f)$ represents the homomorphism of degree $\epsilon$ between $H(\bb{S})$ and $H(\bb{T})$ induced by $f$ (*I think...*). The proposition states that given any multivalued map $C$ that maps simplices in $\bb{S}_a$ to simplices in $\bb{T}_{a+\epsilon}$, there is a homomorphism of degree $\epsilon$ between $H(\bb{S})$ and $H(\bb{T})$. Moreover, it states that it is given by any subordinate map $f:X\xrightarrow{C}Y$ which implies that all subordinate maps induce the same homomorphism of degree $\epsilon$. Thus, any subset of $C$, $C'$ also gives the same map, i.e., $H(C)=H(C')$ for any multivalued map $C'\subset C$.
 
-> [!prp] Composition of Induced Homomorphisms
+> [!prp] Proposition 3.5
 > Let $\bb{S},\bb{T},\bb{U}$ be filtered complexes with vertex sets $X,Y,Z$. If 
 > - $C:X\rightrightarrows Y$ is $\epsilon$-simplicial
 > - $D:Y\rightrightarrows Z$ is $\delta$-simplicial
@@ -202,3 +208,13 @@ $$
 for all $a\in[\delta,1-\delta)$. Even though $d_H(L,L')=\delta$ can be made arbitrarily small, the homology persistence modules do not $\epsilon$-interleave when $\epsilon<1-2\delta$.
 
 ## Regularity of Rips and Cech filtrations
+
+A subset $F\subset X$ of a metric space $(X,d_X)$ is an **$\epsilon$-sample** of $X$ if for any $x\in X$, there is some $f\in F$ such that $d_X(x,f)<\epsilon$. In other words, every point in $X$ can be approximated by a point in $F$.
+We say a metric space $(X,d_X)$ is **totally bounded** if it has a finite $\epsilon$-sample for every $\epsilon>0$. Alternatively $X$ is totally bounded if for every $\epsilon>0$ we can cover $X$ with finitely many balls. For example, a bounded subset in $\R^n$ would be totally bounded.
+
+![[Unit_square_totally_bounded_space.png#invert | center | 300]]
+
+> [!prp] Proposition 5.1
+> If $(X,d_X)$ is a totally bounded metric space then the persistence modules $H(\R\textup{ips}(X))$ and $H(\bb{C}\textup{ech}(X))$ are $q$-tame.
+
+As a result the persistence diagrams of $H(\R\textup{ips}(X))$ and $H(\bb{C}\textup{ech}(X))$ are well-defined for totally bounded metric spaces.
