@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Computational Topology/Witness Complex.md",
+                "file": "content/Category Theory/Categories.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Computational Topology/Witness Complex.md",
+                "file": "content/Category Theory/Categories.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Computational Topology/Witness Complex.md",
+                "file": "content/Category Theory/Categories.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Computational Topology/Witness Complex.md"
+                "file": "content/Category Theory/Categories.md"
               }
             }
           }
@@ -149,11 +149,14 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Category Theory/Categories.md~",
+    "content/Papers/Persistence stability for geometric complexes.md",
+    "content/Category Theory/Categories.md",
+    "content/Category Theory",
+    "content/Papers/Persistence stability for geometric complexes.md~",
+    "content/Computational Topology/Witness Complex.md",
     "content/Computational Topology/Witness Complex.md~",
     "content/Figures/SS_2024-05-08_1715199269.png",
-    "content/Papers/Persistence stability for geometric complexes.md",
-    "content/Computational Topology/Witness Complex.md",
-    "content/Papers/Persistence stability for geometric complexes.md~",
     "content/Algebra/Isomorphism Theorems.md~",
     "content/Figures/Diagram_for_the_First_Isomorphism_Theorem.png",
     "content/Figures/Diagram_for_the_First_Isomorphism_Theorem.png.crdownload",
@@ -170,7 +173,6 @@
     "content/Algebra/Cyclic Groups.md~",
     "content/Algebra/Groups.md",
     "content/Algebra/Groups.md~",
-    "content/Algebra/4913",
     "content/Figures/SS_2024-04-25_1714077275.png",
     "content/Figures/SS_2024-04-25_1714076945.png",
     "content/Figures/SS_2024-04-25_1714076441.png",
@@ -192,7 +194,6 @@
     "content/index.md",
     "content/Daily/2024-03-19.md",
     "node_modules/mathjax-full/README.md",
-    "node_modules/mathjax-full/CONTRIBUTING.md",
-    "node_modules/typescript/SECURITY.md"
+    "node_modules/mathjax-full/CONTRIBUTING.md"
   ]
 }

@@ -164,3 +164,41 @@ The proof is almost identical to the Vietrois-Rips interleaving.
 > Let $d_H$ denote the [[2024-04-16|Hausdorff distance]] between subsets of a metric space. For any $\epsilon >d_H(L,L')$ the ambient Cech persistence modules $H(\bb{C}\text{ech}(L,W))$ and $H(\bb{C}\text{ech}(L',W'))$ are $\epsilon$-interleaved.
 
 #### Witness Complex
+
+The paper generalized the [[Witness Complex]] discussed in class from the Euclidean metric to an arbitrary function $\Lambda:L\times W\rightarrow\R$. Then for any $\sigma\subset L$, $w\in W$ and $a\in\R$, we say $w$ is an **$a$-witness** for simplex $\sigma$ if 
+$$
+    \Lambda(l,w)\le \Lambda(l', w) + a~\text{ for all }l\in\sigma\text{ and }l'\in L\backslash\sigma. 
+$$
+Thus,
+$$
+    \sigma\in\textup{Wit}(L,W;a)\Leftrightarrow \forall\tau\subseteq\sigma,~\exists w\in W\text{ such that $w$ is an $a$-witness for }\tau.
+$$
+Clearly $\textup{Wit}(L,W;a)\subset\textup{Wit}(L,W;b)$ for $a< b$. Thus, by inclusion maps we get a filtered simplicial complex $\bb{W}\text{it}(L,W)$.
+
+Let $W$ and $W'$ be two witness sets for $L$ with maps $\Lambda:L\times W\rightarrow\R$ and $\Lambda':L\times W'\rightarrow\R$. Then the distortion of a correspondence $C:W\rightrightarrows W'$ is given by 
+$$
+    \textup{dis}(C) = \sup_{l\in L}\sup_{(w,w')\in C}|\Lambda(l,w) - \Lambda'(l,w')|.
+$$
+
+If $\epsilon\ge2\textup{dis}(C)$, then $H(\bb{W}\text{it}(L,W))$ and $H(\bb{W}\text{it}(L,W'))$ are $\epsilon$-interleaved. The proof follows a similar pattern as for Vietoris-Rips.
+
+Often with witness complexes, $L$ and $W$ come from an ambient metric space and $\Lambda=d|_{L\times W}$ (see class notes). In such a situation, if $\epsilon>2d_H(W,W')$ then the persistence modules $H(\bb{W}\text{it}(L,W))$ and $H(\bb{W}\text{it}(L,W'))$ are $\epsilon$-interleaved. This is a corollary of the previous result.
+The set 
+$$
+    C = \{(w,w')\in W\times W':d_X(w,w')<\frac{1}{2}\epsilon\}
+$$
+forms a correspondence with $\text{dis}(C)\le\frac{1}{2}\epsilon$.
+
+**Remark:** The above results do not apply when the two spaces have differing landmark sets.
+
+**Counterexample:** Let $W=L=\{0,1\}\subset\R$ and $L'=\{-\delta,0,1,1+\delta\}$ for some $\delta\in(0,1/2)$. Then
+$$
+    \textup{Wit}(L,W; a) = \{[0],[1],[0,1]\}~\text{ for all }a\ge 0
+$$
+whereas
+$$
+    \textup{Wit}(L',W;a) = \{[-\delta], [0], [1], [1+\delta], [-\delta,0], [1,1+\delta]\}
+$$
+for all $a\in[\delta,1-\delta)$. Even though $d_H(L,L')=\delta$ can be made arbitrarily small, the homology persistence modules do not $\epsilon$-interleave when $\epsilon<1-2\delta$.
+
+## Regularity of Rips and Cech filtrations
