@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Category Theory/Duality.md",
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Category Theory/Duality.md",
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Category Theory/Duality.md",
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Category Theory/Duality.md"
+                "file": "content/Papers/Persistence stability for geometric complexes.md"
               }
             }
           }
@@ -149,11 +149,12 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Papers/Persistence stability for geometric complexes.md~",
+    "content/Papers/4913",
+    "content/Category Theory/Duality.md",
     "content/Category Theory/Duality.md~",
     "content/Category Theory/4913",
     "content/Papers/Persistence stability for geometric complexes.md",
-    "content/Category Theory/Duality.md",
-    "content/Papers/Persistence stability for geometric complexes.md~",
     "content/Daily/2024-05-14.md",
     "content/Daily/2024-05-14.md~",
     "content/Figures/1_EmQGvpUYLQj9KQZpBDEQOA.gif",
@@ -168,7 +169,6 @@
     "content/Figures/1_VZAMTElMafRjz4CtVaEqgg.gif",
     "content/Figures/1_VZAMTElMafRjz4CtVaEqgg.gif.crdownload",
     "content/Figures/1_9dqnnfbqz0WfjlhONkD2iQ.gif",
-    "content/Figures/1_9dqnnfbqz0WfjlhONkD2iQ.gif.crdownload",
     "content/Figures/Unit_square_totally_bounded_space.png",
     "content/Category Theory/Categories.md",
     "content/Computational Topology/Witness Complex.md",

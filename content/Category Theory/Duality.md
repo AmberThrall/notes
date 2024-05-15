@@ -59,5 +59,21 @@ But there is no homomorphisms from $\Q$ to $\Z$ so the morphism is not an isomor
 
 1. Let $h,k:w\rightarrow x$ such that $gfh=gfk$. Since $g$ is monic, $fh=fk$ and since $f$ is monic, $h=k$. Thus, $gf$ is monic.
 2. Let $h,k:w\rightarrow x$ such that $fh=fk$. Then clearly $gfh=gfk$, but that implies that $f=k$. Thus, $f$ is monic.
-3. Identical to 1.
-4. Identical to 2.
+3. Similar to 1.
+4. Similar to 2.
+
+## Exercises
+
+1. What are the monomorphisms in the category of fields?
+
+Let $f:x\rightarrow y$ be a homomorphism. Consider $h,k:w\rightarrow x$ such that $fh=fk$. Assume that $h\ne k$. Then there is some $a\in w$ such that $h(a)\ne k(a)$. Notice that 
+$$
+    0 = fh(a) - fk(a) = f(h(a)-k(a))
+$$
+implying that $\textup{Ker}f$ is non-trivial. But $\textup{Ker}f$ is an ideal, and the only ideals of a field are trivial or the whole field. Thus, $f=0$. Therefore, the morphisms in the category of fields are either trivial or monic.
+
+2. Prove that a morphism that is both a monomorphism and a split epimorphism is necessarily an isomorphism. Argue by duality that a split monomorphism that is an epimorphism is also an isomorphism.
+
+Let $x\xrightarrow{s}y\xrightarrow{r}x$ such that $rs=1_x$ and $r$ is a monomorphism. Notice that $rsr=1_xr=r$. Since $r$ is monic and $rsr=r1_y$, $sr=1_y$. Therefore, $r$ is an isomorphism.
+
+Let $x\xrightarrow{s}y\xrightarrow{r}x$ such that $rs=1_x$ and $s$ is an epimorphism. Notice that by duality $x\xleftarrow{s^\text{op}}y\xleftarrow{r^\text{op}}x$ satisfies $s^\text{op}r^\text{op}=1_x$ and $s^\text{op}$ is a monomorphism. Therefore, $s^\text{op}$ is an isomorphism implying that $s$ is an isomorphism.

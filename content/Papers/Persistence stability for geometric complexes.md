@@ -37,6 +37,9 @@ One immediate consequence of this result is that instead of working with the mor
 # Persistence modules and persistence diagrams
 
 We define a **persistence module** $\bb{V}$ over $\R$ as an indexed family of vector spaces $(V_a)_{a\in\R}$ with a family of linear maps $(v_a^b:V_a\rightarrow V_b\mid a\le b)$ which satisfy $v_b^c\circ v_a^b=v_a^c$ whenever $a\le b\le c$.
+$$
+    \cdots\rightarrow V_a \xrightarrow{v_a^b} V_b \xrightarrow{v_b^c} V_c \rightarrow\cdots
+$$
 
 **Example:** Let $\bb{S}=(\bb{S}_a)_{a\in\R}$ be a filtered simplicial complex, that is, $\bb{S}_a\subset\bb{S}_b$ whenever $a\le b$. Let $V_a=H(\bb{S}_a)$ be the homology groups (coefficients from a field $k$) and $v_a^b:V_a\rightarrow V_b$ be induced by inclusion $\bb{S}_a\hookrightarrow\bb{S}_b$. Then $(H(\bb{S}_a))_{a\in\R}$ is a persistence module.
 
@@ -102,7 +105,7 @@ If $C$ is a correspondence then the maps $1_X=\{(x,x)\}$ and $1_Y=\{(y,y)\}$ sat
 $$
     1_X\subset C^\top\circ C~\text{ and }~1_Y\subset C\circ C^\top.
 $$
-Let $C$ be a correspondence between vertex sets of filtered complexes $\bb{S}$ and $\bb{T}$. If $C$ maps simplices $\sigma\in\bb{S}_a$ to simplices $C(\sigma)\in\bb{T}_{a+\epsilon}$ and $C^\top$ maps simplices $\tau\in\bb{T}_a$ to simplices $C^\top(\tau)\in\bb{S}_{a+\epsilon}$, then $H(C)$ and $H(C^\top)$ induce $\epsilon$-interleaved persistence modules $H(\bb{S})$ and $H(\bb{T})$.
+Let $C$ be a correspondence between vertex sets of filtered complexes $\bb{S}$ and $\bb{V}$. If $C$ maps simplices $\sigma\in\bb{S}_a$ to simplices $C(\sigma)\in\bb{V}_{a+\epsilon}$ and $C^\top$ maps simplices $\tau\in\bb{V}_a$ to simplices $C^\top(\tau)\in\bb{S}_{a+\epsilon}$, then $H(C)$ and $H(C^\top)$ induce $\epsilon$-interleaved persistence modules $H(\bb{S})$ and $H(\bb{V})$.
 
 ![[SS_2024-05-02_1714685668.png#invert | center ]]
 
