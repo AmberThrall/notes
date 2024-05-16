@@ -126,7 +126,7 @@ $$
     [x_0,x_1,\dots,x_k]\in\textup{Rips}(X,a)\Leftrightarrow d_X(x_i,x_j)\le a\text{ for all }i,j.
 $$
 
-> [!lemma] Vietoris-Rips interleaving
+> [!lemma] Lemma 4.3 
 > Let $(X,d_X)$ and $(Y,d_Y)$ be metric spaces. For any $\epsilon>2d_{GH}(X,Y)$ the persistence modules $H(\R\textup{ips}(X))$ and $H(\R\textup{ips}(Y))$ are $\epsilon$-interleaved.
 
 Since $\epsilon>2d_{GH}$ there is a correspondence $C:X\rightrightarrows Y$ with distortion at most $\epsilon$. Consider $\sigma\in\textup{Rips}(X,a)$ and finite subset $\tau\subset C(\sigma)$. Notice that for any $y,y'\in\tau$, there is some $x,x'\in\sigma$ such that $y\in C(x)$ and $y'\in C(x')$. Then
@@ -164,12 +164,12 @@ $$
     \text{dis}(C,D) = \sup_{(l,l')\in C}\sup_{(w,w')\in D}|\Lambda(l,w)-\Lambda'(l',w')|.
 $$
 
-> [!lemma] Dowker interleaving
+> [!lemma] Lemma 4.9
 > If $C:L\rightrightarrows L'$ and $D:W\rightrightarrows W'$ are correspondences and $\epsilon\ge\textup{dis}(C,D)$ then the persistence modules $H(\bb{D}\text{ow}(\Lambda))$ and $H(\bb{D}\text{ow}(\Lambda'))$ are $\epsilon$-interleaved.
 
 The proof is almost identical to the Vietrois-Rips interleaving.
 
-> [!cor] ambient Cech interleaving
+> [!cor] Corollary 4.10
 > Let $d_H$ denote the [[2024-04-16|Hausdorff distance]] between subsets of a metric space. For any $\epsilon >d_H(L,L')$ the ambient Cech persistence modules $H(\bb{C}\text{ech}(L,W))$ and $H(\bb{C}\text{ech}(L',W'))$ are $\epsilon$-interleaved.
 
 #### Witness Complex
@@ -220,4 +220,112 @@ We say a metric space $(X,d_X)$ is **totally bounded** if it has a finite $\epsi
 > [!prp] Proposition 5.1
 > If $(X,d_X)$ is a totally bounded metric space then the persistence modules $H(\R\textup{ips}(X))$ and $H(\bb{C}\textup{ech}(X))$ are $q$-tame.
 
+The proof constructs the correpondence:
+$$ C=\{(x,f)\in X\times F:d_X(x,f) < \frac{1}{2}\epsilon \} $$
+where $F$ is an $\frac{1}{2}\epsilon$ sample of $X$. As a result, the Gromov-Hausdorff distance is less than $\frac{1}{2}\epsilon$ and there is an $\epsilon$-interleaving. Letting $\epsilon=(b-a)/2$ results in the map $I_a^b$ in the persistence module factoring into
+$$
+    H(\text{Rips}(X,a)) \rightarrow H(\text{Rips}(F,a+\epsilon)) \rightarrow H(\text{Rips}(X,b)).
+$$
+Since $F$ is finite-dimensional, $\textup{Rips}(F,a+\epsilon)$ is a finite simplicial complex. Therefore, $I_a^b$ has finite rank.
+
 As a result the persistence diagrams of $H(\R\textup{ips}(X))$ and $H(\bb{C}\textup{ech}(X))$ are well-defined for totally bounded metric spaces.
+
+> [!thm] Theorem 5.2
+> Let $X,Y$ be totally bounded metric spaces. Then
+> $$
+>   d_b(\text{dgm}(H(\R\text{ips}(X))),\text{dgm}(H(\R\text{ips}(Y)))) \le 2d_{GH}(X,Y)
+> $$
+> and
+> $$
+>   d_b(\text{dgm}(H(\bb{C}\text{ech}(X))),\text{dgm}(H(\bb{C}\text{ech}(Y)))) \le 2d_{GH}(X,Y).
+> $$
+
+We get similar results for ambient Cech complexes:
+
+> [!prp] Proposition 5.4
+> Let $L, W$ be subsets of a metric space. If at least one of $L,W$ is totally bounded, then the ambient Cech persistence $H(\bb{C}\text{ech}(L,W))$ is $q$-tame.
+
+The proof is similar to proposition 5.1. For every $\epsilon>0$ it shows that $H(\bb{C}\text{ech}(L,W))$ is $\epsilon$-interleaved with a finite simplicial complex. Namely, $H(\bb{C}\text{ech}(F,W))$ where $F$ is an $\epsilon$-sample with $d_H(L,F)\le\epsilon$.
+
+> [!thm] Theorem 5.6
+> Let $L,L'$ and $W$ be subsets of a metric space. Suppose $L,L'$ are totally bounded or that $W$ is totally bounded. Then
+> $$
+>   d_b(\text{dgm}(H(\bb{C}\text{ech}(L,W))),\text{dgm}(H(\bb{C}\text{ech}(L',W)))) \le d_H(L,L').
+> $$
+
+Finally for Dowker complexes:
+
+> [!prp] Proposition 5.7
+> Let $L,W$ be sets and $\Lambda:L\times W\rightarrow\R$ be a function. Suppose the collection $(\lambda_l)_{l\in L}$ of functions $\lambda_l(w)=\Lambda(l,w)$ is bounded and totally bounded with respect to the supremum norm on functions $W\rightarrow\R$. Then $H(\bb{D}\text{ow}(\Lambda))$ is $q$-tame.
+
+Again we show that $H(\bb{D}\text(ow)(\Lambda))$ is $\epsilon$-interleaved with a persistent homology for a finite simplicial complex. Let $F$ be a finite subset of $L$ such that $(\lambda_l)_{l\in F}$ is an $\epsilon$-sample of $(\lambda_l)_{l\in L}$. Construct the following correspondences:
+$$
+    C = \{(l,l')\in L\times F\mid\|\lambda_l-\lambda_{l'}\|_\infty<\epsilon\}
+$$
+$$
+    D = \{(w,w)\mid w\in W\}
+$$
+By Lemma 4.9, we get that $H(\bb{D}\text{ow}(\Lambda))$ and $H(\bb{D}\text{ow}(\Lambda_F))$ are $\epsilon$-interleaved.
+
+#### The homology groups of a Rips filtration
+
+One may construct a homology group $H_1(\text{Rips}(X,a))$ with uncountable infinite dimension.
+
+Let
+$$
+    X = \{(t,0)\in\R^2:t\in[0,1]\}\cup\{(t,1)\in\R^2:t\in[0,1]\}
+$$
+with the metric from $\R^2$. Notice that for any $t\in[0,1]$, the edge $e_t=[(t,0),(t,1)]$ is in $\text{Rips}(X,1)$ but no triangles contain $e_t$ in its boundary. Thus, for each $t\in(0,1]$, the cycles
+$$
+    \gamma_t = [(0,0), (t,0)] + e_t + [(t,1),(0,1)] - e_0
+$$
+form a linearly independent set in $H_1(\text{Rips}(X,1))$.
+
+![[SS_2024-05-16_1715890313.png#invert | center | 300 ]]
+
+Here the filtration is only "bad" for a single radius ($r=1$). The paper provides a construction with arbitrarily large "bad" radii.
+
+> [!prp] Proposition 5.9
+> For any $\alpha,\beta\in\R$ with $0<\alpha\le\beta$ and integer $k$, there is a compact metric space $X$ such that for any $a\in[\alpha,\beta]$ the $k$-homology $H_k(\text{Rips}(X,a))$ has an uncountable infinite dimension.
+
+The assumes $\alpha=1$ and $\beta=2$ (**why?**) and begins with the case $k=1$. It constructs the following space:
+$$
+    X = \{(t,0,z)\in\R^3:t\in[0,2],z\in[0,1]\}\cup\{(t,1+\frac{t}{2},z)\in\R^3:t\in[0,2],z\in[0,1]\}
+$$
+with the $\ell^1$ norm in $\R^3$.
+
+![[SS_2024-05-16_1715899008.png#invert | center ]]
+
+For $a\in[1,2]$ and $z\in[0,1]$ the edge $e_z=[(2(a-1),0,z),(2(a-1),a,z)]$ is in $\text{Rips}(X,a)$ but not contained in any non-degenerate triangle. Thus, for $z\in(0,1]$ the cycles
+$$
+    \gamma_z = [(2(a-1),0,0),(2(a-1),0,z)] + e_z + [(2(a-1),a,z),(2(a-1),a,0)] - e_0
+$$
+are not homologous to 0 and linearly independent.
+
+For $k>1$, we take the product of $X$ with a $(k-1)$-dimensional sphere with sufficiently large radius. It then follows by Künneth theorem:
+$$
+    \bigoplus_{i+j=k}H_i(X)\otimes H_j(Y) \cong H_k(X\times Y).
+$$
+
+#### The open Vietoris-Rips filtration
+
+The Vietoris-Rips complex uses closed balls which was crucial to our "bad" constructions. We consider the open Vietoris-Rips complex made with open balls:
+$$
+    [x_0,x_1,\dots,x_k]\in\text{Rips}(X,a^-) \Leftrightarrow d_X(x_i,x_j)< a~\text{ for all }i,j.
+$$
+Under the open Vietoris-Rips complex the bad edge no longer exists. Under this construction we can ensure at least the homology is countable.
+
+> [!prp] Proposition 5.10
+> For any totally bounded metric space $X$ and real number $a>0$, the total homology $H(\text{Rips}(X,a^-))$ has a countable basis.
+
+Any cycle in $H_k(\textup{Rips}(X,a^-))$ is a finite linear combination of simplices with diameter less than $a$. Thus, there is some $n$ such that their diameter is less than $a-1/n$. Notice that such a class lives in the image of $H_k(\text{Rips}(X,a-1/n))\rightarrow H_k(\text{Rips}(X,a))$. By proposition 5.1, $H_k(\R\text{ips}(X))$ is $q$-tame. So this image is finite dimensional. Moreover, $H_k(\text{Rips}(X,a))$ is the union of all such images as $n\rightarrow\infty$. Since each image is finite, $H_k(\text{Rips}(X,a))$ must have a countable basis.
+
+However, we cannot guarantee finiteness.
+
+> [!prp] Proposition 5.11
+> For any given $a>0$ there exists a totally bounded metric space $X$ such that $H_1(\text{Rips}(X,a^-))$ has infinite dimension.
+
+#### The first homology group of a Cech filtration
+
+
+
