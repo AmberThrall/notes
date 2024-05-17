@@ -327,5 +327,20 @@ However, we cannot guarantee finiteness.
 
 #### The first homology group of a Cech filtration
 
+While the homology groups $H_k(\text{Cech}(X,a))$ can be infinite dimensional for $k\ge 2$, the first homology group is better behaved.
 
+> [!prp] Proposition 5.12
+> Let $(X,d)$ be a totally bounded metric space, and let $a\ge0$. Then over any coefficient ring $A$ and any $a\in \R$, $H_1(\text{Cech}(X,a),A)$ is finitely generated over $A$. In particular, if $A$ is a field $k$ then
+> $$\dim_k(H_1(\text{Cech}(X,a),k)) < \infty. $$
 
+**Proof sketch:**
+1. Every 1-cycle is homologous to a 1-cycle whose edges are at most length $a$
+2. There is a finite set of edges $E_a$ with length at most $a$ such that for any edge $[x,y]$ of length at most $a$, there is an edge $[x',y']$ in $E_a$ such that $d(x,x')\le a$ and $d(y,y')\le a$.
+3. Any 1-cycle can be written in the form
+$$ [x_1,x_2] + [x_2,x_3] + \dots + [x_k,x_1] $$
+4. Any 1-cycle $\gamma$ of the form
+$$ \gamma= [x_1,x_2] + [x_2,x_3] + \dots + [x_k,x_1] $$
+with edges having length at most $a$ is homologous to cycle whose edges are in $E_a$.
+5. Since every 1-cycle involves a finite set of edges $E_a$, the first homology group is finitely generated.
+
+### Special classes of metric spaces

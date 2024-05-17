@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md",
+                "file": "content/Category Theory/Functoriality.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md",
+                "file": "content/Category Theory/Functoriality.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md",
+                "file": "content/Category Theory/Functoriality.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md"
+                "file": "content/Category Theory/Functoriality.md"
               }
             }
           }
@@ -149,6 +149,12 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Category Theory/Functoriality.md~",
+    "content/Figures/SS_2024-05-17_1715985677.png",
+    "content/Papers/The structure and stability of persistence modules.md",
+    "content/Category Theory/Functoriality.md",
+    "content/Papers/The structure and stability of persistence modules.md~",
+    "content/Papers/Persistence stability for geometric complexes.md",
     "content/Papers/Persistence stability for geometric complexes.md~",
     "content/Figures/SS_2024-05-16_1715899008.png",
     "content/Papers/4913",
@@ -156,7 +162,6 @@
     "content/Category Theory/Duality.md",
     "content/Category Theory/Duality.md~",
     "content/Category Theory/4913",
-    "content/Papers/Persistence stability for geometric complexes.md",
     "content/Daily/2024-05-14.md",
     "content/Daily/2024-05-14.md~",
     "content/Figures/1_EmQGvpUYLQj9KQZpBDEQOA.gif",
@@ -165,15 +170,12 @@
     "content/Figures/1_vPwfK_hni5SMDFBuR194Tw.gif",
     "content/Figures/1_4fTqNjb0NpOm_BX-YpT8fg.webp",
     "content/Figures/1_4fTqNjb0NpOm_BX-YpT8fg.webp.crdownload",
-    "content/Daily/4913",
     "content/Figures/1_P8wFt0DqQheT8xEMgx-Z5w.gif",
-    "content/Figures/1_P8wFt0DqQheT8xEMgx-Z5w.gif.crdownload",
     "content/Figures/1_VZAMTElMafRjz4CtVaEqgg.gif",
     "content/Figures/1_9dqnnfbqz0WfjlhONkD2iQ.gif",
     "content/Figures/Unit_square_totally_bounded_space.png",
     "content/Category Theory/Categories.md",
     "content/Computational Topology/Witness Complex.md",
-    "content/Figures/SS_2024-05-08_1715199269.png",
     "content/Algebra/Quotient Group.md",
     "content/Algebra/Isomorphism Theorems.md",
     "content/Algebra/Cyclic Groups.md",
@@ -191,8 +193,6 @@
     "content/Computational Topology/1711664064-UYXB.md",
     "content/Daily/2024-03-26.md",
     "content/Algebra/Free Group.md",
-    "Algebra.md",
-    "content/index.md",
-    "content/Daily/2024-03-19.md"
+    "Algebra.md"
   ]
 }
