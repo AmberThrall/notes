@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Category Theory/Functoriality.md",
+                "file": "content/Daily/2024-05-28.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Category Theory/Functoriality.md",
+                "file": "content/Daily/2024-05-28.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Category Theory/Functoriality.md",
+                "file": "content/Daily/2024-05-28.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Category Theory/Functoriality.md"
+                "file": "content/Daily/2024-05-28.md"
               }
             }
           }
@@ -149,12 +149,15 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Daily/2024-05-28.md~",
+    "content/Daily/4913",
+    "content/Papers/Persistence stability for geometric complexes.md",
+    "content/Daily/2024-05-20.md",
     "content/Category Theory/Functoriality.md~",
     "content/Figures/SS_2024-05-17_1715985677.png",
     "content/Papers/The structure and stability of persistence modules.md",
     "content/Category Theory/Functoriality.md",
     "content/Papers/The structure and stability of persistence modules.md~",
-    "content/Papers/Persistence stability for geometric complexes.md",
     "content/Papers/Persistence stability for geometric complexes.md~",
     "content/Figures/SS_2024-05-16_1715899008.png",
     "content/Papers/4913",
@@ -169,7 +172,6 @@
     "content/Figures/1_vPwfK_hni5SMDFBuR194Tw.gif.crdownload",
     "content/Figures/1_vPwfK_hni5SMDFBuR194Tw.gif",
     "content/Figures/1_4fTqNjb0NpOm_BX-YpT8fg.webp",
-    "content/Figures/1_4fTqNjb0NpOm_BX-YpT8fg.webp.crdownload",
     "content/Figures/1_P8wFt0DqQheT8xEMgx-Z5w.gif",
     "content/Figures/1_VZAMTElMafRjz4CtVaEqgg.gif",
     "content/Figures/1_9dqnnfbqz0WfjlhONkD2iQ.gif",
@@ -192,7 +194,6 @@
     "content/Computational Topology/Persistent Homology.md",
     "content/Computational Topology/1711664064-UYXB.md",
     "content/Daily/2024-03-26.md",
-    "content/Algebra/Free Group.md",
-    "Algebra.md"
+    "content/Algebra/Free Group.md"
   ]
 }
