@@ -109,6 +109,11 @@ Let $C$ be a correspondence between vertex sets of filtered complexes $\bb{S}$ a
 
 ![[SS_2024-05-02_1714685668.png#invert | center ]]
 
+> [!prp] Proposition 4.2
+> Let $\bb{S}$, $\bb{T}$ be filtered complexes with vertex sets $X$, $Y$. If $C:X\rightrightarrows Y$ is a correspondence such that $C$ and $C^\top$ are both $\epsilon$-simplicial, then they induce a $\epsilon$-interleaving between $H(\bb{S})$ and $H(\bb{T})$, namely $H(C)$ and $H(C^\top)$.
+
+**Proposition 4.2 and Theorem 2.3 lay out a foundation for proving an upper bound on the bottleneck distance.** That is, showing the filtered complexes are $q$-tame and there is a correspondence $C$ such that $C$ and $C^\top$ are $\epsilon$-simplicial.
+
 Consider the case where $X$ and $Y$ are metric spaces. Then a correspondence $C:X\rightrightarrows Y$ has **distortion** defined by 
 $$
     \textup{dis}(C) = \sup\{|d_X(x,x')-d_Y(y,y')|:(x,y),(x',y')\in C\}.
@@ -222,10 +227,17 @@ We say a metric space $(X,d_X)$ is **totally bounded** if it has a finite $\epsi
 
 The proof constructs the correpondence:
 $$ C=\{(x,f)\in X\times F:d_X(x,f) < \frac{1}{2}\epsilon \} $$
-where $F$ is an $\frac{1}{2}\epsilon$ sample of $X$. As a result, the Gromov-Hausdorff distance is less than $\frac{1}{2}\epsilon$ and there is an $\epsilon$-interleaving. Letting $\epsilon=(b-a)/2$ results in the map $I_a^b$ in the persistence module factoring into
+where $F$ is an $\frac{1}{2}\epsilon$ sample of $X$. Notice that for all $(x,f),(x',f')\in C$,
 $$
-    H(\text{Rips}(X,a)) \rightarrow H(\text{Rips}(F,a+\epsilon)) \rightarrow H(\text{Rips}(X,b)).
+\begin{align}
+    |d_X(x,x')-d_X(f,f')| &\le |d_X(x,x') - d_X(x,f')| + |d_X(x,f') - d_X(f,f')| \\
+    &\le d_X(x',f') + d_X(x,f) \\
+    &<\epsilon.
+\end{align}
 $$
+
+As a result, the Gromov-Hausdorff distance is less than $\frac{1}{2}\epsilon$ and there is an $\epsilon$-interleaving (Lemma 4.3). Letting $\epsilon=(b-a)/2$ results in the map $I_a^b$ in the persistence module factoring into
+![[SS_2024-05-29_1717014852.png#invert | center | 380 ]]
 Since $F$ is finite-dimensional, $\textup{Rips}(F,a+\epsilon)$ is a finite simplicial complex. Therefore, $I_a^b$ has finite rank.
 
 As a result the persistence diagrams of $H(\R\textup{ips}(X))$ and $H(\bb{C}\textup{ech}(X))$ are well-defined for totally bounded metric spaces.
@@ -239,6 +251,8 @@ As a result the persistence diagrams of $H(\R\textup{ips}(X))$ and $H(\bb{C}\tex
 > $$
 >   d_b(\text{dgm}(H(\bb{C}\text{ech}(X))),\text{dgm}(H(\bb{C}\text{ech}(Y)))) \le 2d_{GH}(X,Y).
 > $$
+
+**Proof:** Lemma 4.3, Proposition 5.1, and Theorem 2.3.
 
 We get similar results for ambient Cech complexes:
 
