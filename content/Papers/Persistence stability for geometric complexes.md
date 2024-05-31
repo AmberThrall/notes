@@ -6,10 +6,13 @@ tags:
 ---
 
 **Questions:**
-- Does the bottleneck metric require both persistence diagrams have the same number of points?
+- Does the bottleneck metric require both persistence diagrams have the same number of points? 
+    - **Answer:** Unmatched points are projected down to the diagonal line. If we take into account the diagonal line, there is always the same number of points.
 - The persistence modules work over a field $k$. The given example is homology groups over a field. Can this be done with homology groups over a group like $\Z_2$ or $\Z$?
+    - **Answer:** Typically we work over a finite field $\Z_p$.
 - How do persistence diagrams differ for persistence modules?
-- Is it possible to construct an $\epsilon$-interleaving?
+- Is it possible to construct an $\epsilon$-interleaving? 
+    - **Answer:** It would be very difficult. Typically work with existence results.
 - What exactly is $q$-tame modules?
 - Proposition 3.3
 
