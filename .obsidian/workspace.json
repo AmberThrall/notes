@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-06-03.md",
+                "file": "content/Daily/2024-06-05.md",
                 "mode": "preview",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-06-03.md",
+                "file": "content/Daily/2024-06-05.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-06-03.md",
+                "file": "content/Daily/2024-06-05.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-06-03.md"
+                "file": "content/Daily/2024-06-05.md"
               }
             }
           }
@@ -149,9 +149,11 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Daily/2024-06-05.md~",
+    "content/Daily/2024-06-03.md",
+    "content/Daily/2024-06-05.md",
     "content/Daily/2024-06-03.md~",
     "content/Daily/2024-05-31.md",
-    "content/Daily/2024-06-03.md",
     "content/Daily/2024-05-31.md~",
     "content/Daily/4913",
     "content/Papers/Persistence stability for geometric complexes.md",
@@ -192,7 +194,6 @@
     "content/Daily/2024-04-04.md",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
     "content/Daily/2024-04-02.md",
-    "content/Daily/2024-03-29.md",
-    "content/Computational Topology/Persistent Homology.md"
+    "content/Daily/2024-03-29.md"
   ]
 }
