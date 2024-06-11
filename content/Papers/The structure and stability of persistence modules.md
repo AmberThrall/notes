@@ -63,9 +63,13 @@ As a result, they are often $q$-tame, i.e., $\textup{rank}(v_s^t)<\infty$ whenev
 
 > [!def] Homomorphism between persistence modules
 > A homomorphism between two $T$-persistence modules $\bb{U},\bb{V}$ is a collection of linear maps
+>
 > $$ (\phi_t:U_t\rightarrow V_t\mid t\in T) $$
+>
 > such that the diagram
+>
 > ![[SS_2024-06-11_1718142701.png#invert | center ]]
+>
 > commutes for all $s\le t$.
 
 $T$-persistence modules with the above homomorphisms defines a category. The identity map $\id_\bb{V}\in\textup{Hom}(\bb{V},\bb{V})$ is the collection of identity maps $(\id_{V_t}:V_t\rightarrow V_t\mid t\in T)$. Composition is defined in the "obvious manner", for $\Phi\in\textup{Hom}(\bb{U},\bb{V})$ and $\Psi\in\textup{Hom}(\bb{V},\bb{W})$ the composition $\Psi\Phi\in\textup{Hom}(\bb{U},\bb{W})$ is the collection of composed linear maps $(\psi_t\phi_t:U_t\rightarrow W_t\mid t\in T)$.
