@@ -7,6 +7,8 @@ tags:
 
 **Questions:**
 - "...$T$ is a **locally finite subset** of $\R$..."
+    - **Answer:** A locally finite poset is a poset $P$ such that for all $x,y\in P$ the interval $[x,y]=\{z\in P\mid x\le z\le y\}$ is finite. (https://en.wikipedia.org/wiki/Locally_finite_poset) 
+- Homology of sublevel sets
 
 Full paper can be found at: https://arxiv.org/abs/1207.3674
 
@@ -113,3 +115,104 @@ An interval module $\bb{I}(p^*,q^*)$ is either represented:
 The classical persistence diagram draws points $(p,q)$ without indicating the decoration.
 
 ### Interval Decomposition
+
+Recall the direct sum of vector spaces. Given vector spaces $X$ and $Y$, the direct sum $X\oplus Y$ is a vector space consisting of all ordered pairs $(x,y)$ with operations defined component wise:
+- $(x_1,y_1) + (x_2,y_2) = (x_1+x_2,y_1+y_2)$
+- $\alpha(x,y)=(\alpha x,\alpha y)$
+
+Moreover, given two maps $T:X\rightarrow X'$ and $S:Y\rightarrow Y'$, we can create the map $T\oplus S:X\oplus Y\rightarrow X'\oplus Y'$ by defining it component wise
+$$
+    (T\oplus S)(x,y) = (T(x),S(y)).
+$$
+
+We can then define the direct sum of persistence modules.
+
+> [!def] Direct Sum
+> Given two $T$-persistence modules $\bb{U},\bb{V}$, the direct sum $\bb{W}=\bb{U}\oplus\bb{V}$ consists of the vector spaces
+> $$ (W_t=U_t\oplus V_t\mid t\in T) $$
+> with linear maps 
+> $$ (w_s^t = u_s^t\oplus v_s^t\mid s\le t). $$
+
+An alternative viewpoint is we are *decomposing* a persistence module $\bb{W}$ into smaller persistence modules $\bb{U}$ and $\bb{V}$. We say a persistence module is **indecomposable** if the only decompositions are the trivial $\bb{W}=\bb{W}\oplus0$ or $\bb{W}=0\oplus\bb{W}$.
+
+Our goal is decompose a persistence module $\bb{V}$ into an indexed family of interval modules:
+$$
+    \bb{V} = \bigoplus_{\ell\in L}\bb{I}^{J_\ell}.
+$$
+
+> [!prp] Proposition 1.1
+> Let $\bb{I}$ be an interval module over $I\subset\R$. Then $\Hom(\bb{I},\bb{I})=k$.
+
+**Proof:**
+
+Let $\Phi\in\Hom(\bb{I},\bb{I})$. Then each $\phi_t\in\Phi$ is an endomorphism on 0 or $k$. In the non-trivial case, $\phi_t(x)=\alpha_t x$ is the only possible endomorphism. Notice that for all $s\le t$
+$$
+    \phi_tu_s^t(x) = \phi_t(x)\id_k = \alpha_tx
+$$
+and
+$$
+    v_s^t\phi_s(x) = \id_k\phi_s(x) = \alpha_sx.
+$$
+But $\phi_tu_s^t=v_s^t\phi_s$. Therefore, $\phi_t=\phi_s$.
+
+> [!prp] Proposition 1.2
+> Interval modules are indecomposable.
+
+**Proof:**
+
+Assume that $\bb{I}=\bb{U}\oplus\bb{V}$. Notice that the projection map $(u,v)\mapsto (u,0)$ is idempotent, i.e., $f(f(x))=f(x)$, in $\textup{Hom}(\bb{I},\bb{I})$. From the previous proof we know that the only idempotent endomorphisms are 0 and $\id_k$. Therefore, the projection map is either trivial or an isomorphism.
+
+> [!thm] Theorem 1.3 (Krull-Remak-Schmidt-Azumaya)
+> Suppose that a $T$-persistence module $\bb{V}$ decomposes in two ways:
+> $$
+>   \bb{V} = \bigoplus_{\ell\in L}\bb{I}^{J_\ell} = \bigoplus_{m\in M}\bb{I}^{K_m}.
+> $$
+> Then there is a bijection $\sigma:L\rightarrow M$ such that $J_\ell=K_{\sigma(m)}$ for all $\ell\in L$.
+
+In other words, decomposing a $T$-persistence module into interval modules is unique up to order.
+
+> [!thm] Theorem 1.4 (Gabriel, Auslander, Ringel-Tachikawa, Webb)
+> Let $\bb{V}$ be a persistence module over $T\subset\R$. Then $\bb{V}$ can be decomposed as a direct sum of interval modules if 
+> 
+> 1. $T$ is a finite set; or 
+> 2. $T$ is a locally finite subset of $\R$ and each $V_t$ is finite-dimensional.
+
+If either condition (1) or condition (2) in the above theorem hold, we can define a persistence diagram. However, we then see that not every persistence module over $\R$ is guaranteed an interval decomposition. To circumnavigate this issue, one may 
+- Work in restricted settings so that $\bb{V}$ only depends on finitely many indices $t\in\R$, 
+- Sample the persistence module over a finite grid, or
+- Show that the persistence intervals can be inferred from the behavior of $\bb{V}$ on finite index sets.
+
+### The persistence diagram of a decomposable module
+
+> [!def] (Un)decorated persistence diagram
+> If a persistence module $\bb{V}$ can be decomposed as
+> $$
+>   \bb{V}\cong\bigoplus_{\ell\in L}\bb{I}(p_\ell^*,q_\ell^*),
+> $$
+> then we define the **decorated persistence diagram** to be the multiset
+> $$
+>   \textup{Dgm}(\bb{V}) = \textup{Int}(\bb{V}) = \{(p_\ell^*,q^*_\ell)\mid \ell\in L\}
+> $$
+> and the **undecorated persistence diagram** as the multiset
+> $$
+>   \textup{dgm}(\bb{V}) = \textup{int}(\bb{V}) = \{(p_\ell,q_\ell)\mid \ell\in L\} - \Delta
+> $$
+> where $\Delta=\{(r,r)\mid r\in\R\}$ is the diagonal in the plane.
+
+The persistence diagram does not depend on the order of interval modules in the decomposition.
+
+**Example:**
+
+Consider the curve in $\R^2$ below filtered by height:
+
+![[SS_2024-06-12_1718226331.png#invert | center ]]
+
+The sublevelset persistent homology decomposes as follows:
+$$
+    H_0(\bb{X}_\text{sub}) \cong \bb{I}(a^-,\infty)\oplus\bb{I}(b^-,c^-)\oplus\bb{I}(d^-,e^-)
+$$
+$$
+    H_1(\bb{X}_\text{sub}) \cong \bb{I}(f^-,\infty).
+$$
+
+### Quiver calculations
