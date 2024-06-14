@@ -12,5 +12,6 @@ You can navigate by [[tags/ | tag]] or folder:
 - [[Category Theory/]]
 - [[Computational Topology/]]
 - [[Daily/]]
+- [[Machine Learning/]]
 - [[Topology/]]
 - [[Papers/]]
