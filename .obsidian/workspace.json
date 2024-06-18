@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-06-17.md",
+                "file": "content/Daily/2024-06-18.md",
                 "mode": "preview",
                 "source": false
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-06-17.md",
+                "file": "content/Daily/2024-06-18.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-06-17.md",
+                "file": "content/Daily/2024-06-18.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-06-17.md"
+                "file": "content/Daily/2024-06-18.md"
               }
             }
           }
@@ -150,12 +150,14 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Daily/2024-06-18.md~",
+    "content/Daily/2024-06-17.md",
+    "content/Daily/2024-06-18.md",
     "content/Daily/2024-06-17.md~",
     "content/Machine Learning/One-Hot Encoding.md",
     "content/Machine Learning/One-Hot Encoding.md~",
     "content/Figures/mtimFxh.png",
     "content/Machine Learning/4913",
-    "content/Daily/2024-06-17.md",
     "content/Daily/4913",
     "content/Machine Learning/Support Vector Machine.md",
     "content/Machine Learning/Support Vector Machine.md~",
@@ -174,7 +176,6 @@
     "content/Figures/Consumption_of_cray_fishes.png",
     "content/Figures/Have_you_had_Expectoration.png",
     "content/Daily/2024-06-05.md",
-    "content/Daily/2024-05-28.md~",
     "content/Daily/2024-06-03.md",
     "content/Daily/2024-05-31.md",
     "content/Papers/Persistence stability for geometric complexes.md",
@@ -193,7 +194,6 @@
     "content/Topology/Topological Spaces.md",
     "content/Algebra/Groups.md",
     "content/Algebra/Module.md",
-    "content/Daily/2024-04-08.md",
-    "content/Daily/2024-04-10.md"
+    "content/Daily/2024-04-08.md"
   ]
 }
