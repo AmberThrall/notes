@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-06-19.md",
-                "mode": "preview",
+                "file": "content/Optimization/Derivatives and Gradients.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-06-19.md",
+                "file": "content/Optimization/Derivatives and Gradients.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-06-19.md",
+                "file": "content/Optimization/Derivatives and Gradients.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-06-19.md"
+                "file": "content/Optimization/Derivatives and Gradients.md"
               }
             }
           }
@@ -150,32 +149,37 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Figures/SS_2024-06-21_1719011183.png",
+    "content/Figures/SS_2024-06-21_1719008346.png",
+    "content/Figures/SS_2024-06-21_1719007889.png",
+    "content/Figures/SS_2024-06-21_1719007560.png",
+    "content/Optimization/Basic Optimization.md",
+    "content/Optimization/Derivatives and Gradients.md",
+    "content/Figures/SS_2024-06-21_1719006303.png",
+    "content/Figures/SS_2024-06-21_1719005606.png",
+    "content/Figures/SS_2024-06-21_1719005225.png",
+    "content/Figures/SS_2024-06-21_1719001659.png",
+    "content/Figures/SS_2024-06-21_1719000599.png",
+    "content/Papers/The structure and stability of persistence modules.md",
+    "content/Optimization",
+    "content/index.md",
+    "content/Daily/2024-06-19.md",
     "content/Daily/2024-06-19.md~",
     "content/Figures/grid_search_cross_validation.png",
     "content/Daily/4913",
     "content/Figures/grid_search_workflow.png",
     "content/Daily/2024-06-18.md",
-    "content/Daily/2024-06-19.md",
     "content/Daily/2024-06-18.md~",
     "content/Daily/2024-06-17.md",
     "content/Daily/2024-06-17.md~",
     "content/Machine Learning/One-Hot Encoding.md",
     "content/Machine Learning/One-Hot Encoding.md~",
-    "content/Figures/mtimFxh.png",
     "content/Machine Learning/4913",
     "content/Machine Learning/Support Vector Machine.md",
     "content/Machine Learning/Support Vector Machine.md~",
-    "content/Figures/sphx_glr_plot_separating_hyperplane_001.png",
-    "content/Figures/Kernel_Machine.svg",
-    "content/Figures/SVM_margin.png",
-    "content/Figures/SVM Separating Hyperplanes.svg",
     "content/Papers/The structure and stability of persistence modules.md~",
-    "content/Figures/SS_2024-06-12_1718226331.png",
     "content/Papers/4913",
-    "content/Figures/SS_2024-06-11_1718144293.png",
-    "content/Figures/SS_2024-06-11_1718142701.png",
     "content/Paragonimiasis Statistical Analysis.md",
-    "content/Paragonimiasis Statistical Analysis.md~",
     "content/Daily/2024-06-05.md",
     "content/Daily/2024-06-03.md",
     "content/Daily/2024-05-31.md",
@@ -183,7 +187,6 @@
     "content/Daily/2024-05-28.md",
     "content/Daily/2024-04-16.md",
     "content/Daily/2024-05-20.md",
-    "content/Papers/The structure and stability of persistence modules.md",
     "content/Category Theory/Functoriality.md",
     "content/Category Theory/Duality.md",
     "content/Daily/2024-05-14.md",
@@ -191,9 +194,6 @@
     "content/Computational Topology/Witness Complex.md",
     "content/Algebra/Quotient Group.md",
     "content/Algebra/Isomorphism Theorems.md",
-    "content/Algebra/Cyclic Groups.md",
-    "content/Topology/Topological Spaces.md",
-    "content/Algebra/Groups.md",
-    "content/Algebra/Module.md"
+    "content/Algebra/Cyclic Groups.md"
   ]
 }

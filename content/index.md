@@ -13,5 +13,6 @@ You can navigate by [[tags/ | tag]] or folder:
 - [[Computational Topology/]]
 - [[Daily/]]
 - [[Machine Learning/]]
-- [[Topology/]]
+- [[Optimization/]]
 - [[Papers/]]
+- [[Topology/]]
