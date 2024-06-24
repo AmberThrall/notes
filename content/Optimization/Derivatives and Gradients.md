@@ -2,7 +2,7 @@
 tags:
   - optimization
 ---
-## Derivatives
+# Derivatives
 
 The derivatives $f'(x)$ of a univariate function $f:\R\rightarrow\R$ is the rate at which the value of $f$ changes at $x$. It is often visualized as the tangent line to the graph at $x$. The derivative is a useful tool for providing a linear approximation of the function by stepping along the tangent line:
 $$
@@ -21,14 +21,16 @@ $$
 $$
 	f'(x) = \lim_{h\rightarrow0}\frac{f(x)-f(x-h)}{h}
 $$
-## Derivatives in Multiple Dimensions
+# Derivatives in Multiple Dimensions
 
 The **gradient** is a generalization of the derivative to multivariate functions. The gradient of $f:\R^n\rightarrow\R$ at $x$, denoted $\nabla f(x)$ is the vector
 $$
 	\nabla f(x)=\langle\frac{\partial f(x)}{\partial x_1},\cdots,\frac{\partial f(x)}{\partial x_n}\rangle
 $$
 that points in the direction of steepest ascent of the tangent hyperplane.
+
 ![[SS_2024-06-21_1719006303.png#invert | center]]
+
 The **Hessian** of a multivariate function is the matrix containing all the second-order partial derivatives.
 $$
 	\nabla^2f = \displaystyle\begin{bmatrix}
@@ -48,7 +50,7 @@ $$
 $$
 The directional derivative is maximal in the direction of the gradient and minimal in the direct opposite direction of the gradient.
 
-## Numerical Differentiation
+# Numerical Differentiation
 
 Numerically we often approximate the derivative of a function. One such method is **finite difference methods** where we simply evaluate the difference quotient for small $h$, i.e.,
 $$
@@ -82,11 +84,12 @@ Hence, with a single evaluation we can approximate both $f(x)$ and $f'(x)$.
 
 Below is a chart comparing the absolute relative error of complex step, forward difference, and central difference for $\sin(x)$ At $x=1/2$ for various step sizes $h$:
 ![[SS_2024-06-21_1719007560.png#invert | center]]
-## Automatic Differentiation
+# Automatic Differentiation
 
 Imagine taking the partial derivative of the function $f(a,b)=\ln(ab+\max(a,2))$ wit h respect to $a$. Doing so requires applying the chain rule several times. We can automate the process with a **computational graph** which represents a function with a graph where nodes are operations and edges are input-output relations.
 
 ![[SS_2024-06-21_1719007889.png#invert | center]]
+
 There are two methods for automatically differentiating a function $f$ using its computational graph, forward accumulation and reverse accumulation.
 
 #### Forward Accumulation
@@ -98,6 +101,7 @@ We start at the computational graph's source nodes consisting of function inputs
 Next, we proceed down the tree one node at a time. We compute the value and local partial derivative using the previous nodes' values and partial derivatives.
 
 ![[SS_2024-06-21_1719008346.png#invert | center]]
+
 When we are done, we get both $f(3,2)=\ln9$ and $\partial f/\partial a=1/3$.
 
 It is often beneficial to express the value and partial derivative as a **dual number**. A dual number is, like complex numbers, written in the form $a+b\epsilon$ where $a,b\in\R$ and $\epsilon^2=0$ by definition. We can add and multiply dual numbers:
