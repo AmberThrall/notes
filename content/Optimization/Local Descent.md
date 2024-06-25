@@ -1,6 +1,6 @@
 ---
 tags:
-  - paragonimiasis
+  - optimization
 ---
 When optimizing multivariate functions a common approach is to make use of local models and incrementally improve a point. We can do this by at each iteration choosing a direction of descent and stepping in the descent direction with an appropriate step size. The local model is often built via a Taylor approximation. The general flow of **descent direction methods** is as follows:
 
