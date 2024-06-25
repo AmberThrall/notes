@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Optimization/Bracketing.md",
+                "file": "content/Optimization/Local Descent.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Optimization/Bracketing.md",
+                "file": "content/Optimization/Local Descent.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Optimization/Bracketing.md",
+                "file": "content/Optimization/Local Descent.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Optimization/Bracketing.md"
+                "file": "content/Optimization/Local Descent.md"
               }
             }
           }
@@ -149,9 +149,12 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Optimization/Bracketing.md",
+    "content/Optimization/Local Descent.md",
+    "content/Figures/SS_2024-06-25_1719351660.png",
+    "content/Figures/SS_2024-06-25_1719350514.png",
     "content/Optimization/Derivatives and Gradients.md",
     "content/Optimization/Basic Optimization.md",
-    "content/Optimization/Bracketing.md",
     "content/Figures/SS_2024-06-24_1719267692.png",
     "content/Figures/SS_2024-06-24_1719260305.png",
     "content/Figures/SS_2024-06-24_1719258967.png",
@@ -160,8 +163,6 @@
     "content/Figures/SS_2024-06-21_1719007889.png",
     "content/Figures/SS_2024-06-21_1719007560.png",
     "content/Figures/SS_2024-06-21_1719006303.png",
-    "content/Figures/SS_2024-06-21_1719005606.png",
-    "content/Figures/SS_2024-06-21_1719005225.png",
     "content/Papers/The structure and stability of persistence modules.md",
     "content/Optimization",
     "content/index.md",
@@ -192,7 +193,6 @@
     "content/Daily/2024-05-14.md",
     "content/Category Theory/Categories.md",
     "content/Computational Topology/Witness Complex.md",
-    "content/Algebra/Quotient Group.md",
-    "content/Algebra/Isomorphism Theorems.md"
+    "content/Algebra/Quotient Group.md"
   ]
 }
