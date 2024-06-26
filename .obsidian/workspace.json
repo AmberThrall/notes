@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Optimization/Local Descent.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Optimization/Local Descent.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Optimization/Local Descent.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Optimization/Local Descent.md"
+                "file": "content/Papers/The structure and stability of persistence modules.md"
               }
             }
           }
@@ -149,8 +149,9 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
-    "content/Optimization/Bracketing.md",
+    "content/Figures/SS_2024-06-26_1719439191.png",
     "content/Optimization/Local Descent.md",
+    "content/Optimization/Bracketing.md",
     "content/Figures/SS_2024-06-25_1719351660.png",
     "content/Figures/SS_2024-06-25_1719350514.png",
     "content/Optimization/Derivatives and Gradients.md",
