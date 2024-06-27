@@ -1,8 +1,9 @@
 ---
 id: Persistent Homology
-aliases: []
+aliases: 
 tags:
   - computational-topology
+date: 2024-03-18
 ---
 
 Consider a filtration on a [[Simplices|simplicial complex]] $K$:

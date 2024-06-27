@@ -1,8 +1,9 @@
 ---
 id: One-Hot Encoding
-aliases: []
+aliases: 
 tags:
   - machine-learning
+date: 2024-06-17
 ---
 
 Categorical data is very common, for example occupation would fall into several categories rather than a numerical value. This can be problematic for many machine learning algorithms. Instead a common approach is to convert them into numerical values via **One-Hot Encoding**. It works best when a categorical variable only takes on a small number of values.

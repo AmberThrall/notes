@@ -1,9 +1,10 @@
 ---
 id: Isomorphism Theorems
-aliases: []
+aliases: 
 tags:
   - algebra
   - group-theory
+date: 2024-05-06
 ---
 
 > [!thm] First Isomorphism Theorem

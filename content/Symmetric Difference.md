@@ -4,7 +4,8 @@ aliases:
   - symmetric difference
   - disjunctive union
   - set sum
-tags: []
+tags: 
+date: 2024-03-10
 ---
 
 > [!def] Symmetric Difference

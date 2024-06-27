@@ -1,6 +1,7 @@
 ---
 tags:
   - optimization
+date: 2024-06-21
 ---
 
 The most basic optimization problem is 

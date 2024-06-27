@@ -6,6 +6,7 @@ aliases:
   - smith normal form
 tags:
   - computational-topology
+date: 2024-03-19
 ---
 
 A common tool in computing [[Reduced Homology|reduced homology groups]] is boundary matrices.

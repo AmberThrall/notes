@@ -7,6 +7,7 @@ aliases:
   - betti number
 tags:
   - computational-topology
+date: 2024-03-18
 ---
 
 Recall that the **order** of a group $G$ is simply its cardinality $|G|$. We define the **rank** of a group $G$ as the smallest generating set, i.e., 

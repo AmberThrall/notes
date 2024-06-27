@@ -1,6 +1,7 @@
 ---
 tags:
   - optimization
+date: 2024-06-24
 ---
 Bracketing is the process of approximating the location of a local minimum by successively shrinking an interval around it. Many algorithms assume **unimodality**, i.e., there is a unique $x^*$ such that $f$ is monotonically decreasing for $x\le x^*$ and monotonically increasing for $x\ge x^*$. This unique point would then be a global minimum and no other local minima exist. The goal is then two find three points $a<b<c$ such that $f(a)>f(b)<f(c)$.
 

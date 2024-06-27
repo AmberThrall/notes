@@ -9,6 +9,7 @@ aliases:
   - contractible
 tags:
   - computational-topology
+date: 2024-03-18
 ---
 
 > [!def] Homotopy

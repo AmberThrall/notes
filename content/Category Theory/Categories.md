@@ -1,8 +1,9 @@
 ---
 id: Categories
-aliases: []
+aliases: 
 tags:
   - category-theory
+date: 2024-05-13
 ---
 
 > [!def] Category

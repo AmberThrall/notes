@@ -1,9 +1,10 @@
 ---
 id: Cyclic Groups
-aliases: []
+aliases: 
 tags:
   - algebra
   - group-theory
+date: 2024-04-30
 ---
 
 > [!thm]

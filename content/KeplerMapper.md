@@ -1,7 +1,8 @@
 ---
 id: KeplerMapper
-aliases: []
-tags: []
+aliases: 
+tags: 
+date: 2024-03-10
 ---
 
 KeplerMapper is a python library that allows for the visualization of high-dimensional data. It uses the MAPPER algorithm first introduced in "Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recoginition" (Singh et al).

@@ -6,6 +6,7 @@ aliases:
   - homology groups
 tags:
   - computational-topology
+date: 2024-03-18
 ---
 
 > [!def] p-chain

@@ -1,9 +1,10 @@
 ---
 id: Free Group
-aliases: []
+aliases: 
 tags:
   - algebra
   - group-theory
+date: 2024-03-26
 ---
 
 Let $G$ and $H$ be groups. We define a **word** in $G$ and $H$ as a product

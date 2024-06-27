@@ -1,9 +1,10 @@
 ---
 id: Groups
-aliases: []
+aliases: 
 tags:
   - algebra
   - group-theory
+date: 2024-04-29
 ---
 
 > [!def] Semigroup, monoid, group

@@ -1,8 +1,9 @@
 ---
 id: Module
-aliases: []
+aliases: 
 tags:
   - algebra
+date: 2024-04-16
 ---
 
 A module is a generalization of a vector space but the scalars are from a ring.

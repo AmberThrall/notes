@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-03-08.md",
+                "file": "content/Symmetric Difference.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-03-08.md",
+                "file": "content/Symmetric Difference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-03-08.md",
+                "file": "content/Symmetric Difference.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-03-08.md"
+                "file": "content/Symmetric Difference.md"
               }
             }
           }
@@ -149,15 +149,36 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
-    "quartz.config.ts~",
-    "content/Papers/The structure and stability of persistence modules.md",
-    "content/Figures/SS_2024-06-26_1719439191.png",
+    "content/Paragonimiasis Statistical Analysis.md",
+    "content/KeplerMapper.md",
+    "content/Topology/Topological Spaces.md",
     "content/Optimization/Local Descent.md",
+    "content/Optimization/Derivatives and Gradients.md",
     "content/Optimization/Bracketing.md",
+    "content/Optimization/Basic Optimization.md",
+    "content/Machine Learning/Support Vector Machine.md",
+    "content/Machine Learning/One-Hot Encoding.md",
+    "content/Category Theory/Functoriality.md",
+    "content/Category Theory/Duality.md",
+    "content/Category Theory/Categories.md",
+    "content/Algebra/Quotient Group.md",
+    "content/Algebra/Module.md",
+    "content/Algebra/Isomorphism Theorems.md",
+    "content/Algebra/Groups.md",
+    "content/Algebra/Free Group.md",
+    "content/Algebra/Cyclic Groups.md",
+    "content/Computational Topology/Witness Complex.md",
+    "content/Computational Topology/Simplices.md",
+    "content/Computational Topology/Relative Homology.md",
+    "content/Computational Topology/Reduced Homology.md",
+    "content/Computational Topology/Persistent Homology.md",
+    "content/Computational Topology/Homotopy.md",
+    "content/Computational Topology/Homology Groups.md",
+    "content/Computational Topology/Euler-Poincaré Theorem.md",
+    "quartz.config.ts~",
+    "content/Figures/SS_2024-06-26_1719439191.png",
     "content/Figures/SS_2024-06-25_1719351660.png",
     "content/Figures/SS_2024-06-25_1719350514.png",
-    "content/Optimization/Derivatives and Gradients.md",
-    "content/Optimization/Basic Optimization.md",
     "content/Figures/SS_2024-06-24_1719267692.png",
     "content/Figures/SS_2024-06-24_1719260305.png",
     "content/Figures/SS_2024-06-24_1719258967.png",
@@ -166,33 +187,13 @@
     "content/Figures/SS_2024-06-21_1719007889.png",
     "content/Figures/SS_2024-06-21_1719007560.png",
     "content/Optimization",
-    "content/index.md",
-    "content/Daily/2024-06-19.md",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
-    "content/Daily/2024-06-18.md",
     "content/Daily/2024-06-18.md~",
-    "content/Daily/2024-06-17.md",
     "content/Daily/2024-06-17.md~",
-    "content/Machine Learning/One-Hot Encoding.md",
     "content/Machine Learning/One-Hot Encoding.md~",
     "content/Machine Learning/4913",
-    "content/Machine Learning/Support Vector Machine.md",
     "content/Machine Learning/Support Vector Machine.md~",
-    "content/Papers/The structure and stability of persistence modules.md~",
-    "content/Paragonimiasis Statistical Analysis.md",
-    "content/Daily/2024-06-05.md",
-    "content/Daily/2024-06-03.md",
-    "content/Daily/2024-05-31.md",
-    "content/Papers/Persistence stability for geometric complexes.md",
-    "content/Daily/2024-05-28.md",
-    "content/Daily/2024-04-16.md",
-    "content/Daily/2024-05-20.md",
-    "content/Category Theory/Functoriality.md",
-    "content/Category Theory/Duality.md",
-    "content/Daily/2024-05-14.md",
-    "content/Category Theory/Categories.md",
-    "content/Computational Topology/Witness Complex.md",
-    "content/Algebra/Quotient Group.md"
+    "content/Papers/The structure and stability of persistence modules.md~"
   ]
 }

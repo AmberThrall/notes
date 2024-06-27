@@ -1,8 +1,9 @@
 ---
 id: Relative Homology
-aliases: []
+aliases: 
 tags:
   - computational-topology
+date: 2024-03-18
 ---
 
 A common tool in homology is relative homology, which is the homology of a space relative to subspace.

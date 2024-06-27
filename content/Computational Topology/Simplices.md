@@ -6,6 +6,7 @@ aliases:
   - abstract simplicial complex
 tags:
   - computational-topology
+date: 2024-03-18
 ---
 
 Let $S=\{p_0,\dots,p_k\}\subset\R^d$. Recall that a **linear combination** of $S$ is a sum of the form

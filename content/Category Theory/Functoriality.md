@@ -1,8 +1,9 @@
 ---
 id: Functoriality
-aliases: []
+aliases: 
 tags:
   - category-theory
+date: 2024-05-17
 ---
 
 Since categories are mathematical objects, it leads to the question of morphisms between categories.

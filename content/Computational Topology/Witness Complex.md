@@ -1,8 +1,9 @@
 ---
 id: Witness Complex
-aliases: []
+aliases: 
 tags:
   - computational-topology
+date: 2024-03-18
 ---
 
 Let $\sigma=[v_0\dots v_k]$ be a $k$-simplex with vertices in $v_i\in S\subset\R^d$. We say $x\in\R^d$ is a **weak witness** for $\sigma$ with respect to $S$ if 

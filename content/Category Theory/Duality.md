@@ -1,8 +1,9 @@
 ---
 id: Duality
-aliases: []
+aliases: 
 tags:
   - category-theory
+date: 2024-05-15
 ---
 
 If we take a category, we can consider another category where the arrows go in reverse. This is the idea behind the opposite category:

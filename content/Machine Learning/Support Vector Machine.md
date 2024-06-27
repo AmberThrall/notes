@@ -1,8 +1,9 @@
 ---
 id: Support Vector Machine
-aliases: []
+aliases: 
 tags:
   - machine-learning
+date: 2024-06-14
 ---
 
 Support vector machines are supervised machine learning models that analyze data for classification and regression analysis. Suppose the data is split into two classes, our goal is decide whether a new point belongs in class A or class B. Using a **linear classifier**, we take a data set in $\R^p$ and separate the data with a $(p-1)$-dimensional hyperplane.

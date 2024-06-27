@@ -1,8 +1,9 @@
 ---
 id: Reduced Homology
-aliases: []
+aliases: 
 tags:
   - computational-topology
+date: 2024-03-18
 ---
 
 There is an issue needing addressing for [[Boundary Matrices|Smith normal form]] when $p=0$. Recall our complex $K$:

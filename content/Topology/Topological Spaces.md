@@ -1,8 +1,9 @@
 ---
 id: Topological Spaces
-aliases: []
+aliases: 
 tags:
   - topology
+date: 2024-04-30
 ---
 
 > [!def] Topology

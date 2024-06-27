@@ -1,8 +1,9 @@
 ---
 id: Paragonimiasis Statistical Analysis
-aliases: []
+aliases: 
 tags:
   - paragonimiasis
+date: 2024-06-07
 ---
 
 # Data Sets
