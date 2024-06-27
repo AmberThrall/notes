@@ -9,7 +9,7 @@ tags:
 - "...$T$ is a **locally finite subset** of $\R$..."
     - **Answer:** A locally finite poset is a poset $P$ such that for all $x,y\in P$ the interval $[x,y]=\{z\in P\mid x\le z\le y\}$ is finite. (https://en.wikipedia.org/wiki/Locally_finite_poset) 
 - Homology of sublevel sets
-- Tick directions for decorated real numbers
+- Computing multiplicity, e,g, $\langle \circ_a\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}\rangle$, without knowing the interval decomposition.
 
 Full paper can be found at: https://arxiv.org/abs/1207.3674
 

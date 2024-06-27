@@ -68,10 +68,13 @@ const config: QuartzConfig = {
             "\\F": "\\mathbb{F}",
             "\\scr": "\\mathscr{#1}",
             "\\cal": "\\mathcal{#1}",
+            "\\tup": "\\textup{#1}",
             "\\d": "\\textup{d}#1",
             "\\Ker": "\\textup{Ker}",
             "\\rank": "\\textup{rank}",
             "\\id": "\\textup{id}",
+            "\\Hom": "\\textup{Hom}",
+            "\\textemdash": "\\text{\\textemdash}",
           },
       }),
       Plugin.SyntaxHighlighting({
