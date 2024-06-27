@@ -64,7 +64,7 @@ export const CreatedModifiedDate: QuartzTransformerPlugin<Partial<Options> | und
                 }
 
                 try {
-                  modified ||= await repo.getFileLatestModifiedDateAsync(file.data.filePath!)
+                  created ||= await repo.getFileLatestModifiedDateAsync(file.data.filePath!)
                 } catch {
                   console.log(
                     chalk.yellow(
