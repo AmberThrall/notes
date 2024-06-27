@@ -74,7 +74,7 @@ const config: QuartzConfig = {
             "\\rank": "\\textup{rank}",
             "\\id": "\\textup{id}",
             "\\Hom": "\\textup{Hom}",
-            "\\textemdash": "\\text{\\textemdash}",
+            "\\textemdash": "\\text{---}",
           },
       }),
       Plugin.SyntaxHighlighting({
