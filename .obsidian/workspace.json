@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Daily/2024-03-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Daily/2024-03-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Daily/2024-03-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md"
+                "file": "content/Daily/2024-03-08.md"
               }
             }
           }
@@ -150,6 +150,7 @@
   "active": "437246b057b1229b",
   "lastOpenFiles": [
     "quartz.config.ts~",
+    "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/SS_2024-06-26_1719439191.png",
     "content/Optimization/Local Descent.md",
     "content/Optimization/Bracketing.md",
@@ -164,7 +165,6 @@
     "content/Figures/SS_2024-06-21_1719008346.png",
     "content/Figures/SS_2024-06-21_1719007889.png",
     "content/Figures/SS_2024-06-21_1719007560.png",
-    "content/Papers/The structure and stability of persistence modules.md",
     "content/Optimization",
     "content/index.md",
     "content/Daily/2024-06-19.md",
@@ -180,7 +180,6 @@
     "content/Machine Learning/Support Vector Machine.md",
     "content/Machine Learning/Support Vector Machine.md~",
     "content/Papers/The structure and stability of persistence modules.md~",
-    "content/Papers/4913",
     "content/Paragonimiasis Statistical Analysis.md",
     "content/Daily/2024-06-05.md",
     "content/Daily/2024-06-03.md",
