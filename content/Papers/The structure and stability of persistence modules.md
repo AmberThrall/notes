@@ -1,8 +1,9 @@
 ---
 id: The structure and stability of persistence modules
-aliases: []
+aliases: 
 tags:
   - papers
+date: 2024-06-28
 ---
 
 **Questions:**
@@ -382,4 +383,73 @@ $$
 A similar calculation follows for vertical splits.
 
 ## Abstract r-measures
+
+> [!def] Rectangle Measure
+> Let $\cal{D}\subset\R^2$. Define
+> $$
+> \textup{Rect}(\cal{D}) = \{[a,b]\times[c,d]\subset\cal{D}\mid a<b~\text{ and }~c<d\},
+> $$
+> i.e., the set of closed rectangles that are contained in $\cal{D}$. A **rectangle measure** or **r-measure** on $\cal{D}$ is a function
+> $$
+> \mu:\textup{Rect}(\cal{D})\rightarrow\{0,1,2,\cdots\}\cup\{\infty\}
+> $$
+> that is additive under vertical and horizontal splitting (satisfies Proposition 2.4).
+
+This is similar to Lebesgue outer measure but more akin to a Lebesgue "inner" measure. With the Lebesgue outer measure we take the infimum of measures of rectangles that contain our set. Here, we instead would take the supremum of measures of rectangles that are contained in our set.
+
+> [!prp] Proposition 2.6
+> Let $\mu$ be an $r$-measure on $\cal{D}$. Then
+> 1. (finitely additive) If $R=R_1\cup\cdots\cup R_k$ with disjoint interiors, then $\mu(R)=\mu(R_1)+\cdots+\mu(R_k)$.
+> 2. (monotone) If $R\subseteq S$, then $\mu(R)\le\mu(S)$.
+
+> [!prp] Proposition 2.7
+> If $R\in\textup{Rect}(\cal{D})$ is such that $R\subseteq R_1\cup\cdots\cup R_k$ with each $R_i\in\textup{Rect}(\cal{D})$, then
+> $$
+> 	\mu(R) \le \mu(R_1) + \cdots + \mu(R_k).
+> $$
+
+## Equivalence of measures and diagrams
+
+There is a correspondence between $r$-measures and decorated diagrams.
+
+> [!def] Interior
+> The **interior** of $\cal{D}\subset\R^2$ is given by
+> $$
+> \cal{D}^\circ = \{(p,q)\mid\exists R\in\textup{Rect}(\cal{D})~\text{s.t.}~(p,q)\in R^\circ\}.
+> $$
+> where $R^\circ$ is the interior of the closed rectangle $R$. The **r-interior** of $\cal{D}$ is 
+> $$
+> 	\cal{D}^\blacksquare=\{(p^*,q^*)\mid \exists R\in\text{Rect}(\cal{D})~\text{s.t.}~(p^*,q^*)\in R\}.
+> $$
+
+The difference is that $r$-interior includes the tick decorations of points.
+
+> [!thm] Theorem 2.8 (The equivalence theorem)
+> Let $\cal{D}\subseteq\R^2$. There is a bijective correspondence between:
+> - Finite $r$-measures on $\cal{D}$ ($\mu(R)<\infty$ for all $R\in\textup{Rect}(\cal{D})$.
+> - Locally finite multisets $A$ in $\cal{D}^\blacksquare$ $(\textup{card}(A|_R)<R$ for all $R\in\textup{Rect}(\cal{D})$).
+>
+>The measure $\mu$ corresponding to the multiset $A$ is related by the formula
+>$$
+>	\mu(R) = \textup{card}(A|_R)
+>$$
+>for every $R\in\text{Rect}(\cal{D})$.
+
+The cardinality of $A|_R$ is given by
+$$
+	\mu(R) = \sum_{(p^*,q^*)\in R}m(p^*,q^*)
+$$
+where $m:\cal{D}^\blacksquare\rightarrow\{0,1,2,\dots\}$ is the multiplicity function for $A$.
+
+This immediately results in the following definitions:
+1. The **decorated diagram** of $\mu$ is the unique locally finite multiset $\text{Dgm}(\mu)$ in $\cal{D}^\blacksquare$ such that 
+$$
+	\mu(R) = \textup{card}(\textup{Dgm}(\mu)|_R)
+$$
+for every $R\in\text{Rect}(\cal{D})$.
+2. The **undecorated diagram** of $\mu$ is the locally finite multiset in $\cal{D}^\circ$
+$$
+	\text{dgm}(\mu) = \{(p,q)\mid(p^*,q^*)\in\textup{Dgm}(\mu)\}\cap\cal{D}^\circ
+$$
+obtained by forgetting the decorations and restricting to the interior.
 

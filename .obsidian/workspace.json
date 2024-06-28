@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Symmetric Difference.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Symmetric Difference.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Symmetric Difference.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Symmetric Difference.md"
+                "file": "content/Papers/The structure and stability of persistence modules.md"
               }
             }
           }
@@ -149,13 +149,21 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Papers/Persistence stability for geometric complexes.md",
+    "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+    "content/Papers/The structure and stability of persistence modules.md",
+    "content/Optimization/Constraints.md",
+    "content/Optimization/Derivatives and Gradients.md",
+    "content/Figures/SS_2024-06-28_1719605877.png",
+    "content/Figures/manim_2024-06-28.gif",
+    "content/Figures/TransformFn_ManimCE_v0.18.1.gif",
+    "content/Symmetric Difference.md",
     "quartz/plugins/transformers/lastmod.ts~",
     "quartz.config.ts~",
     "content/Paragonimiasis Statistical Analysis.md",
     "content/KeplerMapper.md",
     "content/Topology/Topological Spaces.md",
     "content/Optimization/Local Descent.md",
-    "content/Optimization/Derivatives and Gradients.md",
     "content/Optimization/Bracketing.md",
     "content/Optimization/Basic Optimization.md",
     "content/Machine Learning/Support Vector Machine.md",
@@ -172,10 +180,6 @@
     "content/Computational Topology/Witness Complex.md",
     "content/Computational Topology/Simplices.md",
     "content/Computational Topology/Relative Homology.md",
-    "content/Computational Topology/Reduced Homology.md",
-    "content/Computational Topology/Persistent Homology.md",
-    "content/Computational Topology/Homotopy.md",
-    "content/Computational Topology/Homology Groups.md",
     "content/Figures/SS_2024-06-26_1719439191.png",
     "content/Figures/SS_2024-06-25_1719351660.png",
     "content/Figures/SS_2024-06-25_1719350514.png",
@@ -183,9 +187,6 @@
     "content/Figures/SS_2024-06-24_1719260305.png",
     "content/Figures/SS_2024-06-24_1719258967.png",
     "content/Figures/SS_2024-06-21_1719011183.png",
-    "content/Figures/SS_2024-06-21_1719008346.png",
-    "content/Figures/SS_2024-06-21_1719007889.png",
-    "content/Figures/SS_2024-06-21_1719007560.png",
     "content/Optimization",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
@@ -193,7 +194,6 @@
     "content/Daily/2024-06-17.md~",
     "content/Machine Learning/One-Hot Encoding.md~",
     "content/Machine Learning/4913",
-    "content/Machine Learning/Support Vector Machine.md~",
-    "content/Papers/The structure and stability of persistence modules.md~"
+    "content/Machine Learning/Support Vector Machine.md~"
   ]
 }

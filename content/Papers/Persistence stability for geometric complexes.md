@@ -1,8 +1,9 @@
 ---
 id: Persistence stability for geometric complexes
-aliases: []
+aliases: 
 tags:
   - papers
+date: 2024-05-31
 ---
 
 **Questions:**

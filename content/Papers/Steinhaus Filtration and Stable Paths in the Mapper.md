@@ -1,8 +1,9 @@
 ---
 id: Steinhaus Filtration and Stable Paths in the Mapper
-aliases: []
+aliases: 
 tags:
   - papers
+date: 2024-04-02
 ---
 
 **Questions:**
