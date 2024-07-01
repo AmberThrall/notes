@@ -545,5 +545,31 @@ $$
 	\mu_\bb{V}([-\infty,b]\times[c,d]) &= \langle\bullet_b\textemdash\bullet_c\textemdash\circ_d\mid\bb{V}\rangle &= r_b^c - r_b^d && (\text{if }r_b^d<\infty) \\
 \end{align*}
 $$
+One may view $\mu_\bb{V}$ as an $r$-measure on the extended half-plane
+$$
+	\overline{\cal{H}} = \{(p,q)\mid-\infty\le p\le q\le+\infty\}
+$$
+and its diagram $\textup{Dgm}(\mu_\bb{V})$ is defined on the finite $r$-interior $\overline{\cal{H}}^\blacksquare$.
 
+> [!cor] Corollary 2.17
+> If $\bb{V}$ is decomposable into interval modules then $\mu_\bb{V}(R)$ counts the interval summands corresponding to decorated points which lie in $R$.
 
+In other words, $\mu_\bb{V}(R)$ simply counts the number of decorated points that lie inside $R$.
+
+There are three cases of relevance for the 'measure at infinity':
+- the line $(-\infty,\R)$:
+$$
+	\mu(-\infty,[c,d]) = \lim_{b\rightarrow-\infty}\mu([-\infty,b]\times[c,d]) = \min_b\mu([-\infty,b]\times[c,d])
+$$
+- the line $(\R,+\infty)$:
+$$
+	\mu([a,b],+\infty) = \lim_{c\rightarrow+\infty}\mu([a,b]\times[c,+\infty])=\min_c\mu([a,b]\times[c,+\infty])
+$$
+- the point $(-\infty,+\infty)$:
+$$
+	\mu(-\infty,+\infty) = \lim_{e\rightarrow+\infty}\mu([-\infty,-e]\times[e,+\infty]) = \min_e\mu([-\infty,-e]\times[e,+\infty])
+$$
+
+The above limits exist when the rectangles in the expression belong to $\textup{Rect}(\cal{D})$. 
+
+## Diagrams of persistence modules
