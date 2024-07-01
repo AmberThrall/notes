@@ -3,7 +3,7 @@ id: The structure and stability of persistence modules
 aliases: 
 tags:
   - papers
-date: 2024-06-28
+date: 2024-07-01
 ---
 
 **Questions:**
@@ -235,13 +235,14 @@ Such a diagram is a representation of the **quiver**
 $$
 	\bullet\rightarrow\bullet\rightarrow\cdots\rightarrow\bullet
 $$
-With quivers we use filled circles $\bullet$ where the module has rank 1 and open circles $\circ$ where the module has rank 0. For example, if $a<b<c$ then
+For example, if $a<b<c$ then
 $$
 	\bb{I}[a,b]=\bullet_a\textemdash\bullet_b\textemdash \circ_c
 $$
-is the interval module over $\{a,b,c\}\subset\R$ given by $k\rightarrow k\rightarrow 0$.
+is the interval module over $\{a,b,c\}\subset\R$ given by $k\rightarrow k\rightarrow 0$. With quivers we use filled circles $\bullet$ where the module has rank 1 and open circles $\circ$ where the module has rank 0. 
 
-Let $\bb{V}$ be a persistence module indexed over $\R$. If $\textbf{T}:a_1<a_2<\cdots<a_n$, then we define the **multiplicity** of $[a_i,a_j]\subseteq\textbf{T}$ in $\bb{V}_\textbf{T}$ to be the number of copies of $\bb{I}[a_i,a_j]$ in the interval decomposition of $\bb{V}_\textbf{T}$. 
+> [!def] Multiplicity
+> Let $\bb{V}$ be a persistence module indexed over $\R$. If $\textbf{T}:a_1<a_2<\cdots<a_n$, then we define the **multiplicity** of $[a_i,a_j]\subseteq\textbf{T}$ in $\bb{V}_\textbf{T}$ to be the number of copies of $\bb{I}[a_i,a_j]$ in the interval decomposition of $\bb{V}_\textbf{T}$.
 
 We write
 $$
@@ -271,7 +272,7 @@ $$
 > $$
 > for any index set $\textbf{T}=\{a_1,a_2,\cdots,a_n\}$ and interval $[a_i,a_j]\subset\textbf{T}$.
 
-In other words, the multiplicity of $[a_i,a_j]$ in $\bb{V}_\textbf{T}$ is the sum of multiplicities of $[a_i,a_j]$ in each component restricted to $\textbf{T}$.
+In other words, the multiplicity of $[a_i,a_j]$ in $\bb{V}_\textbf{T}$ is the sum of multiplicities of $[a_i,a_j]$ in each component.
 
 > [!prp] Proposition 1.10 (restriction principle)
 > Let $\textbf{S}\subset\textbf{T}$ be finite index sets. Then 
@@ -289,7 +290,7 @@ $$
 	\langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}_{a,b,c}\rangle = \langle\circ_a\textemdash\circ_p\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}_{a,p,b,c}\rangle + \langle\circ_a\textemdash\bullet_p\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}_{a,p,b,c}\rangle.
 $$
 Notice the second term is due to both $\bb{J}[p,c]$ and $\bb{J}[b,c]$ both restricting to $\bb{I}[b,c]$.
-w
+
 We can make use of proposition 1.10 to prove statements about ranks:
 **Example:** We wish to show that $\textup{rank}(V_b\rightarrow V_c)\ge\textup{rank}(V_a\rightarrow V_d)$ when $a\le b\le c\le d$. Notice that 
 $$
@@ -422,7 +423,9 @@ There is a correspondence between $r$-measures and decorated diagrams.
 > 	\cal{D}^\blacksquare=\{(p^*,q^*)\mid \exists R\in\text{Rect}(\cal{D})~\text{s.t.}~(p^*,q^*)\in R\}.
 > $$
 
-The difference is that $r$-interior includes the tick decorations of points.
+The interior is defined similarly to interior in topology. A point is in the interior of $\cal{D}$ if we can put an open rectangle around the point that is contained inside of $\cal{D}$. For $r$-interior, the only difference is we also include the tick decorations of points.
+
+![[Screenshot from 2024-07-01 12-48-49.png#invert | center]]
 
 > [!thm] Theorem 2.8 (The equivalence theorem)
 > Let $\cal{D}\subseteq\R^2$. There is a bijective correspondence between:
@@ -441,6 +444,25 @@ $$
 $$
 where $m:\cal{D}^\blacksquare\rightarrow\{0,1,2,\dots\}$ is the multiplicity function for $A$.
 
+**Proof Sketch:**
+
+- The correspondence from locally finite multisets $A$ in $\cal{D}^\blacksquare$ to finite $r$-measures is given by the fact that $\mu(R)=\textup{card}(A|_R)$ is a finite $r$-measure.
+- The other direction: for $(p^*,q^*)\in\cal{D}^\blacksquare$ define 
+$$
+	m(p^*,q^*) = \min\{\mu(R)\mid R\in\textup{Rect}(\cal{D}),~(p^*,q^*)\in R\}.
+$$
+- Use induction on $\mu(R)$ to show that
+$$
+	\nu(R) = \sum_{(p^*,q^*)\in R}m(p^*,q^*) = \mu(R).
+$$
+	- Base case ($\mu(R)=0$): $0\le m(p^*,q^*)\le\mu(R)=0$.
+	- Inductive step: split rectangle into four quadrants $R=S_1\cup\cdots\cup S_4$. Each quadrant satisfies $\mu(S_i)=\nu(S_i)$ by the inductive hypothesis. By finite additivity we get that $\nu(R)=\mu(R)$. If one of the quadrants has $\mu(S_i)=k$ then the rest have $\mu=0$. In such a case we repeat the subdivision on $S_i$. This either terminates or gives us a sequence of closed rectangles
+	$$
+		R_0\supset R_1\supset\cdots
+	$$
+	- with each $\mu(R_i)=k$. The only contribution to $\nu(R)$ is then the decorated points $(p^*,q^*)$ that belong to each rectangle in the sequence.
+- Show that if $\mu=\nu'$ for some other multiplicity function $m'$, then $m=m'$.
+
 This immediately results in the following definitions:
 1. The **decorated diagram** of $\mu$ is the unique locally finite multiset $\text{Dgm}(\mu)$ in $\cal{D}^\blacksquare$ such that 
 $$
@@ -452,4 +474,76 @@ $$
 	\text{dgm}(\mu) = \{(p,q)\mid(p^*,q^*)\in\textup{Dgm}(\mu)\}\cap\cal{D}^\circ
 $$
 obtained by forgetting the decorations and restricting to the interior.
+
+## Non-finite measures
+
+We now consider the case where the $r$-measure is not finite.
+
+> [!def] Finite interior
+> The **finite interior** of an $r$-measure $\mu$ is given by
+> $$
+> 	\cal{F}^\circ(\mu) = \{(p,q)\mid \exists R\in\textup{Rect}(\cal{D})~\text{s.t.}~(p,q)\in R^\circ\text{ and }\mu(R)<\infty\}.
+> $$
+> The **finite r-interior** is then
+> $$
+> 	\cal{F}^\blacksquare(\mu) = \{(p^*,q^*)\mid \exists R\in\textup{Rect}(\cal{D})~\text{s.t.}~(p^*,q^*)\in R\text{ and }\mu(R)<\infty\}.
+> $$
+
+This is the same as interior and $r$-interior with the caveat that we now also require our rectangle to have finite measure.
+
+We apply Theorem 2.8 (the equivalence theorem) to each rectangle $R$ with finite measure and get a decorated diagram in $R^\blacksquare$. We then stitch together the local definitions to get the multiset $\textup{Dgm}(\mu)$ in the entirety of $\cal{F}^\blacksquare(\mu)$. This multiset satisfies
+$$
+	\mu(R) = \textup{card}(\textup{Dgm}(\mu)|_R)
+$$
+for any rectangle $R\in\textup{Rect}(\cal{D})$ with finite measure.
+
+> [!prp] Proposition 2.14
+> Let $R\in\textup{Rect}(\cal{D})$. If $R^\blacksquare\subseteq\cal{F}^\blacksquare(\mu)$, then $\mu(R)<\infty$.
+
+> [!cor] Corollary 2.15
+> Let $\mu$ be an $r$-measure on $\cal{D}\subseteq\R^2$. Then there is a uniquely defined locally finite multiset $\textup{Dgm}(\mu)$ in $\cal{F}^\blacksquare(\mu)$ such that 
+> $$
+> 	\mu(R) = \textup{card}(\textup{Dgm}(\mu)|_R)
+> $$
+> for every $R\in\textup{Rect}(\cal{D})$ with $R^\blacksquare\subseteq\cal{F}^\blacksquare(\mu)$.
+
+> [!prp] Proposition 2.14
+> Let $R\in\textup{Rect}(\cal{D})$. If $R\subseteq\cal{F}^\circ(\mu)$, then $\mu(R)<\infty$.
+
+Hence, we can define the diagrams for any general $r$-measure:
+- The **decorated diagram** of an $r$-measure is the pair $(\textup{Dgm}(\mu),\cal{F}^\blacksquare(\mu))$, where $\textup{Dgm}(\mu)$ is the multiset in $\cal{F}^\blacksquare(\mu$)$ described in corollary 2.15
+- The **undecorated diagram** is the pair $(\textup{dgm}(\mu),\cal{F}^\circ(\mu))$, where
+$$
+	\textup{dgm}(\mu) = \{(p,q)\mid(p^*,q^*)\in\textup{Dgm}(\mu)\}\cap\cal{F}^\circ(\mu).
+$$
+
+## The diagram at infinity
+
+We focus on $r$-measures in the extended plane which now requires discussion of infinite rectangles.
+
+The $r$-interior and interior of $\cal{D}$ remain primarily the same with the subtlety that now $R^\circ$ is the *relative interior*, e.g., if $R=[-\infty,b]\times[c,d]$ with $b,c,d$ finite, then $R^\circ=[-\infty,b)\times(c,d)$.
+
+We define the **singular support** of $\mu$ as 
+$$
+	\delta(\mu) = \overline{\R}^2-\cal{F}^\circ(\mu).
+$$
+Corollary 2.15 still holds for $r$-measures in the extended plane. We can view $\overline{\R}^2$ as a rectangle in $\R^2$ via a transformation with homeomorphic embeddings, e.g.,
+$$
+	x' = \arctan(x),~y'=\arctan(y)
+$$
+identifies $\overline{R}^2$ with the rectangle $[-\pi/2,pi/2]\times[-\pi/2,\pi/2]$. Both Theorem 2.8 and Corollary 2.15 are invariant under such a transformation.
+
+Let $\bb{V}$ be a persistence module. The persistence measure $\mu_\bb{V}$ previously defined by 
+$$
+	\mu_\bb{V}([a,b]\times[c,d])=\langle \circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\mid\bb{V}\rangle
+$$
+for $a<b\le c<d$ extends to infinite rectangles where $a=-\infty$ or $d=+\infty$ by setting $V_{-\infty}=V_\infty=0$. Such a choice gives us the *k-triangle lemma*:
+$$
+\begin{align*}
+	\mu_\bb{V}([-\infty,b]\times[c,+\infty]) &= \langle\bullet_b\textemdash\bullet_c\mid\bb{V}\rangle &= r_b^c \\
+	\mu_\bb{V}([a,b]\times[c,+\infty]) &= \langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}\rangle &= r_b^c - r_a^c && (\text{if }r_a^c<\infty) \\
+	\mu_\bb{V}([-\infty,b]\times[c,d]) &= \langle\bullet_b\textemdash\bullet_c\textemdash\circ_d\mid\bb{V}\rangle &= r_b^c - r_b^d && (\text{if }r_b^d<\infty) \\
+\end{align*}
+$$
+
 

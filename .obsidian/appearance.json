@@ -1,9 +1,9 @@
 {
   "accentColor": "",
   "enabledCssSnippets": [
+    "algorithms",
     "center",
-    "invert",
-    "algorithms"
+    "invert"
   ],
   "theme": "obsidian"
 }
