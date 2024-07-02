@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Machine Learning/Multiple Correspondence Analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Machine Learning/Multiple Correspondence Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Machine Learning/Multiple Correspondence Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md"
+                "file": "content/Machine Learning/Multiple Correspondence Analysis.md"
               }
             }
           }
@@ -149,10 +149,13 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Machine Learning/One-Hot Encoding.md",
+    "content/Machine Learning/Multiple Correspondence Analysis.md",
+    "content/Figures/Screenshot from 2024-07-02 15-55-42.png",
+    "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-07-01 12-48-49.png",
     "content/Papers/Persistence stability for geometric complexes.md",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
-    "content/Papers/The structure and stability of persistence modules.md",
     "content/Optimization/Constraints.md",
     "content/Optimization/Derivatives and Gradients.md",
     "content/Figures/SS_2024-06-28_1719605877.png",
@@ -168,7 +171,6 @@
     "content/Optimization/Bracketing.md",
     "content/Optimization/Basic Optimization.md",
     "content/Machine Learning/Support Vector Machine.md",
-    "content/Machine Learning/One-Hot Encoding.md",
     "content/Category Theory/Functoriality.md",
     "content/Category Theory/Duality.md",
     "content/Category Theory/Categories.md",
@@ -179,14 +181,11 @@
     "content/Algebra/Free Group.md",
     "content/Algebra/Cyclic Groups.md",
     "content/Computational Topology/Witness Complex.md",
-    "content/Computational Topology/Simplices.md",
     "content/Figures/SS_2024-06-26_1719439191.png",
     "content/Figures/SS_2024-06-25_1719351660.png",
     "content/Figures/SS_2024-06-25_1719350514.png",
     "content/Figures/SS_2024-06-24_1719267692.png",
     "content/Figures/SS_2024-06-24_1719260305.png",
-    "content/Figures/SS_2024-06-24_1719258967.png",
-    "content/Figures/SS_2024-06-21_1719011183.png",
     "content/Optimization",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
