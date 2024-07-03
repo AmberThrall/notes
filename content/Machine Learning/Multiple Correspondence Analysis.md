@@ -151,3 +151,11 @@ and the column principle coordinates by
 $$
 	G = D_c^{-1/2}V\Sigma.
 $$
+
+# Interpreting Correspondence Plots
+
+Correspondence analysis is about the relativistic relations. A correspondence analysis won't show which rows/column have the maximum, instead it will tell you what categories had the most.
+
+The distance from the origin is a measure of how discriminating a column is. Variables close to the origin typically have less distinct values.
+
+Columns that are close together (ensure the plots aspect ratio is set to 1) is an indication of similarity between them. To compare the relationship between rows and columns you have to instead look for small angles between the line connecting them and the line to the origin.
