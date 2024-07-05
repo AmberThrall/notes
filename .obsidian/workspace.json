@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Machine Learning/Multiple Correspondence Analysis.md",
+                "file": "content/Optimization/Linear Programming.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4d65eaeb7c6017f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Machine Learning/Multiple Correspondence Analysis.md",
+                "file": "content/Optimization/Linear Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Machine Learning/Multiple Correspondence Analysis.md",
+                "file": "content/Optimization/Linear Programming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Machine Learning/Multiple Correspondence Analysis.md"
+                "file": "content/Optimization/Linear Programming.md"
               }
             }
           }
@@ -149,14 +161,17 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
-    "content/Machine Learning/One-Hot Encoding.md",
+    "content/Optimization/Constraints.md",
+    "content/Optimization/Linear Programming.md",
+    "content/Figures/Screenshot from 2024-07-05 14-50-22.png",
+    "content/Papers/Box Filtration.md",
+    "content/Papers/Persistence stability for geometric complexes.md",
     "content/Machine Learning/Multiple Correspondence Analysis.md",
+    "content/Machine Learning/One-Hot Encoding.md",
     "content/Figures/Screenshot from 2024-07-02 15-55-42.png",
     "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-07-01 12-48-49.png",
-    "content/Papers/Persistence stability for geometric complexes.md",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
-    "content/Optimization/Constraints.md",
     "content/Optimization/Derivatives and Gradients.md",
     "content/Figures/SS_2024-06-28_1719605877.png",
     "content/Figures/manim_2024-06-28.gif",
@@ -179,13 +194,10 @@
     "content/Algebra/Isomorphism Theorems.md",
     "content/Algebra/Groups.md",
     "content/Algebra/Free Group.md",
-    "content/Algebra/Cyclic Groups.md",
-    "content/Computational Topology/Witness Complex.md",
     "content/Figures/SS_2024-06-26_1719439191.png",
     "content/Figures/SS_2024-06-25_1719351660.png",
     "content/Figures/SS_2024-06-25_1719350514.png",
     "content/Figures/SS_2024-06-24_1719267692.png",
-    "content/Figures/SS_2024-06-24_1719260305.png",
     "content/Optimization",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
