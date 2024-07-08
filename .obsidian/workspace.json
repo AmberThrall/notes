@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Optimization/Linear Programming.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4d65eaeb7c6017f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md",
+                "file": "content/Papers/Box Filtration.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Optimization/Linear Programming.md",
+                "file": "content/Papers/Box Filtration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Optimization/Linear Programming.md",
+                "file": "content/Papers/Box Filtration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Optimization/Linear Programming.md"
+                "file": "content/Papers/Box Filtration.md"
               }
             }
           }
@@ -161,8 +149,12 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
-    "content/Optimization/Constraints.md",
+    "content/Figures/Screenshot from 2024-07-08 16-10-35.png",
+    "content/Figures/Screenshot from 2024-07-08 14-51-46.png",
+    "content/Figures/Screenshot from 2024-07-08 12-44-29.png",
+    "content/Figures/Screenshot from 2024-07-08 12-41-39.png",
     "content/Optimization/Linear Programming.md",
+    "content/Optimization/Constraints.md",
     "content/Figures/Screenshot from 2024-07-05 14-50-22.png",
     "content/Papers/Box Filtration.md",
     "content/Papers/Persistence stability for geometric complexes.md",
@@ -195,9 +187,6 @@
     "content/Algebra/Groups.md",
     "content/Algebra/Free Group.md",
     "content/Figures/SS_2024-06-26_1719439191.png",
-    "content/Figures/SS_2024-06-25_1719351660.png",
-    "content/Figures/SS_2024-06-25_1719350514.png",
-    "content/Figures/SS_2024-06-24_1719267692.png",
     "content/Optimization",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
