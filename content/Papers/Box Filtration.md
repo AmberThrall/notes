@@ -1,10 +1,11 @@
 ---
 tags:
   - papers
-date: 2024-07-08
+  - box-reconstruction
+date: 2024-07-10
 ---
 **Questions:**
-- Example 2.2 weights cost
+- Unsure how the weights $w_x$ for a point $x\in N$ are determined
 - How to solve the LP for box expansion?
 
 Full paper can be found at: https://arxiv.org/abs/2404.05859v2
@@ -25,7 +26,7 @@ Notation used:
 | $\textup{Sol}_\alpha(V,N)$         | set of optimal solutions for input box $V$ and neighborhood $N\supset V$              |
 | $\cal{U}(j\pi)$                    | $j$-th cover $\forall V\in\cal{U}(0)$                                                 |
 | $\Theta(V)$                        | set of pixels with $m_\sigma\in V$, $\theta(\sigma)\ne0$                              |
-| $\psi_1(V), \psi_2(2), \psi_3(V)$  | rounded boxes for given box $V$                                                       |
+| $\psi_1(V), \psi_2(V), \psi_3(V)$  | rounded boxes for given box $V$                                                       |
 | $K(\cal{U})$                       | filtration corresponding to cover $\cal{U}$                                           |
 
 # Introduction
@@ -48,7 +49,7 @@ The box filtration can produce results that are more resilient to noise and with
 Note that a boxes dimension may be lower than $n$ if $l_i=u_i$ for some $i\in\{1,\dots,n\}$.
 ## Point Cover
 
-Given a finite PCD $X\in\R^n$, the initial cover $\cal{U}(0)$ of its **point cover** consists of a collection of hypercubes $($$\ell_\infty$-balls) or boxes such that each point is located in a single box. A box may contain more than one point. Every box $V\in\cal{U}(0)$ is called a **pivot box**. We want to expand each pivot box using two parameters $\pi\in\R_+$ and $\alpha\in[0,1]$ using linear optimization where $\pi$ represents a step size to expand the boxes by and $\alpha$ controls the relative weight in the objective function. The set of optimal solutions for an input box $V$ and neighborhood $N=B(V,\pi)=(l_1-\pi,u_1+\pi)\times\cdots\times(l_n-\pi,u_n+\pi)$ is denoted $\textup{Sol}_\alpha(V,N)$.
+Given a finite PCD $X\in\R^n$, the initial cover $\cal{U}(0)$ of its **point cover** consists of a collection of hypercubes ($\ell_\infty$-balls) or boxes such that each point is located in a single box. A box may contain more than one point. Every box $V\in\cal{U}(0)$ is called a **pivot box**. We want to expand each pivot box using two parameters $\pi\in\R_+$ and $\alpha\in[0,1]$ using linear optimization where $\pi$ represents a step size to expand the boxes by and $\alpha$ controls the relative weight in the objective function. The set of optimal solutions for an input box $V$ and neighborhood $N=B(V,\pi)=(l_1-\pi,u_1+\pi)\times\cdots\times(l_n-\pi,u_n+\pi)$ is denoted $\textup{Sol}_\alpha(V,N)$.
 
 ![[Screenshot from 2024-07-08 16-10-35.png#invert | center]]
 
@@ -73,6 +74,7 @@ $$
 \end{align*}
 $$
 
+
 **Example 2.2:** Let $X=\{a,b\}$ with $a<b$ be a one-dimensional point cloud. Let the initial point cover $\cal{U}(0)$ be a single pivot box $V=[a,a]$. If $\tilde{V}=[a,x]$ with $x\le b$ and $N=B(V,\pi=b-a+\delta)$ for some small $\delta>0$, then
 $$
 	C_\alpha(\tilde{V},N) = \alpha(b-a-x) + (1-\alpha)(x-a) \Rightarrow \frac{\partial C_\alpha(\tilde{V},N)}{\partial x} = 1-2\alpha.
@@ -80,7 +82,7 @@ $$
 The partial derivative is zero when $\alpha=0.5$. Since multiple boxes $\tilde{V}\supseteq V$ are solutions to the LP, the solution is not unique.
 
 > [!def] Definition 2.3 (Union of boxes)
-> Let $V^1=\prod[l_i^1,u_i^1]$ and $V^2=\prod[l_i^2,u_i^2]$ be two boxes. Their union is the box $V^1\cup V^2=\prod[\hat{l_i},\hat{u_i}]$ where $\hat{l}_i = \min\{l_i^1,l_i^2\}$ and $\hat{u_i}=\max\{u_i^1,u_i^2\}$ for each $i\in\cal{I}$
+> Let $V^1=\prod[l_i^1,u_i^1]$ and $V^2=\prod[l_i^2,u_i^2]$ be two boxes. Their **union** is the box $V^1\cup V^2=\prod[\hat{l_i},\hat{u_i}]$ where $\hat{l}_i = \min\{l_i^1,l_i^2\}$ and $\hat{u_i}=\max\{u_i^1,u_i^2\}$ for each $i\in\cal{I}$
 
 For example in 2D:
 ![[Screenshot from 2024-07-08 14-51-46.png#invert | center]]
@@ -131,5 +133,69 @@ If there are $m$ points in the neighborhood, the running time of the LP is $O(q^
 
 ## Pixel Cover
 
+With the pixel cover we instead work over a discretization of $X\in\R^d$ where each **pixel** is a unit cube with integer vertices. We also assume that $\pi\in\Z$ when defining neighborhoods. All results shown above for point covers also hold true for pixel covers.
+
+Define the **integer ceiling** by
+$$
+	\upharpoonright x\upharpoonleft = \begin{cases}
+		\lceil x\rceil & x\not\in\Z \\
+		x + 1 & x\in\Z.
+	\end{cases}
+$$
+For $x=(x_1,\dots,x_n)\in X$ we define the pixel $\sigma=[\lfloor x_1\rfloor],\upharpoonright x_1\upharpoonleft]\times\cdots\times[\lfloor x_n\rfloor,\upharpoonright x_n\upharpoonleft]$ .  We denote the centroid of a pixel $\sigma$ by $m_\sigma=(m_\sigma^1,\dots,m_\sigma^n)$ and define $\theta(\sigma)$ to be the number of points in $X$ that are in $\sigma$. We denote by $\Theta(\tilde{V})$ the set of pixels $\sigma$ such that $m_\sigma\in\tilde{V}$ and $\theta(\sigma)\ne0$, i.e., the set of nonempty pixels whose centroids are in the box $\tilde{V}$.
+
+For a given input box $V$, let $\tilde{V}\supseteq V$ be a box in the neighborhood $N=B(V,\pi)$. The total width of box $\tilde{V}$ is given by $|\tilde{V}|=\sum_{i\in\cal{I}}\tilde{u_i}-\tilde{l_i}$. Let $w_\sigma$ be the weight corresponding to pixel $\sigma\in\Theta(N)$ for a given expansion $\tilde{V}$,
+$$
+	w_\sigma\le\min\{\{m_\sigma^i-\tilde{l}^i\mid i\in\cal{I}\}\\cup\{\tilde{u_i}-m_\sigma^i\mid i\in\cal{I}\}\cup\{0.5\}\}.
+$$
+Note that, like before, $m_\sigma\in\tilde{V}$ if and only if
+$$
+	\min\{\{m_\sigma^i-\tilde{l_i}\mid i\in\cal{I}\}\cup\{\tilde{u_i}-m_\sigma^i\mid i\in\cal{I}\}\} \ge 0.
+$$
+
+For $V=[l_1,u_1]\times\cdots\times[l_n,u_n]$ we define the following LP:
+$$
+\begin{align*}
+	&\min_{\forall\tilde{V}\supseteq V} & \overline{C}_\alpha(\tilde{V},N) = -\alpha\sum_{\sigma\in\Theta(N)}w_\sigma\theta(\sigma) + (1-\alpha)\sum_{i\in\cal{I}}(\tilde{u_i}-\tilde{l_i}) \\
+	&\text{subject to} & \tilde{u_i}\ge u_i~\forall i\in\{1,\dots,n\} \\
+	&& \tilde{l_i}\le l_i~\forall i\in\{1,\dots,n\} \\
+	&& w_\sigma\le m_\sigma^i-\tilde{l_i}~\forall i\in\{1,\dots,n\},\sigma\in\Theta(N) \\
+	&& w_\sigma\le\tilde{u_i}-m_\sigma^i~\forall i\in\{1,\dots,n\},\sigma\in\Theta(N) \\
+	&& w_\sigma\le0.5\forall i\in\{1,\dots,n\},\sigma\in\Theta(N)
+\end{align*}
+$$
+
+An optimal solution $[l_1^*,u_1^*]\times\cdots\times[l_n^*,u_n^*]\in\overline{\text{Sol}}_\alpha(V,N)$ may have non-integer coordinates. The paper claims that in such a case, there is another optimal solution with integer coordinates.
+
+Recall that $\textup{frac}(x) = x - \lfloor x\rfloor\in[0,1)$ is the fractional part of $x\in\R$.
+
+> [!def] Rounding Functions
+> Given a box $V=[l_1,u_1]\times\cdots\times[l_n,u_n]$ we define three rounded boxes $\Psi_r(V)=[\psi_r(l_1),\psi_r(u_1)]\times\cdots\times[\psi_r(l_n),\psi_r(u_n)]$ for $r=1,2,3$ where 
+> $$
+> \psi_1(l_i) = \lceil l_i\rceil, ~ \psi_1(u_i) = \lfloor u_i\rfloor
+> $$
+> $$
+> \psi_2(l_i) = \begin{cases}
+> \lceil l_i\rceil & \text{if }\textup{frac}(l_i)\in(0.5,1) \\
+> \lfloor l_i\rfloor + 0.5 & \text{if }\textup{frac}(l_i)\in(0,0.5] \\
+> \lfloor l_i\rfloor & \text{if }\textup{frac}(l_i)=0 \\
+> \end{cases},~~
+> \psi_2(u_i) = \begin{cases}
+> \lfloor u_i\rfloor + 0.5 & \text{if }\textup{frac}(u_i)\in[0.5,1) \\
+> \lfloor u_i\rfloor & \text{if }\textup{frac}(u_i)\in[0,0.5) \\
+> \end{cases}
+> $$
+> $$
+> \psi_3(l_i) = \begin{cases}
+> \lceil l_i\rceil & \text{if }\textup{frac}(l_i)\in(0.5,1) \\
+> \lfloor l_i\rfloor & \text{if }\textup{frac}(l_i)\in[0,0.5] \\
+> \end{cases},~~
+> \psi_3(u_i) = \begin{cases}
+> \lceil u_i\rceil & \text{if }\textup{frac}(u_i)\in[0.5,1) \\
+> \lfloor u_i\rfloor & \text{if }\textup{frac}(u_i)\in[0,0.5) \\
+> \end{cases}
+> $$
+
+![[Screenshot from 2024-07-10 14-46-17.png#invert | center]]
 
 
