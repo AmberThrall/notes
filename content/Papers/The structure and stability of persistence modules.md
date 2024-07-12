@@ -94,12 +94,12 @@ $$
         0 & \text{otherwise.}
     \end{cases}
 $$
-$\bb{I}^J$ represents a feature that persists over an interval $J$ but is absent elsewhere. For example in homology groups, $\bb{I}^J$ may represent classes that persist over $J$ but are not present outside of $J$.
 
-**Example:** Assume that $a<b<c$. Then the $\{a,b,c\}$-interval module $\bb{I}^{[a,b]}$ is the following persistence module:
+**Example:** Assume that $a<b<c$. Then the $\{a,b,c\}$-interval module $\bb{I}_{\{1,2,3\}}^{[a,b]}$ is the following persistence module:
 $$
 	k \xrightarrow{\text{id}_k}k\xrightarrow{0} 0.
 $$
+$\bb{I}^J$ represents a feature that persists over an interval $J$ but is absent elsewhere. For example in homology groups, $\bb{I}^J$ may represent classes that persist over $J$ but are not present outside of $J$.
 
 For $T=\Z$ there are four types of interval modules: $\bb{I}^{[m,n]}$, $\bb{I}^{(-\infty,n]}$, $\bb{I}^{[m,\infty)}$, $\bb{I}^{(-\infty,\infty)}$. Some sources write them as $\bb{I}[m,n]$ instead. However, over $\R$ two interval modules may have the same endpoints but with different topology, e.g., $\bb{I}(p,q]$ vs $\bb{I}(p,q)$.
 
@@ -126,7 +126,7 @@ The classical persistence diagram draws points $(p,q)$ without indicating the de
 
 ## Interval Decomposition
 
-Recall the direct sum of vector spaces. Given vector spaces $X$ and $Y$, the direct sum $X\oplus Y$ is a vector space consisting of all ordered pairs $(x,y)$ with operations defined component wise:
+Recall the direct sum of vector spaces. Given vector spaces $X$ and $Y$, the direct sum $X\oplus Y$ is the vector space $V=X+Y$ when $X\cap Y=\{0\}$. The direct sum is isomorphic to the direct product, i.e., the vector space consisting of all ordered pairs $(x,y)$ with operations defined component wise:
 - $(x_1,y_1) + (x_2,y_2) = (x_1+x_2,y_1+y_2)$
 - $\alpha(x,y)=(\alpha x,\alpha y)$
 
@@ -261,6 +261,8 @@ $$
 	\textup{conullity}(v) &= \langle\circ_a\textemdash\bullet_b\mid\bb{V}\rangle \\
 \end{align*}
 $$
+The **conullity** is the dimension of the **cokernel**, for linear map $f:X\rightarrow Y$, the cokernel of $f$ is the quotient space $Y/\textup{Im}(f)$.
+
 > [!prp] Proposition 1.9 (direct sums)
 > Suppose $\bb{V}$ is the direct sum of persistence modules,
 > $$
@@ -573,3 +575,41 @@ $$
 The above limits exist when the rectangles in the expression belong to $\textup{Rect}(\cal{D})$. 
 
 ## Diagrams of persistence modules
+
+We have defined two definitions of diagrams of persistence module:
+- Decomposition of intervals $\bb{V}=\bigoplus_{\ell\in L}\bb{I}(p_\ell^*,q_\ell^*)$ gives the multiset
+$$
+	\textup{Dgm}(\bb{V}) = \textup{Int}(\bb{V}) = \{(p_\ell^*,q_\ell^*)\mid\ell\in L\}
+$$
+- For persistence measure $\mu_\bb{V}$ of $\bb{V}$ gives the multiset that satisfies
+$$
+	\mu_\bb{V}(R) = \textup{card}(\textup{Dgm}(\mu_\bb{V})|_R)
+$$
+for all rectangles $R$.
+
+> [!prp] Proposition 2.18
+> If $\bb{V}$ is decomposable into intervals, then $\textup{Int}(\bb{V})$ agrees with $\textup{Dgm}(\mu_\bb{V})$ where the latter is defined on $\cal{F}^\blacksquare(\mu)$.
+
+**Example 2.19:** Let
+$$
+	\bb{V}=\oplus_{\ell\in L}\bb{I}(p_\ell^*,q_\ell^*)
+$$
+where the undecorated pairs $(p_\ell,q_\ell)$ form a dense subset of the half-plane $\overline{\cal{H}}$. Notice that that for any rectangle $R$, $\mu_\bb{V}(R)=\infty$ because the pairs are dense, i.e., there are infinitely many points in every rectangle. Hence,
+$$
+	\cal{F}^\blacksquare(\mu_\bb{V}) = \{(p^*,q^*)\mid \exists R\in\textup{Rect}(\cal{D})\text{ s.t. }(p^*,q^*)\in R\text{ and }\mu(R)<\infty\} = \emptyset.
+$$
+Therefore, the multiset $\textup{Dgm}(\mu_\bb{V})$ is nowhere defined.
+
+**Example 2.20:** Consider the persistence module 
+$$
+	\cdots\rightarrow W_{-2}\rightarrow W_{-1} \rightarrow W_0 \rightarrow 0 \rightarrow\cdots
+$$
+defined by 
+$$
+\begin{align*}
+	W_t &= 0 & \text{for }t>0 \\
+	W_0 &= \{\text{sequences $(x_1,x_2,x_3,\dots)$ of real numbers}\} \\
+	W_t &= \{\text{sequences with $x_n=0$ for all $n\le|t|$}\} & \text{for }t<0
+\end{align*}
+$$
+???

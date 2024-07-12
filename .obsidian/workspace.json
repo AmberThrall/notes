@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Box Filtration.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/Box Filtration.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/Box Filtration.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/Box Filtration.md"
+                "file": "content/Papers/The structure and stability of persistence modules.md"
               }
             }
           }
@@ -149,10 +149,10 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Papers/Box Filtration.md",
     "content/Figures/Screenshot from 2024-07-10 14-46-17.png",
     "content/Machine Learning/k-nearest Neighbors.md",
     "content/Figures/KnnClassification.svg.png",
-    "content/Papers/Box Filtration.md",
     "content/Figures/Screenshot from 2024-07-08 16-10-35.png",
     "content/Figures/Screenshot from 2024-07-08 14-51-46.png",
     "content/Figures/Screenshot from 2024-07-08 12-44-29.png",
@@ -169,7 +169,6 @@
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
     "content/Optimization/Derivatives and Gradients.md",
     "content/Figures/SS_2024-06-28_1719605877.png",
-    "content/Figures/manim_2024-06-28.gif",
     "content/Symmetric Difference.md",
     "quartz/plugins/transformers/lastmod.ts~",
     "quartz.config.ts~",
