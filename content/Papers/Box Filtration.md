@@ -2,11 +2,12 @@
 tags:
   - papers
   - box-reconstruction
-date: 2024-07-10
+date: 2024-07-15
 ---
 **Questions:**
 - Unsure how the weights $w_x$ for a point $x\in N$ are determined
 - How to solve the LP for box expansion?
+- What if a point $x\in X$ lies on the boundary of two or more pixels?
 
 Full paper can be found at: https://arxiv.org/abs/2404.05859v2
 
@@ -85,6 +86,7 @@ The partial derivative is zero when $\alpha=0.5$. Since multiple boxes $\tilde{V
 > Let $V^1=\prod[l_i^1,u_i^1]$ and $V^2=\prod[l_i^2,u_i^2]$ be two boxes. Their **union** is the box $V^1\cup V^2=\prod[\hat{l_i},\hat{u_i}]$ where $\hat{l}_i = \min\{l_i^1,l_i^2\}$ and $\hat{u_i}=\max\{u_i^1,u_i^2\}$ for each $i\in\cal{I}$
 
 For example in 2D:
+
 ![[Screenshot from 2024-07-08 14-51-46.png#invert | center]]
 
 Let $\cal{I}_i=\{1,\dots,i\}$ and $V\subseteq\tilde{V}$. Then $S(V,\tilde{V})$ is the ordered sequence whose $i$-th entry is the union of $V$ and the projections of $\tilde{V}$ onto the set of directions $\cal{I}_i$, i.e., $S(V,\tilde{V})$ is the ordered sequence of boxes from $V$ to $\tilde{V}$ by expanding in each direction. Let $\tilde{c_i}$ denote the change in the cost function resulting from the expansion of $\tilde{V}$ in the one additional $i$-th direction.
@@ -153,7 +155,7 @@ For $x=(x_1,\dots,x_n)\in X$ we define the pixel $\sigma=[\lfloor x_1\rfloor],\u
 
 For a given input box $V$, let $\tilde{V}\supseteq V$ be a box in the neighborhood $N=B(V,\pi)$. The total width of box $\tilde{V}$ is given by $|\tilde{V}|=\sum_{i\in\cal{I}}\tilde{u_i}-\tilde{l_i}$. Let $w_\sigma$ be the weight corresponding to pixel $\sigma\in\Theta(N)$ for a given expansion $\tilde{V}$,
 $$
-	w_\sigma\le\min\{\{m_\sigma^i-\tilde{l}^i\mid i\in\cal{I}\}\\cup\{\tilde{u_i}-m_\sigma^i\mid i\in\cal{I}\}\cup\{0.5\}\}.
+	w_\sigma\le\min\{\{m_\sigma^i-\tilde{l}^i\mid i\in\cal{I}\}\cup\{\tilde{u_i}-m_\sigma^i\mid i\in\cal{I}\}\cup\{0.5\}\}.
 $$
 Note that, like before, $m_\sigma\in\tilde{V}$ if and only if
 $$
