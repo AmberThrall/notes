@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Papers/Box Filtration.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Papers/Box Filtration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Papers/Box Filtration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md"
+                "file": "content/Papers/Box Filtration.md"
               }
             }
           }
@@ -149,6 +149,9 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Figures/Screenshot from 2024-07-15 13-33-42.png",
+    "content/Figures/Screenshot from 2024-07-15 13-15-09.png",
+    "content/Papers/The structure and stability of persistence modules.md",
     "content/Papers/Box Filtration.md",
     "content/Figures/Screenshot from 2024-07-10 14-46-17.png",
     "content/Machine Learning/k-nearest Neighbors.md",
@@ -164,11 +167,9 @@
     "content/Machine Learning/Multiple Correspondence Analysis.md",
     "content/Machine Learning/One-Hot Encoding.md",
     "content/Figures/Screenshot from 2024-07-02 15-55-42.png",
-    "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-07-01 12-48-49.png",
     "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
     "content/Optimization/Derivatives and Gradients.md",
-    "content/Figures/SS_2024-06-28_1719605877.png",
     "content/Symmetric Difference.md",
     "quartz/plugins/transformers/lastmod.ts~",
     "quartz.config.ts~",

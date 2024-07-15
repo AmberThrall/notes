@@ -89,6 +89,10 @@ For example in 2D:
 
 Let $\cal{I}_i=\{1,\dots,i\}$ and $V\subseteq\tilde{V}$. Then $S(V,\tilde{V})$ is the ordered sequence whose $i$-th entry is the union of $V$ and the projections of $\tilde{V}$ onto the set of directions $\cal{I}_i$, i.e., $S(V,\tilde{V})$ is the ordered sequence of boxes from $V$ to $\tilde{V}$ by expanding in each direction. Let $\tilde{c_i}$ denote the change in the cost function resulting from the expansion of $\tilde{V}$ in the one additional $i$-th direction.
 
+
+![[Screenshot from 2024-07-15 13-15-09.png#invert | center]]
+
+
 > [!prp] Proposition 2.4
 > Let $V^l\supseteq V$, $V^k\supseteq V$, and $\hat{V}=V^l\cup V^k$ be expansions of a box $V$ such that $V=V^k\cap V^l$ for some neighborhood $N$. Let $S(V,V^l)$, $S(V, V^k)$, and $S(V,\hat{V})$ be the sequences with $c_i^1$, $c_i^k$, and $\hat{c_i}$ being the corresponding changes in the cost function at the $i$-th step. Then
 > $$
@@ -143,6 +147,9 @@ $$
 	\end{cases}
 $$
 For $x=(x_1,\dots,x_n)\in X$ we define the pixel $\sigma=[\lfloor x_1\rfloor],\upharpoonright x_1\upharpoonleft]\times\cdots\times[\lfloor x_n\rfloor,\upharpoonright x_n\upharpoonleft]$ .  We denote the centroid of a pixel $\sigma$ by $m_\sigma=(m_\sigma^1,\dots,m_\sigma^n)$ and define $\theta(\sigma)$ to be the number of points in $X$ that are in $\sigma$. We denote by $\Theta(\tilde{V})$ the set of pixels $\sigma$ such that $m_\sigma\in\tilde{V}$ and $\theta(\sigma)\ne0$, i.e., the set of nonempty pixels whose centroids are in the box $\tilde{V}$.
+
+![[Screenshot from 2024-07-15 13-33-42.png#invert | center]]
+
 
 For a given input box $V$, let $\tilde{V}\supseteq V$ be a box in the neighborhood $N=B(V,\pi)$. The total width of box $\tilde{V}$ is given by $|\tilde{V}|=\sum_{i\in\cal{I}}\tilde{u_i}-\tilde{l_i}$. Let $w_\sigma$ be the weight corresponding to pixel $\sigma\in\Theta(N)$ for a given expansion $\tilde{V}$,
 $$
