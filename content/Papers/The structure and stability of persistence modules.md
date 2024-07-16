@@ -3,7 +3,7 @@ id: The structure and stability of persistence modules
 aliases: 
 tags:
   - papers
-date: 2024-07-01
+date: 2024-07-15
 ---
 
 **Questions:**
@@ -11,6 +11,7 @@ date: 2024-07-01
     - **Answer:** A locally finite poset is a poset $P$ such that for all $x,y\in P$ the interval $[x,y]=\{z\in P\mid x\le z\le y\}$ is finite. (https://en.wikipedia.org/wiki/Locally_finite_poset) 
 - Homology of sublevel sets
 - Computing multiplicity, e,g, $\langle \circ_a\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}\rangle$, without knowing the interval decomposition.
+- Counterexample by Webb in Theorem 1.4 on page 13.
 
 Full paper can be found at: https://arxiv.org/abs/1207.3674
 
@@ -188,7 +189,16 @@ In other words, decomposing a $T$-persistence module into interval modules is un
 > 1. $T$ is a finite set; or 
 > 2. $T$ is a locally finite subset of $\R$ and each $V_t$ is finite-dimensional.
 
-If either condition (1) or condition (2) in the above theorem hold, we can define a persistence diagram. However, we then see that not every persistence module over $\R$ is guaranteed an interval decomposition. To circumnavigate this issue, one may 
+If either condition (1) or condition (2) in the above theorem hold, we can define a persistence diagram. However, we then see that not every persistence module over $\R$ is guaranteed an interval decomposition. For example, consider the following (from Webb)  persistence module over the non-positive integers:
+$$
+\begin{align*}
+	V_0 &= \{\text{sequences $(x_1,x_2,x_3,\dots)$ of real numbers}\} \\
+	V_{-n} &= \{\text{sequences with $x_1=\cdots=x_n=0$}\} && n\ge1
+\end{align*}
+$$
+with maps $v_{-m}^{-n}$ given by inclusion $V_{-m}\hookrightarrow V_{-n}$ for $m\ge n$. Suppose $\bb{V}$ has an interval decomposition. Every map $v_{-n-1}^{-n}$ is injective so each interval is of the form $[-n,0]$ or $(-\infty,0]$. Moreover, $\bigcap V_{-n}=\{(0,0,\dots)\}$ implying that the interval $(-\infty,0]$ does not occur. Hence, $V\cong\bigoplus_{n\ge0}\bb{I}[-n,0]$. But $\dim(V_0)$ is uncountable, a contradiction.
+
+If conditions (1) and (2) are not satisfied, one may 
 - Work in restricted settings so that $\bb{V}$ only depends on finitely many indices $t\in\R$, 
 - Sample the persistence module over a finite grid, or
 - Show that the persistence intervals can be inferred from the behavior of $\bb{V}$ on finite index sets.
@@ -206,17 +216,18 @@ If either condition (1) or condition (2) in the above theorem hold, we can defin
 > $$
 > and the **undecorated persistence diagram** as the multiset
 > $$
->   \textup{dgm}(\bb{V}) = \textup{int}(\bb{V}) = \{(p_\ell,q_\ell)\mid \ell\in L\} - \Delta
+>   \textup{dgm}(\bb{V}) = \textup{int}(\bb{V}) = \{(p_\ell,q_\ell)\mid \ell\in L\} \setminus \Delta
 > $$
 > where $\Delta=\{(r,r)\mid r\in\R\}$ is the diagonal in the plane.
 
-The persistence diagram does not depend on the order of interval modules in the decomposition.
+The persistence diagram does not depend on the order of interval modules in the decomposition (see Theorem 1.3).
 
 **Example:**
 
 Consider the curve in $\R^2$ below filtered by height:
 
 ![[SS_2024-06-12_1718226331.png#invert | center ]]
+
 
 The sublevelset persistent homology decomposes as follows:
 $$
@@ -291,7 +302,7 @@ and
 $$
 	\langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}_{a,b,c}\rangle = \langle\circ_a\textemdash\circ_p\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}_{a,p,b,c}\rangle + \langle\circ_a\textemdash\bullet_p\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}_{a,p,b,c}\rangle.
 $$
-Notice the second term is due to both $\bb{J}[p,c]$ and $\bb{J}[b,c]$ both restricting to $\bb{I}[b,c]$.
+Notice the second term is due to both $\bb{J}[b,c]$ and $\bb{J}[p,c]$ both restricting to $\bb{I}[b,c]$.
 
 We can make use of proposition 1.10 to prove statements about ranks:
 **Example:** We wish to show that $\textup{rank}(V_b\rightarrow V_c)\ge\textup{rank}(V_a\rightarrow V_d)$ when $a\le b\le c\le d$. Notice that 
@@ -300,7 +311,7 @@ $$
 	\textup{rank}(V_b\rightarrow V_c) &= \langle\bullet_b\textemdash\bullet_c\mid\bb{V}_{b,c}\rangle \\
 	&= \langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\mid\bb{V}_{a,b,c,d}\rangle +
 	\langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\mid\bb{V}_{a,b,c,d}\rangle \\
-	&\phantom{=} + \langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_c\mid\bb{V}_{a,b,c,d}\rangle +
+	&\phantom{=} + \langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\mid\bb{V}_{a,b,c,d}\rangle +
 	\langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\mid\bb{V}_{a,b,c,d}\rangle \\
 	&\ge\langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\mid\bb{V}_{a,b,c,d}\rangle \\
 	&= \langle\bullet_a\textemdash\bullet_d\mid\bb{V}_{a,d}\rangle \\
@@ -320,7 +331,7 @@ Right now our definitions for (un)decorated persistence diagrams requires knowin
 
 That is, the persistence measure $\mu_\bb{V}$ is the number of copies of $\bb{I}[b,c]$ in the interval decomposition of $\bb{V}_{a,b,c,d}$.
 
-This measure is easy to calculate on interval modules.
+This "measure" is easy to calculate on interval modules.
 
 > [!prp] Proposition 2.1
 > Let $\bb{V}=\bb{I}^J$ where $J=(p^*,q^*)$ is a real interval. Let $R=[a,b]\times[c,d]$ where $a<b\le c<d$. Then
@@ -362,6 +373,18 @@ With this we can layout the strategy for defining persistence diagrams without d
 > 	\langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\mid\bb{V}\rangle = r_b^c - r_a^c - r_b^d + r_a^d.
 > $$
 
+**Proof:**
+By the restriction principle:
+$$
+\begin{align*}
+	r_b^c &= \langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\rangle &+ \langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\rangle &+ \langle \circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\rangle &+ \langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\rangle \\
+	r_a^c &= &\phantom{+}\langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\rangle &&+\langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\rangle \\
+	r_b^d &= &&\phantom{+}\langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\rangle &+\langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\rangle \\
+	r_a^d &= &&&\phantom{+}\langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\rangle
+\end{align*}
+$$
+All the terms are finite.
+
 Moreover, the measure is additive with respect to vertical or horizontal splitting of the rectangle:
 
 > [!prp] Proposition 2.4
@@ -372,6 +395,9 @@ Moreover, the measure is additive with respect to vertical or horizontal splitti
 > 	\mu_\bb{V}([a,b]\times[c,d]) &= \mu_\bb{V}([a,b]\times[c,q]) + \mu_\bb{V}([a,b]\times[q,d]) \\
 > \end{align*}
 > $$
+
+![[Screenshot from 2024-07-15 15-19-11.png#invert | center]]
+
 
 **Proof:**
 Notice that by direct calculation using the restriction principle
@@ -398,7 +424,8 @@ A similar calculation follows for vertical splits.
 > $$
 > that is additive under vertical and horizontal splitting (satisfies Proposition 2.4).
 
-This is similar to Lebesgue outer measure but more akin to a Lebesgue "inner" measure. With the Lebesgue outer measure we take the infimum of measures of rectangles that contain our set. Here, we instead would take the supremum of measures of rectangles that are contained in our set.
+The $r$-measure assigns each closed rectangle $R$ that lies inside of the dataset $\cal{D}$ either infinity or a non-negative integer such that splitting a rectangle does not change the total "area".
+
 
 > [!prp] Proposition 2.6
 > Let $\mu$ be an $r$-measure on $\cal{D}$. Then
