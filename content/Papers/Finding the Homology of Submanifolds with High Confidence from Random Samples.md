@@ -78,6 +78,7 @@ $$
 	c = \sum_{\sigma\in L_j}c(\sigma)\sigma.
 $$
 Adding $j$-chains componentwise forms a vector space of $j$-chains denoted by $C_j$.
+
 5. The boundary operator $\partial_j:C_j\rightarrow C_{j-1}$ is defined as follows: for each (oriented) simplex $\sigma\in L_j$,
 $$
 	\partial_j\sigma = \sum_{i=0}^j(-1)^i\sigma_i,
@@ -87,6 +88,7 @@ $$
 	\partial_j\left(\sum_{\sigma\in L_j}c(\sigma)\sigma\right) = \sum_{\sigma\in L_j}c(\sigma)\partial_j\sigma
 $$
 One may view $\partial_j$ as an $n_{j-1}\times n_j$ matrix where $n_i=|L_i|$.
+
 6. The boundary operator forms a chain complex
 $$
 	\cdots\rightarrow C_{j+1}\xrightarrow{\partial_{j+1}}C_j\xrightarrow{\partial_j}C_{j-1}\rightarrow\cdots
