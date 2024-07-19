@@ -147,8 +147,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "437246b057b1229b",
+  "active": "fb6316178493ddb5",
   "lastOpenFiles": [
+    "content/index.md~",
     "content/Figures/Tangentialvektor.svg.png",
     "content/An Introduction to Manifolds/Smooth Functions on a Euclidean Space.md",
     "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md",
@@ -167,7 +168,6 @@
     "content/Figures/Screenshot from 2024-07-15 13-15-09.png",
     "content/Figures/Screenshot from 2024-07-10 14-46-17.png",
     "content/Machine Learning/k-nearest Neighbors.md",
-    "content/Figures/KnnClassification.svg.png",
     "content/Optimization/Linear Programming.md",
     "content/Optimization/Constraints.md",
     "content/Papers/Persistence stability for geometric complexes.md",
