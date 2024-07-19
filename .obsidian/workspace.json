@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
+                "file": "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
+                "file": "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
+                "file": "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md"
+                "file": "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md"
               }
             }
           }
@@ -149,8 +149,14 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
-    "content/Computational Topology/Homotopy.md",
+    "content/Figures/Tangentialvektor.svg.png",
+    "content/An Introduction to Manifolds/Smooth Functions on a Euclidean Space.md",
+    "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md",
+    "content/Figures/Screenshot from 2024-07-19 14-11-06.png",
+    "content/Figures/Screenshot from 2024-07-19 13-11-54.png",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
+    "content/An Introduction to Manifolds",
+    "content/Computational Topology/Homotopy.md",
     "content/Figures/Screenshot from 2024-07-16 15-28-31.png",
     "content/Figures/Screenshot from 2024-07-16 15-00-38.png",
     "content/Figures/Two_coordinate_charts_on_a_manifold.svg.png",
@@ -162,8 +168,6 @@
     "content/Figures/Screenshot from 2024-07-10 14-46-17.png",
     "content/Machine Learning/k-nearest Neighbors.md",
     "content/Figures/KnnClassification.svg.png",
-    "content/Figures/Screenshot from 2024-07-08 16-10-35.png",
-    "content/Figures/Screenshot from 2024-07-08 14-51-46.png",
     "content/Optimization/Linear Programming.md",
     "content/Optimization/Constraints.md",
     "content/Papers/Persistence stability for geometric complexes.md",
@@ -184,16 +188,12 @@
     "content/Category Theory/Functoriality.md",
     "content/Category Theory/Duality.md",
     "content/Category Theory/Categories.md",
-    "content/Algebra/Quotient Group.md",
-    "content/Algebra/Module.md",
-    "content/Algebra/Isomorphism Theorems.md",
     "content/Optimization",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
     "content/Daily/2024-06-18.md~",
     "content/Daily/2024-06-17.md~",
     "content/Machine Learning/One-Hot Encoding.md~",
-    "content/Machine Learning/4913",
-    "content/Machine Learning/Support Vector Machine.md~"
+    "content/Machine Learning/4913"
   ]
 }
