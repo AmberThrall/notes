@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md",
+                "file": "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md",
+                "file": "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md",
+                "file": "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md"
+                "file": "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md"
               }
             }
           }
@@ -151,8 +151,8 @@
   "lastOpenFiles": [
     "content/index.md~",
     "content/Figures/Tangentialvektor.svg.png",
-    "content/An Introduction to Manifolds/Smooth Functions on a Euclidean Space.md",
-    "content/An Introduction to Manifolds/Tangent Vectors in Rn as Derivations.md",
+    "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
+    "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
     "content/Figures/Screenshot from 2024-07-19 14-11-06.png",
     "content/Figures/Screenshot from 2024-07-19 13-11-54.png",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
