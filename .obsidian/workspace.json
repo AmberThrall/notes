@@ -147,12 +147,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fb6316178493ddb5",
+  "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Figures/Screenshot from 2024-07-23 15-55-22.png",
+    "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
     "content/index.md~",
     "content/Figures/Tangentialvektor.svg.png",
     "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
-    "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
     "content/Figures/Screenshot from 2024-07-19 14-11-06.png",
     "content/Figures/Screenshot from 2024-07-19 13-11-54.png",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
@@ -193,7 +194,6 @@
     "content/Daily/4913",
     "content/Daily/2024-06-18.md~",
     "content/Daily/2024-06-17.md~",
-    "content/Machine Learning/One-Hot Encoding.md~",
-    "content/Machine Learning/4913"
+    "content/Machine Learning/One-Hot Encoding.md~"
   ]
 }
