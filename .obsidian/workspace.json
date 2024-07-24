@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
+                "file": "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
+                "file": "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
+                "file": "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md"
+                "file": "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md"
               }
             }
           }
@@ -149,11 +149,12 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
-    "content/Figures/Screenshot from 2024-07-23 15-55-22.png",
+    "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
+    "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
     "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
+    "content/Figures/Screenshot from 2024-07-23 15-55-22.png",
     "content/index.md~",
     "content/Figures/Tangentialvektor.svg.png",
-    "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
     "content/Figures/Screenshot from 2024-07-19 14-11-06.png",
     "content/Figures/Screenshot from 2024-07-19 13-11-54.png",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
@@ -167,7 +168,6 @@
     "content/Papers/Box Filtration.md",
     "content/Figures/Screenshot from 2024-07-15 13-33-42.png",
     "content/Figures/Screenshot from 2024-07-15 13-15-09.png",
-    "content/Figures/Screenshot from 2024-07-10 14-46-17.png",
     "content/Machine Learning/k-nearest Neighbors.md",
     "content/Optimization/Linear Programming.md",
     "content/Optimization/Constraints.md",
