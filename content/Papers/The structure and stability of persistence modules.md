@@ -3,7 +3,7 @@ id: The structure and stability of persistence modules
 aliases: 
 tags:
   - papers
-date: 2024-07-15
+date: 2024-07-26
 ---
 
 **Questions:**
@@ -12,6 +12,7 @@ date: 2024-07-15
 - Homology of sublevel sets
 - Computing multiplicity, e,g, $\langle \circ_a\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}\rangle$, without knowing the interval decomposition.
 - Counterexample by Webb in Theorem 1.4 on page 13.
+- Proposition 3.3, how to visualize $\bb{W}$.
 
 Full paper can be found at: https://arxiv.org/abs/1207.3674
 
@@ -96,7 +97,7 @@ $$
     \end{cases}
 $$
 
-**Example:** Assume that $a<b<c$. Then the $\{a,b,c\}$-interval module $\bb{I}_{\{1,2,3\}}^{[a,b]}$ is the following persistence module:
+**Example:** Assume that $a<b<c$. Then the $\{a,b,c\}$-interval module $\bb{I}_{\{a,b,c\}}^{[a,b]}$ is the following persistence module:
 $$
 	k \xrightarrow{\text{id}_k}k\xrightarrow{0} 0.
 $$
@@ -150,14 +151,24 @@ Our goal is decompose a persistence module $\bb{V}$ into an indexed family of in
 $$
     \bb{V} = \bigoplus_{\ell\in L}\bb{I}^{J_\ell}.
 $$
-This is a generalization of what we do with homology groups. For example, the first-homology group of the torus $\bb{T}^2$ decomposes as $H_1(\bb{T}^2)\cong\Z_2\oplus\Z_2$. With persistence modules, we would be working with a filtration of the torus and each component would be a persistence module.
+This is a generalization of what we do with homology groups. For example, if we have filtration of a simplicial complex
+$$
+	K_1\hookrightarrow K_2\hookrightarrow\cdots\hookrightarrow K_n
+$$
+then we obtain a persistence module $\bb{V}=(H_i(K_j))_j$ with linear maps induced by inclusion
+$$
+	H_i(K_1)\rightarrow H_i(K_2)\rightarrow\cdots\rightarrow H_i(K_n).
+$$
+This persistence module then decomposes into a persistence module formed by interval modules
+$$
+	\Z_2^{k_1}\rightarrow\Z_2^{k_2} \cdots\rightarrow\Z_2^{k_n}.
+$$
+
 
 > [!prp] Proposition 1.1
 > Let $\bb{I}$ be an interval module over $I\subset\R$. Then $\Hom(\bb{I},\bb{I})=k$.
 
-**Proof:**
-
-Let $\Phi\in\Hom(\bb{I},\bb{I})$. Then each $\phi_t\in\Phi$ is an endomorphism on 0 or $k$. In the non-trivial case, $\phi_t(x)=\alpha_t x$ is the only possible endomorphism. Notice that for all $s\le t$
+**Proof:** Let $\Phi\in\Hom(\bb{I},\bb{I})$. Then each $\phi_t\in\Phi$ is an endomorphism on 0 or $k$. In the non-trivial case, $\phi_t(x)=\alpha_t x$ is the only possible endomorphism. Notice that for all $s\le t$
 $$
     \phi_tu_s^t(x) = \phi_t(x)\id_k = \alpha_tx
 $$
@@ -166,13 +177,14 @@ $$
     v_s^t\phi_s(x) = \id_k\phi_s(x) = \alpha_sx.
 $$
 But $\phi_tu_s^t=v_s^t\phi_s$. Therefore, $\phi_t=\phi_s$.
+<p style='text-align: right'>Q.E.D.</p>
+
 
 > [!prp] Proposition 1.2
 > Interval modules are indecomposable.
 
-**Proof:**
-
-Assume that $\bb{I}=\bb{U}\oplus\bb{V}$. Notice that the projection map $(u,v)\mapsto (u,0)$ is idempotent, i.e., $f(f(x))=f(x)$, in $\textup{Hom}(\bb{I},\bb{I})$. From the previous proof we know that the only idempotent endomorphisms are 0 and $\id_k$. Therefore, the projection map is either trivial or an isomorphism.
+**Proof:** Assume that $\bb{I}=\bb{U}\oplus\bb{V}$. Notice that the projection map $(u,v)\mapsto (u,0)$ is idempotent, i.e., $f(f(x))=f(x)$, in $\textup{Hom}(\bb{I},\bb{I})$. From the previous proof we know that the only idempotent endomorphisms are 0 and $\id_k$. Therefore, the projection map is either trivial or an isomorphism.
+<p style='text-align: right'>Q.E.D.</p>
 
 > [!thm] Theorem 1.3 (Krull-Remak-Schmidt-Azumaya)
 > Suppose that a $T$-persistence module $\bb{V}$ decomposes in two ways:
@@ -196,7 +208,11 @@ $$
 	V_{-n} &= \{\text{sequences with $x_1=\cdots=x_n=0$}\} && n\ge1
 \end{align*}
 $$
-with maps $v_{-m}^{-n}$ given by inclusion $V_{-m}\hookrightarrow V_{-n}$ for $m\ge n$. Suppose $\bb{V}$ has an interval decomposition. Every map $v_{-n-1}^{-n}$ is injective so each interval is of the form $[-n,0]$ or $(-\infty,0]$. Moreover, $\bigcap V_{-n}=\{(0,0,\dots)\}$ implying that the interval $(-\infty,0]$ does not occur. Hence, $V\cong\bigoplus_{n\ge0}\bb{I}[-n,0]$. But $\dim(V_0)$ is uncountable, a contradiction.
+with maps $v_{-m}^{-n}$ given by inclusion $V_{-m}\hookrightarrow V_{-n}$ for $m\ge n$. 
+$$
+	\cdots\hookrightarrow V_{-3} \hookrightarrow V_{-2} \hookrightarrow V_{-1} \hookrightarrow V_0
+$$
+Suppose $\bb{V}$ has an interval decomposition. Every map $v_{-n-1}^{-n}$ is injective so each interval is of the form $[-n,0]$ or $(-\infty,0]$. Moreover, $\bigcap V_{-n}=\{(0,0,\dots)\}$ implying that the interval $(-\infty,0]$ does not occur. Hence, $\bb{V}\cong\bigoplus_{n\ge0}\bb{I}[-n,0]$. But $\dim(V_0)$ is uncountable, a contradiction.
 
 If conditions (1) and (2) are not satisfied, one may 
 - Work in restricted settings so that $\bb{V}$ only depends on finitely many indices $t\in\R$, 
@@ -342,26 +358,35 @@ This "measure" is easy to calculate on interval modules.
 > 	\end{cases}
 > $$
 
-**Proof:**
-Notice that $\mu_\bb{V}(R)=1$ when
+**Proof:** Notice that $\mu_\bb{V}(R)=1$ when
 $$
 	\bb{I}_{a,b,c,d}^J = \circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d
 $$
 which occurs if and only if $b,c\in J$ and $a,d\not\in J$. 
-
+<p style='text-align: right'>Q.E.D.</p>
 
 Graphically we can determine when decorated point $(p^*,q^*)$ are detected by $\mu_\bb{V}(R)$:
 - If $(p,q)$ is in the interior of $R$, then $(p^*,q^*)$ is always detected
 - If $(p,q)$ is on the boundary, then $(p^*,q^*)$ is detected if the tick is pointed inwards.
-Thus, we say that a decorated point $(p^*,q^*)\in R$ if the point $(p,q)$ and its decoration tick are contained in the closed rectangle $R$. We denote the set of points in $R$ by
+
+![[Screenshot from 2024-07-26 13-47-41.png#invert | center]]
+
+Thus, we say that a decorated point $(p^*,q^*)\in R$ if the point $(p,q)$ and its decoration tick are contained in the closed rectangle $R$. This is equivalent to $[b,c]\subseteq (p^*,q^*)\subseteq (a,d)$. We denote the set of points in $R$ by
 $$
 	R^\blacksquare := \{(p^*,q^*)\in R\}.
 $$
+
 > [!cor] Corollary 2.2
 > Suppose $\bb{V}$ is a decomposable persistence module over $\R$, then
 > $$
 > 	\mu_\bb{V}(R) = \text{card}(\textup{Dgm}(\bb{V})|_R).
 > $$
+
+**Proof:** By Proposition 1.9 and 2.1,
+$$
+	\mu_\bb{V}(R) = \mu_{\bigoplus_{\ell\in L}\bb{I}(p_\ell^*,q_\ell^*)}(R) = \sum_{\ell\in L}\mu_{\bb{I}(p_\ell^*,q_\ell^*)}(R) = \textup{card}(\textup{Dgm}(\bb{V})|_R)
+$$
+<p style='text-align: right'>Q.E.D.</p>
 
 With this we can layout the strategy for defining persistence diagrams without decomposing:
 1. construct the persistence measure $\mu_\bb{V}$;
@@ -373,8 +398,7 @@ With this we can layout the strategy for defining persistence diagrams without d
 > 	\langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\mid\bb{V}\rangle = r_b^c - r_a^c - r_b^d + r_a^d.
 > $$
 
-**Proof:**
-By the restriction principle:
+**Proof:** By the restriction principle:
 $$
 \begin{align*}
 	r_b^c &= \langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\rangle &+ \langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\rangle &+ \langle \circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\rangle &+ \langle\bullet_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\bullet_d\rangle \\
@@ -384,6 +408,7 @@ $$
 \end{align*}
 $$
 All the terms are finite.
+<p style='text-align: right'>Q.E.D.</p>
 
 Moreover, the measure is additive with respect to vertical or horizontal splitting of the rectangle:
 
@@ -399,8 +424,7 @@ Moreover, the measure is additive with respect to vertical or horizontal splitti
 ![[Screenshot from 2024-07-15 15-19-11.png#invert | center]]
 
 
-**Proof:**
-Notice that by direct calculation using the restriction principle
+**Proof:** Notice that by direct calculation using the restriction principle
 $$
 \begin{align*}
 	\mu_\bb{V}([a,b]\times[c,d]) &= \langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\rangle \\
@@ -410,6 +434,7 @@ $$
 \end{align*}
 $$
 A similar calculation follows for vertical splits.
+<p style='text-align: right'>Q.E.D.</p>
 
 ## Abstract r-measures
 
@@ -454,7 +479,8 @@ There is a correspondence between $r$-measures and decorated diagrams.
 
 The interior is defined similarly to interior in topology. A point is in the interior of $\cal{D}$ if we can put an open rectangle around the point that is contained inside of $\cal{D}$. For $r$-interior, the only difference is we also include the tick decorations of points.
 
-![[Screenshot from 2024-07-01 12-48-49.png#invert | center]]
+![[Screenshot from 2024-07-26 14-06-47.png#invert | center]]
+
 
 > [!thm] Theorem 2.8 (The equivalence theorem)
 > Let $\cal{D}\subseteq\R^2$. There is a bijective correspondence between:
@@ -471,7 +497,7 @@ The cardinality of $A|_R$ is given by
 $$
 	\mu(R) = \sum_{(p^*,q^*)\in R}m(p^*,q^*)
 $$
-where $m:\cal{D}^\blacksquare\rightarrow\{0,1,2,\dots\}$ is the multiplicity function for $A$.
+where $m:\cal{D}^\blacksquare\rightarrow\{0,1,2,\dots\}$ is the multiplicity function for $A$. Essentially, the measure of a rectangle $R$ can be done by counting the number of decorated points that lie inside $R$.
 
 **Proof Sketch:**
 
@@ -619,7 +645,7 @@ for all rectangles $R$.
 
 **Example 2.19:** Let
 $$
-	\bb{V}=\oplus_{\ell\in L}\bb{I}(p_\ell^*,q_\ell^*)
+	\bb{V}=\bigoplus_{\ell\in L}\bb{I}(p_\ell^*,q_\ell^*)
 $$
 where the undecorated pairs $(p_\ell,q_\ell)$ form a dense subset of the half-plane $\overline{\cal{H}}$. Notice that that for any rectangle $R$, $\mu_\bb{V}(R)=\infty$ because the pairs are dense, i.e., there are infinitely many points in every rectangle. Hence,
 $$
@@ -640,3 +666,166 @@ $$
 \end{align*}
 $$
 ???
+
+## Tameness Conditions
+
+We say a persistence module $\bb{V}$ is of **finite type** if it is a finite direct sum of interval modules. It is **locally finite**, if it is a direct sum of interval modules such that every $t\in\R$ has a neighborhood which meets only finitely many of the intervals.
+
+> [!prp] Proposition 2.21
+> A persistence module $\bb{V}$ is locally finite if and only if
+> 1. each $V_t$ is finite-dimensional
+> 2. there is a locally finite set $S\subset\R$ such that $v_b^c$ is an isomorphism for every pair $b<c$ with $[b,c]\cap S=\emptyset$.
+
+Condition (2) asserts that $\bb{V}$ is constant over each interval of the open set $\R\setminus S$.
+
+![[Screenshot from 2024-07-26 14-26-11.png#invert | center]]
+
+There are four kinds of tameness relating to the measure of various types of rectangles in $\overline{\cal{H}}$:
+
+1. We say $\bb{V}$ is **q-tame** if $\mu_\bb{V}(Q)<\infty$ for every quadrant $Q$ (infinite rectangle) not touching the diagonal, i.e.,
+$$
+	\textup{rank}(V_b\rightarrow V_c) =\langle\bullet_b\textemdash\bullet_c\mid\bb{V}\rangle < \infty
+$$
+for all $b<c$.
+
+2. We say $\bb{V}$ is **h-tame** if $\mu_\bb{V}(H)<\infty$ for every horizontally infinite strip $H$ not touching the diagonal, i.e.,
+$$
+	\langle\bullet_b\textemdash\bullet_c\textemdash\circ_d\mid\bb{V}\rangle<\infty
+$$
+for all $b<c<d$.
+
+3. We say $\bb{V}$ is **v-tame** if $\mu_\bb{V}(V)<\infty$ for every vertically infinite strip $V$ not touching the diagonal, i.e.,
+$$
+	\langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}\rangle<\infty
+$$
+for all $a<b<c$.
+
+4. We say $\bb{V}$ is **r-tame** if $\mu_\bb{V}(R)<\infty$ for every finite rectangle $R$ not touching the diagonal, i.e.,
+$$
+	\langle\circ_a\textemdash\bullet_b\textemdash\bullet_c\textemdash\circ_d\mid\bb{V}\rangle < \infty
+$$
+for all $a<b<c<d$.
+
+One may show that
+$$
+	\text{q-tame}\subsetneq\text{h-tame }\cap\text{ v-tame},~~\text{h-tame }\cup\text{ v-tame}\subsetneq\text{r-tame}.
+$$
+and the following diagram of inclusion:
+
+![[Screenshot from 2024-07-26 14-35-33.png#invert | center]]
+
+# Interleaving
+
+Two persistence modules $\bb{U},\bb{V}$ are said to be isomorphic if there are maps
+$$
+	\Phi\in\Hom(\bb{U},\bb{V}),~\Psi\in\Hom(\bb{V},\bb{U})
+$$
+such that
+$$
+	\Psi\Phi = 1_\bb{U},~\Phi\Psi=1_\bb{V}.
+$$
+
+![[Screenshot from 2024-07-26 14-42-59.png#invert | center | 300]]
+
+Such a relation is too strong to be used in practice. Instead we introduce a weaker relation known as $\delta$-interleaving where $\delta\ge0$ quantifies a level of uncertainty.
+
+## Shifted Homomorphisms
+
+Let $\bb{U},\bb{V}$ be persistence modules over $\R$ and $\delta\in\R$. A **homomorphism of degree** $\delta$ is a collection $\Phi$ of linear maps
+$$
+	\phi_t: U_t\rightarrow V_{t+\delta}
+$$
+for all $t\in\R$ such that the diagram
+
+![[Screenshot from 2024-07-26 14-47-34.png#invert | center]]
+
+commutes whenever $a\le b$.
+
+We denote the set of homomorphisms $\bb{U}\rightarrow\bb{V}$ of degree $\delta$ by $\Hom^\delta(\bb{U},\bb{V})$. One may compose two homomorphisms of degree $\delta_1$ and $\delta_2$ to get a homomorphism of degree $\delta_1+\delta_2$.
+
+![[Screenshot from 2024-07-26 14-51-20.png#invert | center]]
+
+For $\delta\ge0$ a crucial degree-$\delta$ endomorphism is the shift map $1_\bb{V}^\delta\in\Hom^\delta(\bb{V},\bb{V})$ that is given by the collection of maps $(v_t^{t+\delta}:V_t\rightarrow V_{t+\delta})_t$ from the underlying persistence structure on $\bb{V}$. This map satisfies
+$$
+	\Phi1_\bb{U}^\delta = 1_\bb{V}^\delta\Phi
+$$
+for any $\Phi\in\Hom^\delta(\bb{U},\bb{V})$ and $\delta\ge0$, i.e., the diagram below commutes for all $t$ and $\delta\ge0$.
+
+![[Screenshot from 2024-07-26 15-59-03.png#invert | center]]
+
+## Interleaving
+
+Two persistence modules $\bb{U},\bb{V}$ are said to be **$\delta$-interleaved** if there are maps
+$$
+	\Phi\in\Hom^\delta(\bb{U},\bb{V}),~\Psi\in\Hom^\delta(\bb{V},\bb{U})
+$$
+such that 
+$$
+	\Psi\Phi=1_\bb{U}^{2\delta},~\Phi\Psi=1_\bb{V}^{2\delta},
+$$
+in other words, for all $a<b$ the diagrams below commute:
+
+![[Screenshot from 2024-07-26 15-22-51.png#invert | center]]
+
+
+**Example 3.2.** Let $X$ be a topological space and let $f,g:X\rightarrow\R$. Suppose $\|f-g\|_\infty<\delta$. Then the persistence modules $H(\bb{X}_\text{sub}^f)$ and $H(\bb{X}_\text{sub}^g)$ are $\delta$-interleaved by the homomorphisms of degree $\delta$
+$$
+	\Phi:H(\bb{X}_\text{sub}^f)\rightarrow H(\bb{X}_\text{sub}^g),~\Psi:H(\bb{X}_\text{sub}^g)\rightarrow H(\bb{X}_\text{sub}^f)
+$$
+induced by inclusion
+$$
+	(X,f)^t\hookrightarrow(X,g)^{t+\delta},~(X,g)^t\hookrightarrow(X,f)^{t+\delta}.
+$$
+
+
+An interleaving between two persistence modules can be viewed as a persistence module over a poset. Consider the standard partial order on $\R^2$:
+$$
+	(p_1,q_1) \le (p_2,q_2) \Leftrightarrow p_1\le p_2\text{ and }q_1\le q_2.
+$$
+Then for any $x\in\R$ we define the poset
+$$
+	\Delta_x = \{(p,q)\mid q-p=2x\}\subset\R^2
+$$
+that is isomorphic to $\R$ by $t\mapsto(t-x,t+x)$.
+
+> [!prp] Proposition 3.3
+> Let $x,y\in\R$. Persistence modules $\bb{U},\bb{V}$ are $|y-x|$-interleaved if and only if there is a persistence module $\bb{W}$ over $\Delta_x\cup\Delta_y$ such that $\bb{W}|_{\Delta_x}=\bb{U}$ and $\bb{W}|_{\Delta_y}=\bb{V}$.
+
+
+![[Screenshot from 2024-07-26 16-28-11.png#invert | center]]
+
+
+**Proof:** Assume WLOG that $x<y$.
+1. Since $\bb{U},\bb{V}$ are $(y-x)$-interleaved, there are $(y-x)$-degree homomorphisms
+$$
+\begin{align*}
+	\Phi &= (\phi_t:U_t\rightarrow V_{t+y-x})_t \\
+	\Psi &= (\psi_t:V_t\rightarrow U_{t+y-x})_t
+\end{align*}
+$$
+such that for all $\eta\ge0$
+$$
+	\Phi1_{\bb{U}}^\eta=1_\bb{V}^\eta\Phi,~\Psi1_\bb{V}^\eta=1_\bb{U}^\eta\Psi,~\Psi\Phi=1_\bb{U}^{2y-2x},~\Phi\Psi=1_\bb{V}^{2y-2x}.
+$$
+2. The persistence module $\bb{W}$ maps satisfy
+$$
+	w_R^T=w_S^T\circ w_R^S
+$$
+for all $R\le S\le T$ in $\Delta_x\cup\Delta_y$. Notice that
+$$
+\begin{align*}
+	\phi_t:U_t=W_{t-x,t+x}\rightarrow W_{t-x,t+2y-x}=V_{t+y-x} \\
+	\psi_t:V_t=W_{t-y,t+y}\rightarrow W_{t+y-2x,t+y}=U_{t+y-x}
+\end{align*}
+$$
+by the isomorphism $t\mapsto(t-x,t+x)$ for $\R\cong\Delta_x$. Moreover all maps $w_S^T$, where $S\le T$, in $\bb{W}$ can be factored as
+$$
+\begin{align*}
+	w_S^T &= v_{s+y-x}^t\circ\phi_s~\text{if }S\in\Delta_x\text{ and }T\in\Delta_y \\
+	w_S^T &= u_{s+y-x}^t\circ\psi_s~\text{if }S\in\Delta_y\text{ and }T\in\Delta_x.
+\end{align*}
+$$
+???
+
+
+
