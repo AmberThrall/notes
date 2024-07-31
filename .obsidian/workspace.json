@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Daily/2024-07-29.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Daily/2024-07-29.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Daily/2024-07-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md"
+                "file": "content/Daily/2024-07-29.md"
               }
             }
           }
@@ -149,7 +149,9 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Figures/Screenshot from 2024-07-31 12-51-34.png",
     "content/Papers/The structure and stability of persistence modules.md",
+    "content/Daily/2024-07-29.md",
     "content/Figures/Screenshot from 2024-07-26 16-28-11.png",
     "content/Figures/Screenshot from 2024-07-26 16-25-13.png",
     "content/Figures/Screenshot from 2024-07-26 15-59-03.png",
@@ -187,7 +189,6 @@
     "content/Optimization/Basic Optimization.md",
     "content/Machine Learning/Support Vector Machine.md",
     "content/Category Theory/Functoriality.md",
-    "content/Category Theory/Duality.md",
     "content/Optimization",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
