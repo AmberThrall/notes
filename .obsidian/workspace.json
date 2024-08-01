@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-07-29.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-07-29.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-07-29.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-07-29.md"
+                "file": "content/Papers/The structure and stability of persistence modules.md"
               }
             }
           }
@@ -149,9 +149,10 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Figures/Screenshot from 2024-08-01 13-12-01.png",
+    "content/Daily/2024-07-29.md",
     "content/Figures/Screenshot from 2024-07-31 12-51-34.png",
     "content/Papers/The structure and stability of persistence modules.md",
-    "content/Daily/2024-07-29.md",
     "content/Figures/Screenshot from 2024-07-26 16-28-11.png",
     "content/Figures/Screenshot from 2024-07-26 16-25-13.png",
     "content/Figures/Screenshot from 2024-07-26 15-59-03.png",
@@ -161,7 +162,6 @@
     "content/Figures/Screenshot from 2024-07-26 14-42-59.png",
     "content/Figures/Screenshot from 2024-07-26 14-35-33.png",
     "content/Figures/Screenshot from 2024-07-26 14-26-11.png",
-    "content/Figures/Screenshot from 2024-07-26 14-06-47.png",
     "content/Papers/Persistence stability for geometric complexes.md",
     "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
     "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",

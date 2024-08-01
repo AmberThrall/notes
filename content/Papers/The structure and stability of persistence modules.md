@@ -12,7 +12,6 @@ date: 2024-07-26
 - Homology of sublevel sets
 - Computing multiplicity, e,g, $\langle \circ_a\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}\rangle$, without knowing the interval decomposition.
 - Counterexample by Webb in Theorem 1.4 on page 13.
-- Proposition 3.3, how to visualize $\bb{W}$.
 
 Full paper can be found at: https://arxiv.org/abs/1207.3674
 
@@ -791,8 +790,9 @@ that is isomorphic to $\R$ by $t\mapsto(t-x,t+x)$.
 > [!prp] Proposition 3.3
 > Let $x,y\in\R$. Persistence modules $\bb{U},\bb{V}$ are $|y-x|$-interleaved if and only if there is a persistence module $\bb{W}$ over $\Delta_x\cup\Delta_y$ such that $\bb{W}|_{\Delta_x}=\bb{U}$ and $\bb{W}|_{\Delta_y}=\bb{V}$.
 
+For $x=1$ and $y=2$, we may visualize $\bb{W}$ as follows:
 
-![[Screenshot from 2024-07-26 16-28-11.png#invert | center]]
+![[Screenshot from 2024-08-01 13-12-01.png#invert | center]]
 
 
 **Proof:** Assume WLOG that $x<y$.
@@ -825,7 +825,22 @@ $$
 	w_S^T &= u_{s+y-x}^t\circ\psi_s~\text{if }S\in\Delta_y\text{ and }T\in\Delta_x.
 \end{align*}
 $$
-???
+So every map in $\bb{W}$ is of the form
+$$
+\begin{align*}
+	&1_\bb{U}^\eta & \text{from $\Delta_x$ to $\Delta_x$} \\
+	&1_\bb{V}^\eta & \text{from $\Delta_y$ to $\Delta_y$} \\
+	&1_\bb{V}^\eta\Phi & \text{from $\Delta_x$ to $\Delta_y$} \\
+	&1_\bb{U}^\eta\Psi & \text{from $\Delta_y$ to $\Delta_x$}
+\end{align*}
+$$
+One may then show that the composition law is satisfied.
+<p style='text-align: right'>Q.E.D.</p>
+
+## The Interpolation Lemma
+
+> [!lemma] Lemma 3.4 (Interpolation Lemma)
+> Suppose $\bb{U},\bb{V}$ are a $\delta$-interleaved pair of persistence modules. Then there exists a 1-parameter family of persistence modules $(\bb{U}_x\mid x\in[0,\delta])$ such that $\bb{U}_0,\bb{U}_\delta$ are equal to $\bb{U},\bb{V}$ respectively, and $\bb{U}_x,\bb{U}_y$ are $|y-x|$-interleaved for all $x,y\in[0,\delta]$.
 
 
 
