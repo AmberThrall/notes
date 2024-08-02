@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md"
+                "file": "content/An Introduction to Manifolds/4. Differential Forms on Rn.md"
               }
             }
           }
@@ -149,10 +149,14 @@
   },
   "active": "437246b057b1229b",
   "lastOpenFiles": [
+    "content/Figures/Screenshot from 2024-08-02 16-27-16.png",
+    "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
+    "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
+    "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
+    "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-08-01 13-12-01.png",
     "content/Daily/2024-07-29.md",
     "content/Figures/Screenshot from 2024-07-31 12-51-34.png",
-    "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-07-26 16-28-11.png",
     "content/Figures/Screenshot from 2024-07-26 16-25-13.png",
     "content/Figures/Screenshot from 2024-07-26 15-59-03.png",
@@ -161,11 +165,8 @@
     "content/Figures/Screenshot from 2024-07-26 14-47-34.png",
     "content/Figures/Screenshot from 2024-07-26 14-42-59.png",
     "content/Figures/Screenshot from 2024-07-26 14-35-33.png",
-    "content/Figures/Screenshot from 2024-07-26 14-26-11.png",
     "content/Papers/Persistence stability for geometric complexes.md",
-    "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
     "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
-    "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
     "content/index.md~",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
     "content/An Introduction to Manifolds",
@@ -188,7 +189,6 @@
     "content/Optimization/Bracketing.md",
     "content/Optimization/Basic Optimization.md",
     "content/Machine Learning/Support Vector Machine.md",
-    "content/Category Theory/Functoriality.md",
     "content/Optimization",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
