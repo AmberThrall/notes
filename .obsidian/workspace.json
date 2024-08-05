@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "437246b057b1229b",
+            "id": "8b6ba050b5ec1b66",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -147,12 +147,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "437246b057b1229b",
+  "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
+    "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
+    "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
     "content/Figures/Screenshot from 2024-08-02 16-27-16.png",
     "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
-    "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
-    "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
     "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-08-01 13-12-01.png",
     "content/Daily/2024-07-29.md",
@@ -164,7 +164,6 @@
     "content/Figures/Screenshot from 2024-07-26 14-51-20.png",
     "content/Figures/Screenshot from 2024-07-26 14-47-34.png",
     "content/Figures/Screenshot from 2024-07-26 14-42-59.png",
-    "content/Figures/Screenshot from 2024-07-26 14-35-33.png",
     "content/Papers/Persistence stability for geometric complexes.md",
     "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
     "content/index.md~",
