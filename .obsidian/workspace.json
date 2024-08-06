@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
+                "file": "content/An Introduction to Manifolds/A. Point-Set Topology.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
+                "file": "content/An Introduction to Manifolds/A. Point-Set Topology.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
+                "file": "content/An Introduction to Manifolds/A. Point-Set Topology.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/An Introduction to Manifolds/4. Differential Forms on Rn.md"
+                "file": "content/An Introduction to Manifolds/A. Point-Set Topology.md"
               }
             }
           }
@@ -149,8 +149,13 @@
   },
   "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
-    "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
+    "content/Figures/Screenshot from 2024-08-06 14-41-56.png",
+    "content/Figures/Screenshot from 2024-08-06 14-11-57.png",
+    "content/Figures/Screenshot from 2024-08-06 13-49-18.png",
+    "content/An Introduction to Manifolds/5. Manifolds.md",
+    "content/An Introduction to Manifolds/A. Point-Set Topology.md",
     "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
+    "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
     "content/Figures/Screenshot from 2024-08-02 16-27-16.png",
     "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
     "content/Papers/The structure and stability of persistence modules.md",
@@ -162,8 +167,6 @@
     "content/Figures/Screenshot from 2024-07-26 15-59-03.png",
     "content/Figures/Screenshot from 2024-07-26 15-22-51.png",
     "content/Figures/Screenshot from 2024-07-26 14-51-20.png",
-    "content/Figures/Screenshot from 2024-07-26 14-47-34.png",
-    "content/Figures/Screenshot from 2024-07-26 14-42-59.png",
     "content/Papers/Persistence stability for geometric complexes.md",
     "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
     "content/index.md~",
@@ -186,8 +189,6 @@
     "content/Topology/Topological Spaces.md",
     "content/Optimization/Local Descent.md",
     "content/Optimization/Bracketing.md",
-    "content/Optimization/Basic Optimization.md",
-    "content/Machine Learning/Support Vector Machine.md",
     "content/Optimization",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
