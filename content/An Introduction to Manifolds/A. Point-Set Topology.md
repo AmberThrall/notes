@@ -151,6 +151,7 @@ $$
 $$
 Therefore, $A$ is Hausdorff.
 <p style='text-align: right'>Q.E.D.</p>
+
 # Product Topology
 
 Given two topological spaces $X,Y$. Consider the collection $\cal{B}$ of subsets of $X\times Y$ where $U\subset X$ is open in $X$ and $V\subset Y$ is open in $Y$. Then $\cal{B}$ is the basis for a topology on $X\times Y$ known as the **product topology**.
@@ -251,6 +252,7 @@ $$
 		\bigcup_{i=1}^nf(f^{-1}(V_i)) = f\left(\bigcup_{i=1}^nf^{-1}(V_i)\right) \supset f(K).
 $$
 <p style='text-align: right'>Q.E.D.</p>
+
 > [!prp]
 > A continuous map $f:X\rightarrow Y$ from a compact space $X$ to a Haudorff space $Y$ is a closed map.
 
@@ -342,6 +344,7 @@ Then $p\in S\setminus F$ for some closed set $F$ in $S$. But $S\setminus F$ is o
 
 $(\Leftarrow$): Let $p$ be in a open set $U$ disjoint from $A$. Notice that then $F=S\setminus U$ is a closed set containing $A$ and not containing $p$. Thus, $p\not\in\textup{cl}A$.
 <p style='text-align: right'>Q.E.D.</p>
+
 We call a point $p\in S$ an **accumulation point** of $A$ if every neighborhood of $p$ in $S$ contains a point of $A$ other than $p$. We denote the set of accumulation points by $\textup{ac} A$. Some texts refer to accumulation points as **limit points**.
 
 **Example:** For $A=[0,1)\cup\{2\}$in $\R$, the closure of $A$ is $[0,1]\cup\{2\}$ but the set of accumulation points of $A$ is $[0,1]$.
