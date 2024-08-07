@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/An Introduction to Manifolds/A. Point-Set Topology.md",
+                "file": "content/An Introduction to Manifolds/5. Manifolds.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/An Introduction to Manifolds/A. Point-Set Topology.md",
+                "file": "content/An Introduction to Manifolds/5. Manifolds.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/An Introduction to Manifolds/A. Point-Set Topology.md",
+                "file": "content/An Introduction to Manifolds/5. Manifolds.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/An Introduction to Manifolds/A. Point-Set Topology.md"
+                "file": "content/An Introduction to Manifolds/5. Manifolds.md"
               }
             }
           }
@@ -149,16 +149,17 @@
   },
   "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
+    "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
+    "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
+    "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
+    "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
+    "content/An Introduction to Manifolds/A. Point-Set Topology.md",
     "content/Figures/Screenshot from 2024-08-07 14-32-05.png",
     "content/Figures/Screenshot from 2024-08-06 14-41-56.png",
     "content/Figures/Screenshot from 2024-08-06 14-11-57.png",
     "content/Figures/Screenshot from 2024-08-06 13-49-18.png",
     "content/An Introduction to Manifolds/5. Manifolds.md",
-    "content/An Introduction to Manifolds/A. Point-Set Topology.md",
-    "content/An Introduction to Manifolds/4. Differential Forms on Rn.md",
-    "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
     "content/Figures/Screenshot from 2024-08-02 16-27-16.png",
-    "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
     "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-08-01 13-12-01.png",
     "content/Daily/2024-07-29.md",
@@ -166,9 +167,7 @@
     "content/Figures/Screenshot from 2024-07-26 16-28-11.png",
     "content/Figures/Screenshot from 2024-07-26 16-25-13.png",
     "content/Figures/Screenshot from 2024-07-26 15-59-03.png",
-    "content/Figures/Screenshot from 2024-07-26 15-22-51.png",
     "content/Papers/Persistence stability for geometric complexes.md",
-    "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
     "content/index.md~",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
     "content/An Introduction to Manifolds",

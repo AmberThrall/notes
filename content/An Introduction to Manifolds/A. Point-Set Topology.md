@@ -1,5 +1,7 @@
 ---
 date: 2024-08-06
+tags:
+  - an-introduction-to-manifolds
 ---
 > [!def] Topology
 > A **topology** on a set $S$ is a collection $\cal{T}$ of subsets such that
