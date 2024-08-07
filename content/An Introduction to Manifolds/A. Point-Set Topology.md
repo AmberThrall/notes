@@ -15,7 +15,7 @@ We call elements of a topology **open sets** and the pair $(S,\cal{T})$ a **topo
 ![[Screenshot from 2024-08-06 13-49-18.png#invert | center]]
 
 
-If $\cal{T}_1$ and $\cal{T}_2$ are both topologies of $S$ and $\cal{T}_1\subset\cal{T}_2$, then we say that $\cal{T}_2$ is **coarser** than $\cal{T}_1$. Or equivalently, $\cal{T}_1$ is **finer** than $\cal{T}_2$.
+If $\cal{T}_1$ and $\cal{T}_2$ are both topologies of $S$ and $\cal{T}_1\subset\cal{T}_2$, then we say that $\cal{T}_2$ is **finer** than $\cal{T}_1$. Or equivalently, $\cal{T}_1$ is **coarser** than $\cal{T}_2$.
 
 > [!lemma] Local criterion for openness
 > Let $S$ be a topological space. A subset $A$ is open in $S$ if and only if for every $p\in A$, there is an open set $V$ such that $p\in V\subseteq A$.
@@ -210,3 +210,159 @@ is open in $X$ since $f^{-1}(U)$ is open in $Y$.
 We call a map $f:X\rightarrow Y$ **open** if the image of every open set in $X$ is open in $Y$. Likewise, it is called **closed** if the image of every closed set in $X$ is closed in $Y$.
 
 # Compactness
+
+We call a collection $\{U_\alpha\}$ of open sets an **open cover** of $S$ if $S\subset\bigcup_\alpha U_\alpha$. A **subcover** is a subcollection of an open cover that still contains $S$. We say a topological space is **compact** if every open cover has a finite subcover.
+
+**Example:** Any closed interval $[a,b]\subset\R$ is compact.
+
+> [!prp]
+> A subspace $A$ of a topological space $S$ is compact if and only if every open cover of $A$ in $S$ has a finite subcover.
+
+> [!prp]
+> A closed subset $F$ of a compact topological space $S$ is compact.
+
+**Proof:** Let $\{U_\alpha\}$ be an open cover of $F$. Notice then that $\{U_\alpha\}\cup\{S\backslash F\}$ is a open cover of $S$. Since $S$ is compact, there is a finite subcover $U_1,\dots,U_n,S\backslash F$. Thus, $F\subset\bigcup U_i$.
+<p style='text-align: right'>Q.E.D.</p>
+
+> [!prp]
+> In a Hausdorff space $S$, it is possible to separate a compact subset $K$ and a point $p\not\in K$ by disjoint open sets, i.e., there exists an open set $U\supset K$ and a neighborhood $V$ of $p$ such that $U\cap V=\emptyset$.
+
+**Proof:** Since $S$ is Hausdorff, for each $x\in K$ there are disjoint neighborhoods $U_x$ of $x$ and $V_x$ of $p$. Notice that $\{U_x\}$ forms an open cover of $K$, hence there is a finite subcover $U_{x_1},\dots,U_{x_n}$. Let $U=\bigcup U_{x_i}$ and $V=\bigcap V_{x_i}$. Notice that $U$ is open and $K\subset U$. Moreover $V$ is open and $p\in V$ since each $V_i$ contains $p$. Notice that
+$$
+	U \cap V = \bigcup_i(U_{x_i}\cap V) = \bigcup_i\emptyset = \emptyset.
+$$
+<p style='text-align: right'>Q.E.D.</p>
+
+> [!prp]
+> Every compact subset $K$ of a Hausdorff space $S$ is closed.
+
+**Proof:** Let $p\in S\setminus K$. By the previous proposition, there is an open set $V$ containing $p$ such that $V\cap K=\emptyset$. Thus, $S\setminus K$ is open.
+<p style='text-align: right'>Q.E.D.</p>
+
+> [!prp]
+> The image of a compact set under a continuous map is compact.
+
+**Proof:** Let $f:X\rightarrow Y$ be a continuous map and $K$ a compact subset of $X$. Consider an open cover $\{V_\alpha\}$ of $f(K)$. Since $f$ is continuous, $\{f^{-1}(V_\alpha)\}$ is a collection of open sets in $X$. Notice that
+$$
+	\bigcup_\alpha f^{-1}(V_\alpha) = f^{-1}\left(\bigcup_\alpha V_\alpha\right) \supset f^{-1}(f(K)) \supset K
+$$
+Thus, there is a finite subcover $\{f^{-1}(V_1),\dots,f^{-1}(V_n)\}$ of $K$. Notice that
+$$
+		\bigcup_{i=1}^nf(f^{-1}(V_i)) = f\left(\bigcup_{i=1}^nf^{-1}(V_i)\right) \supset f(K).
+$$
+<p style='text-align: right'>Q.E.D.</p>
+> [!prp]
+> A continuous map $f:X\rightarrow Y$ from a compact space $X$ to a Haudorff space $Y$ is a closed map.
+
+**Proof:** Let $F$ be closed in $X$. By proposition 22, $F$ is compact. By proposition 25, $f(F)$ is compact. By proposition 24, $f(F)$ is closed.
+<p style='text-align: right'>Q.E.D.</p>
+
+A continuous bijection $f:X\rightarrow Y$ whose inverse is also continuous is called a **homeomorphism**.
+
+> [!cor]
+> A continuous bijection $f:X\rightarrow Y$ from a compact space $X$ to a Hausdorff space $Y$ is a homeomorphism.
+
+> [!thm]
+> The product of compact spaces is compact in the product topology.
+
+# Boundedness in $\R^n$
+
+A subset $A$ of $\R^n$ is called **bounded** if there is an open ball $B(p,r)$ containing $A$. Otherwise it is **unbounded**.
+
+> [!prp]
+> A compact subset of $\R^n$ is bounded.
+
+**Proof:** Let $K$ be a compact subset and consider the open cover $\{B(0,r)\}_{r=1}^\infty$ of $K$. Since $K$ is compact, it follows that $K$ is contained in a single ball $B(0,r')$.
+<p style='text-align: right'>Q.E.D.</p>
+
+> [!thm] Heine-Borel
+> A subset of $\R^n$ is compact if and only if it is closed and bounded.
+
+
+# Connectedness
+
+> [!def] Connected/Disconnected
+> A topological space $S$ is **disconnected** if it is the union $S=U\cup V$ of two disjoint nonempty open subsets $U$ and $V$. It is **connected** if it is not disconnected. 
+> 
+
+A subset $A$ is disconnected if it is disconnected in the subspace topology.
+
+> [!prp]
+> A subset $A$ of a topological space $S$ is disconnected if and only if there are open sets $U$ and $V$ in $S$ such that
+> 1. $U\cap A\ne\emptyset, V\cap A\ne\emptyset$
+> 2. $U\cap V\cap A=\emptyset$
+> 3. $A\subset U\cup V$
+> 
+> A pair of open sets in $S$ with these properties is called a **separation** of $A$.
+
+**Proof:**
+$(\Rightarrow$): If $A$ is disconnected, then there are disjoint non-empty open sets $U$ and $V$ such that $A=U\cup V$. Thus, there are open sets $U',V'$ in $S$ such that $U=U'\cap A$, $V=V'\cap A$. Notice that
+$$
+	\emptyset = U\cap V = (U'\cap A)\cap(V'\cap A) = U'\cap V'\cap A
+$$
+and
+$$
+	A = U\cup V = (U'\cap A)\cup (V'\cap A) \subset U'\cup V'.
+$$
+
+($\Leftarrow$): Let $U'=U\cap A$ and $V'=V\cap A$. Notice that $U',V'$ are open in $A$,
+$$
+	U'\cap V' = (U\cap A)\cap(V\cap A) = \emptyset
+$$
+and
+$$
+	U'\cup V' = (U\cap A)\cup(V\cup A) = (U\cup V)\cap A = A.
+$$
+<p style='text-align: right'>Q.E.D.</p>
+
+> [!prp]
+> The image of a connected space $X$ under a continuous map $f:X\rightarrow Y$ is connected.
+
+# Closure
+
+Let $S$ be a topological space and $A$ a subset of $S$. The **closure** of $A$ in $S$, denoted $\overline{A}$ or $\textup{cl}(A)$, is defined to be the intersection of all closed sets containing $A$. In other words, it is the smallest closed set containing $A$.
+
+**Example:** The closure of the open disk $B(0,r)$ in $\R^2$ is the closed disk
+$$
+	\overline{B}(0,r) = \{p\in\R^2\mid d(p,0)\le r\}.
+$$
+
+> [!prp]
+> Let $A$ be a subset of a topological space $S$. A point $p\in S$ is in the closure $\textup{cl}A$ if and only if every neighborhood of $p$ contains a point of $A$.
+
+![[Screenshot from 2024-08-07 14-32-05.png#invert | center]]
+
+**Proof:** We prove the contrapositive.
+
+$(\Rightarrow$): Suppose
+$$
+	p\not\in \textup{cl}(A) =\bigcap\{F\text{ closed in }S\mid F\supset A\}
+$$
+Then $p\in S\setminus F$ for some closed set $F$ in $S$. But $S\setminus F$ is open and disjoint from $A$.
+
+$(\Leftarrow$): Let $p$ be in a open set $U$ disjoint from $A$. Notice that then $F=S\setminus U$ is a closed set containing $A$ and not containing $p$. Thus, $p\not\in\textup{cl}A$.
+<p style='text-align: right'>Q.E.D.</p>
+We call a point $p\in S$ an **accumulation point** of $A$ if every neighborhood of $p$ in $S$ contains a point of $A$ other than $p$. We denote the set of accumulation points by $\textup{ac} A$. Some texts refer to accumulation points as **limit points**.
+
+**Example:** For $A=[0,1)\cup\{2\}$in $\R$, the closure of $A$ is $[0,1]\cup\{2\}$ but the set of accumulation points of $A$ is $[0,1]$.
+
+> [!prp]
+> Let $A$ be a subset of a topological space $S$. Then $\textup{cl}A=A\cup\textup{ac}(A)$.
+
+# Convergence
+
+Let $S$ be a topological space. A **sequence** in $S$ is a map from the set $\N$ to $S$. We typically write $\{x_i\}_{i=1}^\infty$ or $x_1,x_2,x_3,\dots$.
+
+We say a sequence **converges** to $p$ if for every neighborhood $U$ of $p$, there is some $N$ such that $n\ge N$ implies that $x_n\in U$. We often write this as $x_n\rightarrow p$ or $\lim_{n\rightarrow\infty}x_n=p$. Not every sequence converges, in such a case we say it **diverges**. For example the sequence $-1,1,-1,1,\dots$ in $\R$ diverges.
+
+> [!prp]
+> Let $S$ be a Hausdorff space. If $\{x_n\}$ converges to $p$ and to $q$, then $p=q$.
+
+**Proof:** Assume $p\ne q$. Then since $S$ is Hausdorff, there are neighborhoods $U$ and $V$ of $p$ and $q$ respectively such that $U\cap V=\emptyset$. Since $x_n\rightarrow p$ there is some $N_p$ such that $x_n\in U$ whenever $n\ge N_p$. Likewise, there is some $N_q$ such that $x_n\in V$ whenever $n\ge N_q$. Then it follows that for $n\ge\max\{N_p,N_q\}$, $x_n\in U\cap V=\emptyset$.
+<p style='text-align: right'>Q.E.D.</p>
+
+This uniqueness property does not hold in general. The simplest counterexample is any non-empty set $X$ with the trivial topology $\cal{T}=\{\emptyset, X\}$. In such a space a sequence $\{x_n\}$ converges to every point $p\in X$.
+
+> [!prp] The sequence lemma
+> Let $S$ be a topological space and $A$ a subset of $S$. If there is a sequence $\{a_n\}$ in $A$ such that $a_n\rightarrow p$, then $p\in\textup{cl} A$. The converse is true if $S$ is first countable.
+
