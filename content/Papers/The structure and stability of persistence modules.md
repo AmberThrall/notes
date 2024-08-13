@@ -3,7 +3,7 @@ id: The structure and stability of persistence modules
 aliases: 
 tags:
   - papers
-date: 2024-07-26
+date: 2024-08-13
 ---
 
 **Questions:**
@@ -12,6 +12,7 @@ date: 2024-07-26
 - Homology of sublevel sets
 - Computing multiplicity, e,g, $\langle \circ_a\textemdash\bullet_b\textemdash\bullet_c\mid\bb{V}\rangle$, without knowing the interval decomposition.
 - Counterexample by Webb in Theorem 1.4 on page 13.
+- Proof for Theorem 3.5.
 
 Full paper can be found at: https://arxiv.org/abs/1207.3674
 
@@ -839,8 +840,225 @@ One may then show that the composition law is satisfied.
 
 ## The Interpolation Lemma
 
+Given two $\delta$-interleaved persistence modules $\bb{U}$ and $\bb{V}$, we can find a family of persistence modules that "continuously" transforms between $\bb{U}$ and $\bb{V}$.
+
 > [!lemma] Lemma 3.4 (Interpolation Lemma)
 > Suppose $\bb{U},\bb{V}$ are a $\delta$-interleaved pair of persistence modules. Then there exists a 1-parameter family of persistence modules $(\bb{U}_x\mid x\in[0,\delta])$ such that $\bb{U}_0,\bb{U}_\delta$ are equal to $\bb{U},\bb{V}$ respectively, and $\bb{U}_x,\bb{U}_y$ are $|y-x|$-interleaved for all $x,y\in[0,\delta]$.
 
+More specifically, given interleaving $\Phi\in\Hom^\delta(\bb{U},\bb{V})$ and $\Psi\in\Hom^\delta(\bb{V},\bb{U})$, then for each $x<y$ we get a pair of interleaving maps
+$$
+\begin{align*}
+	\Phi_x^y\in\Hom^{y-x}(\bb{U}_x,\bb{U}_y) \\
+	\Psi_y^x\in\Hom^{y-x}(\bb{U}_y,\bb{U}_x)
+\end{align*}
+$$
+such that $\Phi_0^\delta=\Phi$, $\Psi_\delta^0=\Psi$ and 
+$$
+	\Phi_x^z = \Phi_y^z\Phi_x^y~\text{ and }~\Psi_z^x = \Psi_y^x\Psi_z^y
+$$
+for all $x<y<z$.
 
+In other words, we get a persistence module.
+
+> [!thm] Theorem 3.5
+> Any persistence module $\bb{W}$ over $\Delta_0\cup\Delta_\delta$ extends to a persistence module $\overline{\bb{W}}$ over the diagonal strip
+> $$
+> 	\Delta_{[0,\delta]} = \{(p,q)\mid0\le q-p\le 2\delta\}\subset\R^2.
+> $$
+
+**Proof Outline:** We replace the interval $[0,\delta]$ with $[-1,1]$ by rescaling and translating the plane. By proposition 3.3, the persistence module $\bb{W}$ satisfies $\bb{U}=\bb{W}|_{\Delta_{-1}}$ and $\bb{V}=\bb{W}|_{\Delta_1}$ which we view as persistence modules over $\R$:
+$$
+\begin{align*}
+	U_t &= W_{(t+1,t-1)} \\
+	V_t &= W_{(t-1,t+1)}.
+\end{align*}
+$$
+We also get interleaving maps $\Phi\in\Hom^2(\bb{U},\bb{V})$ and $\Psi\in\Hom^2(\bb{V},\bb{U})$ of degree 2. We construct four persistence modules over $\R^2$:
+$$
+\begin{align*}
+	\bb{A} &= \bb{U}[p-1]\text{ defined by }A_{(p,q)} = U_{p-1}\text{ and }a_{(p,q)}^{(r,s)} = u_{p-1}^{r-1} \\
+	\bb{B} &= \bb{V}[q-1]\text{ defined by }B_{(p,q)} = V_{q-1}\text{ and }b_{(p,q)}^{(r,s)} = v_{q-1}^{s-1} \\
+	\bb{C} &= \bb{U}[q+1]\text{ defined by }C_{(p,q)} = U_{q+1}\text{ and }c_{(p,q)}^{(r,s)} = u_{q+1}^{s+1} \\
+	\bb{D} &= \bb{V}[p+1]\text{ defined by }D_{(p,q)} = V_{p+1}\text{ and }d_{(p,q)}^{(r,s)} = v_{p+1}^{r+1}
+\end{align*}
+$$
+and module maps
+$$
+\begin{align*}
+	1_\bb{U}&:\bb{A}\rightarrow\bb{C}\text{ defined at $(p,q)$ to be }u_{p-1}^{q+1}:U_{p-1}\rightarrow U_{q+1} \\
+	\Phi&:\bb{A}\rightarrow\bb{D}\text{ defined at $(p,q)$ to be }\phi_{p-1}:U_{p-1}\rightarrow V_{p+1} \\
+	\Psi&:\bb{B}\rightarrow\bb{C}\text{ defined at $(p,q)$ to be }\psi_{q-1}:V_{q-1}\rightarrow U_{q+1} \\
+	1_\bb{V}&:\bb{B}\rightarrow\bb{D}\text{ defined at $(p,q)$ to be }v_{q-1}^{p+1}:V_{q-1}\rightarrow V_{p+1}
+\end{align*}
+$$
+
+For example, if $\delta=0.5$:
+
+![[Screenshot from 2024-08-13 13-53-42.png#invert | center]]
+
+
+Define $\Omega\in\Hom(\bb{A}\oplus\bb{B},\bb{C}\oplus\bb{D})$ by the 2-by-2 matrix
+$$
+\begin{bmatrix}
+	1_\bb{U} & \Psi \\
+	\Phi & 1_\bb{V}
+\end{bmatrix}
+$$
+of module maps. We claim $\overline{\bb{W}}=\textup{Im}(\Omega)$ is the desired extension.
+1. $\overline{\bb{W}}|_{\Delta_{-1}}$ is isomorphic to $\bb{U}$.
+2. $\overline{\bb{W}}_{\Delta_1}$ is isomorphic to $\bb{V}$.
+3. The cross maps of $\overline{\bb{W}}$ are precisely $\Phi$ and $\Psi$.
+
+## The Interpolation Lemma (continued)
+
+# The Isometry Theorem
+
+The main result is thaanks to Cohen-Steiner, Edelsbrunner and Harer in a 2007 paper.
+
+## The Interleaving Distance
+
+Let $\bb{U}$ and $\bb{V}$ be $\delta$-interleaved. Then for every $\epsilon>0$, they are $(\delta+\epsilon)$-interleaved by the maps
+$$
+\begin{align*}
+	\Phi' &= \Phi1_\bb{U}^\epsilon = 1_\bb{V}^\epsilon\bb{V} \\
+	\Psi' &= \Psi1_\bb{V}^\epsilon = 1_\bb{U}^\epsilon\bb{U}.
+\end{align*}
+$$
+We want to make the interleaving parameter as small as possible. We may not be able to attain the actual minimum.
+
+We say that $\bb{U}$ and $\bb{V}$ are **$\delta^+$-interleaved** if they are $(\delta+\epsilon)$-interleaved for all $\epsilon>0$.
+
+**Example 4.1.** Two persistence modules are isomorphic if and only if they are $0$-interleaved.
+
+**Example 4.2.** Let $\bb{U}$ and $\bb{V}$ be two non-isomorphic **ephemeral modules** ($v_s^t=0$ for all $s<t$). Then $\bb{U},\bb{V}$ are $0^+$-interleaved but not 0-interleaved. Since $1_\bb{U}^{2\epsilon}=0$ and $1_\bb{V}^{2\epsilon}=0$ for all $\epsilon>0$, it follows that the zero maps $\Phi=0$ and $\Psi=0$ are an $\epsilon$-interleaving.
+
+We define the **interleaving distance** between two persistence modules as
+$$
+\begin{align*}
+	d_i(\bb{U},\bb{V}) &= \inf\{\delta\mid\bb{U},\bb{V}\text{ are $\delta$-interleaved}\} \\
+	&= \min\{\delta\mid\bb{U},\bb{V}\text{ are $\delta^+$-interleaved}\}.
+\end{align*}
+$$
+If there is no $\delta$-interleaving, then we say $d_i(\bb{U},\bb{V})=\infty$.
+
+> [!prp] Proposition 4.3
+> The interleaving distance satisfies the triangle inequality
+> $$
+> 	d_i(\bb{U},\bb{W}) \le d_i(\bb{U},\bb{V}) + d_i(\bb{V},\bb{W}).
+> $$
+
+Clearly, $d_i$ is symmetric; but it is not a metric. As we saw above in example 4.2, $d_i(\bb{U},\bb{V})=0$ does not imply that $\bb{U}\cong\bb{V}$. Instead, $d_i$ forms a pseudometric.
+
+> [!prp] Proposition 4.5
+> Let $\bb{U}_1,\bb{U}_2,\bb{V}_1,\bb{V}_2$ be persistence modules. Then
+> $$
+> 	d_i(\bb{U_1}\oplus\bb{U_2},\bb{V_1}\oplus\bb{V_2}) \le \max(d_i(\bb{U_1},\bb{V_1}),d_i(\bb{U_2},\bb{V_2})).
+> $$
+
+The above proposition extends to a family of persistence modules:
+$$
+	d_i(\bigoplus\bb{U}_\ell,\bigoplus\bb{V}_\ell) \le \sup(d_i(\bb{U}_\ell,\bb{V}_\ell)\mid\ell\in L).
+$$
+
+## The Bottleneck Distance
+
+Recall that for a $q$-tame persistence module every rectangle not touching the diagonal has finite $\mu_\bb{V}$-measure. this implies that
+$$
+	\textup{dgm}(\bb{V}) = \textup{dgm}(\mu_\bb{V})
+$$
+is a multiset in the extended open half-plane
+$$
+	\overline{\cal{H}^\circ} = \{(p,q)\mid-\infty\le p<q\le+\infty\}.
+$$
+
+We need to specify the distance between any pair of points in $\overline{\cal{H}^\circ}$.
+
+**point-to-point:** We use the $\ell^\infty$-metric in $\R^2$,
+$$
+	d^\infty((p,q),(r,s)) = \max(|p-r|, |q-s|).
+$$
+For points at infinity:
+$$
+\begin{align*}
+	d^\infty((-\infty,q),(-\infty,s)) &= |q-s| \\
+	d^\infty((p,\infty),(r,\infty)) &= |p-r| \\
+	d^\infty((-\infty,\infty),(-\infty,\infty)) &= 0 \\
+	d^\infty((p,q),(-\infty,s)) = \infty \\
+	d^\infty((p,q),(r,\infty)) = \infty
+\end{align*}
+$$
+> [!prp] Proposition 4.6.
+> Let $(p^*,q^*)$ and $(r^*,s^*)$ be intervals and let $\bb{U}=\bb{I}(p^*,q^*)$ and $\bb{V}=\bb{I}(r^*,s^*)$. Then
+> $$
+> 	d_i(\bb{U},\bb{V}) \le d^\infty((p,q),(r,s)).
+> $$
+
+
+**point-to-diagonal:** We again use the $\ell^\infty$ metric:
+$$
+	d^\infty((p,q),\Delta) = \frac{1}{2}(q-p),
+$$
+half the distance from $(p,q)$ to the diagonal $\Delta$.
+
+> [!prp] Proposition 4.7.
+> Let $(p^*,q^*)$ be an interval and $\bb{U}=\bb{I}(p^*,q^*)$. Then $d_i(\bb{U},0)=\frac{1}{2}(q-p)$ where 0 is the zero persistence module.
+
+**Proof:** Let $\delta\ge0$. The only $\delta$-interleaving maps between $\bb{U}$ and 0 must be zero maps, $\Phi=\Psi=0$. It is $\delta$-interleaving when $\Psi\Phi=0=1_\bb{U}^{2\delta}$. This is satisfied only when $\delta>\frac{1}{2}(q-p)$.
+<p style='text-align: right'>Q.E.D.</p>
+
+We can now define the bottleneck distance between two multisets in the extended half-plane. A **partial matching** between multisets $A$ and $B$ is a collection of pairs $M\subset A\times B$ such that:
+- for every $\alpha\in A$ there is at most one $\beta\in B$ such that $(\alpha,\beta)\in M$;
+- for every $\beta\in B$ there is at most one $\alpha\in A$ such that $(\alpha,\beta)\in M$.
+A partial matching $M$ is a **$\delta$-matching** if 
+1. if $(\alpha,\beta)\in M$, then $d^\infty(\alpha,\beta)\le\delta$
+2. if $\alpha\in A$ is unmatched, then $d^\infty(\alpha,\Delta)\le\delta$
+3. if $\beta\in B$ is unmatched, then $d^\infty(\beta,\Delta)\le\delta$.
+
+In other words, any unmatched elements are within $\delta$ from the diagonal.
+
+The **bottleneck distance** between two multisets $A,B$ in the extended half-plane is defined to be
+$$
+	d_b(A,B) = \inf\{\delta\mid\text{there exists a $\delta$-matching between $A$ and $B$}\}.
+$$
+If $A$ and $B$ are locally finite, we can replace the inf with a min.
+
+> [!prp] Proposition 4.8
+> The bottleneck distance satisfies the triangle inequality.
+
+**Proof:** Let $M_1$ be a $\delta_1$-matching between $A,B$ and $M_2$ a $\delta_2$-matching between $B,C$. Let $\delta=\delta_1+\delta_2$. Define
+$$
+	M = \{(\alpha,\gamma)\mid\text{there exists $\beta\in B$ such that $(\alpha,\beta)\in M_1$ and $(\beta,\gamma)\in M_2$}\}.
+$$
+Notice that
+- If $(\alpha,\gamma)\in M$, then
+$$
+	d^\infty(\alpha,\gamma)\le d^\infty(\alpha,\beta) + d^\infty(\beta,\gamma)\le \delta
+$$
+where $\beta\in B$ is the point linking $\alpha$ to $\gamma$.
+- If $\alpha$ is unmatched in $M$, then either $\alpha$ is unmatched in $M_1$ in which case
+$$
+	d^\infty(\alpha,\Delta) \le \delta_1\le\delta
+$$
+or $(\alpha,\beta)\in M_1$ but $\beta$ is unmatched in $M_2$. But then
+$$
+	d^\infty(\alpha,\Delta) \le d^\infty(\alpha,\beta) + d^\infty(\beta,\Delta) \le \delta.
+$$
+- If $\gamma$ is unmatched in $M$, then by a similar argument
+$$
+	d^\infty(\gamma,\Delta) \le \delta.
+$$
+<p style='text-align: right'>Q.E.D.</p>
+
+**Remark:** Since $A,B,C$ are multisets, the composition operation between matchings is not uniquely defined. For example:
+
+![[Screenshot from 2024-08-13 15-18-52.png#invert | center]]
+
+
+> [!thm] Theorem 4.9
+> Let $\bb{U},\bb{V}$ be decomposable persistence modules. Then
+> $$
+> 	d_i(\bb{U},\bb{V}) \le d_b(\textup{dgm}(\bb{U}),\textup{dgm}(\bb{V})).
+> $$
+
+## The Bottleneck Distance (continued)
 
