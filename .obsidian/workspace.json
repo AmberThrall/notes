@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/An Introduction to Manifolds/5. Manifolds.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/An Introduction to Manifolds/5. Manifolds.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/An Introduction to Manifolds/5. Manifolds.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md"
+                "file": "content/An Introduction to Manifolds/5. Manifolds.md"
               }
             }
           }
@@ -149,10 +149,12 @@
   },
   "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
+    "content/Daily/2024-06-03.md",
+    "content/An Introduction to Manifolds/5. Manifolds.md",
+    "content/Figures/Screenshot from 2024-08-15 13-14-16.png",
+    "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-08-13 15-18-52.png",
     "content/Figures/Screenshot from 2024-08-13 13-53-42.png",
-    "content/An Introduction to Manifolds/5. Manifolds.md",
-    "content/Daily/2024-06-03.md",
     "content/Daily/2024-06-05.md",
     "content/Daily/2024-06-17.md",
     "content/Daily/2024-06-18.md",
@@ -169,11 +171,8 @@
     "content/Figures/Screenshot from 2024-08-06 14-11-57.png",
     "content/Figures/Screenshot from 2024-08-06 13-49-18.png",
     "content/Figures/Screenshot from 2024-08-02 16-27-16.png",
-    "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-08-01 13-12-01.png",
     "content/Figures/Screenshot from 2024-07-31 12-51-34.png",
-    "content/Figures/Screenshot from 2024-07-26 16-28-11.png",
-    "content/Figures/Screenshot from 2024-07-26 16-25-13.png",
     "content/Papers/Persistence stability for geometric complexes.md",
     "content/index.md~",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
