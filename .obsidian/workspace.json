@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/An Introduction to Manifolds/5. Manifolds.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/An Introduction to Manifolds/5. Manifolds.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/An Introduction to Manifolds/5. Manifolds.md",
+                "file": "content/Papers/The structure and stability of persistence modules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/An Introduction to Manifolds/5. Manifolds.md"
+                "file": "content/Papers/The structure and stability of persistence modules.md"
               }
             }
           }
@@ -149,8 +149,8 @@
   },
   "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
-    "content/Daily/2024-06-03.md",
     "content/An Introduction to Manifolds/5. Manifolds.md",
+    "content/Daily/2024-06-03.md",
     "content/Figures/Screenshot from 2024-08-15 13-14-16.png",
     "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-08-13 15-18-52.png",

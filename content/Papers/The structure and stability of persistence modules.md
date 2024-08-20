@@ -3,7 +3,7 @@ id: The structure and stability of persistence modules
 aliases: 
 tags:
   - papers
-date: 2024-08-13
+date: 2024-08-20
 ---
 
 **Questions:**
@@ -1014,7 +1014,7 @@ A partial matching $M$ is a **$\delta$-matching** if
 2. if $\alpha\in A$ is unmatched, then $d^\infty(\alpha,\Delta)\le\delta$
 3. if $\beta\in B$ is unmatched, then $d^\infty(\beta,\Delta)\le\delta$.
 
-In other words, any unmatched elements are within $\delta$ from the diagonal.
+In other words, matched points are within $\delta$ of each other and any unmatched elements are within $\delta$ from the diagonal.
 
 The **bottleneck distance** between two multisets $A,B$ in the extended half-plane is defined to be
 $$
@@ -1062,3 +1062,132 @@ $$
 
 ## The Bottleneck Distance (continued)
 
+Locally finite multisets always have matchings.
+
+> [!thm] Theorem 4.10
+> Let $A,B$ be locally finite multisets in the extended open half-plane $\overline{\cal{H}}^\circ$. Suppose for every $\eta>\delta$ there exists an $\eta$-matching between $A,B$. Then there exists a $\delta$-matching between $A,B$.
+
+**Proof:** For every $n\ge1$, let $M_n$ be a $(\delta+1/n)$-matching. Take a fixed enumeration $((\alpha_\ell,\beta_\ell)\mid\ell\ge 1)$ of the countable set $A\times B$. Let $\chi_n:A\times B\rightarrow\{0,1\}$ be an indicator function of $M_n$. Construct the descending sequence
+$$
+	\bb{N} = \bb{N}_0\supseteq\bb{N}_1\supseteq\cdots\supseteq\bb{N}_\ell\supseteq\cdots
+$$
+where $\bb{N}_\ell$ is defined recursively by taking the set
+$$
+	\{n\in\bb{N}_{\ell-1}\mid\chi_n(\alpha_\ell,\beta_\ell)=0\}\text{ or }\{n\in\bb{N}_{\ell-1}\mid\chi_n(\alpha_\ell,\beta_\ell)=1\}
+$$
+that has infinite cardinality as $\bb{N}_\ell$. We then construct another indicator function $\chi:A\times B\rightarrow\{0,1\}$ where $\chi(\alpha_\ell,\beta_\ell)$ is the value that $\chi_n(\alpha_\ell,\beta_\ell)$ is for all $n\in\bb{N}_\ell$. We claim that $\chi$ is an indicator function for a $\delta$-matching.
+
+- For $a\in A$ there is at most one $\beta\in B$ such that $\chi(\alpha,\beta)=1$.
+- For $\alpha\in A$ with $d^\infty(\alpha,\Delta)>\delta$, there is at least one $\beta\in B$ such that $\chi(\alpha,\beta)=1$.
+- For $\beta\in B$ there is at most one $\alpha\in A$ such that $\chi(\alpha,\beta)=1$.
+- For $\beta\in B$ with $d^\infty(\beta,\Delta)>\delta$, there is at least one $\alpha\in A$ such that $\chi(\alpha,\beta)=1$.
+- If $\chi(\alpha,\beta)=1$ then $d^\infty(\alpha,\beta)\le\delta$.
+
+<p style='text-align: right'>Q.E.D.</p>
+
+## The Isometry Theorem
+
+For $q$-tame modules, Theorem 4.9 becomes equality.
+
+> [!thm] Theorem 4.11
+> Let $\bb{U},\bb{V}$ be $q$-tame persistence modules. Then
+> $$
+> 	d_i(\bb{U},\bb{V}) = d_b(\textup{dgm}(\bb{U}),\textup{dgm}(\bb{V})).
+> $$
+
+This theorem can be seen as the combination of two parts: the *stability theorem*
+$$
+	d_i(\bb{U},\bb{V})\ge d_b(\textup{dgm}(\bb{U}),\textup{dgm}(\bb{V}))
+$$
+and the *converse stability theorem*
+$$
+	d_i(\bb{U},\bb{V})\le d_b(\textup{dgm}(\bb{U}),\textup{dgm}(\bb{V})).
+$$
+
+## The Converse Stability Theorem
+
+We already saw this result for decomposable modules in Theorem 4.9. We extend this to $q$-tame modules.
+
+> [!def] Definition 4.12.
+> Let $\bb{V}$ be a persistence module and $\epsilon>0$. The $\epsilon$**-smoothing** of $\bb{V}$ is the persistence module $\bb{V}^\epsilon$ defined to be the image of the following map:
+> $$
+> 	1_\bb{V}^{2\epsilon}:\bb{V}[t-\epsilon]\rightarrow\bb{V}[t+\epsilon],
+> $$
+> i.e., $V_t^\epsilon\in\bb{V}^\epsilon$ is the image of the map $v_{t-\epsilon}^{t+\epsilon}$. 
+
+
+We can factorize $1_\bb{V}^{2\epsilon}$ into a surjective and injective map by
+$$
+	\bb{V}[t-\epsilon]\rightarrow \bb{V}^\epsilon\rightarrow\bb{V}[t+\epsilon]
+$$
+where at any given index $t$, the sequence is given by
+$$
+	V_{t_\epsilon}\xrightarrow{v_{t-\epsilon}^{t+\epsilon}}V_t^\epsilon\xrightarrow{1}V_{t+\epsilon}.
+$$
+These maps form an $\epsilon$-interleaving.
+
+> [!prp] Proposition 4.14
+> Let $\bb{V}$ be a persistence module. Then $d_i(\bb{V},\bb{V}^\epsilon)\le\epsilon$.
+
+**Example 4.15:** Let $\bb{V}=\bb{I}(p^*,q^*)$. Then
+$$
+	\bb{V}^\epsilon = \begin{cases}
+		\bb{I}\left((p+\epsilon)^*,(q-\epsilon)^*\right) & \text{if }(p+\epsilon)^*<(q-\epsilon)^* \\
+		0 & \text{otherwise.}
+	\end{cases}
+$$
+The $\epsilon$-smoothing shrinks the interval module by $\epsilon$ on both ends.
+
+Consider the $\Q$-interval module $\bb{V}=\bb{I}[0,1]$ which can be seen as the chain
+$$	\cdots\xrightarrow{0}0\xrightarrow{0}V_0\xrightarrow{1}\cdots\xrightarrow{1}V_{1/2}\xrightarrow{1}\cdots\xrightarrow{1}V_1\xrightarrow{0}0\xrightarrow{0}\cdots
+$$
+Then for $\epsilon=1/4$, the shift map $1_\bb{V}^{1/2}$ gives use $\bb{V}^{1/4}=\bb{I}[1/4,,3/4]$ which can be seen as the chain
+$$	\cdots\xrightarrow{0}0\xrightarrow{0}V_{1/4}\xrightarrow{1}\cdots\xrightarrow{1}V_{1/2}\xrightarrow{1}\cdots\xrightarrow{1}V_{3/4}\xrightarrow{0}0\xrightarrow{0}\cdots
+$$
+
+> [!prp] Proposition 4.16
+> The persistence diagram of $\bb{V}^\epsilon$ is obtained from the persistence diagram of $\bb{V}$ by applying the translation $T_\epsilon:(p,q)\rightarrow(p+\epsilon,q-\epsilon)$ to the extended half-plane that lies above the line $\Delta_\epsilon=\{(t-\epsilon,t+\epsilon)\mid t\in\R\}$.
+
+> [!cor] Corollary 4.17
+> Let $\bb{V}$ be a $q$-tame persistence module. Then $d_b(\textup{dgm}(\bb{V}),\textup{dgm}(\bb{V}^\epsilon))\le\epsilon$.
+
+**Proof:** Take the $\epsilon$-matching
+$$
+	(p,q)\in\textup{dgm}(\bb{V}^\epsilon) \leftrightarrow (p-\epsilon,p+\epsilon)\in\textup{dgm}(\bb{V})
+$$
+<p style='text-align: right'>Q.E.D.</p>
+
+Smoothing $q$-tame persistence modules can result in easier to work with modules.
+
+> [!prp] Proposition 4.18
+> Let $\bb{V}$ be a $q$-tame persistence module over $\R$. Then $\bb{V}^\epsilon$ is locally finite and decomposable into intervals.
+
+With this we can finally prove the converse stability theorem:
+
+**Proof:** Let $\bb{U},\bb{V}$ be $q$-tame persistence modules. Since $\bb{U}^\epsilon,\bb{V}^\epsilon$ are decomposable for any $\epsilon>0$ it follows that
+$$
+\begin{align*}
+	d_i(\bb{U},\bb{V)}) &\le d_i(\bb{U},\bb{U}^\epsilon) + d_i(\bb{U}^\epsilon,\bb{V}^\epsilon) + d_i(\bb{V}^\epsilon,\bb{V}) && \text{Prop }4.3 \\
+	&\le d_i(\bb{U}^\epsilon,\bb{V}^\epsilon) + 2\epsilon && \text{Prop }4.14 \\
+	&\le d_b(\textup{dgm}(\bb{U}^\epsilon),\textup{dgm}(\bb{V}^\epsilon)) + 2\epsilon && \text{Thm }4.9 \\
+	&\le d_b(\textup{dgm}(\bb{U}^\epsilon),\textup{dgm}(\bb{U})) + d_b(\textup{dgm}(\bb{U}),\textup{dgm}(\bb{V}))  && \text{Prop }4.8\\
+	&\phantom{\le}+ d_b(\textup{dgm}(\bb{V}),\textup{dgm}(\bb{V}^\epsilon)) + 2\epsilon \\
+	&\le d_b(\textup{dgm}(\bb{U}),\textup{dgm}(\bb{V})) + 4\epsilon  && \text{Cor }4.17\\
+\end{align*}
+$$
+<p style='text-align: right'>Q.E.D.</p>
+
+> [!thm] Theorem 4.19
+> A persistence module $\bb{V}$ is $q$-tame if and only if it can be approximated, in the interleaving distance, by locally finite modules.
+> 
+
+**Question:** Unclear what it means to be *approximated* by.
+
+## The Stability Theorem
+
+We express the stability theorem inequality as a $\delta$-matching.
+
+> [!thm] Theorem 4.21
+> Let $\bb{U},\bb{V}$ be $q$-tame persistence modules that are $\delta$-interleaved. Then there exists a $\delta$-matching between the multisets $\textup{dgm}(\bb{U}),\textup{dgm}(\bb{V})$.
+
+(This result holds for $\delta^+$-interleaved as well).
