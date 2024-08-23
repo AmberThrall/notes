@@ -3,7 +3,7 @@ id: The structure and stability of persistence modules
 aliases: 
 tags:
   - papers
-date: 2024-08-20
+date: 2024-08-23
 ---
 
 **Questions:**
@@ -15,6 +15,7 @@ date: 2024-08-20
 - Proof for Theorem 3.5.
 
 Full paper can be found at: https://arxiv.org/abs/1207.3674
+Smaller summary can be found at: ???
 
 An interleaving is an approximate isomorphism between two persistence modules. Moreover, the isometry theorem states that the interleaving distance is equal to the bottleneck distance under the assumption that the persistence modules are $q$-tame. A more general theorem is provided that does not depend on tameness.
 
@@ -1191,3 +1192,108 @@ We express the stability theorem inequality as a $\delta$-matching.
 > Let $\bb{U},\bb{V}$ be $q$-tame persistence modules that are $\delta$-interleaved. Then there exists a $\delta$-matching between the multisets $\textup{dgm}(\bb{U}),\textup{dgm}(\bb{V})$.
 
 (This result holds for $\delta^+$-interleaved as well).
+
+Let $R=[a,b]\times[c,d]\subset\overline{\R^2}$. The $\delta$**-thickening** of $R$ is the rectangle
+$$
+	R^\delta = [a-\delta,b+\delta]\times[c-\delta,d+\delta].
+$$
+We also thicken a single point $\alpha=(p,q)$ by taking the rectangle
+$$
+	\alpha^\delta=[p-\delta,p+\delta]\times[q-\delta,q+\delta]
+$$
+of size $2\delta$-by-$2\delta$ centered at $\alpha$.
+
+> [!lemma] Lemma 4.22 (Box lemma)
+> Let $\bb{U},\bb{V}$ be a $\delta$-interleaved pair of persistence modules. Let $R$ be a rectangle whose $\delta$-thickening $R^\delta$ lies above the diagonal. Then $\mu_\bb{U}(R)\le\mu_\bb{V}(R^\delta)$ and $\mu_\bb{V}(R)\le\mu_\bb{U}(R^\delta)$.
+
+**Proof:** By the interleaving, the modules
+$$
+	\bb{U} : U_a\rightarrow U_b\rightarrow U_c\rightarrow U_d
+$$
+and
+$$
+	\bb{V}:V_{a-\delta}\rightarrow V_{b+\delta}\rightarrow V_{c-\delta}\rightarrow V_{d+\delta}
+$$
+can be viewed as the 8-term module
+$$
+	\bb{W}:V_{a-\delta}\rightarrow U_a\rightarrow U_b\rightarrow V_{b+\delta}\rightarrow V_{c-\delta}\rightarrow U_c \rightarrow U_d\rightarrow V_{d+\delta}.
+$$
+The rest follows from the restriction principle for quivers.
+<p style='text-align: right'>Q.E.D.</p>
+
+Proposition 4.23 shows that the box lemma holds for boxes at infinity.
+
+## The Measure Stability Theorem
+
+Let $\cal{D}$ be an open subset of $\overline{\R^2}$. For $\alpha\in\cal{D}$, define the **exit distance** of $\alpha$ to be
+$$
+	\text{ex}^\infty(\alpha,\cal{D}) = d^\infty(\alpha,\overline{\R^2}\setminus\cal{D}) = \min(d^\infty(\alpha,x)\mid x\in\overline{\R^2}\setminus\cal{D}).
+$$
+For the extended half-plane, we have that $\text{ex}^\infty(\alpha,\overline{\cal{H}})=d^\infty(\alpha,\Delta)$.
+
+Let $A,B$ be multisets in $\cal{D}$. A $\delta$**-matching** between $A, B$ is a partial matching $M\subset A\times B$ such that
+1. $d^\infty(\alpha,\beta)\le\delta$ if $(\alpha,\beta)\in M$
+2. $\textup{ex}^\infty(\alpha,\cal{D})\le\delta$ if $\alpha\in A$ is unmatched
+3. $\textup{ex}^\infty(\beta,\cal{D})\le\delta$ if $\beta\in B$ is unmatched.
+
+This is a generalization of $\delta$-matchings in the half-plane which we get when  $\cal{D}=\overline{\cal{H}}$.
+
+> [!prp] Proposition 4.24
+> If $A,B,C$ are multisets in $\cal{D}$ and there is a $\delta_1$-matching between $A,B$ and a $\delta_2$-matching between $B,C$, then there is a $(\delta_1+\delta_2)$-matching between $A$ and $C$.
+
+> [!thm] Theorem  4.25 (stability for finite measures)
+> Suppose $(\mu_x\mid x\in[0,\delta])$ is a 1-parameter family of finite $r$-measures on an open set $\cal{D}\subseteq\overline{\R^2}$. Suppose for all $x,y\in[0,\delta]$ the box inequality
+> $$
+> 	\mu_x(R) \le \mu_y(R^{|y-x|})
+> $$
+> holds for all rectangles $R$ whose $|y-x|$-thickening $R^{|y-x|}$ belongs to $\textup{Rect}(\cal{D})$. Then there exists a $\delta$-matching between the undecorated diagrams $\textup{dgm}(\mu_0)$ and $\textup{dgm}(\mu_\delta)$.
+
+# Examples
+
+## Partial Interleavings
+
+Imagine comparing a filtered simplicial complex on an input point cloud to the sublevel set filtration of the density function it was sampled from. In the regions with low-density, samples may be too sparse to expect an interleaving. In such a case we may get a partial interleaving where the modules are interleaved only in high-density regions.
+
+We say two persistence modules $\bb{U}$ and $\bb{V}$ are $\delta$**-interleaving up to time** $t_0$ if there are maps $\phi_t:U_t\rightarrow V_{t+\delta}$ and $\psi_t:V_t\rightarrow U_{t+\delta}$ defined for all $t\le t_0$ such that the diagrams below commute for all $a<t\le t_0$.
+
+![[Screenshot from 2024-07-26 15-22-51.png#invert | center]]
+
+We still get a (albeit weaker) version of the stability theorem.
+
+> [!thm] Theorem 5.1
+> Let $\bb{U}$ and $\bb{V}$ be two $q$-tame persistence modules that are $\delta$-interleaved up to time $t_0$. Then, there is a partial matching $M\subset\textup{dgm}(\bb{U})\times\textup{dgm}(\bb{V})$ with the following properties:
+> - Points $(p,q)$ in either diagram for which $\frac{1}{2}|p-q|\le\delta$ are not required to be matched.
+> - Points $(p,q)$ in either diagram for which $p\ge t_0-\delta$ are not required to be matched.
+> All other points must be matched. Then
+> - If $\alpha,\beta$ are matched, then the $p$-coordinates of $\alpha,\beta$ differ by at most $\delta$.
+> - If $\alpha,\beta$ are matched and one of $\alpha,\beta$ lies below the line $q=t_0$, then $d^\infty(\alpha,\beta)\le\delta$.
+
+The proof constructs two new persistence modules $\tilde{\bb{U}},\tilde{\bb{V}}$ called the **truncations** of $\bb{U},\bb{V}$ to $(-\infty, T)$, where $T=t_0+\delta$, that are defined with spaces
+$$
+	\tilde{U}_t = \begin{cases}
+		U_t & \text{if }t\le t_0+\delta \\
+		0 & \text{otherwise}
+	\end{cases}
+$$
+and maps
+$$
+	\tilde{u}_s^t = \begin{cases}
+		u_s^t & \text{if }t\le t_0+\delta \\
+		0 & \text{otherwise}
+	\end{cases}
+$$
+for all $s\le t$.
+
+There are three steps to the proof:
+1. The decorated diagram of a persistence module $\bb{U}$ determines the decorated diagram of its truncation $\tilde{\bb{U}}$ by the following transformation:
+$$
+	(p^*,q^*)\mapsto\begin{cases}
+		(p^*,q^*) & \text{if } q^*<T \\
+		(p^*,T^+) & \text{if } p^* < T < q^* \\
+		\text{disappears} & \text{if }p^* > T
+	\end{cases}
+$$
+that is, any points that are born and die before $T$ are unchanged, any points that are born before $T$ by die after $T$ are killed at time $T$, and any points that are born after $T$ are ignored.
+
+2. If $\bb{U},\bb{V}$ are $\delta$-interleaved up to time $t_0$, then $\tilde{\bb{U}},\tilde{\bb{V}}$ are $\delta$-interleaved.
+3. The stability theorem gives a $\delta$-matching between $\textup{dgm}(\tilde{\bb{U}})$ and $\textup{dgm}(\tilde{\bb{V}})$ that may be lifted to a matching between $\textup{dgm}(\bb{U})$ and $\textup{dgm}(\bb{V})$.
