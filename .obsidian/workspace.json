@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-08-23.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "64ca5993eb78cd3f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Network Flow/Types of Network Flow Problems.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Network Flow/Types of Network Flow Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "file": "content/Network Flow/Types of Network Flow Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md"
+                "file": "content/Network Flow/Types of Network Flow Problems.md"
               }
             }
           }
@@ -159,11 +146,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "64ca5993eb78cd3f",
+  "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
+    "content/Figures/Screenshot from 2024-08-28 16-41-54.png",
+    "content/Figures/Screenshot from 2024-08-28 16-29-01.png",
+    "content/Figures/Screenshot from 2024-08-28 16-17-43.png",
+    "content/Figures/Screenshot from 2024-08-28 16-15-43.png",
+    "content/Figures/Screenshot from 2024-08-28 15-54-27.png",
+    "content/Figures/Screenshot from 2024-08-28 15-42-41.png",
+    "content/Figures/Screenshot from 2024-08-28 15-34-09.png",
     "content/Daily/2024-08-23.md",
-    "content/Computational Topology/Homology Groups.md",
+    "content/Network Flow/Types of Network Flow Problems.md",
+    "content/Network Flow",
     "content/Papers/The structure and stability of persistence modules.md",
+    "content/Computational Topology/Homology Groups.md",
     "content/Daily/2024-07-29.md",
     "content/An Introduction to Manifolds/5. Manifolds.md",
     "content/Daily/2024-06-03.md",
@@ -181,12 +177,6 @@
     "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
     "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
     "content/Figures/Screenshot from 2024-08-07 14-32-05.png",
-    "content/Figures/Screenshot from 2024-08-06 14-41-56.png",
-    "content/Figures/Screenshot from 2024-08-06 14-11-57.png",
-    "content/Figures/Screenshot from 2024-08-06 13-49-18.png",
-    "content/Figures/Screenshot from 2024-08-02 16-27-16.png",
-    "content/Figures/Screenshot from 2024-08-01 13-12-01.png",
-    "content/Figures/Screenshot from 2024-07-31 12-51-34.png",
     "content/Papers/Persistence stability for geometric complexes.md",
     "content/index.md~",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
@@ -197,15 +187,12 @@
     "content/Optimization/Linear Programming.md",
     "content/Optimization/Constraints.md",
     "content/Machine Learning/Multiple Correspondence Analysis.md",
-    "content/Machine Learning/One-Hot Encoding.md",
-    "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
     "quartz/plugins/transformers/lastmod.ts~",
     "quartz.config.ts~",
     "content/Optimization",
     "content/Daily/2024-06-19.md~",
     "content/Daily/4913",
     "content/Daily/2024-06-18.md~",
-    "content/Daily/2024-06-17.md~",
-    "content/Machine Learning/One-Hot Encoding.md~"
+    "content/Daily/2024-06-17.md~"
   ]
 }
