@@ -14,6 +14,7 @@ You can navigate by [[tags/ | tag]] or folder:
 - [[Computational Topology/]]
 - [[Daily/]]
 - [[Machine Learning/]]
+- [[Network Flow/]]
 - [[Optimization/]]
 - [[Papers/]]
 - [[Topology/]]
