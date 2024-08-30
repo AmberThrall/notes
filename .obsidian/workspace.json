@@ -13,7 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Network Flow/Types of Network Flow Problems.md",
+                "file": "content/Daily/2024-08-30.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "195cfd597f3e2cb4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Papers/The structure and stability of persistence modules.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1372bca15b14b220",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Papers/Persistence stability for geometric complexes.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Network Flow/Types of Network Flow Problems.md",
+                "file": "content/Daily/2024-08-30.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Network Flow/Types of Network Flow Problems.md",
+                "file": "content/Daily/2024-08-30.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Network Flow/Types of Network Flow Problems.md"
+                "file": "content/Daily/2024-08-30.md"
               }
             }
           }
@@ -148,8 +173,12 @@
   },
   "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
-    "content/index.md",
+    "content/Papers/The structure and stability of persistence modules.md",
+    "content/Daily/2024-08-30.md",
+    "content/Papers/Persistence stability for geometric complexes.md",
+    "content/Daily/2024-08-23.md",
     "content/Network Flow/Types of Network Flow Problems.md",
+    "content/index.md",
     "content/Figures/Screenshot from 2024-08-28 16-41-54.png",
     "content/Figures/Screenshot from 2024-08-28 16-29-01.png",
     "content/Figures/Screenshot from 2024-08-28 16-17-43.png",
@@ -157,9 +186,7 @@
     "content/Figures/Screenshot from 2024-08-28 15-54-27.png",
     "content/Figures/Screenshot from 2024-08-28 15-42-41.png",
     "content/Figures/Screenshot from 2024-08-28 15-34-09.png",
-    "content/Daily/2024-08-23.md",
     "content/Network Flow",
-    "content/Papers/The structure and stability of persistence modules.md",
     "content/Computational Topology/Homology Groups.md",
     "content/Daily/2024-07-29.md",
     "content/An Introduction to Manifolds/5. Manifolds.md",
@@ -177,7 +204,6 @@
     "content/An Introduction to Manifolds/3. The Exterior Algebra of Multicovectors.md",
     "content/An Introduction to Manifolds/2. Tangent Vectors in Rn as Derivations.md",
     "content/An Introduction to Manifolds/1. Smooth Functions on a Euclidean Space.md",
-    "content/Papers/Persistence stability for geometric complexes.md",
     "content/index.md~",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
     "content/An Introduction to Manifolds",
@@ -186,7 +212,6 @@
     "content/Machine Learning/k-nearest Neighbors.md",
     "content/Optimization/Linear Programming.md",
     "content/Optimization/Constraints.md",
-    "content/Machine Learning/Multiple Correspondence Analysis.md",
     "quartz/plugins/transformers/lastmod.ts~",
     "quartz.config.ts~",
     "content/Optimization",

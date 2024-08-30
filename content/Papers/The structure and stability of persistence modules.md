@@ -16,7 +16,8 @@ date: 2024-08-23
 - Proof for Theorem 3.5.
 
 Full paper can be found at: https://arxiv.org/abs/1207.3674
-Smaller summary can be found at: ???
+
+Smaller summary can be found at: [[2024-08-30]]
 
 An interleaving is an approximate isomorphism between two persistence modules. Moreover, the isometry theorem states that the interleaving distance is equal to the bottleneck distance under the assumption that the persistence modules are $q$-tame. A more general theorem is provided that does not depend on tameness.
 

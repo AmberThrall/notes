@@ -91,29 +91,6 @@ A transportation problem is called balanced if
 $$
 	\sum_{s_i\in N_1} b(s_i) = -\sum_{d_j\in N_2}b(d_j).
 $$
-## The Seat-sharing Problem
-
-Let there be $p$ families and $q$ cars. Family $f_i$ has $b_i$ members and car $c_j$ has $u_j$ seats.  The goal is assign each family member to a car such that no two members of the same family are assigned to the same car. Let $N=N_1\cup N_2$ where $N_1=\{f_1,\dots,f_p\}$ and $N_2=\{c_1,\dots,c_q\}$. Construct an arc $(f_i,c_j)$ for each $f_i\in N_1$ and $c_j\in N_2$. We set the capacity of each arc $c_{f_i,c_j}=1$. Under the assumption that
-$$
-	\sum_{i=1}^p b_i = \sum_{j=1}^q u_j
-$$
-and that there is a feasible assignment this becomes a transportation problem.
-
-There may not be a feasible assignment. For example consider the network below:
-
-![[Screenshot from 2024-08-28 16-41-54.png#invert | center]]
-
-Here the supply nodes both have a supply of 4 and the demand nodes both have a demand of 4, hence it is a balanced transportation problem. However, there is a capacity of 1 on each arc so we can only send 2 units out of each supply node (1 unit per outarc).
-
-A more general approach would be to assume that
-$$
-	\sum_{i=1}^p b_i < \sum_{j=1}^q u_j,
-$$
-i.e., there are more seats than people. In such a case, we can add a terminus node $t$
-
-**FINISH THIS**
-
-If we do not assume a feasible solution exists, we can view a transportation problem as a max flow problem. We add a source node $s^*$ connecting it to each supply node and a terminus node $t$ connecting each demand node to it. For each arc $(s^*,s_i)$, we assign a capacity of $b(s_i)$. For each arc $(d_j,t)$ we assign a capacity of $b(d_j)$. We then set the supply/demand of each node to zero.
 
 # Assignment Problem
 
