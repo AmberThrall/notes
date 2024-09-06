@@ -19,6 +19,8 @@ date: 2024-05-31
 
 Full paper can be found at: https://link.springer.com/article/10.1007/s10711-013-9937-z
 
+A brief summary can be found at: [[2024-09-06]]
+
 # Introduction
 
 Given a metric space $(Y,d_Y)$ which "approximates" another metric space $(X,d_X)$, our goal is construct a simplicial complex on the vertex set $Y$ such that the homology or homotopy type is the same as $X$. In most applications, $Y$ is finite.
