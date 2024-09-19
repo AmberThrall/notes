@@ -13,43 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024-09-06.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "46562f7684f1f91d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Daily/2024-08-30.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "195cfd597f3e2cb4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Papers/The structure and stability of persistence modules.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1372bca15b14b220",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Papers/Persistence stability for geometric complexes.md",
+                "file": "content/Daily/2024-09-19.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024-09-06.md",
+                "file": "content/Daily/2024-09-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024-09-06.md",
+                "file": "content/Daily/2024-09-19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024-09-06.md"
+                "file": "content/Daily/2024-09-19.md"
               }
             }
           }
@@ -185,8 +149,10 @@
   },
   "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
-    "content/Daily/2024-04-16.md",
+    "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
+    "content/Daily/2024-09-19.md",
     "content/Daily/2024-09-06.md",
+    "content/Daily/2024-04-16.md",
     "content/Daily/2024-08-30.md",
     "content/Papers/Persistence stability for geometric complexes.md",
     "content/Figures/Screenshot from 2024-09-06 15-17-20.png",
@@ -222,7 +188,6 @@
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
     "content/An Introduction to Manifolds",
     "content/Computational Topology/Homotopy.md",
-    "content/Papers/Box Filtration.md",
     "quartz/plugins/transformers/lastmod.ts~",
     "quartz.config.ts~",
     "content/Optimization",
