@@ -3,6 +3,7 @@ id: Steinhaus Filtration and Stable Paths in the Mapper
 aliases: 
 tags:
   - papers
+  - steinhaus
 date: 2024-04-02
 ---
 
