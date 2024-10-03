@@ -149,8 +149,6 @@
   "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
     "public/404.html",
-    "public/static/icon.png",
-    "public/static/og-image.png",
     "public/Figures/sphx_glr_plot_separating_hyperplane_001.png",
     "public/Figures/sample_simplices.png",
     "public/Figures/random_data_vr_complex_scikit_tda_tut.png",
@@ -159,6 +157,8 @@
     "public/Figures/main-qimg-770386a52678c9c44552eef3452fd540-pjlq.jpg",
     "public/Figures/homemorphic_but_not_isomorphic.png",
     "public/Figures/grid_search_workflow.png",
+    "public/Figures/grid_search_cross_validation.png",
+    "public/Figures/delaunay_tetrahedron.png",
     "public/Figures",
     "public/static/contentIndex.json",
     "public/static",
