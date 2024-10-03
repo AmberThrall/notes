@@ -1,5 +1,7 @@
 ---
 date: 2024-10-01
+tags:
+  - network-flow
 ---
 Given a network $G=(N,A)$ where nodes are given by distinct numbers from 1 to $n$, we construct a label $\textup{order}(i)$ on the nodes. A **topological ordering** of nodes is a label $\textup{order}(i)$ where for every arc $(i,j)\in A$, $\textup{order}(i)<\textup{order}(j)$.
 
