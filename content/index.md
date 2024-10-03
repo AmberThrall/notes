@@ -12,9 +12,11 @@ You can navigate by [[tags/ | tag]] or folder:
 - [[An Introduction to Manifolds/]]
 - [[Category Theory/]]
 - [[Computational Topology/]]
-- [[Daily/]]
 - [[Machine Learning/]]
 - [[Network Flow/]]
 - [[Optimization/]]
 - [[Papers/]]
 - [[Topology/]]
+
+Daily Entries:
+- [[Daily/2024]]

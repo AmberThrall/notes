@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Network Flow/Flow Decomposition.md",
+                "file": "content/Daily/2024/2024-09-27.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Network Flow/Flow Decomposition.md",
+                "file": "content/Daily/2024/2024-09-27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Network Flow/Flow Decomposition.md",
+                "file": "content/Daily/2024/2024-09-27.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Network Flow/Flow Decomposition.md"
+                "file": "content/Daily/2024/2024-09-27.md"
               }
             }
           }
@@ -148,51 +148,50 @@
   },
   "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
-    "content/Network Flow/Dijkstra's Algorithm.md",
-    "content/Network Flow/Flow Decomposition.md",
-    "content/Network Flow/Network Search Algorithms.md",
-    "content/Network Flow/Network Transformations.md",
-    "content/Network Flow/Types of Network Flow Problems.md",
-    "content/Figures/main-qimg-770386a52678c9c44552eef3452fd540-pjlq.jpg",
-    "content/Big-O Notation.md",
-    "content/Network Flow/Topological Ordering.md",
-    "content/Figures/Screenshot_2024-10-02_18-24-03.png",
-    "content/Figures/Screenshot_2024-10-02_18-20-17.png",
-    "content/Figures/Screenshot_2024-10-02_17-50-03.png",
-    "content/Figures/Screenshot_2024-10-02_17-35-27.png",
-    "content/Figures/Screenshot_2024-10-02_17-15-53.png",
-    "content/Figures/Screenshot from 2024-10-01 16-19-17.png",
-    "content/Daily/2024-09-27.md",
-    "content/Daily/2024-09-06.md",
-    "content/Daily/2024-09-19.md",
-    "content/Papers/Steinhaus Filtration and Stable Paths in the Mapper.md",
-    "content/Daily/2024-04-16.md",
-    "content/Daily/2024-08-30.md",
-    "content/Papers/Persistence stability for geometric complexes.md",
-    "content/Figures/Screenshot from 2024-09-06 15-17-20.png",
-    "content/Figures/Screenshot from 2024-09-06 15-14-52.png",
-    "content/Papers/The structure and stability of persistence modules.md",
-    "content/Figures/Screenshot from 2024-09-06 13-23-43.png",
-    "content/Daily/2024-08-23.md",
-    "content/index.md",
-    "content/Network Flow",
-    "content/Computational Topology/Homology Groups.md",
-    "content/Daily/2024-07-29.md",
-    "content/An Introduction to Manifolds/5. Manifolds.md",
-    "content/Daily/2024-06-03.md",
-    "content/Daily/2024-06-05.md",
-    "content/Daily/2024-06-17.md",
-    "content/Daily/2024-06-18.md",
-    "content/Daily/2024-06-19.md",
-    "content/Paragonimiasis Statistical Analysis.md",
-    "content/index.md~",
-    "content/An Introduction to Manifolds",
-    "quartz/plugins/transformers/lastmod.ts~",
-    "quartz.config.ts~",
-    "content/Optimization",
-    "content/Daily/2024-06-19.md~",
-    "content/Daily/4913",
-    "content/Daily/2024-06-18.md~",
-    "content/Daily/2024-06-17.md~"
+    "content/Daily/index.md",
+    "public/Daily/index.html",
+    "public/Daily/Untitled.html",
+    "content/Daily/2024/2024-09-27.md",
+    "public/404.html",
+    "public/Figures/sphx_glr_plot_separating_hyperplane_001.png",
+    "public/Figures/sample_simplices.png",
+    "public/Figures/random_data_vr_complex_scikit_tda_tut.png",
+    "public/Figures/nerve_example.png",
+    "public/Figures/mtimFxh.png",
+    "public/Figures/main-qimg-770386a52678c9c44552eef3452fd540-pjlq.jpg",
+    "public/Figures/homemorphic_but_not_isomorphic.png",
+    "public/Figures/grid_search_workflow.png",
+    "public/Figures/grid_search_cross_validation.png",
+    "public/Figures/delaunay_tetrahedron.png",
+    "public/Figures",
+    "public/static/contentIndex.json",
+    "public/static",
+    "public/index.xml",
+    "public/sitemap.xml",
+    "public/tags/steinhaus.html",
+    "public/tags/paragonimiasis.html",
+    "node_modules/mathjax-full/README.md",
+    "node_modules/mathjax-full/CONTRIBUTING.md",
+    "node_modules/typescript/SECURITY.md",
+    "node_modules/typescript/README.md",
+    "node_modules/@esbuild/linux-x64/README.md",
+    "node_modules/fetch-ponyfill/node_modules/node-fetch/README.md",
+    "node_modules/fetch-ponyfill/node_modules/node-fetch/LICENSE.md",
+    "node_modules/asynckit/README.md",
+    "node_modules/bytes/History.md",
+    "node_modules/bytes/Readme.md",
+    "node_modules/delayed-stream/Readme.md",
+    "node_modules/isexe/README.md",
+    "node_modules/is-extglob/README.md",
+    "node_modules/sprintf-js/README.md",
+    "node_modules/fetch-ponyfill/node_modules/webidl-conversions/LICENSE.md",
+    "node_modules/fetch-ponyfill/node_modules/webidl-conversions/README.md",
+    "node_modules/fetch-ponyfill/node_modules/whatwg-url/README.md",
+    "node_modules/hast-util-raw/node_modules/@types/unist/README.md",
+    "node_modules/hast-util-from-parse5/node_modules/@types/unist/README.md",
+    "node_modules/hast-util-from-html/node_modules/unist-util-stringify-position/readme.md",
+    "node_modules/hast-util-from-html/node_modules/@types/unist/README.md",
+    "node_modules/mdast-util-mdx-jsx/node_modules/vfile-message/readme.md",
+    "node_modules/hast-util-to-jsx-runtime/node_modules/vfile-message/readme.md"
   ]
 }
