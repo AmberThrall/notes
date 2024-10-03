@@ -53,44 +53,43 @@ $$
 
 The algorithm is outlined below:
 
+```pseudo
+\begin{algorithm}
+\caption{Flow decomposition algorithm}
+\begin{algorithmic}
+	\Procedure{FlowDecomposition}{$G=(N,A),~x$}
+		\State $y:=x$
+		\State $\mathcal{P} := \emptyset$
+		\State $\mathcal{W} := \emptyset$
+		\While{$y\ne0$}
+			\State $s:=$\textsc{Select}$(y)$
+			\State Do DFS starting at node $s$ until finding a cycle $W$ in $G(y)$ or a path $P$ in $G(y)$ from node $s$ to node $t\in D$
+			\If{cycle $W$ is found}
+				\State add $W$ to $\mathcal{W}$
+				\State $f(W) := \Delta(W)$
+				\State $y_{ij} := y_{ij}-\Delta(W),~\forall (i,j)\in W$
+				\State update $A(y)$ and $N(y)$
+			\EndIf
+			\If{path $P$ is found}
+				\State add $P$ to $\mathcal{P}$
+				\State $f(P) := \Delta(P)$
+				\State $y_{ij} := y_{ij} - \Delta(P),~\forall (i,j)\in P$
+				\State $b(s) = b(s) - \Delta(P)$ where $s$ is the starting node of $P$
+				\State $b(t) = b(t) + \Delta(P)$ where $t$ is the ending node of $P$
+				\State update $A(y)$, $N(y)$, $\mathcal(S)$ and $\mathcal{D}$
+			\EndIf
+		\EndWhile
+	\EndProcedure
+
+	\Function{Select}{y}
+		\If{$S\ne\empty$}
+			\State \Return $x\in S$
+		\Else
+			\State \Return $x\in N(y)$
+        \EndIf
+    \EndFunction
+  \end{algorithmic}
+\end{algorithm}
 ```
-fn FlowDecomposition(N, x)
-	y = x
-	paths = []
-	cycles = []
-	while y != 0 do
-		s = Select(y)
-		Search(s,y)
-		if cycle W is found then 
-			add W to cycles
-			f(W) = capacity(W)
-			y[i,j] = y[i,j] - capacity(W) for all (i,j) in W
-			update A(y) and N(y)
-		endif
-	
-		if path P is found then
-			add P to paths
-			f(P) = capacity(P)
-			y[i,j] = y[i,j] - capacity(P) for all (i,j) in P
-			b(s) = b(s) - capacity(P) where s is the starting node of P
-			b(t) = b(t) + capacity(P) where t is the ending node of P
-			update A(y), N(y), S, D
-		endif
-	endwhile
 
-	return [paths, cycles]
-endfn
 
-fn Select(y)
-	if S is not empty then
-		return some x in S
-	else
-		return some x in N(y)
-	endif
-endfn
-
-fn Search(s,y)
-	Do DFS starting at node s until finding a cycle W in G(y) or a path
-	P in G(y) from node s to node t in D.
-endfn
-```

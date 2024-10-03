@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Network Flow/Network Transformations.md",
+                "file": "content/Network Flow/Flow Decomposition.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Network Flow/Network Transformations.md",
+                "file": "content/Network Flow/Flow Decomposition.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Network Flow/Network Transformations.md",
+                "file": "content/Network Flow/Flow Decomposition.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Network Flow/Network Transformations.md"
+                "file": "content/Network Flow/Flow Decomposition.md"
               }
             }
           }
@@ -146,17 +146,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fb6316178493ddb5",
+  "active": "8b6ba050b5ec1b66",
   "lastOpenFiles": [
+    "content/Network Flow/Dijkstra's Algorithm.md",
     "content/Network Flow/Flow Decomposition.md",
-    "content/Network Flow/Topological Ordering.md",
+    "content/Network Flow/Network Search Algorithms.md",
     "content/Network Flow/Network Transformations.md",
+    "content/Network Flow/Types of Network Flow Problems.md",
+    "content/Figures/main-qimg-770386a52678c9c44552eef3452fd540-pjlq.jpg",
+    "content/Big-O Notation.md",
+    "content/Network Flow/Topological Ordering.md",
     "content/Figures/Screenshot_2024-10-02_18-24-03.png",
     "content/Figures/Screenshot_2024-10-02_18-20-17.png",
     "content/Figures/Screenshot_2024-10-02_17-50-03.png",
     "content/Figures/Screenshot_2024-10-02_17-35-27.png",
     "content/Figures/Screenshot_2024-10-02_17-15-53.png",
-    "content/Big-O Notation.md",
     "content/Figures/Screenshot from 2024-10-01 16-19-17.png",
     "content/Daily/2024-09-27.md",
     "content/Daily/2024-09-06.md",
@@ -170,9 +174,7 @@
     "content/Papers/The structure and stability of persistence modules.md",
     "content/Figures/Screenshot from 2024-09-06 13-23-43.png",
     "content/Daily/2024-08-23.md",
-    "content/Network Flow/Types of Network Flow Problems.md",
     "content/index.md",
-    "content/Figures/Screenshot from 2024-08-28 16-41-54.png",
     "content/Network Flow",
     "content/Computational Topology/Homology Groups.md",
     "content/Daily/2024-07-29.md",
@@ -183,7 +185,6 @@
     "content/Daily/2024-06-18.md",
     "content/Daily/2024-06-19.md",
     "content/Paragonimiasis Statistical Analysis.md",
-    "content/An Introduction to Manifolds/A. Point-Set Topology.md",
     "content/index.md~",
     "content/An Introduction to Manifolds",
     "quartz/plugins/transformers/lastmod.ts~",
