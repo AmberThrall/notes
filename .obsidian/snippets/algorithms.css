@@ -3,3 +3,12 @@ div.ps-root {
   opacity: 1;
   color: white
 }
+
+div.ps-root div.ps-algorithm {
+  border-top: 2px solid white;
+  border-bottom: 1px solid white;
+}
+
+div.ps-root div.ps-algorithm.with-caption > .ps-line:first-child {
+  border-bottom: 1px solid white;
+}
