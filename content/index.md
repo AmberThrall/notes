@@ -18,4 +18,4 @@ You can navigate by [[tags/ | tag]] or folder:
 - [[Papers/]]
 
 Daily Entries:
-- [[Daily/2024]]
+- [[Daily/2024/]]
