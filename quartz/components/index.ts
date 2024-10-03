@@ -17,6 +17,7 @@ import Search from "./Search"
 import Footer from "./Footer"
 import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
+import OnlyFor from "./OnlyFor"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 
@@ -39,6 +40,7 @@ export {
   Footer,
   DesktopOnly,
   MobileOnly,
+  OnlyFor,
   RecentNotes,
   NotFound,
   Breadcrumbs,

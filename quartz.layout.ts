@@ -5,6 +5,16 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
+  afterBody: [
+    Component.OnlyFor(
+        { titles: ["Notes"] },
+        Component.RecentNotes({
+            showTags: false,
+            title: "Recently edited notes:",
+            showDate: true,
+        }),
+    )
+  ],
   footer: Component.Footer({
     links: {
     },
