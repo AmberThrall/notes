@@ -8,12 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8b6ba050b5ec1b66",
+            "id": "8f93b6e672d9e0bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Daily/2024/2024-10-04.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "29462713d7baef2c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "content/Daily/2024/2024-09-27.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "31b7efcbc2ffa735",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Daily/2024/2024-09-06.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024/2024-09-27.md",
+                "file": "content/Daily/2024/2024-10-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024/2024-09-27.md",
+                "file": "content/Daily/2024/2024-10-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024/2024-09-27.md"
+                "file": "content/Daily/2024/2024-10-04.md"
               }
             }
           }
@@ -146,8 +170,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8b6ba050b5ec1b66",
+  "active": "8f93b6e672d9e0bf",
   "lastOpenFiles": [
+    "content/Daily/2024/2024-09-06.md",
+    "content/Daily/2024/2024-10-04.md",
+    "content/Daily/2024/2024-09-27.md",
+    "content/Daily/2024/2024-08-30.md",
+    "content/Network Flow/Network Transformations.md",
+    "content/Network Flow/Flow Decomposition.md",
     "quartz/static/icon.png",
     "quartz/static/icon-old.png",
     "quartz/static/logo192.png",
@@ -159,7 +189,6 @@
     "public/Figures/mtimFxh.png",
     "public/Figures/main-qimg-770386a52678c9c44552eef3452fd540-pjlq.jpg",
     "public/Figures/homemorphic_but_not_isomorphic.png",
-    "public/Figures/grid_search_workflow.png",
     "public/Figures",
     "public/static/contentIndex.json",
     "public/static",
@@ -188,11 +217,6 @@
     "node_modules/preact/README.md",
     "node_modules/speech-rule-engine/lib/README.md",
     "node_modules/resolve/SECURITY.md",
-    "node_modules/@citation-js/core/README.md",
-    "node_modules/@citation-js/core/LICENSE.md",
-    "node_modules/rimraf/README.md",
-    "node_modules/parse5/README.md",
-    "node_modules/cssstyle/README.md",
-    "node_modules/mj-context-menu/README.md"
+    "node_modules/@citation-js/core/README.md"
   ]
 }

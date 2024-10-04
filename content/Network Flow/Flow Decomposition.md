@@ -13,11 +13,11 @@ $$
 $$
 Note, here we have replaced the supply/node $b(i)$ with $-e(i)$ which represents the **imbalance**. One may view $e(i)$ as the inflow minus the outflow of node $i$. If $e(i)>0$ then $i$ is an **excess node**. If $e(i)<0$ then $i$ is a **deficit node**. Otherwise, inflow and outflow are equal and $i$ is a **balanced node**.
 
-In **flow decomposition** we go from flows on arcs to defining flows on paths and cycles. For example, in the network below
+In **flow decomposition** we go from flows on arcs to defining flows on paths and cycles. For example, consider the figure below:
 
 ![[Screenshot from 2024-10-01 16-19-17.png#invert | center]]
 
-we have decomposed the flow $x_{ij}$ into the paths $P_1=1-2-4-6$, $P_2=1-3-5-6$ and cycle $W=2-4-5-2$. $P_1$ sends 4 units of flow, $P_2$ sends 3 units of flow and cycle $C$ has $2$ units of flow circulating.
+We have decomposed the flow $x_{ij}$ into the paths $P_1=1-2-4-6$, $P_2=1-3-5-6$ and cycle $W=2-4-5-2$. $P_1$ sends 4 units of flow, $P_2$ sends 3 units of flow and cycle $C$ has $2$ units of flow circulating.
 
 If we denote the flow of a path/cycle by $f(P)$, then the set of paths $\cal{P}$ and the set of cycles $\cal{W}$ in the flow decomposition uniquely determine the flow $x_{ij}$. That is,
 $$
