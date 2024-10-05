@@ -2,6 +2,7 @@
 id: index
 aliases: []
 tags: []
+date: "2024-10-03"
 title: Notes
 ---
 
