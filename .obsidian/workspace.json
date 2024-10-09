@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024/2024-10-07.md",
+                "file": "content/Daily/2024/2024-10-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024/2024-10-07.md",
+                "file": "content/Daily/2024/2024-10-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024/2024-10-07.md",
+                "file": "content/Daily/2024/2024-10-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024/2024-10-07.md"
+                "file": "content/Daily/2024/2024-10-08.md"
               }
             }
           }
@@ -172,8 +173,12 @@
   },
   "active": "8f93b6e672d9e0bf",
   "lastOpenFiles": [
-    "content/Daily/2024/2024-09-06.md",
+    "content/Computational Topology/Mapper.md",
+    "content/Daily/2024/2024-10-08.md",
+    "content/Figures/Screenshot_2024-10-08_17-48-11.png",
+    "content/Figures/Screenshot_2024-10-08_16-26-06.png",
     "content/Daily/2024/2024-10-07.md",
+    "content/Daily/2024/2024-09-06.md",
     "content/Daily/2024/2024-09-27.md",
     "content/Figures/Screenshot_2024-10-07_15-08-27.png",
     "content/Daily/2024/2024-10-04.md",
@@ -188,8 +193,6 @@
     "public/Figures/sample_simplices.png",
     "public/Figures/random_data_vr_complex_scikit_tda_tut.png",
     "public/Figures/nerve_example.png",
-    "public/Figures/mtimFxh.png",
-    "public/Figures/main-qimg-770386a52678c9c44552eef3452fd540-pjlq.jpg",
     "public/Figures",
     "public/static/contentIndex.json",
     "public/static",
@@ -215,7 +218,6 @@
     "node_modules/katex/README.md",
     "node_modules/sass/README.md",
     "node_modules/prettier/README.md",
-    "node_modules/preact/README.md",
-    "node_modules/speech-rule-engine/lib/README.md"
+    "node_modules/preact/README.md"
   ]
 }
