@@ -20,6 +20,7 @@ import MobileOnly from "./MobileOnly"
 import OnlyFor from "./OnlyFor"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
+import GithubSource from "./GithubSource"
 
 export {
   ArticleTitle,
@@ -44,4 +45,5 @@ export {
   RecentNotes,
   NotFound,
   Breadcrumbs,
+  GithubSource,
 }

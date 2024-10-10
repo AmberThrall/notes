@@ -181,15 +181,11 @@
     "public/tags/papers.html",
     "public/tags/optimization.html",
     "public/tags/network-flow.html",
-    "node_modules/mathjax/README.md",
-    "node_modules/quartz-pseudocode/README.md",
-    "node_modules/pseudocode/README.md",
-    "node_modules/rehype/readme.md",
-    "node_modules/rehype-stringify/readme.md",
     "node_modules/mathjax-full/README.md",
     "node_modules/mathjax-full/CONTRIBUTING.md",
     "node_modules/typescript/SECURITY.md",
     "node_modules/typescript/README.md",
+    "node_modules/mathjax/README.md",
     "node_modules/jsdom/README.md",
     "node_modules/@esbuild/linux-x64/README.md",
     "node_modules/rehype-citation/README.md",
@@ -205,6 +201,10 @@
     "node_modules/preact/README.md",
     "node_modules/speech-rule-engine/lib/README.md",
     "node_modules/resolve/SECURITY.md",
-    "node_modules/@citation-js/core/README.md"
+    "node_modules/@citation-js/core/README.md",
+    "node_modules/@citation-js/core/LICENSE.md",
+    "node_modules/rimraf/README.md",
+    "node_modules/parse5/README.md",
+    "node_modules/cssstyle/README.md"
   ]
 }
