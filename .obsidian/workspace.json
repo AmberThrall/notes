@@ -13,31 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "content/Daily/2024/2024-10-10.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "122be82a81225408",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "content/Daily/2024/2024-10-08.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "29462713d7baef2c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Daily/2024/2024-09-27.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "31b7efcbc2ffa735",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Daily/2024/2024-09-06.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -110,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024/2024-10-08.md",
+                "file": "content/Daily/2024/2024-10-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024/2024-10-08.md",
+                "file": "content/Daily/2024/2024-10-10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024/2024-10-08.md"
+                "file": "content/Daily/2024/2024-10-10.md"
               }
             }
           }
@@ -173,8 +160,10 @@
   },
   "active": "8f93b6e672d9e0bf",
   "lastOpenFiles": [
-    "content/Computational Topology/Mapper.md",
+    "content/Figures/Screenshot_2024-10-10_11-19-06.png",
     "content/Daily/2024/2024-10-08.md",
+    "content/Daily/2024/2024-10-10.md",
+    "content/Computational Topology/Mapper.md",
     "content/Figures/Screenshot_2024-10-08_17-48-11.png",
     "content/Figures/Screenshot_2024-10-08_16-26-06.png",
     "content/Daily/2024/2024-10-07.md",
@@ -216,8 +205,6 @@
     "node_modules/flexsearch/CHANGELOG.md",
     "node_modules/katex/src/metrics/README.md",
     "node_modules/katex/README.md",
-    "node_modules/sass/README.md",
-    "node_modules/prettier/README.md",
-    "node_modules/preact/README.md"
+    "node_modules/sass/README.md"
   ]
 }

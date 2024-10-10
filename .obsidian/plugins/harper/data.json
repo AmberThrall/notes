@@ -1,5 +1,6 @@
 {
   "lintSettings": {
+    "long_sentences": false,
     "spell_check": false
   }
 }
