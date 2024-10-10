@@ -1,4 +1,5 @@
 import { QuartzConfig } from "./quartz/cfg"
+import { Pseudocode as CommunityPseudocode } from "quartz-pseudocode"
 import * as Plugin from "./quartz/plugins"
 
 /**
@@ -52,6 +53,7 @@ const config: QuartzConfig = {
   },
   plugins: {
     transformers: [
+      CommunityPseudocode(),
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
