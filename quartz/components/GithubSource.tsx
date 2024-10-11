@@ -14,12 +14,12 @@ return (
     <h3>Source code</h3>
     <ul>
       <li>
-        <a href={`https://github.com/AmberThrall/notes/blob/main/content/${fileData.slug}.md`}>
+        <a href={`https://github.com/AmberThrall/notes/blob/main/${fileData.filePath}`}>
           Source
         </a>
       </li>
       <li>
-        <a href={`https://github.com/AmberThrall/notes/commits/main/content/${fileData.slug}.md`}>
+        <a href={`https://github.com/AmberThrall/notes/commits/main/${fileData.filePath}`}>
           History
         </a>
       </li>

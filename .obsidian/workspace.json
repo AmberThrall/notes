@@ -194,7 +194,6 @@
     "node_modules/css-tree/README.md",
     "node_modules/flexsearch/README.md",
     "node_modules/flexsearch/CHANGELOG.md",
-    "node_modules/katex/src/metrics/README.md",
     "node_modules/katex/README.md",
     "node_modules/sass/README.md",
     "node_modules/prettier/README.md",
@@ -205,6 +204,7 @@
     "node_modules/@citation-js/core/LICENSE.md",
     "node_modules/rimraf/README.md",
     "node_modules/parse5/README.md",
-    "node_modules/cssstyle/README.md"
+    "node_modules/cssstyle/README.md",
+    "node_modules/mj-context-menu/README.md"
   ]
 }
