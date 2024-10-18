@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024/2024-10-04.md",
+                "file": "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Daily/2024/2024-10-04.md",
+                "file": "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Daily/2024/2024-10-04.md",
+                "file": "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Daily/2024/2024-10-04.md"
+                "file": "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md"
               }
             }
           }
@@ -159,14 +159,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fb6316178493ddb5",
+  "active": "8f93b6e672d9e0bf",
   "lastOpenFiles": [
-    "content/Figures/Screenshot_2024-10-11_16-40-08.png",
-    "content/Daily/2024/2024-10-04.md",
-    "content/Daily/2024/2024-10-11.md",
-    "content/Figures/Screenshot_2024-10-11_16-23-55.png",
+    "content/Figures/Screenshot_2024-10-18_15-39-47.png",
     "content/Daily/2024/2024-09-27.md",
     "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
+    "content/Daily/2024/2024-10-04.md",
+    "content/Figures/Screenshot_2024-10-11_16-40-08.png",
+    "content/Daily/2024/2024-10-11.md",
+    "content/Figures/Screenshot_2024-10-11_16-23-55.png",
     "content/Figures/Screenshot_2024-10-11_14-26-59.png",
     "content/Computational Topology/Mapper.md",
     "content/Daily/2024/2024-10-10.md",
