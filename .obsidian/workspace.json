@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
+                "file": "content/Daily/2024/2024-10-21.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
+                "file": "content/Daily/2024/2024-10-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
+                "file": "content/Daily/2024/2024-10-21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md"
+                "file": "content/Daily/2024/2024-10-21.md"
               }
             }
           }
@@ -161,9 +161,10 @@
   },
   "active": "8f93b6e672d9e0bf",
   "lastOpenFiles": [
+    "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
+    "content/Daily/2024/2024-10-21.md",
     "content/Figures/Screenshot_2024-10-18_15-39-47.png",
     "content/Daily/2024/2024-09-27.md",
-    "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
     "content/Daily/2024/2024-10-04.md",
     "content/Figures/Screenshot_2024-10-11_16-40-08.png",
     "content/Daily/2024/2024-10-11.md",
@@ -178,7 +179,6 @@
     "public/Figures/nerve_example.png",
     "public/Figures/mtimFxh.png",
     "public/Figures/main-qimg-770386a52678c9c44552eef3452fd540-pjlq.jpg",
-    "public/Figures/homemorphic_but_not_isomorphic.png",
     "public/Figures",
     "public/static/contentIndex.json",
     "public/static",
