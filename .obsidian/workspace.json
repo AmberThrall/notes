@@ -13,22 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Network Flow/Maximum Flow.md",
+                "file": "content/Daily/2024/2024-10-31.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "8d7e2c48b36a1d51",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Network Flow/Dijkstra's Algorithm.md",
-                "mode": "source",
-                "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "2024-10-31"
             }
           },
           {
@@ -40,7 +30,9 @@
                 "file": "content/Daily/2024/2024-09-27.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "2024-09-27"
             }
           }
         ]
@@ -63,7 +55,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -78,7 +72,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -86,15 +82,16 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -110,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Network Flow/Maximum Flow.md",
+                "file": "content/Daily/2024/2024-10-31.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +115,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2024-10-31"
             }
           },
           {
@@ -127,10 +126,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Network Flow/Maximum Flow.md",
+                "file": "content/Daily/2024/2024-10-31.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2024-10-31"
             }
           },
           {
@@ -141,7 +142,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -150,8 +153,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Network Flow/Maximum Flow.md"
-              }
+                "file": "content/Daily/2024/2024-10-31.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2024-10-31"
             }
           }
         ]
@@ -173,10 +178,14 @@
   },
   "active": "8f93b6e672d9e0bf",
   "lastOpenFiles": [
+    "content/Figures/svm_boxplots_new.png",
+    "content/Figures/svm_boxplots.png",
+    "content/Daily/2024/2024-09-27.md",
+    "content/Daily/2024/2024-10-31.md",
+    "content/Network Flow/Maximum Flow.md",
     "content/Figures/Screenshot_2024-10-24_13-10-37.png",
     "content/Figures/Screenshot_2024-10-24_13-08-33.png",
     "content/Network Flow/Dijkstra's Algorithm.md",
-    "content/Network Flow/Maximum Flow.md",
     "content/Figures/Screenshot_2024-10-24_12-51-05.png",
     "content/Figures/Screenshot_2024-10-24_12-46-18.png",
     "content/Figures/Screenshot_2024-10-24_12-39-30.png",
@@ -184,16 +193,13 @@
     "content/Daily/2024/2024-10-21.md",
     "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
     "content/Figures/Screenshot_2024-10-18_15-39-47.png",
-    "content/Daily/2024/2024-09-27.md",
     "content/Daily/2024/2024-10-04.md",
     "content/Figures/Screenshot_2024-10-11_16-40-08.png",
     "content/Daily/2024/2024-10-11.md",
     "content/Figures/Screenshot_2024-10-11_16-23-55.png",
-    "content/Figures/Screenshot_2024-10-11_14-26-59.png",
     "content/Computational Topology/Mapper.md",
     "content/Daily/2024/2024-10-10.md",
     "public/404.html",
-    "public/Figures/sphx_glr_plot_separating_hyperplane_001.png",
     "public/Figures",
     "public/static/contentIndex.json",
     "public/static",
@@ -217,7 +223,6 @@
     "node_modules/flexsearch/README.md",
     "node_modules/flexsearch/CHANGELOG.md",
     "node_modules/katex/README.md",
-    "node_modules/sass/README.md",
-    "node_modules/prettier/README.md"
+    "node_modules/sass/README.md"
   ]
 }
