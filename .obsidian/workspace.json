@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024/2024-10-31.md",
+                "file": "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-10-31"
+              "title": "Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density"
             }
           },
           {
@@ -91,7 +91,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -178,10 +179,11 @@
   },
   "active": "8f93b6e672d9e0bf",
   "lastOpenFiles": [
+    "content/Figures/Screenshot_2024-11-01_14-23-27.png",
+    "content/Daily/2024/2024-10-31.md",
     "content/Figures/svm_boxplots_new.png",
     "content/Figures/svm_boxplots.png",
     "content/Daily/2024/2024-09-27.md",
-    "content/Daily/2024/2024-10-31.md",
     "content/Network Flow/Maximum Flow.md",
     "content/Figures/Screenshot_2024-10-24_13-10-37.png",
     "content/Figures/Screenshot_2024-10-24_13-08-33.png",
@@ -196,7 +198,6 @@
     "content/Daily/2024/2024-10-04.md",
     "content/Figures/Screenshot_2024-10-11_16-40-08.png",
     "content/Daily/2024/2024-10-11.md",
-    "content/Figures/Screenshot_2024-10-11_16-23-55.png",
     "content/Computational Topology/Mapper.md",
     "content/Daily/2024/2024-10-10.md",
     "public/404.html",

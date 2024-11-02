@@ -1,5 +1,5 @@
 ---
-date: 2024-10-18
+date: 2024-11-01
 tags:
   - papers
 ---
@@ -154,4 +154,62 @@ The author's implementation uses a cosine window.
 
 Recall that as the resolution goes to zero, the Mapper converges to the Reeb graph. The paper claims this property is preserved by the density-based Mapper.
 
-**Insert category theory mumbo-jumbo here**
+Recall that the family $\{X^{(a)}\}_{a\in\R}$, where $X^{(a)}=f^{-1}(-\infty,a]$, defines a filtration. If flip the interval we get another filtration $\{X_\textup{op}^{(b)}\}_{b\in\R}$ where $X^{(b)}_\textup{op}=f^{-1}[b,\infty)$. Define $\R_\textup{Ext}=\R\cup\{\infty\}\cup\R_\textup{op}$ ordered $a<\infty<\tilde{a}$ for all $a\in\R$ and $\tilde{a}\in\R_\textup{op}$. Define the extended filtration to have spaces
+$$
+	X_\textup{Ext}^{(a))} = \begin{cases}
+		f^{-1}(-\infty,a] & a\in\R \\
+		X & a = \infty \\
+		(X,f^{-1}[a,\infty)) & a\in\R_\textup{op}.
+	\end{cases}
+$$
+Applying the homology functor defines the *extended persistence module* $EP(f)$. 
+
+> [!prp] Proposition 13
+> Suppose $X$ is a topological space and that $f:X\rightarrow\R$ is a Morse function. Then the endpoints of a persistence interval $[b,d)$ of $EP(f)$ only occur at critical values of $f$.
+
+If the critical points of $f$ are $\{-\infty,a_1,a_2,\dots,a_n,+\infty\}$, then $EP(f)$ is the sequence
+$$
+	0\rightarrow H_*(X^{(a_0)}) \rightarrow\cdots\rightarrow H_*(X^{(a_n)}) \rightarrow H_*(X) \rightarrow H_*(H_\textup{Ext}^{(a_n)}) \rightarrow\cdots\rightarrow H_*(X_\textup{Ext}^{(a_0)}) \rightarrow 0.
+$$
+
+A **zigzag persistence module** is a generalization of persistence modules in which one allows some arrows to go backwards. For example, if $f:X\rightarrow\R$ is a Morse type function with critical values $\{a_0=-\infty,a_1,a_2,\dots,a_n,a_{n+1}=\infty\}$ ordered in increasing order and for any set of values $\{s_i\}_{i=1}^n$ with $a_i<s_i<a_{i+1}$, then the levelset zigzag persistence module $\textup{LZZ}(X,f)$ is the sequence
+$$
+	H_*(X_0^0) \rightarrow H_*(X_0^1) \leftarrow H_*(X_1^1) \rightarrow H_*(X_1^2) \leftarrow\cdots\rightarrow H_*(X_{n-1}^n)\leftarrow H_*(X_n^n),
+$$
+where $X_i^j = f^{-1}[s_i,s_j]$.
+
+## Mapper Graphs from Zigzag Modules
+
+Let $X$ be a topological space with cover $\cal{V}=\{V_i\}_{i=1}^N$. This gives the zigzag module
+
+![[Screenshot_2024-11-01_14-23-27.png#invert | center]]
+
+where each $\phi_{i,j}^k:H_0(V_i,V_j)\rightarrow H_0(V_k)$, with $k\in\{i,j\}$, is given by inclusion. We can construct the Mapper graph associated to cover $\cal{V}$ as follows:
+1. For each of the upper spaces, $H_0(V_i)$, we choose the basis $\{v_j^i\}_{j=1}^{J_i}$ consisting of the connected components of $V_i$.
+2. For each of the lower spaces, $H_0(V_i\cap V_j)$, we choose the basis $\{e_k^{i,i+1}\}_{k=1}^{K_i}$.
+Then the multinerve Mapper graph $\overline{G}$ associated to the zig-zag module is a multigraph defined by vertex sets
+$$
+	V(G) = \bigcup_{i=1}^N\{v_1^i,\dots,v_{J_i}^i\}
+$$
+and edge sets
+$$
+	E(G) = \bigcup_{i=1}^{N-1}\left\{\phi_{i,i+1}^i(e_k^{i,i+1}),\phi_{i,i+1}^{i+1}(e_k^{i,i+1}),k=1,\dots,K_i\right\}.
+$$
+To obtain the Mapper graph $G$, one may take $\overline{G}$ and collapse all parallel edges into single edges.
+
+---
+
+
+Assuming $f$ is Morse type, this module decomposes into interval modules:
+$$
+	EP(f) = \bigoplus_{k=1}^n\bb{I}[b_k,d_k) = \bigoplus_{k=1}^n\left[(\R\times[b_k,d_k))\cup(\{0\}\times\R_\textup{Ext}-[b_k,d_k))\right].
+$$
+We define a **partial matching** between persistence diagrams $D$ and $D'$ as a subset $\Gamma\subseteq D\times D'$ such that if $(p,p')\in\Gamma$ and $(p,q')\in\Gamma$ then $p'=q'$ and if $(p,p'),(q,p')\in\Gamma$ then $p=q$. Let $\Delta\subset\R^2$ be the diagonal. Then the **cost** of $\Gamma$ is defined as
+$$
+	\textup{cost}(\Gamma) := \max\left\{\max_{p\in D}\delta(p),\max_{p'\in D'}\delta(p')\right\}
+$$
+where $\delta(p)=\|p-p'\|_\infty$ where $(p,p')\in\Gamma$, otherwise $\delta(p)=\inf_{q\in\Delta}\|p-q\|_\infty$. Then the **bottleneck distance** between $D$ and $D'$ is defined by
+$$
+	d_b(D,D') := \inf_\Gamma\textup{cost}(\Gamma)
+$$
+which ranges over all partial matchings $\Gamma$.
