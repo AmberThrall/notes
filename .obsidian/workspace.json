@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024/2024-11-04.md",
+                "file": "content/Papers/Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recognition.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-11-04"
+              "title": "Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recognition"
             }
           },
           {
@@ -91,7 +91,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -178,9 +179,10 @@
   },
   "active": "8f93b6e672d9e0bf",
   "lastOpenFiles": [
+    "content/Daily/2024/2024-11-04.md",
+    "content/Papers/Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recognition.md",
     "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
     "content/Figures/Screenshot_2024-11-01_14-23-27.png",
-    "content/Daily/2024/2024-11-04.md",
     "content/Figures/svm_boxplots_new.png",
     "content/Figures/svm_boxplots.png",
     "content/Daily/2024/2024-09-27.md",
