@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2024/2024-11-15.md",
+                "file": "content/Daily/2024/2024-11-21.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-11-15"
+              "title": "2024-11-21"
             }
           }
         ]
@@ -164,8 +164,9 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
-    "content/Daily/2024/2024-11-08.md",
     "content/Daily/2024/2024-11-15.md",
+    "content/Daily/2024/2024-11-21.md",
+    "content/Daily/2024/2024-11-08.md",
     "content/Daily/2024/2024-11-14.md",
     "content/Computational Topology/Triangulations of Common Surfaces.md",
     "content/Figures/Screenshot_2024-11-14_12-44-36.png",
@@ -208,7 +209,6 @@
     "node_modules/jsdom/README.md",
     "node_modules/@esbuild/linux-x64/README.md",
     "node_modules/rehype-citation/README.md",
-    "node_modules/speech-rule-engine/README.md",
-    "node_modules/speech-rule-engine/bin/README.md"
+    "node_modules/speech-rule-engine/README.md"
   ]
 }
