@@ -17,6 +17,7 @@ You can navigate by [[tags/ | tag]] or folder:
 - [[Network Flow/]]
 - [[Optimization/]]
 - [[Papers/]]
+- [[Probability/]]
 
 Daily Entries:
 - [[Daily/2024/]]
