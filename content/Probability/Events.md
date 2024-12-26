@@ -77,7 +77,9 @@ $$
 **Proof:** Let $B_1=A_1$, $B_2=A_2-A_1$, $\dots$, $B_n=A_n-\bigcup_{k=1}^{n-1}B_k$. Then the $B_i$ are mutually exclusive events with union $\bigcup_k A_k$. Therefore,
 $$
 	P(\bigcup_k A_k) = \sum_kP(B_k) = \lim_{n\rightarrow\infty}\sum_{k=1}^nP(B_k) = \lim_{n\rightarrow\infty}P(A_n).
-$$<p style='text-align:right'>Q.E.D.</p>
+$$
+<p style='text-align:right'>Q.E.D.</p>
+
 > [!thm]
 > If $A_1\supset A_2\supset A_3\supset\cdots$ is a decreasing sequence of events then
 > $$
