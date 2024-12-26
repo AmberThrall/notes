@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Probability/Basics of Probability.md",
+                "file": "content/Probability/Events.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Basics of Probability"
+              "title": "Events"
             }
           }
         ]
@@ -165,8 +165,9 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
-    "content/Papers/A Mapper algorithm with implicit intervals and its optimization.md",
     "content/Probability/Basics of Probability.md",
+    "content/Probability/Events.md",
+    "content/Papers/A Mapper algorithm with implicit intervals and its optimization.md",
     "content/Probability",
     "content/Papers/Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density.md",
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
@@ -209,7 +210,6 @@
     "public/tags/papers.html",
     "node_modules/mathjax-full/README.md",
     "node_modules/mathjax-full/CONTRIBUTING.md",
-    "node_modules/typescript/SECURITY.md",
-    "node_modules/typescript/README.md"
+    "node_modules/typescript/SECURITY.md"
   ]
 }
