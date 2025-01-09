@@ -20,4 +20,5 @@ You can navigate by [[tags/ | tag]] or folder:
 - [[Probability/]]
 
 Daily Entries:
+- [[Daily/2025/]]
 - [[Daily/2024/]]
