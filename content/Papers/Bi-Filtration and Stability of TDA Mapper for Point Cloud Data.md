@@ -1,5 +1,5 @@
 ---
-date: 2025-01-15
+date: 2025-01-17
 tags:
   - papers
 ---
@@ -44,7 +44,7 @@ While a filtration of covers of $Z$ induces a filtration of pullback covers of $
 
 ## No Filtration of Cluster Covers: Complete/Average-Linkage, bin size.
 
-Two common clustering algorithms used in Mapper is [single-linkage](https://en.wikipedia.org/wiki/Single-linkage_clustering) and [DBSCAN](https://en.wikipedia.org/wiki/DBSCAN) as they provide the correct connected components of a dataset. But, two points far from each may be put in the same cover if there is a chain of points connecting them.
+Two common clustering algorithms used in Mapper is [single-linkage](https://en.wikipedia.org/wiki/Single-linkage_clustering) and [DBSCAN](https://en.wikipedia.org/wiki/DBSCAN) as they provide the correct connected components of a dataset. But, two points far from each other may be put in the same cover if there is a chain of points connecting them.
 
 The authors construct an example in which the Mapper parameterized by bin size fails to produce a filtration. More specifically, they take a data set $X\subset\R$ and the filter function $f(x)=x$ and construct two covers of $f(X)$:
 1. Two interval $I_1$ and $I_2$ with 20\% overlap
@@ -77,7 +77,7 @@ KeplerMapper defaults to $\epsilon=0.5$ and $MinPts=3$.
 
 
 > [!def]
-> A point $q$ is **directly density-reachable** from a point $p$ w.r.t. $\epsilon$ and $MinPtrs$ if $p$ is a core point and $q\in N_\epsilon(p)$.
+> A point $q$ is **directly density-reachable** from a point $p$ w.r.t. $\epsilon$ and $MinPts$ if $p$ is a core point and $q\in N_\epsilon(p)$.
 
 > [!def]
 > A point $q$ is **density-reachable** from a point $p$ w.r.t. $\epsilon$ and $MinPts$ if there is a sequence of points $p=\alpha_1,\alpha_2,\dots,\alpha_n=q$ such that $\alpha_{i+1}$ is directly density-reachable from $\alpha_i$.
@@ -91,7 +91,7 @@ KeplerMapper defaults to $\epsilon=0.5$ and $MinPts=3$.
 
 ![[snapshot_2025-01-15_14-37-45.png#invert | center]]
 
-the point $s$ is (directly) density-reachable to the points $p$ and $q$, but $p$ and $q$ are not density-reachable to $s$ because $s$ is not a core point ($|N_\epsilon(s)|<MinPts$). But $p$ is density-connected to $s$ because there is a point $o=s$ such that $p$ and $s$ are density-reachable from $o$.
+the point $s$ is (directly) density-reachable to the points $p$ and $q$, but $p$ and $q$ are not density-reachable to $s$ because $s$ is not a core point ($|N_\epsilon(s)|<MinPts$). But $p$ is density-connected to $s$ because there is a point $o=p$ such that $p$ and $s$ are density-reachable from $o$.
 
 > [!def]
 > Let a dataset $X=C_1\sqcup C_2\sqcup\cdots\sqcup C_n\sqcup N$ where $N$ is a set of noise points and $C_i$ is a **cluster** w.r.t. $\epsilon$ and $MinPts$ satisfying:
@@ -168,4 +168,77 @@ If there are no free-border points, then we can construct simplicial and homolog
 
 # Bi-Filtrations and Stability
 
-The paper claims that DBSCAN is not stable under small perturbation.
+The paper claims that DBSCAN is not stable under small perturbation. Let $X$ be a dataset and $X_\delta$ the dataset obtained by perturbing $X$ by at most $\delta$, i.e., there is some function $\Delta:X\rightarrow X_\delta$ such that $d(x,\Delta(x))\le\delta$ for all $x\in X$. We say that
+$$
+	d(X,X_\delta) = \max\{\min\{d(x,y)\mid x\in X,y\in X_\delta\}\}\le\delta.
+$$
+How does applying DBSCAN to $X$ and $X_\delta$ vary?
+
+For example, consider the following two datasets:
+
+![[snapshot_2025-01-17_11-16-06.png#invert | center]]
+
+If we let $\epsilon$ be the distance between two points in $X$ and $MinPts=2$, then $X$ is clustered into a single set where as $X_\delta$ is clustered into three disjoint sets.
+
+We construct a two-dimensional filtration (bi-filtration) parameterized by $\epsilon$ and bins $\bb{B}$, leaving $MinPts$ fixed. Note that each parameter alone gives a filtration (assuming no free-border points), that is, given a dataset $X$ there is a filtration of cluster covers
+$$
+	\{c^{\bb{B}_i,\bb{B}_j}:\bb{C}_{\bb{B}_i}\rightarrow\bb{C}_{\bb{B}_j}\mid\forall \bb{B}_i\le\bb{B}_j\}
+$$
+which induces a filtration of simplicial complexes
+$$
+	\{\Phi^{\bb{B}_i,\bb{B}_j}:\textup{Nrv}(\bb{C}_{\bb{B}_i})\rightarrow\text{Nrv}(\bb{C}_{\bb{B}_j})\mid\forall \bb{B}_i\le\bb{B}_j\}
+$$
+which induces a filtration of $k$-th homology groups
+$$
+	\{f^{\bb{B}_i,\bb{B}_j}:H_k(\textup{Nrv}(\bb{C}_{\bb{B}_i}))\rightarrow H_k(\text{Nrv}(\bb{C}_{\bb{B}_j}))\mid\forall \bb{B}_i\le\bb{B}_j\}.
+$$
+
+A similar set of filtrations exist parameterized by $\epsilon$. Combining the two together gives a set of bi-filtrations where $\bb{B}$ is one dimension and $\epsilon$ is the other.
+
+![[snapshot_2025-01-17_11-28-34.png#invert | center | 400]]
+
+
+
+We can perform the same with $X_\delta$ to get another set of bi-filtrations $\bb{D}_{(\bb{B}_i,\epsilon_j)}$.
+
+## Interleaving of Bi-filtrations
+
+See [[The structure and stability of persistence modules]] for more details.
+
+> [!def]
+> Let $P_n$ be a polynomial ring in $n$ variables $x=\{x_1,x_2,\dots,x_n\}$. An **$n$-graded module** is a $P_n$ module $M$ such that $M\cong\bigoplus_{a\in\R^n}M_a$ and $x^b(M_a)\subset M_{a+b}$ for all $a\in\R^n$, $b\in[0,\infty)^n$ where $M_a$ is a vector space over some field $k$. The action of $x^{b-a}$ gives rise to a linear map $\varphi:M_a\rightarrow M_b$ for all $a\le b\in\R^n$.
+
+This is unnecessarily complicated. We're just taking persistence modules parameterized by two variables. Thus, we have a set of vector spaces $M_{(x,y)}$ and a set of linear maps $\varphi:M_{(x,y)}\rightarrow M_{(x',y')}$ for all $(x,y)\le (x',y')$.
+
+> [!def]
+> For $M$ an $n$-graded module and $v\in\R^n$, $M(v)$ is the **shifted module** such that $M(v)_u=M_{v+u}$.
+
+> [!def]
+> For $M$ and $n$-graded module, $\overline{\xi}=\{\xi,\xi,\dots,\xi\}\in\R^n_+$ and $M(\overline{\xi})$,
+> $$
+> 	\varphi_M^{\overline{\xi}}:M\rightarrow M(\overline{\xi})
+> $$
+> is the (diagonal) $\xi$-transition morphism such that $\varphi_M^{\overline{\xi}}(M_a) = \varphi_M(a+\overline{\xi})$.
+
+This is just $\epsilon$-homomorphisms but now $\epsilon\in\R^n$.
+
+> [!def]
+> Let $\xi\ge0$. Two $n$-modules $M$ and $N$ are $\xi$-interleavd if there are morphisms $f:M\rightarrow N(\xi)$ and $g:N\rightarrow M(\xi)$ such that $\varphi_N^{2\xi}=f(\xi)\circ g$ and $\varphi_M^{2\xi}=g(\xi)\circ f$.
+
+Again, this is just $\epsilon$-interleaving but now $\epsilon\in\R^n$.
+
+## Stability Against Perturbation
+
+Assume there are no free-border points. Then as described above we get a filtration for $X$
+$$
+	\cal{C} : \cdots\rightarrow \bb{C}_{(\bb{B}_i,\epsilon_j)} \rightarrow \bb{C}_{(\bb{B}_k,\epsilon_\ell)}\rightarrow\cdots
+$$
+and a filtration for $X_\delta$
+$$
+	\cal{D} : \cdots\rightarrow \bb{D}_{(\bb{B}_i,\epsilon_j)} \rightarrow \bb{D}_{(\bb{B}_k,\epsilon_\ell)}\rightarrow\cdots.
+$$
+According to proposition 1, there are family of maps $\phi$ and $\psi$ such that the diagram below commutes:
+
+![[snapshot_2025-01-17_11-47-39.png#invert | center]]
+
+In other words, the filtrations $\cal{C}$ and $\cal{D}$ are $2\delta$-interleaved. This $2\delta$-interleaving induces a $2\delta$-interleaving between their homologies $H_k(\cal{C})$ and $H_k(\cal{D})$.
