@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Bi-Filtration and Stability of TDA Mapper for Point Cloud Data.md",
+                "file": "content/Papers/Median shapes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bi-Filtration and Stability of TDA Mapper for Point Cloud Data"
+              "title": "Median shapes"
             }
           }
         ]
@@ -164,6 +164,8 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
+    "content/Papers/Bi-Filtration and Stability of TDA Mapper for Point Cloud Data.md",
+    "content/Papers/Median shapes.md",
     "content/Figures/snapshot_2025-01-17_11-47-39.png",
     "content/Figures/snapshot_2025-01-17_11-28-34.png",
     "content/Figures/snapshot_2025-01-17_11-25-47.png",
@@ -172,7 +174,6 @@
     "content/Figures/snapshot_2025-01-15_15-01-26.png",
     "content/Figures/snapshot_2025-01-15_14-37-45.png",
     "content/KeplerMapper.md",
-    "content/Papers/Bi-Filtration and Stability of TDA Mapper for Point Cloud Data.md",
     "content/Big-O Notation.md",
     "content/Figures/snapshot_2025-01-15_12-08-42.png",
     "content/Figures/snapshot_2025-01-15_11-49-15.png",
@@ -193,7 +194,6 @@
     "content/Daily/2024/2024-11-08.md",
     "content/Daily/2024/2024-11-14.md",
     "content/Computational Topology/Triangulations of Common Surfaces.md",
-    "content/Figures/Screenshot_2024-11-14_12-44-36.png",
     "content/Daily/Untitled.md",
     "content/Papers/Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recognition.md",
     "content/Daily/2024/2024-11-04.md",
