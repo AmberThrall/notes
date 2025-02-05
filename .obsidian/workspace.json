@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Median shapes.md",
+                "file": "content/Papers/Contour Boxplots A Method for Characterizing Uncertainty in Feature Sets from Simulation Ensembles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Median shapes"
+              "title": "Contour Boxplots A Method for Characterizing Uncertainty in Feature Sets from Simulation Ensembles"
             }
           }
         ]
@@ -164,9 +164,10 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
+    "content/Papers/Median shapes.md",
+    "content/Papers/Contour Boxplots A Method for Characterizing Uncertainty in Feature Sets from Simulation Ensembles.md",
     "content/Figures/snapshot_2025-01-22_14-51-14.png",
     "content/Papers/Bi-Filtration and Stability of TDA Mapper for Point Cloud Data.md",
-    "content/Papers/Median shapes.md",
     "content/Figures/snapshot_2025-01-17_11-47-39.png",
     "content/Figures/snapshot_2025-01-17_11-28-34.png",
     "content/Figures/snapshot_2025-01-17_11-25-47.png",
@@ -189,7 +190,6 @@
     "content/Papers/Finding the Homology of Submanifolds with High Confidence from Random Samples.md",
     "content/Papers/Box Filtration.md",
     "content/Daily/2024/2024-12-16.md",
-    "content/Figures/mulan_to_moulin.png",
     "content/Daily/2024/2024-11-21.md",
     "content/Daily/2024/2024-11-15.md",
     "content/Daily/2024/2024-11-08.md",
