@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -77,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -164,6 +166,7 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
+    "content/Figures/SS_2025-02-14_1739561467.png",
     "content/Papers/Median shapes.md",
     "content/Papers/Contour Boxplots A Method for Characterizing Uncertainty in Feature Sets from Simulation Ensembles.md",
     "content/Figures/snapshot_2025-01-22_14-51-14.png",
@@ -202,7 +205,6 @@
     "content/Network Flow/Maximum Flow.md",
     "content/Network Flow/Dijkstra's Algorithm.md",
     "content/Daily/2024/2024-10-21.md",
-    "content/Daily/2024/2024-10-04.md",
     "public/404.html",
     "public/Figures",
     "public/static/contentIndex.json",
