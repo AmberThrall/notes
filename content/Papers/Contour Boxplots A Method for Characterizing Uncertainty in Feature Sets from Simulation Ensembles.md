@@ -80,7 +80,8 @@ They call this application of set $BD$ to level sets as **contour band depth** (
 This formulation may produce unsatisfactory results if the ensemble is relatively small and the contours vary significantly in shape. Thus, they relax the definition of subset:
 $$
 	A\subset_\epsilon B \Longleftrightarrow |A|=0\text{ or }\frac{|A-B|}{|A|} < \epsilon,
-$$i.e., $A$ is the empty set or the percentage of elements $x\in A$ with $x\not\in B$ is less than $\epsilon$. Under this notion, the epsilon set band is then
+$$
+i.e., $A$ is the empty set or the percentage of elements $x\in A$ with $x\not\in B$ is less than $\epsilon$. Under this notion, the epsilon set band is then
 $$
 	S\in sB_\epsilon(S_1,\dots,S_j) \Longleftrightarrow \bigcap_{k=1}^j S_k\subset_\epsilon S\subset_\epsilon \bigcup_{k=1}^j S_k.
 $$
