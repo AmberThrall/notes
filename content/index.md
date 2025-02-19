@@ -2,7 +2,7 @@
 id: index
 aliases: []
 tags: []
-date: "2024-10-03"
+date: "2025-02-18"
 title: Notes
 ---
 
@@ -13,6 +13,7 @@ You can navigate by [[tags/ | tag]] or folder:
 - [[An Introduction to Manifolds/]]
 - [[Category Theory/]]
 - [[Computational Topology/]]
+- [[GMT/]]
 - [[Machine Learning/]]
 - [[Network Flow/]]
 - [[Optimization/]]
