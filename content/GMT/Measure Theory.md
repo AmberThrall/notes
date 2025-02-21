@@ -20,9 +20,7 @@ We say a union of rectangles is **almost disjoint** if the interiors of the rect
 
 > [!lemma]
 > If a rectangle is the almost disjoint union of finitely many other rectangles, say $R=\bigcup_{k=1}^N R_k$, then
-> $$
-   |R| = \sum_{k=1}^N|R_k|.
-> $$
+> $$|R| = \sum_{k=1}^N|R_k|.$$
 
 If the rectangles are not almost disjoint, then 
 $$
@@ -73,13 +71,13 @@ Some useful properties:
 4. If $E=E_1\cup E_2$ and $\inf_{e_1\in E_1, e_2\in E_2} d(e_1,e_2) > 0$, then $m_*(E) = m_*(E_1) + m_*(E_2)$.
 5. If $E$ is a countable union of almost disjoint cubes $E=\bigcup_{j=1}^\infty Q_j$, then $m_*(E)=\sum_{j=1}^\infty |Q_j|$.
 
-# Measurable Sets and the Lebesgue Measure
+# The Lebesgue Measure
 
-We say a subset $E\subset\R^d$ is **Lebesgue measurable** if for any $\epsilon>0$ there exists an open set $\cal{O}$ with $E\subset\cal{O}$ and
+We say a subset $E\subset\R^d$ is **Lebesgue measurable** if for every $\epsilon>0$ there exists an open set $\cal{O}$ with $E\subset\cal{O}$ and
 $$
 	m_*(\cal{O} - E) \le \epsilon.
 $$
-If $E$ is measurable, we define it's **Lebesgue measure** to be $m(E)=m_*(E)$. In other words, the Lebesgue measure is simply the outer measure restricted to measurable sets. Clearly, properties 1-5 above still hold. Moreover, it is clear that every open set in $\R^d$ is measurable as $m_*(\cal{O}-\cal{O})=m_*(\emptyset)=0\le\epsilon$. This also holds for closed sets $F$.
+If $E$ is measurable, we define it's **Lebesgue measure** to be $m(E)=m_*(E)$. In other words, the Lebesgue measure is simply the outer measure restricted to measurable sets. Clearly, properties 1-5 above still hold. Moreover, it is clear that every open set in $\R^d$ is measurable as $m_*(\cal{O}-\cal{O})=m_*(\emptyset)=0\le\epsilon$.
 
 Notice that for any set $E$ with $m_*(E)=0$, we get that $E$ is measurable. Indeed, for every $\epsilon>0$ it follows by property 3 that we can choose an open set $\cal{O}\supset E$ with $m_*(\cal{O})\le\epsilon$. Then by monotonicity,
 $$
@@ -101,9 +99,73 @@ Notice that this result does not hold for the outer measure!
 
 Some more properties:
 - The complement of a measurable set is measurable
+- Closed sets are measurable
 - A countable intersection of measurable sets is measurable
 - If $E_k\nearrow E$, then $m(E)=\lim_{k\rightarrow\infty}m(E_k)$.
 - If $E_k\searrow E$ and $m(E_k)<\infty$ for some $k$, then $m(E)=\lim_{k\rightarrow\infty}m(E_k)$.
 
 ## σ-algebras and Borel Sets
+
+A **$\sigma$-algebra** on a set $X$ is a collection of subsets of $X$ that is closed under countable unions, countable intersections and complements. While the power set, $\scr{P}(\R^d)$, is a $\sigma$-algebra we are more interested in the $\sigma$-algebra consisting of all measurable sets. 
+
+One special $\sigma$-algebra is the **Borel $\sigma$-algebra**, i.e., the smallest $\sigma$-algebra consisting of all open sets.
+
+# Abstract Measures
+
+In the above, we focused on $\R^d$ and the Lebesgue measure. We know abstract our notion of measure to arbitrary sets.
+
+A **measure space** consists of a set $X$ with
+1. A $\sigma$-algebra $\cal{M}$ of measurable sets; and
+2. A **measure** $\mu:\cal{M}\rightarrow[0,\infty]$ such that if $E_1,E_2,\dots$ is a countable family of disjoint sets in $\cal{M}$ then
+$$
+	\mu\left(\sum_{n=1}^\infty E_n\right) = \sum_{n=1}^\infty\mu(E_n).
+$$
+One may denote a measure space by $(X,\cal{M},\mu)$, but it is typically abbreviated as $(X,\mu)$. As we saw above, $(\R^d,\cal{M},m)$ is a measure space where $\cal{M}$ is the set of Lebesgue measurable sets. Another simple example is the **counting measure**, $(X,\scr{P}(X),\mu)$ where $\mu(E)=|E|$ the cardinality of $E$.
+
+## Caratheodory's Extension Theorem
+
+Let $X$ be a set. An **exterior measure** $\mu_*$ on $X$ is a function $\mu_*:\scr{P}(X)\rightarrow[0,\infty]$ that satisfies the following properties:
+1. $\mu_*(\emptyset)=0$.
+2. **Monotonicity**: If $E_1\subset E_2$, then $\mu_*(E_1)\le m_*(E_2)$.
+3. **Countable sub-additivity:** If $E_1, E_2,\dots$ is a countable family of sets, then 
+$$
+	\mu_*\left(\bigcup_{j=1}^\infty E_j\right)\le \sum_{j=1}^\infty \mu_*(E_j).
+$$
+Given an exterior measure $\mu_*$, we say a set $E$ in $X$ is **Caratheodory measurable** if for every $A\subset X$,
+$$
+	\mu_*(A) = \mu_*(E\cap A) + \mu_*(E^c\cap A).
+$$
+This is sometimes called the separation condition.
+
+> [!prp]
+> Lebesgue measurable sets are Caratheodory measurable.
+
+**Proof:** Let $E$ Lebesgue measurable, i.e., for all $\epsilon>0$ there is an open set $O_\epsilon$ such that $E\subset O_\epsilon$ and $m_*(O_\epsilon-E)\le \epsilon$. Let $A\subset\R^d$. Notice that
+$$
+\begin{align*}
+	\mu_*(A) &= \mu_*((E\cap A)\cup(E^c\cap A)) \\ 
+	&\le \mu_*(E\cap A) + \mu_*(E^c\cap A) \\
+	&\le \mu_*(O_\epsilon\cap A) + \mu_*((E^c\cap O_\epsilon\cap A)\cup( O_\epsilon^c\cap A)) \\
+	&\le \mu_*(O_\epsilon\cap A) + \mu_*(E^c\cap O_\epsilon\cap A) + \mu_*(O_\epsilon^c\cap A) \\
+	&\le \mu_*(A) + \epsilon.
+\end{align*}
+$$
+Let $\epsilon\rightarrow0$.
+
+> [!thm] Caratheodory Extension Theorem
+> Given an exterior measure $\mu_*$ on a set $X$, the collection $\cal{M}$ of Caratheodory measurable sets forms a $\sigma$-algebra. Moreover, $(X,\cal{M},\mu)$, where $\mu$ is $\mu_*$ restricted to $\cal{M}$, is a measure space.
+
+
+# Measurable Functions
+
+Let $(X, \mu_X)$ and $(Y,\mu_Y)$ be measurable spaces. A function $f:X\rightarrow Y$ is said to be **measurable** if for any $\mu_Y$-measurable set $E\subset Y$, the pre-image 
+$$
+	f^{-1}(E) = \{x\in X\mid f(x)\in E\}
+$$
+is $\mu_X$-measurable.
+
+Some properties:
+1. The sum and product of complex valued measurable functions is measurable.
+2. The composition of measurable functions is measurable.
+3. If $Y$ is a metric space, then the pointwise limit of a sequence of measurable functions $f_n:X\rightarrow Y$ is measurable.
 
