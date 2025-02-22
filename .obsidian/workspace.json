@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/GMT/Measure Theory.md",
+                "file": "content/GMT/Rectifiable Sets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Measure Theory"
+              "title": "Rectifiable Sets"
             }
           }
         ]
@@ -166,8 +166,10 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
-    "content/GMT/Hausdorff Measure.md",
+    "content/Figures/Example-of-a-1-dimensional-rectifiable-set.png",
     "content/GMT/Measure Theory.md",
+    "content/GMT/Rectifiable Sets.md",
+    "content/GMT/Hausdorff Measure.md",
     "content/index.md~",
     "content/Papers/Contour Boxplots A Method for Characterizing Uncertainty in Feature Sets from Simulation Ensembles.md",
     "content/Optimization/Duality.md",
@@ -204,8 +206,6 @@
     "content/Daily/Untitled.md",
     "content/Papers/Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recognition.md",
     "content/Daily/2024/2024-11-04.md",
-    "content/Daily/2024/2024-09-27.md",
-    "content/Network Flow/Maximum Flow.md",
     "public/404.html",
     "public/Figures",
     "public/static/contentIndex.json",
