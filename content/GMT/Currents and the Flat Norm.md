@@ -1,5 +1,5 @@
 ---
-date: 2025-02-26
+date: 2025-02-27
 tags:
   - gmt
 ---
@@ -58,16 +58,68 @@ $$
 		0 & i \ne j.
 	\end{cases}
 $$
+> [!def] 0-form
+> A **differentiable 0-form** is a differentiable function $f:V\rightarrow\R$.
+
+
+> [!def] 1-form
+> A **differential one-form** $\alpha$ on $V$ is a covector field, i.e., a map
+> $$ \alpha: V\rightarrow V^\vee $$
+> which assigns a covector to each vector.
+
+One may view a one-form as the linear combination
+$$
+	\alpha(x) = f_1(x)dx_1 + f_2(x)dx_2 + \cdots + f_n(x)dx_n.
+$$
+Note that $\alpha$ here can be viewed as a family of linear functionals. That is, given a vector $\langle a,b,c\rangle$, 
+$$
+	(fdx+gdy+hdz)(a,b,c) = f(x_0,y_0,z_0)a + g(x_0,y_0,z_0)b + h(x_0,y_0,z_0)c
+$$
+at the point $(x_0,y_0,z_0)\in V$.
+
+For example, the change in angle form $d\theta$ in $\R^2$ is the one-form
+$$
+	d\theta = -\frac{y}{x^2+y^2}dx + \frac{x}{x^2+y^2}dy.
+$$
+Integrating over the unit circle $C$ gives
+$$
+\begin{align*}
+	\int_Cd\theta &= \int_0^{2\pi}\left(-\frac{y}{x^2+y^2}\frac{dx}{dt} + \frac{x}{x^2+y^2}\frac{dy}{dt}\right)dt \\
+	&= \int_0^{2\pi}\left(\sin^2t + \cos^2t\right)dt \\
+	&= 2\pi.
+\end{align*}
+$$
+Note that $d\theta$ is simply the gradient $\nabla\theta=\langle\partial_x\textup{atan2},\partial_y\textup{atan2}\rangle$ viewed as a 1-form.
+
+## Visualizing 1-forms
+
+Let $S$ be the 2-sphere in $\R^3$. At any point $p\in S$ the sphere has a tangent plane which we denote by $T_pS$. This tangent space forms a vector space. The collection of all tangent spaces, 
+$$
+	TS=\bigsqcup_{p\in S}T_pS = \{(p,v)\mid p\in S, v\in T_pS\},
+$$
+is called the **tangent bundle**. Taking the dual gives the **cotangent bundle**, $TS^*$, where now we are assigning each point $p\in S$ a linear functional $v^*:T_pS\rightarrow\R$. Under this view, a 1-form is the map $\alpha:S\rightarrow TS^*$.
+
+Now let $\varphi:\R\rightarrow S$ be a curve on the sphere and $\alpha(p)=f(p)dx+g(p)dy$ a 1-form. Then for time $t$ we get a linear functional
+$$
+	\alpha(\varphi(t)) = f(\varphi(t))dx + g(\varphi(t))dy
+$$
+which eats a vector $v\in T_{\varphi(t)}S$ and spits out a number.
+
+![[SS_2025-02-27_1740682464.png#invert | center]]
+
+Integrating along $\varphi$ 
+## m-forms
+
 An **$m$-covector** is a linear combination of wedge products of covectors, i.e., an $m$-covector is an $m$-vector over the vector space $V^\vee$. We denote the space of $m$-covectors by $\Lambda^m V$.
 
 > [!def] Differential Form
-> A **differential $m$-form** $\varphi$ on $V$ is an $m$-covector field, i.e., a map
-> $$ \varphi: V\rightarrow\Lambda^mV $$
+> A **differential $m$-form** $\omega$ on $V$ is an $m$-covector field, i.e., a map
+> $$ \omega: V\rightarrow\Lambda^mV $$
 > which assigns a $m$-covector to each vector.
 
 For example, $f(x)dx$ is an example of a 1-form while
 $$
-	\varphi(x,y,z) = f(x,y,z)dx\wedge dy + g(x,y,z)dz\wedge dx + h(x,y,z)dy\wedge dz
+	\omega(x,y,z) = f(x,y,z)dx\wedge dy + g(x,y,z)dz\wedge dx + h(x,y,z)dy\wedge dz
 $$
 is an example of a 2-form.
 
@@ -114,7 +166,16 @@ is compact. A **current** is an element of the dual space, i.e., it is a linear 
 $$
 	T:\Omega_c^m(\R^n) \rightarrow \R
 $$
-that is continuous.
+that is continuous. One may view them as a generalization of oriented surfaces.
+
+Given a compact rectifiable oriented submanifold $M$ of dimension $m$, one may construct an $m$-current $R$ given by
+$$
+	R(\omega) = \int_M\omega,
+$$
+i.e., the linear functional that simply integrates the $m$-form over $M$. If the boundary $\partial M$ is rectifiable, then it follows by Stokes' theorem that
+$$
+	\partial R(\omega) = \int_{\partial M}\omega = \int_Md\omega = R(d\omega).
+$$
 
 Given a $p$-current $T$, it's **boundary** $\partial T$ is the $(p-1)$-current that satisfies
 $$
@@ -135,11 +196,15 @@ $$
 $$
 where
 $$
-	\|\omega(x)\| := ???
+	\|\omega(x)\| := \sup\{|\langle\omega,\xi\rangle|:\xi\text{ is a unit simple $m$-vector}\}.
 $$
 The mass of a current can be thought of as the weighted $m$-dimensional volume of the object represented by $T$.
 
 > [!def] The Flat Norm
 > Given an $m$-current $T\in\cal{E}_m$, the **flat norm** is given by
 > $$ F(T) = \inf\{M(T-\partial S) + M(S): S\in\cal{E}_{m+1}\}. $$
+
+In summary the flat norm looks at all decompositions of an $m$-current $T$ as $T=(T-\partial S) +S$ for $(m+1)$-currents $S$ and takes the decomposition with smallest sum of masses. 
+
+![[SS_2025-02-27_1740686141.png#invert | center]]
 
