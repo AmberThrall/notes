@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2025/2025-02-28.md",
+                "file": "content/Computational Topology/Orientation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-02-28"
+              "title": "Orientation"
             }
           },
           {
@@ -180,8 +180,10 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
-    "content/GMT/Currents and the Flat Norm.md",
+    "content/Figures/SS_2025-03-06_1741286274.png",
     "content/Daily/2025/2025-02-28.md",
+    "content/Computational Topology/Orientation.md",
+    "content/GMT/Currents and the Flat Norm.md",
     "content/Figures/SS_2025-02-27_1740686141.png",
     "content/Figures/SS_2025-02-27_1740686054.png",
     "content/Figures/SS_2025-02-27_1740682464.png",
@@ -218,8 +220,6 @@
     "content/Daily/2024/2024-11-08.md",
     "content/Daily/2024/2024-11-14.md",
     "content/Computational Topology/Triangulations of Common Surfaces.md",
-    "content/Daily/Untitled.md",
-    "content/Papers/Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recognition.md",
     "public/404.html",
     "public/Figures",
     "public/static/contentIndex.json",
