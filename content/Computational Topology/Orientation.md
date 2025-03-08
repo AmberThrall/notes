@@ -1,5 +1,5 @@
 ---
-date: 2025-03-06
+date: 2025-03-07
 tags:
   - computational-topology
 ---
@@ -35,3 +35,16 @@ $$
 If we want to get the orientation of the triangle, we need to apply the right-hand rule to cross product $e_1\times e_2$. That is, if point your thumb in the direction to $e_1\times e_2$ then your fingers will either curl CCW or CW. This curling gives the orientation of the triangle.
 
 However, the cross product will either give a vector pointed inwards or outwards. One needs to ensure they choose the outward normal vector.
+
+## Orientation Propagation
+
+Start by assigning an orientation to a $d$-simplex $\sigma$. We then *propagate* this orientation to other $d$-simplices $\tau$ that share a $(d-1)$-simplex with $\sigma$.
+
+For example, consider the complex (see below)
+$$
+	K = \{\{a,f,e\},\{d,f,e\},\{c,d,f\},\{b,c,f,\},\{a,b,f\}\}.
+$$
+Start with $[a,f,e]$ (CCW orientation). We then look at $\{a,f,e\}$ neighbors ($\{d,e,f\}$ and $\{a,b,f\}$) and orient them so that they're shared edge ($\{e,f\}$ and $\{a,f\}$) get induced the opposing orientations. Thus, we get $[a,b,f]$ and $[d,e,f]$. Note that $[a,f,e]$ induces $[f,e]$ and $[a,f]$ onto it's edges, whereas $[a,b,f]$ induces $[f,a]$ and $[d,e,f]$ induces $[e,f]$. We then continue by propagating $[a,b,f]$ and $[d,e,f]$ orientation's onto their neighbors.
+
+![[SS_2025-03-07_1741379069.png#invert | center]]
+
