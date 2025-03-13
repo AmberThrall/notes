@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Computational Topology/Orientation.md",
+                "file": "content/Daily/2025/2025-03-12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Orientation"
-            }
-          },
-          {
-            "id": "39ef969d7f0b7a34",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/GMT/Currents and the Flat Norm.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Currents and the Flat Norm"
+              "title": "2025-03-12"
             }
           }
         ]
@@ -180,10 +166,11 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
+    "content/Computational Topology/Orientation.md",
+    "content/Daily/2025/2025-03-12.md",
     "content/Figures/SS_2025-03-07_1741379069.png",
     "content/Figures/SS_2025-03-06_1741286274.png",
     "content/Daily/2025/2025-02-28.md",
-    "content/Computational Topology/Orientation.md",
     "content/GMT/Currents and the Flat Norm.md",
     "content/Figures/SS_2025-02-27_1740686141.png",
     "content/Figures/SS_2025-02-27_1740686054.png",
@@ -200,7 +187,6 @@
     "content/Optimization/Duality.md",
     "content/Figures/Duality_numberline_.png",
     "content/GMT",
-    "content/Figures/SS_2025-02-14_1739561467.png",
     "content/Papers/Median shapes.md",
     "content/Papers/Bi-Filtration and Stability of TDA Mapper for Point Cloud Data.md",
     "content/KeplerMapper.md",

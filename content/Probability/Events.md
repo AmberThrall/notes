@@ -25,7 +25,7 @@ A simple inductive argument gives that if $A_1,A_2,\dots,A_n$ are mutually exclu
 $$
 	P\left(\bigcup_{i=1}^nA_i\right) = \sum_{i=1}^nP(A_i).
 $$
-The above formula is known as the **addition law for probabilities**.
+The above formula is kno2wn as the **addition law for probabilities**.
 
 > [!thm]
 > For arbitrary events $A$, $A_1$ and $A_2$ we have that
