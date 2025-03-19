@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2025/2025-03-12.md",
+                "file": "content/Daily/2025/2025-03-19.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-03-12"
+              "title": "2025-03-19"
             }
           }
         ]
@@ -166,26 +166,28 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
-    "content/Computational Topology/Orientation.md",
+    "content/Figures/SS_2025-03-19_1742426692.png",
+    "content/Figures/SS_2025-03-19_1742421375.png",
+    "content/Figures/SS_2025-03-19_1742421335.png",
+    "content/Figures/SS_2025-03-19_1742420656.png",
+    "content/Figures/SS_2025-03-19_1742420606.png",
+    "content/Figures/SS_2025-03-19_1742420400.png",
+    "content/Figures/SS_2025-03-19_1742419241.png",
     "content/Daily/2025/2025-03-12.md",
+    "content/Daily/2025/2025-03-19.md",
+    "content/Computational Topology/Orientation.md",
     "content/Figures/SS_2025-03-07_1741379069.png",
     "content/Figures/SS_2025-03-06_1741286274.png",
     "content/Daily/2025/2025-02-28.md",
     "content/GMT/Currents and the Flat Norm.md",
     "content/Figures/SS_2025-02-27_1740686141.png",
     "content/Figures/SS_2025-02-27_1740686054.png",
-    "content/Figures/SS_2025-02-27_1740682464.png",
-    "content/Figures/SS_2025-02-27_1740682015.png",
-    "content/Figures/SS_2025-02-26_1740617854.png",
-    "content/Figures/Area_parallellogram_as_determinant.svg",
     "content/GMT/Rectifiable Sets.md",
-    "content/Figures/Example-of-a-1-dimensional-rectifiable-set.png",
     "content/GMT/Measure Theory.md",
     "content/GMT/Hausdorff Measure.md",
     "content/index.md~",
     "content/Papers/Contour Boxplots A Method for Characterizing Uncertainty in Feature Sets from Simulation Ensembles.md",
     "content/Optimization/Duality.md",
-    "content/Figures/Duality_numberline_.png",
     "content/GMT",
     "content/Papers/Median shapes.md",
     "content/Papers/Bi-Filtration and Stability of TDA Mapper for Point Cloud Data.md",
@@ -204,8 +206,6 @@
     "content/Daily/2024/2024-11-21.md",
     "content/Daily/2024/2024-11-15.md",
     "content/Daily/2024/2024-11-08.md",
-    "content/Daily/2024/2024-11-14.md",
-    "content/Computational Topology/Triangulations of Common Surfaces.md",
     "public/404.html",
     "public/Figures",
     "public/static/contentIndex.json",
