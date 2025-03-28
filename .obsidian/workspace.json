@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2025/2025-03-19.md",
+                "file": "content/Daily/2025/2025-03-28.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-03-19"
+              "title": "2025-03-28"
             }
           }
         ]
@@ -166,6 +166,10 @@
   },
   "active": "44032ba8861c7f28",
   "lastOpenFiles": [
+    "content/Figures/SS_2025-03-28_1743185588.png",
+    "content/Figures/SS_2025-03-27_1743115317.png",
+    "content/Daily/2025/2025-03-19.md",
+    "content/Daily/2025/2025-03-28.md",
     "content/Figures/SS_2025-03-19_1742426692.png",
     "content/Figures/SS_2025-03-19_1742421375.png",
     "content/Figures/SS_2025-03-19_1742421335.png",
@@ -174,14 +178,11 @@
     "content/Figures/SS_2025-03-19_1742420400.png",
     "content/Figures/SS_2025-03-19_1742419241.png",
     "content/Daily/2025/2025-03-12.md",
-    "content/Daily/2025/2025-03-19.md",
     "content/Computational Topology/Orientation.md",
     "content/Figures/SS_2025-03-07_1741379069.png",
     "content/Figures/SS_2025-03-06_1741286274.png",
     "content/Daily/2025/2025-02-28.md",
     "content/GMT/Currents and the Flat Norm.md",
-    "content/Figures/SS_2025-02-27_1740686141.png",
-    "content/Figures/SS_2025-02-27_1740686054.png",
     "content/GMT/Rectifiable Sets.md",
     "content/GMT/Measure Theory.md",
     "content/GMT/Hausdorff Measure.md",
@@ -205,7 +206,6 @@
     "content/Daily/2024/2024-12-16.md",
     "content/Daily/2024/2024-11-21.md",
     "content/Daily/2024/2024-11-15.md",
-    "content/Daily/2024/2024-11-08.md",
     "public/404.html",
     "public/Figures",
     "public/static/contentIndex.json",
