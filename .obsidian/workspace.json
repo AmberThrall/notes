@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Optimal Homologous Cycles, Total Unimodularity, and Linear Programming.md",
+                "file": "content/Paragonimiasis Statistical Analysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Optimal Homologous Cycles, Total Unimodularity, and Linear Programming"
+              "title": "Paragonimiasis Statistical Analysis"
             }
           },
           {
@@ -180,13 +180,18 @@
   },
   "active": "bf0ceb17b86dcb60",
   "lastOpenFiles": [
+    "content/Daily/2025/NCTU-GR2.md",
+    "content/Daily/2025/SS_2025-09-17_1758139920.png",
+    "content/Paragonimiasis Statistical Analysis.md",
+    "content/Paragonimiasis Statistical Analysis.pdf",
+    "content/Daily/2025/NCTU-GR2.pdf",
+    "content/Papers/Optimal Homologous Cycles, Total Unimodularity, and Linear Programming.md",
     "content/Figures/Steiner_4_points.svg",
     "content/Figures/Screenshot_2025-06-26_03-55-46.png",
     "content/Figures/Hanan5.svg",
     "content/Daily/2025/2025-06-26.md",
     "content/Daily/2025/2025-05-07.md",
     "content/Parallel Algorithm Design.md",
-    "content/Papers/Optimal Homologous Cycles, Total Unimodularity, and Linear Programming.md",
     "content/Papers/Median shapes.md",
     "content/Daily/2025/2025-08-21.md",
     "content/Daily/2025/comparison_rtree_methods.png",
@@ -207,24 +212,18 @@
     "content/Daily/2025/SS_2025-08-07_1754586248.png",
     "content/Daily/2025/2025-08-05.pdf",
     "content/Daily/2025/2025-08-04.pdf",
-    "content/Daily/2025/SS_2025-08-04_1754349129.png",
-    "content/Daily/2025/SS_2025-08-04_1754349020.png",
     "content/Daily/2025/2025-07-31.md",
     "content/Daily/2025/2025-07-31.pdf",
     "content/Daily/2025/2025-07-31.tex",
-    "content/Daily/2025/2025-07-31.html",
     "content/Daily/2025/2025-07-31.pandoc.md",
     "content/Daily/2025/2025-07-25.md",
     "content/Daily/2025/2025-07-24.md",
-    "content/Daily/2025/2025-07-25.pdf",
     "content/Daily/2025/2025-07-24-2.md",
     "content/Daily/2025/2025-03-19.md",
     "content/Daily/2025/2025-03-12.md",
     "content/Computational Topology/Orientation.md",
     "content/Daily/2025/2025-02-28.md",
     "content/GMT/Currents and the Flat Norm.md",
-    "content/GMT/Rectifiable Sets.md",
-    "content/GMT/Measure Theory.md",
-    "content/GMT/Hausdorff Measure.md"
+    "content/GMT/Rectifiable Sets.md"
   ]
 }

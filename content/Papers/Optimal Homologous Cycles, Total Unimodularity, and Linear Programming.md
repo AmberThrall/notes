@@ -2,6 +2,7 @@
 tags:
   - papers
   - ohcp
+date: 2025-09-11
 ---
 
 Authors: Tamal K. Dey, Anil N. Hirani, Bala Krishnamoorthy
@@ -76,7 +77,7 @@ has a minimum. Define
 $$
 	U_c'=\{\|Wx\|_1\mid \|Wx\|_1\le\|Wc\|_1,~x=c+[\partial_{p+1}]y,~x\in \Z^m\text{ and }y\in\Z^n\}\subseteq U_c
 $$
-which must be finite as $x$ is integral. Then $\inf U_c=\min U_c'$ ($c$ is homologous to $c$).
+which must be finite as $x$ is integral. It is also non-empty as $c\in U_c'$. Since $\inf U_c=\min U_c'$, it follows that a solution exists.
 
 - Below is the ILP formulation for the OHCP:
 $$
@@ -101,4 +102,99 @@ $$
 - The above result **does not** hold in $\Z_2$ as the constraint matrix is different
 
 ## Minimizing the number of simplices
+
+- Setting $W$ to be the identity matrix gives $\ell^0$-optimization problem:
+
+$$
+	\min\|x\|_1~\text{ such that }~x=c+[\partial_{p+1}]y,~x\in\{-1,0,1\}^m,~y\in\Z^n.
+$$
+
+> [!thm] Theorem 3.10
+> For any $p$-chain $c\in\{-1,0,1\}^m$, a solution to the $\ell^0$-optimization LP exists. Moreover, the optimal homologous chain $x^*$ has the smallest number of nonzero entries.
+
+- Without the constraint $x\in\{-1,0,1\}^m$, we may get values outside of this range. Let $K$ be an hour-glass with boundary cycles $c_1$ and $c_2$ such that $c_1+c_2$ is not trivial. Let $z$ be the smallest cycle homologous to $c_1$ and $c_2$, i.e., $z=c_1+\partial y_1$ and $z=c_2+\partial y_2$. Then $c_1 + c_2 + \partial(y_1+y_2)= 2z$, it follows that the chain homologus to $c_1+c_2$ has entries -2 or 2 for non-zero entries.
+- LP Formulation:
+$$
+\begin{align*}
+	&\min &\sum_i(x_i^++x_i^-) \\
+	&\text{subject to} & \textbf{x}^+-\textbf{x}^- = \textbf{c}+[\partial_{p+1}]\textbf{y} \\
+	&& \textbf{x}^+,\textbf{x}^- \ge 0 \\
+	&& \textbf{x}^+,\textbf{x}^- \le 1 
+\end{align*}
+$$
+
+
+> [!thm] Theorem 3.13
+> If the boundary matrix $[\partial_{p+1}]$ of a finite simplicial complex of dimension greater than $p$ is TU, then given a $p$-chain with values in $\{-1,0,1\}$, a homologous $p$-chain with the smallest number of non-zeros taking values in $\{-1,0,1\}$ can be found in polynomial time.
+
+# Manifolds
+
+In the remaining sections they focus on determining in which cases the boundary matrix is TU, starting with triangulations of orientable manifolds.
+
+## Orientable Manifolds
+
+Herein, $K$ is a triangulation of a $(p+1)$-dimensional compact orientable manifold $M$.
+
+> [!thm] Theorem 4.1
+> $[\partial_{p+1}]$ is TU for any orientation of simplices
+
+**Proof:**
+- Each $p$-face $\tau$ is a face of one or two $(p+1)$-simplices, hence the row of $[\partial_{p+1}]$ corresponding to $\tau$ has one or two nonzero entries.
+	- If consistently oriented and two non-zero entries, they have alternating signs.
+- A $\{-1,0,1\}$-matrix is TU if the columns have no more than two nonzero entries in which one is 1 and the other is -1.
+- If $A^\top$ is TU, then $A$ is TU.
+- Flipping the orientation can be done by multiplying its column by -1, which preserves TU.
+- Any orientation can be made to be consistent by flipping the orientation of one or more simplices.
+
+## Non-orientable Manifolds
+
+- Non-orientable manifolds are not guaranteed to have a TU boundary matrix.
+- Let $K$ be a triangulation of a Mobius strip $M$. One may select rows and columns to obtain a boundary matrix which has a submatrix of determinant -2.
+	- Said submatrix corresponds to relative boundary $\partial_2^{(L,L_0)}$ where $L=K$ and $L_0$ are the edges in $\partial M$.
+- Note that $H_1(M)\cong\Z$ so the $H_1$ group has no torsion. But the relative homology $H_1(M,\partial M)$ does have torsion.
+
+# Simplicial Complexes
+
+The following makes no use of geometric realization or embedding in $\R^n$ for the complexes. Hence, the following holds for abstract complexes.
+
+## Total Unimodularity and Relative Torsion
+
+- They define a **pure simplicial complex** of dimension $p$ as a simplicial complex formed by a collection of $p$-simplices and their proper faces.
+	- Triangulations of $p$-dimensional manifolds are pure simplicial complexes
+	- A **pure subcomplex** is a subcompex that is pure.
+- If $L\subset K$ and $L_0\subset L$ is a pure subcomplex of dimension $p$, then the matrix representing the relative boundary operator, $\partial_{p+1}^{(L,L_0)}:C_{p+1}(L,L_0)\rightarrow C_p(L,L_0)$, is obtained by including the columns of $[\partial_{p+1}]$ corresponding to the $(p+1)$-simplices in $L$ and excluding rows corresponding to the $p$-simplices n $L_0$ and any zero rows.
+ 
+
+> [!thm] Theorem 5.2
+> $[\partial_{p+1}]$ is TU if and only if $H_p(L,L_0)$ is torsion-free, for all pure subcomplexes $L_0,L$ of $K$ of dimensions $p$ and $p+1$ respectively, where $L_0\subset L$.
+
+**Proof:**
+
+- $(\Rightarrow)$:
+	- Proceed via contrapositve
+	- Smith normal form on $[\partial_{p+1}^{(L,L_0)}]$ to get block matrix `[D 0; 0 0]` where $D=\textup{diag}(d_1,\dots,d_l)$. 
+	- Since $H_p(L,L_0)$ has torsion, $d_k>1$ for some $1\le k\le l$.
+	- The product $d_1\cdots d_k$ is the gcd of the determinants of all $k\times k$ square submatrices.
+	- $d_1\cdots d_k>1$, hence, there is a submatrix with absolute determinant greater than 1. 
+	- Thus, $[\partial_{p+1}]$ is not TU
+- $(\Leftarrow)$
+	- Proceed via contrapositive
+	- Let $S$ be a square submatrix of $[\partial_{p+1}]$ such that $|\det(S)|>1$.
+	- Let $L$ be the columns of $[\partial_p+1]$ in $S$ and $B_L$ the submatrix formed by columns $L$
+	- Discard zero rows of $B_L$ to form submatrix $B'_L$
+	- Let $L_0$ correspond to rows of $B'_L$ which are excluded to form $S$ to form matrix representation, $S$, of the relative boundary matrix.
+	- At least one diagonal entry in the SNF of $S$ has magnitude greater than 1.
+	- Hence $H_p(L,L_0)$ has torsion.
+
+> [!cor] Corollary 5.4
+> Let $K$ be a simplicial complex with dimension greater than $p$. Then there is a polynomial time algorithm for answering the following question: Is $H_p(L,L_0)$ torsion-free for all subcomplexes $L_0$ and $L$ of dimensions $p$ and $(p+1)$ such that $L_0\subset L$?
+
+**Proof:** Seymour's decomposition theorem gives a polynomial time algorithm for deciding if a matrix is TU or not.
+
+## A Special Case
+
+> [!thm] Theorem 5.7
+> If $K$ is a finite simplicial complex embedded in $\R^{d+1}$, then $H_d(L,L_0)$ is torsion-free for all pure subcomplexes $L_0$ of $L$ of dimensions $d$ and $d+1$ respectively, such that $L_0\subset L$.
+
+## Total Unimodularity and Mobius Complexes
 

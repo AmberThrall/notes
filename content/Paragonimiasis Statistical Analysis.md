@@ -70,7 +70,7 @@ For example, consider the responses in regards to marital status:
 
 Running a chi-squared test on this table results in a $p$-value of 0.0103. The $p$-value being less than 0.05 suggests that there is significant differences in the proportions of responses between ELISA positive and ELISA negative individuals. We can see this visually by creating bar-charts:
 
-![[Marital_status_of_the_participant.png | center]]
+![[Figures/Marital_status_of_the_participant.png]]
 
 The red bars represent the percentage of ELISA positive individuals who gave a particular response. Likewise, the blue bars are the percentage of ELISA negative individuals who gave a particular response.
 
@@ -88,9 +88,9 @@ We get a similar result in terms of expectoration ($p=0.0378$) and chest pain ($
 
 Or in bar chart form:
 
-![[Have_you_had_Expectoration.png | center ]]
+![[Figures/Have_you_had_Expectoration.png]]
 
-![[Have_you_had_Chest_pain.png | center ]]
+![[Figures/Have_you_had_Chest_pain.png]]
 
 In terms of pathogen factors, we also find a strong significant difference in the consumption of cray fish ($p=0.000017$).
 
@@ -99,7 +99,7 @@ In terms of pathogen factors, we also find a strong significant difference in th
 |Consumes cray fish| 4 | 15 |
 |Does not consume cray fish|322 |11989|
 
-![[Consumption_of_cray_fishes.png | center]]
+![[Figures/Consumption_of_cray_fishes.png]]
 
 In summary, we found statistically significant differences between ELISA positive and ELISA negative in the following variables:
 - Marital status
