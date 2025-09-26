@@ -179,6 +179,7 @@ $$
 	&& -\mathbf{c}_m\le\tilde{\mathbf{f}}\le\mathbf{c}_m
 \end{align*}
 $$
+
 	- The circulation preservation condition no longer holds in this case.
 
 # Cohomology of Embedded and Dual Complexes
