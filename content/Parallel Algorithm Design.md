@@ -1,3 +1,7 @@
+---
+aliases:
+date: 2025-09-11
+---
 Notes on chapter 3 of *An Introduction to Parallel Computing*.
 
 ---
@@ -6,7 +10,7 @@ Parallelizing an algorithm involves the following:
 - Identifying portions that can be performed concurrently
 - Mapping concurrent tasks onto multiple processors
 - Distributing data to tasks
-- Managing data shared by several processors
+- Managing data sh2ared by several processors
 - Synchronization
 
 Some tasks may need to wait for other tasks to finish executing. This dependency and relative order provides a **task-dependency graph**, a directed acyclic graph with tasks as nodes and the directed edges indicate dependencies.
