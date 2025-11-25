@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/Smallest-Last Ordering and Clustering and Graph Coloring Algorithms.md",
+                "file": "content/Papers/Efficient Network Flow Models for Optimal Homology Problems over the Integers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Smallest-Last Ordering and Clustering and Graph Coloring Algorithms"
+              "title": "Efficient Network Flow Models for Optimal Homology Problems over the Integers"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4fbc2bdf59846ffb",
@@ -166,6 +167,7 @@
   },
   "active": "b5dab5ea19e69387",
   "lastOpenFiles": [
+    "content/Papers/Smallest-Last Ordering and Clustering and Graph Coloring Algorithms.md",
     "content/Parallel Algorithm Design.md",
     "content/Papers/Efficient Network Flow Models for Optimal Homology Problems over the Integers.md",
     "content/Papers/Efficient Algorithms for Optimal Homology Problems and Their Applications.md",
@@ -192,7 +194,6 @@
     "content/Daily/2025/2025-08-07.md",
     "content/Daily/2025/SS_2025-08-04_1754327476.png",
     "content/ALENEX26 Review - Simpler is Faster.pdf",
-    "content/Papers/Smallest-Last Ordering and Clustering and Graph Coloring Algorithms.md",
     "content/Daily/2025/2025-08-07.pdf",
     "content/Daily/2025/2025-08-06.pdf",
     "content/Daily/2025/SS_2025-08-07_1754586626.png",
