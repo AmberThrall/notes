@@ -3,7 +3,7 @@ tags:
   - computational-topology
 date: 2025-12-10
 ---
-Let $X^0$ be a discrete set, whose points we call **0-cells**. We can inductively define an **$n$-skeleton**, $X^n$, to be given by attaching **$n$-cells** $e_\alpha^n$ via maps $\phi_\alpha:\partial \overline{e_\alpha^n}\cong S^{n-1}\rightarrow X^{n-1}$. In looser terms, the $n$-skeleton $X^n$ can be viewed by the set
+Let $X^0$ be a discrete set, whose points we call **0-cells**. We can inductively define an **$n$-skeleton**, $X^n$, to be given by attaching **$n$-cells** $e_\alpha^n\cong B^n$ via maps $\phi_\alpha:\partial \overline{e_\alpha^n}\cong S^{n-1}\rightarrow X^{n-1}$. In looser terms, the $n$-skeleton $X^n$ can be viewed by the set
 $$
 	X^n = X^{n-1}\sqcup_\alpha e_\alpha^n
 $$
@@ -11,7 +11,7 @@ where $(e_\alpha^n)_\alpha$ are a collections of topological spaces homeomorphic
 
 Like simplicial complexes, one may compute the **Euler characteristic** of a cellular complex:
 $$
-	\sum_{k=0}^{\dim X}-1^k|X^k|.
+	\sum_{k=0}^{\dim X}(-1)^k|X^k|.
 $$
 For instance, a 2-sphere would have Euler characteristic $\chi=1-0+1=2$.
 
@@ -19,7 +19,7 @@ For instance, a 2-sphere would have Euler characteristic $\chi=1-0+1=2$.
 
 - A graph is an example of a 1-dimensional cell complex, where the vertices are 0-cells and the attached edges are 1-cells. More precisely, edges can be viewed as the interval $(0,1)$ glued to vertices by the map $\phi:\partial[0,1]=\{0,1\}\rightarrow X^0$. If both boundary points map to the same vertex, then the edge is a loop.
 - The $n$-sphere, $S^n$, is a $n$-dimensional cell complex with a single 0-cell, $e^0$, and a single $n$-cell, $e^n\cong B^n$, glued by the constant map $\phi:\partial D^n=S^{n-1}\rightarrow e^0$. This gluing can be viewed as collapsing the boundary to a single point, which gives a $n$-sphere. For instance, $S^1$ can be viewed as taking $D^1=[0,1]$ and gluing the boundary $\{0,1\}\rightarrow e^0$ to a single point, giving a circle.
-- Every simplicial complex $K=\bigcup K_n$ is a cell complex where $n$-cells are given by the interior of $k$-simplices, $\{e_\sigma^n=\mathring{\sigma}:\sigma\in K_n\}$, with attaching maps $\varphi_\sigma:\partial \overline{e_\sigma^n}\hookrightarrow X^{n-1}$ which glues each boundary face to its corresponding $(n-1)$-cell.
+- Every simplicial complex $K=\bigcup K_n$ is a cell complex where $n$-cells are given by the interior of $k$-simplices, $\{e_\sigma^n=\mathring{\sigma}:\sigma\in K_n\}$, with attaching inclusion maps $\varphi_\sigma:\partial \overline{e_\sigma^n}\hookrightarrow X^{n-1}$ which glues each boundary face to its corresponding $(n-1)$-cell.
 
 ### Singular Homology
 
@@ -63,9 +63,8 @@ The cellular boundary map $d_n$ can be computed by
 $$
 	d_n(e^n_\alpha) = \sum_\beta d_{\alpha\beta}e_\beta^{n-1}
 $$
-where $d_{\alpha\beta}$ is the degree of the map $S^{n-1}_\alpha\rightarrow X^{n-1}\rightarrow S^{n-1}_\beta$, i.e., the composition of attaching map $\phi_\alpha:S_\alpha^{n-1}\rightarrow X_{n-1}$ and the quotient map $q_\beta:X^{n-1}\rightarrow X^{n-1}/(X^{n-1}-e_\beta^{n-1})\cong S_\beta^{n-1}$ which collapses everything but $e_\beta^{n-1}$ to a point. Geometrically, $d_{\alpha\beta}$ measures how many times the boundary of $e_\alpha^n$ winds around $e_\beta^{n-1}$.
+where $d_{\alpha\beta}$ is the degree of the map $S^{n-1}_\alpha\rightarrow X^{n-1}\rightarrow S^{n-1}_\beta$, i.e., the composition of attaching map $\phi_\alpha:S_\alpha^{n-1}\rightarrow X_{n-1}$ and the quotient map $q_\beta:X^{n-1}\rightarrow X^{n-1}/(X^{n-1}-e_\beta^{n-1})\cong S_\beta^{n-1}$ which collapses everything but $e_\beta^{n-1}$ to a point. Geometrically, $d_{\alpha\beta}$ measures how many times (and direction) the boundary of $e_\alpha^n$ winds around $e_\beta^{n-1}$.
 
 ### Examples
 
  - Consider the cellular complex for $S^1$: a single 0-cell, $e^0$ and a single $1$-cell, $e^1$, glued by the constant map $S^0\rightarrow e^0$. Then the chain complex would be given by $\Z\rightarrow\Z\rightarrow0\rightarrow\cdots$. In computing the homology, notice that $d_1(k\cdot e^1)=k\cdot d_1(e^1)=k\cdot(e^0-e^0)=0$. Hence, $H_1(S^1)=0$ and $H_0(S^1)=\Z$. 
-cd not
