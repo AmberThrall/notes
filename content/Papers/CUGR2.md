@@ -2,7 +2,7 @@
 tags:
   - papers
   - eda
-date: 2026-04-19
+date: 2026-04-14
 ---
 
 Given a multi-pin net they construct a **routing DAG** as follows:
