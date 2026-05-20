@@ -36,10 +36,10 @@ The goal of gate-sizing is to select the sizes of gates from a library which min
 $$
 \begin{align*}
 	&\textup{minimize} & \textup{Power}(\omega) \\
-	&\textup{subject to} & \textup{Delay}(\omega) \le T_\max
+	&\textup{subject to} & \textup{Delay}(\omega) \le T_\textup{max}
 \end{align*}
 $$
-where $T_\max$ is the clock period. Since the choices of gate sizes come from a predefined library, we have integer constraints on $\omega$.
+where $T_\textup{max}$ is the clock period. Since the choices of gate sizes come from a predefined library, we have integer constraints on $\omega$.
 
 # Static Timing Analysis
 
