@@ -2,7 +2,7 @@
 tags:
   - papers
   - gate-sizing
-date: 2026-05-20
+date: 2026-05-21
 ---
 
 Authors: John Lee and Puneet Gupta
@@ -13,7 +13,7 @@ https://doi.org/10.1561/1000000019
 
 # Preliminaries
 
-At the very start of the physical design process is logic synthesis. The goal of logic synthesis is to transform a **Register Transfer Language (RTL)** design description into a gate level netlist. Gate cells either comprise of Boolean logic functions, such as NAND and XOR, or as sequential cells such as a flip-flop which provides memory to the design. The ISPD 2012 benchmarks provide 11 Boolean logic functions each having 3 different voltage thresholds and each voltage threshold has 10 different sizes.
+At the very start of the physical design process is logic synthesis. The goal of logic synthesis is to transform a **Register Transfer Language (RTL)** design description into a gate level netlist. Gate cells either comprise of Boolean logic functions, such as NAND and XOR, or as sequential cells such as a flip-flop which provides memory to the design. The ISPD 2012 benchmarks provide one flip-flop and 11 Boolean logic functions each having 3 different voltage thresholds and each voltage threshold has 10 different sizes.
 
 Logic gates are designed to input and output either a "high" or "low" voltage representing 1 and 0 respectively. In an ideal world, the voltages would only exist at these extreme limits. However, this is not the case in reality. Thus, each gate has a corresponding **voltage threshold** $V_t$ which is used to distinguish between a "high" and "low" voltage. 
 
@@ -98,4 +98,121 @@ All Liberty models also provide leakage power information for a given cell. For 
 Similar to the Nonlinear Delay Model (NLDM), the Liberty model uses a Nonlinear Power Model (NLPM) which provides a series of tables for the rise and fall of power of the cell, as a function of the input transition and output load.
 
 # Gate Sizing
+
+Delay is roughly related to gate size, length and $V_t$ by the power law
+$$
+	\textup{Delay} \propto \frac{1}{\frac{W}{L}(V_{gs}-V_t)^\alpha}
+$$
+where $V_{gs}$ is the gate-to-source voltage. The specifics of the relation between gate size and delay depends heavily on the gate technology.
+
+The dynamic power of a gate depends on the total capacitance, $C_g$, and the frequency of gate switches, $f_\textup{switch}$:
+$$
+	P_{\textup{dynamic}} = \frac{1}{2}C_gV_{dd}^2f_{\textup{switch}}.
+$$
+The capacitance, $C_g$, is linearly related to the area of the gate. A smaller aspect to dynamic power is *short-circuit power*. During the brief period where the PMOS and NMOS transistors are in transition, some power is lost. This power loss can be minimized by accelerating the input transition time.
+
+There are several sources of leakage power, with the main source being due to a transistor never being fully "off". The leakage power is related linearly to gate-width, but *exponentially* to threshold voltage $V_t$. The leakage power also depends on the current input of the gate (see table above for NAND2_X1 gate).
+
+**Example:**
+
+![[SS_2026-05-21_1779395283.png#invert | center | 400]]
+
+
+# Methods for Discrete Gate Sizing and $V_t$ Assignment
+
+Denote as follows:
+- $\cal{G}$ - Set of gates in the design
+- $g$ - A gate in the design
+- $\omega,\omega_0$ - A cell option, current cell option
+- $\textup{CellOptions}(g)$ - Set of alternative library cell options for $g$
+- $w_g$ - The width for gate $g$
+- $v_{th,g}$ - The threshold voltage for gate $g$
+- $t_a$ - Arrival time
+- $t_{a(g)}$ - Set of arrival times for the inputs of gate $g$
+- $t_r$ - Required arrival time
+- $t_{r(g)}$ - Set of required arrival times for the inputs of gate $g$
+- $\tau_g$ - Set of input transition slews for gate $g$
+- $d$ - Delay
+- $p$ - Power
+- $PI$ - Primary inputs
+- $PO$ - Primary outputs
+- $\textup{fi}(g)$ - The set of gates that drive the inputs of gate $g$
+- $\textup{fo}(g)$ - The set of gates that are connected to the output of gate $g$
+
+**Linear Programming Based Assignment Method:**
+
+We approximate the power of a design by
+$$
+	\textup{Power} = \sum_{g\in\cal{G}}p_{g}\cdot w_g
+$$
+where $w_g$ is the width of gate $g$ and $p_{g}$ is the power of gate $g$. Unfortunately, the gate delay is not linear. We approximate with the following linearization
+$$
+	d_g = c_1 + c_2w_g - c_3\sum_{g'\in\textup{fo}(g)}C_{g'}w_{g'}
+$$
+where $c_1,c_2,c_3$ are coefficients, and $C_g$ is the input capacitance of gate $g$. Our constraint $\textup{Delay}\le T_\textup{max}$ places bounds on the arrival times of gates:
+$$
+	0\le t_{a(g)}\le T_\textup{max}.
+$$
+We also need to capture the order of arrival in gates. That is, if $g'\in\textup{fo}(g)$ then the signal arrives to $g$ *before* $g'$. More precisely,
+$$
+	t_{a(g)}+d_g \le t_{a(g')}.
+$$
+Putting this all together results in the following linear program:
+$$
+\begin{align*}
+	&\text{minimize} & \sum_{g\in\cal{G}}p_gw_g \\
+	&\text{subject to} & t_{a(g)} + d_g \le t_{a(g')} && \forall g\in\cal{G}, g'\in\textup{fo}(g) \\
+	&& c_1 + c_2w_g - c_3\sum_{g'\in\textup{fo}(g)}C_{g'}w_{g'}\le d_g && \forall g\in\cal{G} \\
+	&& 0\le t_{a(g)} \le T_{\textup{max}} && \forall g\in\cal{G} \\
+	&& w_\textup{min} \le w_g \le w_\textup{max} && \forall g\in\cal{G}
+\end{align*}
+$$
+
+References:
+- [J. Fishburn, A. Dunlop. "TILOS: A posynomial programming approach to transistor sizing."](https://doi.org/10.1007/978-1-4615-0292-0_23)
+- [Y. Tamiya, Y. Matsunaga. "LP based Cell Selection with Constraints of Timing, Area, and Power Consumption."](https://www.cecs.uci.edu/~papers/compendium94-03/papers/1994/iccad94/pdffiles/06a_3scn.pdf)
+
+
+**Integer Linear Programming Based Assignment Method:**
+
+The above model chooses gate sizes, $w_g$, continuously. In typical cases, such as ISPD2012, the available gate sizes are discrete. One may round $w_g$ to the nearest available gate size. However, a more accurate approach is to model the problem using integer constraints.
+
+Define the assignment variable
+$$
+	x_{g\leftarrow \omega} = \begin{cases}
+		1 & \text{if gate $g$ is assigned to cell $\omega$} \\
+		0 & \text{otherwise.}
+\end{cases}
+$$
+We assume we currently have an assignment of gates to cells. Then the objective is to minimize
+$$
+\sum_{g\in\cal{G}}\sum_{\omega\textup{CellOptions}(g)}\Delta p(g,\omega;\omega_0)\cdot x_{g\leftarrow\omega}
+$$
+where
+$$
+	\Delta p(g,\omega;\omega_0) = p(g,\omega) - p(g,\omega_0)
+$$
+is the change in power of our new assignment from $\omega_0$ to $\omega$. We also change the computation of delay so that
+$$
+	t_{a(g)} + \sum_{\omega\in\textup{CellOptions}(g)}\Delta d(g,\omega;\omega_0)\cdot x_{g\leftarrow\omega} \le t_{a(g')} ~\text{ }~\forall g'\in\textup{fo}(g)
+$$
+where $\Delta d(g,\omega;\omega_0)$ is the change in delay if we change the gate from $\omega_0$ to $\omega$. 
+
+In summary:
+$$
+\begin{align*}
+	&\text{minimize} & \sum_{g\in\cal{G}}\sum_{\omega\in\textup{CellOptions(g)}}\Delta p(g,\omega;\omega_0)\cdot x_{g\leftarrow\omega} \\
+	&\text{subject to} & t_{a(g)} + \sum_{\omega\in\textup{CellOptions}(g)}\Delta d(g,\omega;\omega_0)\cdot x_{g\leftarrow\omega} \le t_{a(g')} && \forall g\in\cal{G}, g'\in\textup{fo}(g) \\
+	&&\sum_{\omega\in\textup{CellOptions}(g)}x_{g\leftarrow\omega}\le 1 && \forall g\in\cal{G} \\
+	&& 0\le t_{a(g)} \le T_{\textup{max}} && \forall g\in\cal{G} \\
+	&& x_{g\leftarrow\omega}\in\{0,1\} && \forall g\in\cal{G},\omega\in\textup{CellOptions}(g)
+\end{align*}
+$$
+
+The authors of this approach relax the binary constraints by treating $x_{g\leftarrow\omega}$ as continuous between 0 and 1 and use $x_{g\leftarrow\omega}>0.99$ as a threshold value. However, relaxing the constraints may result in timing violations.
+
+References:
+- [H. Abrishami, J. Lou, J. Qin, J. Froessl, M. Pedram. "Post sign-off leakage power optimization."](https://dl.acm.org/doi/10.1145/2024724.2024829)
+- [J. Lee, P. Gupta. "Incremental gate sizing for late process changes."](https://ieeexplore.ieee.org/document/5647778)
+- [D.G. Chinnery, K. Keutzer. "Linear programming for sizing, $V_{th}$ and $V_{dd}$ assignment."](https://dl.acm.org/doi/10.1145/1077603.1077642)
 
