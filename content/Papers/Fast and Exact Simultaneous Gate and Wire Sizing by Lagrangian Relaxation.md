@@ -215,13 +215,13 @@ They use subgradient optimization method to solve $\cal{L}\cal{D}\cal{P}$. See [
 	1. Solve $\cal{L}\cal{R}\cal{S}/\lambda$ (by solving $\cal{L}\cal{R}\cal{S}/\mu$).
 	2. For each relaxed constraint $i$, compute the subgradient $g_i(x,a)=\textup{LHS}_i-\textup{RHS}_i$. For instance, for constraint $a_j\le A_0$ the subgradient is $a_j-A_0$ where $a_j$ is the value given by our current solution $(x,a)$.
 	3. Set $\lambda_{k+1}=\lambda_k + \rho_k g$, where $g=\begin{bmatrix} g_1 & g_2 & \cdots\end{bmatrix}^\top$ and $\rho_k$ is some step size.
-	4. Project $\lambda_{k+1}$ to the nearest point $\Omega_\lambda$.
+	4. Project $\lambda_{k+1}$ to the nearest point in $\Omega_\lambda$.
 
 They don't specify the step size, the simplest would be $\rho_k=1/(k+1)$. The only real requirement for convergence is that $\lim_{k\rightarrow\infty}\rho_k=0$ and $\sum_{k=1}^\infty\rho_k=\infty$.
 
 ```pseudo
 \begin{algorithm}
-\caption{$\textup{SOLVE\_LDP}/$}
+\caption{$\textup{SOLVE\_LDP}$}
 \begin{algorithmic}
 	\State $k:=1$, $\lambda:=\text{arbitrary entry in }\Omega_\lambda$
 	\While{$(\sum_{i=1}^n\alpha_ix_i - Q(\lambda)) \le \epsilon$}
