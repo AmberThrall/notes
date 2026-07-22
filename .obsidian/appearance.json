@@ -6,5 +6,6 @@
     "invert"
   ],
   "theme": "obsidian",
-  "nativeMenus": false
+  "nativeMenus": false,
+  "cssTheme": "GitHub Theme"
 }
