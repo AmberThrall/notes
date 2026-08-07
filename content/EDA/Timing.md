@@ -49,9 +49,9 @@ which captures the following RC circuit:
 
 Solving this ODE gives us that
 $$
-	V = V_{in} + V_0e^{-t/RC}
+	V = V_{in} + Ae^{-t/RC}
 $$
-where $V_0$ is the voltage at time $t=0$. Applying the initial condition $V(0)=0$ gives us that
+where $A$ is some unknown constant. Applying the initial condition $V(0)=0$ and solving for $A$ gives us that
 $$
 	V = V_{in}(1-e^{-t/RC})_.
 $$
