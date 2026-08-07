@@ -24,7 +24,8 @@ For simplicity, we assume that $0\le V\le 1$ at all points in time.
 These timings are due to the gates resistance $R$ and capacitance $C$. Consider the current $I$ flowing through the buffer gate. We can view the buffer gate as a junction with one in current, $I_{in}$, and one out current, $I_{out}$. According to Kirchhoff's current law,
 $$
 	I_{out} = I_{in}
-$$We can model the out current using the current-voltage relationship:
+$$
+We can model the out current using the current-voltage relationship:
 $$
 	I_{out} = \frac{dQ}{dt} = C\frac{dV}{dt}.
 $$
