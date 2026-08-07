@@ -21,39 +21,51 @@ For simplicity, we assume that $0\le V\le 1$ at all points in time.
 
 # Single Buffer Gate
 
-These timings are due to the gates resistance $R$ and capacitance $C$. Consider the current $I$ flowing through the buffer gate. We can view the buffer gate as a junction with one in current, $I_{in}$, and one out current, $I_{out}$. According to Kirchhoff's current law,
+These timings are due to the gates resistance $R$ and capacitance $C$. Consider the current $I$ flowing through a single buffer gate. An actual buffer gate is a bit complex, so we'll simplify things and look at the following values of the buffer gate:
+- **Driving voltage** $V_{in}$ is the voltage going into the buffer gate and is tied to the previous components output
+- The gate has its own **drive resistance** $R$
+- The gates **load** is determined by the next gate's input capacitance $C$
+- Output voltage $V$.
+
+We can view the buffer gate as a junction with one in current, $I_{in}$, and one out current, $I_{out}$. According to Kirchhoff's current law,
 $$
-	I_{out} = I_{in}
+	I_{out} = I_{in}.
 $$
-We can model the out current using the current-voltage relationship:
+The current coming out of the buffer gate is used to drive the input of the next gate(s) downstream. Logic gates are built from transistors, which are controlled by a control terminal (called a **gate**) used to control whether the source and drain are connected. Control terminals are a tiny sliver of conductive material separated from the rest of the transistor by an insulating layer. These two conductive layers separated by an insulator results in a capacitor ([image](https://en.wikipedia.org/wiki/Field-effect_transistor#/media/File:FET_cross_section.svg)). Thus, $I_{out}$ needs to charge the capacitor (technically the wire connecting the gates also has capacitance); which we can model using the current-voltage relationship:
 $$
-	I_{out} = \frac{dQ}{dt} = C\frac{dV}{dt}.
+	I_{out} = \frac{dQ}{dt} = \frac{dQ}{dV}\frac{dV}{dt} = C\frac{dV}{dt}.
 $$
-The input current is simpler and can be modeled with Ohms law:
+The input current simply flows through the gate which has drive resistance $R$. Ohm's law states that the current between two points is directly proportional to the voltage across the two points. That is, the current through our buffer gate is simply
 $$
-	I_{in} = \frac{1-V}{R}.
+	I_{in} = \frac{V_{in}-V}{R}.
 $$
 Thus, we get the linear differential equation
 $$
-	C\frac{dV}{dt} + \frac{V}{R} = \frac{1}{R},
+	C\frac{dV}{dt} = \frac{V_{in} - V}{R},
 $$
-which solving gives us that
+which captures the following RC circuit:
+
+![[SS_2026-08-07_1786132350.png#invert | center | 300]]
+
+Solving this ODE gives us that
 $$
-	V = V_0e^{-t/RC}
+	V = V_{in} + V_0e^{-t/RC}
 $$
-where $V_0$ is the voltage at time $t=0$. Applying the initial condition gives us that $V_0=-1$. Thus,
+where $V_0$ is the voltage at time $t=0$. Applying the initial condition $V(0)=0$ gives us that
 $$
-	V = 1-e^{-t/RC}.
+	V = V_{in}(1-e^{-t/RC})_.
 $$
-We get a similar expression for discharge:
+Thus, we can find the propagation delay by setting $V=V_{in}/2$:
 $$
-	V = e^{-t/RC}.
-$$
-Thus, we can find the propagation delay by setting $V=1/2$:
-$$
-	\frac{1}{2} = 1-e^{-t/RC} \Longrightarrow t = \tau\ln2.
+	\frac{V_{in}}{2} = V_{in}(1-e^{-t/RC}) \Longrightarrow t = \tau\ln2
 $$
 where $\tau=RC$ is the **RC time constant**.
+
+I compared our model to a SPICE simulation using $R=50~\Omega$ and $C=500~\textup{nF}$, which corresponds to a propagation delay of $17.3~\mu\textup{s}$. Other than a slight error at the pulse edge, our model performs very well with an average error of $0.0007~\textup{V}$ and standard deviation of $0.0022~\textup{V}$. The spike of error at the pulse edge is likely do to my code detecting when $V_{in}$ reaches 50% as $V_{in}$ transitions from $0~\textup{V}$ to $1~\textup{V}$ in $1~\mu\text{s}$.
+
+![[SS_2026-08-07_1786135906.png#invert | center | 400]]
+
+That being said, all this result essentially shows us is that our math is correct as SPICE simply converts the circuit into a system of differential equations and solves numerically. In fact, our model is probably more accurate.
 
 # Elmore Delay
 
@@ -146,6 +158,16 @@ $$
 	&\vdots \\
 	R_nC_n\frac{dV_n}{dt} + V_n &= V_{n-1}.
 \end{align*}
+$$
+Or in matrix form, $\mathbf{V}'=A\mathbf{V}$ where (defining $\tau_i=R_iC_i$), 
+$$
+	A = \begin{bmatrix}
+		1/\tau_0 & -1/\tau_1 & 0 & \cdots & 0 & 0 \\
+		0 & 1/\tau_1 & -1/\tau_2 & \cdots & 0 & 0 \\
+		0 & 0 & 1/\tau_2 & \cdots & 0 & 0 \\
+		 &  &  & \ddots \\
+		0 & 0 & 0 & \dots & 1/\tau_{n-1} & -1/\tau_{n}
+	\end{bmatrix}.
 $$
 Taking the Laplace transform of each equation gives us:
 $$
