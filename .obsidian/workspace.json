@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Papers/A Strongly Polynomial Algorithm for Bimodular Integer Linear Programming.md",
+                "file": "content/Daily/2026/2026-09-18.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "A Strongly Polynomial Algorithm for Bimodular Integer Linear Programming"
+              "title": "2026-09-18"
             }
           },
           {
@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily/2026/2026-09-08.md",
+                "file": "content/Daily/2026/2026-09-22.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-09-08"
+              "title": "2026-09-22"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -200,17 +200,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "de0d678cba3b3c66",
+  "active": "8130610bf1a866c4",
   "lastOpenFiles": [
-    "content/Daily/2026/2026-08-31.md",
+    "content/Daily/2026/2026-09-22.md",
+    "content/Daily/2026/2026-09-18.md",
     "content/Daily/2026/2026-09-08.md",
+    "content/EDA/Circuit Simulation.md",
+    "content/Figures/SS_2026-09-18_1789765283.png",
+    "content/Papers/A Strongly Polynomial Algorithm for Bimodular Integer Linear Programming.md",
+    "content/Daily/2026/2026-08-31.md",
     "content/Figures/SS_2026-09-15_1789506768.png",
     "content/Figures/SS_2026-09-15_1789501625.png",
     "content/Computational Topology/Reduced Homology.md",
     "content/Daily/2026/2026-08-17.md",
     "content/Daily/2026/2026-09-03.md",
-    "content/Papers/A Strongly Polynomial Algorithm for Bimodular Integer Linear Programming.md",
-    "content/EDA/Circuit Simulation.md",
     "Pasted image 20260819083015.png",
     "content/EDA/Timing Analysis.md",
     "content/EDA/Timing.md",
@@ -224,7 +227,6 @@
     "content/EDA/Static Timing Analysis.md",
     "content/Figures/SS_2026-08-12_1786564594.png",
     "content/Figures/SS_2026-08-07_1786135906.png",
-    "content/Figures/SS_2026-08-07_1786132350.png",
     "content/EDA/Verilog.md",
     "content/Daily/2026/2026-07-21.md",
     "content/EDA",
@@ -237,7 +239,6 @@
     "content/Optimization/Local Descent.md",
     "content/Papers/Efficient Network Flow Models for Optimal Homology Problems over the Integers.md",
     "content/Papers/Smallest-Last Ordering and Clustering and Graph Coloring Algorithms.md",
-    "content/Parallel Algorithm Design.md",
     "content/Paragonimiasis Statistical Analysis.pdf",
     "content/Daily/2025/NCTU-GR2.pdf",
     "content/Daily/2025/2025-08-21.pdf",
