@@ -1,139 +1,220 @@
 
 Authors: S. Artmann, R. Weismantel, R. Zenklusen
 
-Link:
+Link: https://dl.acm.org/doi/10.1145/3055399.3055473
 
 ---
 
-They focus on ILPs where the constraint matrix $A$ is **totally bimodular**, i.e., all subdeterminants are bounded by 2 in absolute value.
-
-**Bimodular integer programming (BIP):** Let $b\in\Z^m$, $c\in\ Z^n$ and $A\in\Z^{m\times n}$ with $\textup{rank}(A)=n$ such that each $(n\times n)$ subdeterminant of $A$ is at most 2 in absolute value. Solve
+**Bimodular integer programming (BIP):** Let $b\in\Z^m$, $c\in\Z^n$, and $A\in\Z^{m\times n}$ with $\text{rank}(A)=n$ such that each $(n\times n)$ subdeterminant of $A$ is at most 2 in absolute value. The task is to solve
 $$
 	\max\{c^\top x:Ax\le b,~x\in\Z^n\}.
 $$
 
-More generally, one may define a matrix $A$ as **totally $\Delta$-modular** if all subdeterminants of $A$ are at most $\Delta$ in absolute value. Of course, when $\Delta=1$ one simply gets totally unimodular.
-
-**Theorem 2.1:** Consider a BIP problem and its natural LP relaxation
+BIP generalizes ILPs with a totally bimodular constraint matrix $A$. Reformulating the problem as 
 $$
-	\max\{c^\top x:Ax\le b,~x\in\R^n\}
+	\max\{c^\top(x^+-x^-):A(x^+-x^-)\le b,~x^+,x^-\in\Z^n_{\ge0}\}
 $$
-is feasible and bounded. Let $v$ be the optimal vertex solution to the LP relaxation. 
-1. If the BIP is feasible, then there is an optimal solution $y$ for the BIP such that $|A_{i,\cdot}(y-v)|\le 1$ for all $i\in[m]=\{1,\dots,m\}$, where $A_{i,\cdot}$ is the $i$-th row of $A$.
-2. Morever, if $v$ is the unique optimal solution to the LP-relaxation of BIP, then the following holds. Let $A'$ be the submatrix of $A$ only consisting of the rows that are tight with respect to $v$. Then, if $y$ is an optimal solution to $\max\{c^\top x:A'x\le 0,~v+x\in\Z^n\}$, then $y+v$ is optimal for BIP.
+we get a new constraint matrix that is still totally bimodular and now full-rank.
 
-For brevity they use the shorthand $x(S)=\sum_{i\in S}x_i$. Consider the following two auxiliary problems:
+A more generalized formulation is totally $\Delta$-modular constraint matrices, in which for large enough $\Delta$ the problem becomes NP-hard. One may construct NP-hard ILPs by taking a constraint matrix that is TU and adding an additional $\{0,1\}$-row (see Burch et al. 2003 or Chestnut et al. 2017). Bonifas et al. showed that the polyhedra have a diameter bounded by a polynomial in $\Delta$ and the number of variables. Dropping integrality constraints, Eisenbrand and Vempala provide a randomized simplex-type LP algorithm with strongly polynomial running time when all subdeterminants are bounded by some constant.
 
-**Parity TU-optimization (PTU):** Given $T\in\Z^{m\times n}$ totally uniomodular with $\textup{rank}(T)=n$, $b\in\Z^m$, $c\in\Z^n$, $\alpha\in\{0,1\}$ and $S\subseteq[n]$, solve
+# Outline
+
+**Theorem 2.1 (Veselov and Chirkov 2009).** Consider a BIP problem, and assume that its natural LP relaxation is feasible and bounded. Let $v$ be an optimal vertex solution to the LP relaxation of BIP.
+1. If BIP is feasible, then there is an optimal solution $y$ for BIP such that $|A_{i,\cdot}(y-v)|\le1$ for all $i\in[m]=\{1,\dots,m\}$, where $A_{i,\cdot}$ is the $i$-th row of $A$.
+2. Moreover, if $v$ is the unique optimal solution to the LP relaxation of BIP, then the following holds. Let $A'$ be the submatrix of $A$ only consisting of rows that are tight with respect to $v$. Then if $y$ is an optimal solution to $\max\{c^\top x:A'x\le 0,v+x\in\Z^n\}$, then $y+v$ is optimal for BIP.
+
+
+They show that Theorem 2.1 can be used to reduce BIP to an ILP over a TU constraint matrix. Denote by $x(S)P:=\sum_{i\in S}x_i$ and define the following two auxiliary problems:
+
+**Parity TU-optimization (PTU):** Given $T\in\Z^{m\times n}$ totally unimodular with $\text{rank}(T)=n$, $b\in\Z^m$, $c\in\Z^n$, $\alpha\in\{0,1\}$, and $S\subseteq[n]$, solve
 $$
-	\max\{c^\top x:Tx\le b,~x\in\Z_{\ge0}^n,~x(S)\equiv\alpha\bmod 2\}.	
+	\max\{c^\top x:Tx\le b,~x\in\Z^n_{\ge0},~x(S)\equiv\alpha(\bmod2)\}.
 $$
 
-**Conic parity TU-optimization (CPTU):** Given $T\in\Z^{m\times n}$ totally unimodularwith $\textup{rank}(T)=n$, $b\in\Z^m$, $c\in\Z^n$, and $S\subseteq[n]$, solve
+**Conic parity TU-optimization (CPTU):** Given $T\in \Z^{m\times n}$ totally unimodular with $\text{rank}(T)=n$, $b\in\Z^m$, $c\in\Z^n$, and $S\subseteq[n]$, solve
 $$
 	\max\{c^\top x:Tx\le 0,~x\in\Z^n_{\ge0},~x(S)\text{ odd}\}.
 $$
 
-These three problems reduce to each other.
+All three of these problems are connected:
 
-**Lemma 2.2:** Given an algorithm $\cal{A}$ for BIP, PTU or CPTU, one can solve any of the other problems using
+**Lemma 2.2.** Given an algorithm $\cal{A}$ for one of BIP, PTU or CPTU, one can solve any of the other two problems using
 1. operations taking strongly polynomial time, and
 2. a single call to $\cal{A}$.
-Futhermore, when solving PTU with an algorithm $\cal{A}$ for CPTU, the call to $\cal{A}$ is on a CPTU problem whose constraint matrix $T$ is a submatrix of the one of the given PTU problem.
 
+Furthermore, when solving PTU with an algorithm $\cal{A}$ for CPTU, the call to $\cal{A}$ is on a CPTU problem whose constraint matrix $T$ is a submatrix of the one of the given PTU problem.
 
-The main idea is to solve BIP by moving the problem from BIP to PTU or CPTU. The constraint matrix for CPTU is then decomposed into smaller TU base blocks which are solved in strongly polynomial time.
+They focus on solving CPTU via Seymour TU-decomposition to reduce a CPTU problem into a constant number of smaller instances.
 
-**Definition 2.3 ($k$-sums):** Let $L\in\{-1,0,1\}^{m_L\times n_L}$ and let $R\in\{-1,0,1\}^{m_R\times n_R}$ be two matrices, and let $a\in \Z^{m_L}$, $d\in\in\Z^{n_R}$, $f\in\Z^{n_L}$ and $g\in\Z^{m_R}$. Then define
+**Definition 2.3 ($k$-sums).** Let $L\in\{-1,0,1\}^{m_L\times n_L}$ and let $R\in\{-1,0,1\}^{m_R\times n_R}$ be two matrices, and let $a\in\Z^{m_L}$, $d\in\Z^{n_R}$, $f\in\Z^{n_L}$ and $g\in\Z^{m_R}$. Then
 $$
 \begin{align*}
-	L \oplus_1R &= \begin{bmatrix} L & 0 \\ 0 & R \end{bmatrix} \\
-	\begin{bmatrix}L & a\end{bmatrix}\oplus_2\begin{bmatrix}d^\top\\ R\end{bmatrix} &= \begin{bmatrix}L & ad^\top \\ 0 & R\end{bmatrix} \\
-	\begin{bmatrix}L & a & a \\ f^\top & 0 & 1\end{bmatrix}\oplus_3\begin{bmatrix}1 & 0 & d^\top \\ g & g & R\end{bmatrix} &= \begin{bmatrix}L & ad^\top \\ gf^\top & R\end{bmatrix}
+	L\oplus_1 R &= \begin{bmatrix}L& 0 \\ 0 & R\end{bmatrix} && \text{(1-sum)}\\
+	\begin{bmatrix}L & a\end{bmatrix} \oplus_2\begin{bmatrix}d^\top\\ R\end{bmatrix} &= \begin{bmatrix} L& ad^\top\\ 0 & R\end{bmatrix} && (\text{2-sum}) \\
+	\begin{bmatrix} L & a & a \\ f^\top & 0 & 1 \end{bmatrix}\oplus_3\begin{bmatrix}1 & 0 & d^\top\\ g & g & R\end{bmatrix} &= \begin{bmatrix}L & ad^\top \\ gf^\top & R\end{bmatrix} && (\text{3-sum})
 \end{align*}
 $$
 
-**Definition 2.4 (Pivoting):** Let $T=\begin{bmatrix}\epsilon & c^\top\\ b & D\end{bmatrix}$ be a TU matrix, where $\epsilon\in\{-1,1\}$, $c\in\Z^n$, $b\in\Z^m$, and $d\in\Z^{m\times n}$. Then the matrix from $T$ obtained by **pivoting** on the element in $(1,1)$ is
+
+**Definition 2.4 (Pivoting).** Let $T=\begin{bmatrix}\epsilon&c^\top\\ b&D\end{bmatrix}$ where $\epsilon\in\{-1,1\}$. Then
 $$
 	\text{pivot}_{1,1}(T) = \begin{bmatrix}
-		-\epsilon & \epsilon C^\top \\
-		\epsilon b & D-\epsilon bc^\top
+		-\epsilon & \epsilon c^\top \\ \epsilon b & D-\epsilon bc^\top
 	\end{bmatrix}.
 $$
-A pivot on $(i,j)$, where $T_{i,j}\ne0$, corresponds to first exchaning rows $1$ and $i$ and columns $1$ and $j$, applying the pivot operation as above, and permutting the rows and columns back.
+This can be extended to an arbitrary entry by permuting rows and columns until its at entry $(1,1)$, applying the pivot, then undoing the permutations.
 
-The above operations can be shown to preserve the TU properties of matrices (Lemma 2.5).
+**Lemma 2.5.** The $k$-sum, for $k\in\{1,2,3\}$, of two TU matrices is TU. Moreover, the pivot operation of a TU matrix results in a TU matrix.
 
-**Defintion 2.6:** Let $T\in\Z^{m\times n}$ be TU. We call a submatrix of $T$ a **core** of $T$ if it arises from $T$ by iteratively deleting
-1. any row or column with at most one non-zero entry
+**Definition 2.6 (Core).** Let $T\in\Z^{m\times n}$ be totally unimodular. We call a submatrix $\text{core}(T)$ a *core* of $T$ if it arises by iteratively deleting
+1. any row or column with at most one non-zero entry,
 2. any row or column appearing twice or whose negation is also in the matrix.
-While the core is not unique, we denote by $\textup{core}(T)$ to be any core of $T$.
 
-**Theorem 2.7:** Let $T$ be TU. Then one of the following holds:
-1. $\text{core}(T)$ or $\text{core}(T)^\top$ is a network matrix, i.e., it corresponds to a directed graph (see Defintion 5.1).
-2. $core(T)$ is, upto permutation and scaling by $-1$, one of the following two matrices:
+**Theorem 2.7.** Omitted, see paper. It assumes $T$ is TU and describes what $\text{core}(T)$ is. Theorem 2.8 gives an alternative form.
+
+**Theorem 2.8.** Let $T$ be TU. Then one of the following cases hold:
+1. $\text{core}(T)$ or $\text{core}(T)^\top$ is a network matrix.
+2. $\text{core}(T)$ is, possibly after row/column permutations or negating, one of the following two matrices:
 $$
-\begin{bmatrix}
-	1 & -1 & 0 & 0 & -1 \\
-	-1 & 1 & -1 & 0 & 0 \\
-	0 & -1 & 1 & -1 & 0 \\\
-	0 & 0 & -1 & 1 & -1 \\
-	-1 & 0 & 0 & -1 & 1
-\end{bmatrix},~
-\begin{bmatrix}
-	1 & 1 & 1 & 1 & 1 \\
-	1 & 1 & 1 & 0 & 0 \\
-	1 & 0 & 1 & 1 & 0 \\
-	1 & 0 & 0 & 1 & 1 \\
-	1 & 1 & 0 & 0 & 1
-\end{bmatrix}
+	\begin{bmatrix}
+		1 & -1 & 0 & 0 & -1 \\
+		-1 & 1 & -1 & 0 & 0 \\
+		0 & -1 & 1 & -1 & 0 \\
+		0 & 0 & -1 & 1 & -1 \\
+		-1 & 0 & 0 & -1 & 1
+	\end{bmatrix},
+	\begin{bmatrix}
+		1 & 1 & 1 & 1 & 1 \\
+		1 & 1 & 1 & 0 & 0 \\
+		1 & 0 & 1 & 1 & 0 \\
+		1 & 0 & 0 & 1 & 1 \\
+		1 & 1 & 0 & 0 & 1
+	\end{bmatrix}.
 $$
-3. $\textup{core}(T)$ is, upto permutation, of the form $\begin{bmatrix}L & D_1\\ D_2 & R\end{bmatrix}$ where $\textup{rank}(D_1)+\textup{rank}(D_2)\le2$.
-4. $T$ can be decomposed into a 1-sum with $m_L,m_R\ge2$.
-5. There are no row and column permutations such that $T$ can be written as a 1-sum, and $T$ can be decomposed into a 2-sum with $m_L,m_R\ge 2$.
-6. There are no row and column permutations such that $T$ can be written as a 1- or 2-sum, and $T$ can be decomposed into a 3-sum with $m_L,m_R\ge 2$.
-7. There are no row and column permutations such that $T$ can be written as a 1-,2- or 3-sum, and $T$ after pivoting once can be decomposed into a 3-sum with $m_L,m_R\ge 2$.
+3. $T$ can, possibly after row/column permutations, be decomposed into a 1-sum with $m_L,m_R\ge2$.
+4. There are no row and column permutations such that $T$ can be written as a 1-sum, and $T$ can after row/column permutations be decomposed into a $2$-sum with $m_L,m_R\ge2$.
+5. There are no row and column permutations such that $T$ can be written as a 1- or 2-sum, and $T$ can after row/column permutations be decomposed into a $3$-sum with $m_L,m_R\ge2$.
+6. There are no row and column permutations such that $T$ can be written as a 1-, 2- or 3-sum, and $T$ after pivoting once and row/column permutations be decomposed into a $3$-sum with $m_L,m_R\ge2$.
 
+The idea behind solving CPTU problems is by tackling each of the above cases, which can be determined in strongly polynomial time.
 
-One may then solve CPTU in strongly polynomial time by using the above theorem to decompose $T$ until reaching a core given in case 1 or 2. They then present a strongly polynomial time algorithm for solving the case 1 and case 2 instances.
+**Lemma 2.9.** There exists a strongly polynomial time algorithm for solving CPTU if the core of the constraint matrix $T$ has a core that is a network matrix (or its transpose), or one of the matrices given in Theorem 2.8 case 2.
+
+**Theorem 2.10.** Consider a (CPTU) with constraint matrix $T$ such that neither $\text{core}(T)$ nor its transpose is a network matrix, and $\text{core}(T)$ is not , up to row/column permutations and sign changes, one of the constraint matrices given in Theorem 2.8 case 2. Then we can solve CPTU by
+1. Solving at most 14 problems of type CPTU with at most $m_1$ rows and at most $n-1$ columns.
+2. Solving 1 problem of type CPTU with at most $m_2$ rows and at most $n+13$ columns, and
+3. using further operations taking strongly polynomial time, where $m_1,m_2$ satisfy $m_1\le m_2<m$ and $m_1+m_2\le m+2$.
+
+In other words:
+- Case 1 or 2: apply Lemma 2.9
+- Case 3-6: apply Theorem 2.10.
 
 # Reductions Between BIP, PTU and CPTU
 
-Their proof depends on a crucial fact regarding the inverse of matrices $Q$ with $|\det Q|=2$.
+**Lemma 3.1.** The LP relaxation of BIP can be solved in strongly polynomial time. That is,
+1. If the LP relaxation has a finite optimum, an optimal vertex solution can be determined in strongly polynomial time.
+2. If the LP relaxation is unbounded, one can determine in strongly polynomial time a feasible vertex $v\in\Q^n$ and an improving ray $r\in\Z^n$, i.e., if $v$ satisfies $Av\le b$ and $r$ satisfies $Ar\le 0$ and $c^\top r>0$.
 
-**Lemma 3.3:** Let $Q\in\Z^{n\times n}$ be a matrix with $|\det Q|=2$. Then there are row indices $I\subseteq[n]$ and column indices $J\subseteq[n]$, $I,J\ne\emptyset$, such that
-$$
-	(Q^{-1})_{ij} \in \begin{cases}
-		\frac{1}{2} + \Z & (i,j)\in I\times J \\
-		\Z & (i,j)\not\in I\times J.
-	\end{cases}
-$$
+In the second case, if the relaxation is unbounded then the BIP is either infeasible or unbounded. This allows us to construct another BIP instance that is bounded.
 
-This result is not suprising, it more or less follows from Cramer's rule or SNF.
+**Lemma 3.2.** Consider a BIP problem whose LP relaxation is either unbounded or has multiple optimal solutions. Then we can reduce this problem in strongly polynomial time to a BIP problem with the same constraint matrix $A$ and right-hand side $B$, whose LP relaxation has a unique optimum.
 
-**Lemma 3.4:** Given an algorithm $\mathcal{A}$ for CPTU, one can solve any BIP problem using operations taking strongly polynomial time and a single call to $\cal{A}$.
+The reduction from BIP to CPTU makes use of the fact that for a matrix $Q$ with $|\det Q|=2$ we get that $Q^{-1}$ has entries in $\Z$ or $1/2+\Z$.
 
-*Proof.* If the LP relaxation is infeasible, then so is BIP and we done. If the LP relaxation of BIP is unbounded or has a non-unique optimal solution, one can transform the problem to another with a bounded LP relaxation in strongly polynomial time (Lemma 3.2). Let $v$ be the optimal vertex solution of the LP relaxation and assume that $v\not\in\Z^n$ (otherwise, we are done).
+**Lemma 3.4.** Given an algorithm $\cal{A}$ for CPTU, one can solve any BIP problem using operations taking strongly polynomial time and a single call to $\cal{A}$.
 
-Let $C$ be the submatrix of $A$ only consisting of the rows that are tight with respect to $v$. Then we can reduce the BIP to solving
+*Proof sketch.* Solve LP relaxation to get optimal $v$. If integral, we are done. Otherwise, we want to solve
 $$
-	\max\{c^\top x:Cx\le 0,~v+x\in\Z^n\}.
+	\max\{c^\top x:Cx\le 0,v+x\in\Z^n\}
 $$
-Let $Q$ be a full-rank square submatrix of $C$ and $b_Q$ the part of $b$ corresponding to $Q$. Then we get $v=Q^{-1}b_Q$. Because $v\not\in\Z^n$, we must have $|\det Q|=2$ as $Q$ is a submatrix of totally bimodular matrix $A$. Because $Q$ was taken arbitrarily, it must be the case that every $(n\times n)$-subdeterminant of $C$ is $-2$, $0$ or $2$.
+where $C$ is the set of rows that are not tight with respect to $v$. The optimal $y$ gives $y+v$ optimal for BIP. This rounding problem can be written in the form of a CPTU problem. $\square$
 
-Define $\bar{C}=CQ^{-1}$. Then it follows that
+**Question:** In the CPTU construction, we get the constraint matrix $\tilde{C}=CQ^{-1}$ where $Q$ is a full-rank submatrix of $C$. What does this correspond to in the flat norm?
+
+## Quick Aside Regarding Flat Norm
+
+We need to write the matrix in the form $Au\le b$ with $\text{rank}(A)=n$:
 $$
-	|\det\bar{C}| = \frac{|\det C|}{|\det Q|}\in\{0,1\},
+	\begin{bmatrix}
+		A \\
+		-A \\
+		-I_{2m+2n}
+	\end{bmatrix}
+	u
+	\le \begin{bmatrix}
+		b \\ -b \\ 0
+	\end{bmatrix}
 $$
-i.e., any $n\times n$ submatrix of $\bar{C}$ has determinant within $\{-1,0,1\}$ implying that $\bar{C}$ is TU. Set $\bar{c}=(Q^{-1})^\top c$ and $z=Qx$ and we get that
+where $A=\begin{bmatrix} I & -I & -B & B\end{bmatrix}$. 
+
+Let $C$ be the submatrix of $A$ consisting of rows that are tight, i.e., $C$ is given by both $A$ and $-A$ as well as copies of $-e_j^\top$ for each $j$ with $u_j^*=0$. Take $Q$ to be given by rows $A$, and the rest columns from last rows of $-I_{2m+2n}$.  That is,
+$$
+	Q = \begin{bmatrix}
+		I_m & -I_m & -B & B \\
+		0 & -I_m & 0 & 0 \\
+		0 & 0 & -I_n & 0 \\
+		0 & 0 & 0 & -I_n
+	\end{bmatrix}
+$$
+which satisfies $Q^{-1}=Q$ as $Q^2=I$:
 $$
 \begin{align*}
-	\max\{c^\top x:Cx\le 0,~v+x\in\Z^n\} &= \max\{c^\top Q^{-1}Q x:CQ^{-1}Qx\le 0,~v+Q^{-1}Qx\in\Z^n\} \\
-	&= \max\{\bar{c}^\top z :\bar{C}z\le 0,~Q^{-1}(b_Q + z)\in\Z^n\} \\
-	&= \max\{\bar{c}^\top z :\bar{C}z\le 0,~Q^{-1}(b_Q + z)\in\Z^n,z\in\Z^n\}
+	Q^2 &= \begin{bmatrix}
+		I_m & I_m-I_m & -B+B & B-B \\
+		0 & I_m & 0 & 0 \\
+		0 & 0 & I_n & 0 \\\
+		0 & 0 & 0 & I_n
+	\end{bmatrix}
+	= I.
 \end{align*}
 $$
-which is solveable in polynomial time.
 
-They continue on to reduce this problem into CPTU. $\square$
+Let $B=\{1,\dots,m\}$ be the first $m$ variables and $N=\{m+1,\dots,2m+2n\}$ the last $m+2n$.
+Then we get that
+$$
+\begin{align*}
+	AQ^{-1} &= \begin{bmatrix}
+		I_m & -I_m & -B & B
+	\end{bmatrix}
+	\begin{bmatrix}
+		I_m & -I_m & -B & B \\
+		0 & -I_m & 0 & 0 \\
+		0 & 0 & -I_n & 0 \\
+		0 & 0 & 0 & -I_n
+	\end{bmatrix} \\
+	&= \begin{bmatrix}
+		I_m & -I_m+I_m & -B+B & B-B
+	\end{bmatrix} \\
+	&= \begin{bmatrix}
+		I_m & 0 & 0 & 0
+	\end{bmatrix}.
+\end{align*}
+$$
+The other tight rows are of the form $-e_j^\top$ for some $j\in[2m+2n]$. Then
+- if $m+1\le j\le 2m+2n$ then $-e_j^\top Q^{-1}=\begin{bmatrix}0&e_j^\top&0&0\end{bmatrix}$.
+- otherwise, $-e_j^\top Q^{-1}=\begin{bmatrix}-e_j^\top & e_j^\top & B_j & -B_j\end{bmatrix}$.
+
+So
+$$
+\tilde{C} = CQ^{-1} = \begin{bmatrix}
+	\pm I_m & 0 & 0 & 0 \\
+	-I_m & I_m & B' & -B' \\
+	0 & I_m & 0 & 0
+\end{bmatrix}
+$$
+where $B'$ is a submatrix of $B$ corresponding to rows such that $x_j^+=0$. The corresponding CPTU is then given by
+$$
+\begin{align*}
+	&\max\{\tilde{c}^\top z:\tilde{C}z\le 0,~Q^{-1}(bQ+z)\in\Z_{\ge0}^n\} \\
+	&\quad =\max\{\tilde{c}^\top z:\tilde{C}z\le 0,~z\in\Z_{\ge0}^n,~(b_Q+z)(J)\text{ is even}\}
+\end{align*}
+$$
+where $\tilde{c}=(Q^{-1})^\top c$, $z=Qu$, and $J$ are the columns in which $Q_{ij}^{-1}$ is fractional for some $i$. But $J=\emptyset$, so $(b_Q+z)(J)=0$ is always even! Does this mean the problem is just
+$$
+	\max\{\tilde{c}^\top z:\tilde{C}z\le 0,~z\in\Z_{\ge0}^n\}
+$$
+which can be solved by taking the LP relaxation? We would just need to show that $\tilde{C}=CQ^{-1}$ is always TU.
+
+# Solving CPTU via TU-Decompositions
 
